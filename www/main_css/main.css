@@ -1,5 +1,51 @@
 @charset "utf-8";
 
+#wrap {
+  position: relative;
+}
+
 /*메인 비주얼 영역 */
 
+#headerArea {
+  width: 1400px;
+  height: 100px;
+  margin: 5px auto;
+  padding-right: 20px;
+  border: 1px solid purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#headerArea .logo {
+  width: 100px;
+}
+
+#headerArea nav ul {
+  display: flex;
+  gap: 100px;
+  border: 1px solid red;
+}
+
+#headerArea nav ul li {
+  font-size: var(--font-size-no9);
+}
+
+#headerArea .top_menu {
+  display: flex;
+  margin-top: 10px;
+  gap: 30px;
+  border: 1px solid blue;
+}
+
 /* 본문 컨텐츠 영역 */
+
+.visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

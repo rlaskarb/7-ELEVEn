@@ -2,11 +2,18 @@
 
 /* 사용방법 선택자{var(--font-color-point1)} */
 :root {
-  --font-size-h2: 5rem;
-  --font-size-h3: 3rem;
-  --font-size-h4: 2rem;
-  --font-size-h5: 1.5rem;
-  --font-size-h6: 1.2rem;
+  --font-size-no1: 5.63rem; /*90px*/
+  --font-size-no2: 3.44rem; /*55px*/
+  --font-size-no3: 3.13rem; /*50px*/
+  --font-size-no4: 3rem; /*48px*/
+  --font-size-no5: 2.5rem; /*40px*/
+  --font-size-no6: 1.88rem; /*30px*/
+  --font-size-no7: 1.63rem; /*26px*/
+  --font-size-no8: 1.5rem; /*24px*/
+  --font-size-no9: 1.38rem; /*22px*/
+  --font-size-no10: 1.25rem; /*20px*/
+  --font-size-no11: 1.13rem; /*18px*/
+  --font-size-no12: 1rem; /*16px*/
 
   --font-color-main: #d92629; /*빨강*/
   --font-color-point1: #e77e2d; /*주황*/
@@ -128,7 +135,6 @@ body {
   font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Malgun Gothic", sans-serif;
   color: #333333;
-  line-height: 1.6;
   font-weight: 400;
   word-break: keep-all; /* 한글 줄바꿈 최적화 */
   -webkit-font-smoothing: antialiased; /* 맥에서 폰트 렌더링 개선 */
