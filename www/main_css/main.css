@@ -38,12 +38,51 @@
   gap: 30px;
 }
 
+.visual {
+  position: relative;
+}
+
 .visual img {
   width: 2000px;
   height: 1050px;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.visual dl dt {
+  font-size: var(--font-size-no3);
+  color: var(--font-color-sub2);
+  font-weight: bold;
+  position: absolute;
+  left: 150px;
+  top: 200px;
+  opacity: 0;
+}
+
+.visual:hover dl dt {
+  opacity: 1;
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  transition: all 1s ease-out;
+}
+
+.visual dl dd {
+  font-size: var(--font-size-no6);
+  color: var(--font-color-sub2);
+  position: absolute;
+  left: 150px;
+  top: 290px;
+  opacity: 0;
+}
+
+.visual:hover dl dd {
+  opacity: 1;
+  position: absolute;
+  left: 150px;
+  top: 190px;
+  transition: all 1.5s ease-out;
 }
 
 /* 본문 컨텐츠 영역 */
