@@ -1,5 +1,21 @@
 @charset "utf-8";
 
+/* 사용방법 선택자{var(--font-color-point1)} */
+:root {
+  --font-size-h2: 5rem;
+  --font-size-h3: 3rem;
+  --font-size-h4: 2rem;
+  --font-size-h5: 1.5rem;
+  --font-size-h6: 1.2rem;
+
+  --font-color-main: #d92629; /*빨강*/
+  --font-color-point1: #e77e2d; /*주황*/
+  --font-color-point2: #017121; /*초록*/
+  --font-color-sub1: #f0f0f2; /*쿨그레이*/
+  --font-color-sub2: #faf8f5; /*연한아이보리*/
+  --font-color-font: #333; /*쉬커먼색*/
+}
+
 /* CSS Reset */
 
 html,
