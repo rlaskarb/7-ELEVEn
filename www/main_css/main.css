@@ -9,20 +9,15 @@
 #headerArea {
   width: 1400px;
   height: 100px;
-  margin: 5px auto;
+  margin: auto;
   padding-right: 20px;
   border: 1px solid purple;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#headerArea .logo {
-  width: 100px;
+  position: relative;
+  z-index: 10;
 }
 
 #headerArea nav ul {
