@@ -58,7 +58,97 @@
   width: 2000px;
   height: 800px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
   border: 2px solid blue;
+}
+
+#content .new_menu > div {
+  width: 1400px;
+  height: 600px;
+  background: #fff;
+  border: 3px solid var(--font-color-point1);
+  border-radius: 30px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+#content .new_menu_left_box h3 {
+  font-size: var(--font-size-no3);
+  color: var(--font-color-point1);
+  margin-bottom: 15px;
+  display: inline-block;
+  width: 70%;
+}
+
+#content .new_menu_left_box p {
+  font-size: var(--font-size-no8);
+  margin-bottom: 70px;
+}
+
+#content .new_menu_left_box {
+  width: 640px;
+  padding: 50px;
+  border-radius: 30px;
+}
+
+#content #new_menu_change {
+  border: 2px solid blue;
+}
+
+#content #new_menu_change dl {
+  display: flex;
+  border: 1px solid red;
+  gap: 30px;
+}
+
+#content #new_menu_change dt {
+  font-size: var(--font-size-no6);
+}
+#content #new_menu_change dd {
+  font-size: var(--font-size-no7);
+}
+
+#content #new_menu_change dl:nth-child(4) dt span,
+#content #new_menu_change dl:nth-child(4) dd span {
+  color: var(--font-color-main);
+}
+
+#content #new_menu_change dl:nth-child(5) dt span,
+#content #new_menu_change dl:nth-child(5) dd span {
+  color: var(--font-color-point2);
+}
+
+#content #new_menu_right_box {
+  width: 451px;
+  height: 321px;
+  border: 2px solid #999;
+}
+
+#content .new_menu a {
+  position: absolute;
+  top: 75px;
+  left: 500px;
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  text-align: center;
+  font-size: var(--font-size-no10);
+  background: var(--font-color-point1);
+  color: var(--font-color-sub1);
+  transition: all 0.3s ease;
+}
+
+#content .new_menu a:hover {
+  background: var(--font-color-main);
+  transform: translateY(-2px);
 }
 
 #content .eventing {

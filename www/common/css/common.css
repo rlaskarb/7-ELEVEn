@@ -180,6 +180,16 @@ img {
 #wrap {
   width: 100%;
   overflow: hidden;
+  cursor: url(../images/love.cur) 16 16, pointer;
+}
+
+/* 읽기 전용 텍스트 */
+p,
+span,
+.text-content,
+dt,
+dd {
+  cursor: default;
 }
 
 #headerArea {
@@ -189,7 +199,7 @@ img {
   top: 0;
   left: 0;
   z-index: 100;
-  background: rgba(250, 248, 245, 0.4);
+  background: rgba(250, 248, 245, 0.7);
 }
 
 #headerArea .header_inner {
@@ -230,11 +240,12 @@ img {
 }
 
 #headerArea #gnb ul a {
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #headerArea #gnb ul a:hover {
   color: var(--font-color-main);
+  transform: scale(1.2);
 }
 
 #headerArea .top_menu {
@@ -248,8 +259,9 @@ img {
   font-size: var(--font-size-no10);
 }
 
-#headerArea .top_menu {
-  cursor: url(../images/love.cur) 16 16, pointer;
+#headerArea .top_menu a:hover {
+  color: var(--font-color-point1);
+  transform: scale(1.2);
 }
 
 /* 풋터 공통 영역 */
