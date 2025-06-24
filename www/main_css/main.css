@@ -66,11 +66,11 @@
   border: 2px solid blue;
 }
 
-#content .new_menu > div {
+#content .new_menu .new_menu_tuck_box {
   width: 1400px;
   height: 600px;
-  background: #fff;
-  border: 3px solid var(--font-color-point1);
+  background: var(--font-color-sub2);
+  border: 5px solid var(--font-color-point1);
   border-radius: 30px;
   display: flex;
   position: relative;
@@ -81,61 +81,72 @@
 #content .new_menu_left_box h3 {
   font-size: var(--font-size-no3);
   color: var(--font-color-point1);
-  margin-bottom: 15px;
-  display: inline-block;
-  width: 70%;
+  margin-bottom: 10px;
 }
 
 #content .new_menu_left_box p {
   font-size: var(--font-size-no8);
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 #content .new_menu_left_box {
-  width: 640px;
+  width: 60%;
   padding: 50px;
-  border-radius: 30px;
+  box-sizing: border-box;
 }
 
 #content #new_menu_change {
-  border: 2px solid blue;
+  width: 690px;
+  height: 310px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 50px;
 }
 
 #content #new_menu_change dl {
   display: flex;
-  border: 1px solid red;
-  gap: 30px;
+
+  margin-bottom: 13px;
 }
 
 #content #new_menu_change dt {
+  padding-right: 25px;
   font-size: var(--font-size-no6);
 }
 #content #new_menu_change dd {
   font-size: var(--font-size-no7);
 }
 
-#content #new_menu_change dl:nth-child(4) dt span,
-#content #new_menu_change dl:nth-child(4) dd span {
-  color: var(--font-color-main);
+#content #new_menu_change dd strong {
+  font-size: var(--font-size-no6);
 }
 
-#content #new_menu_change dl:nth-child(5) dt span,
-#content #new_menu_change dl:nth-child(5) dd span {
+#content #new_menu_change dl:nth-of-type(4) dt span,
+#content #new_menu_change dl:nth-of-type(4) dd span {
+  color: var(--font-color-main);
+  font-size: var(--font-size-no6);
+  font-weight: 500;
+}
+
+#content #new_menu_change dl:nth-of-type(5) dt span,
+#content #new_menu_change dl:nth-of-type(5) dd span {
   color: var(--font-color-point2);
+  font-size: var(--font-size-no6);
+  font-weight: 700;
 }
 
 #content #new_menu_right_box {
-  width: 451px;
-  height: 321px;
-  border: 2px solid #999;
+  width: 40%;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#content .new_menu a {
+#content .new_menu_tuck_box a {
   position: absolute;
   top: 75px;
   left: 500px;
-  width: auto;
-  height: auto;
   padding: 10px 15px;
   border-radius: 20px;
   font-weight: 500;
@@ -146,7 +157,7 @@
   transition: all 0.3s ease;
 }
 
-#content .new_menu a:hover {
+#content .new_menu_tuck_box a:hover {
   background: var(--font-color-main);
   transform: translateY(-2px);
 }

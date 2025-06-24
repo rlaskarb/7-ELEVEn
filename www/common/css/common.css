@@ -180,7 +180,7 @@ img {
 #wrap {
   width: 100%;
   overflow: hidden;
-  cursor: url(../images/love.cur) 16 16, pointer;
+  cursor: url(../images/round-logo_.cur) 20 20, pointer;
 }
 
 /* 읽기 전용 텍스트 */
@@ -199,7 +199,7 @@ dd {
   top: 0;
   left: 0;
   z-index: 100;
-  background: rgba(250, 248, 245, 0.7);
+  background: var(--font-color-sub1);
 }
 
 #headerArea .header_inner {
