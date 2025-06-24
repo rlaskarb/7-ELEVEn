@@ -63,7 +63,6 @@
   align-items: center;
   overflow: hidden;
   box-sizing: border-box;
-  border: 2px solid blue;
 }
 
 #content .new_menu .new_menu_tuck_box {
@@ -167,6 +166,7 @@
   height: 900px;
   margin: 0 auto;
   border: 2px solid orange;
+  background: url(../main_images/events_in_profess_background.png);
 }
 
 #content .honey_recipe {
@@ -181,5 +181,6 @@
   width: 2000px;
   height: 450px;
   margin: 0 auto;
+  border: 2px solid blue;
   box-sizing: border-box;
 }
