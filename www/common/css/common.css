@@ -196,7 +196,6 @@ dd {
 #headerArea {
   width: 100%;
   position: fixed; /*스클롤을 해도 고정*/
-
   top: 0;
   left: 0;
   z-index: 100;
