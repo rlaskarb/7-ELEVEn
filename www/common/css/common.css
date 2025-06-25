@@ -4,9 +4,9 @@
 :root {
   --font-size-no1: 6.25rem; /*100px*/
   --font-size-no2: 5.63rem; /*90px*/
-  --font-size-no3: 3.44rem; /*55px*/
-  --font-size-no4: 3.13rem; /*50px*/
-  --font-size-no5: 3rem; /*48px*/
+  --font-size-no3: 5rem; /*80px*/
+  --font-size-no4: 4.38rem; /*70px*/
+  --font-size-no5: 3.13rem; /*50px*/
   --font-size-no6: 2.5rem; /*40px*/
   --font-size-no7: 1.88rem; /*30px*/
   --font-size-no8: 1.63rem; /*26px*/
@@ -181,16 +181,7 @@ img {
 #wrap {
   width: 100%;
   overflow: hidden;
-  cursor: url(../images/round-logo_.cur) 20 20, pointer;
-}
-
-/* 읽기 전용 텍스트 */
-p,
-span,
-.text-content,
-dt,
-dd {
-  cursor: default;
+  cursor: url(../images/round-logo_.cur) 25 25, pointer;
 }
 
 #headerArea {

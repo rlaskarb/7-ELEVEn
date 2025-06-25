@@ -76,14 +76,13 @@
 /* 이달의 신상 css */
 #content .new_menu {
   width: 2000px;
-  height: 800px;
+  height: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-sizing: border-box;
 }
 
 #content .new_menu .new_menu_tuck_box {
@@ -95,7 +94,7 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 #content .new_menu_left_box h3 {
@@ -118,7 +117,7 @@
 #content #new_menu_change {
   width: 690px;
   height: 310px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 30px 0 0 30px;
   border-radius: 50px;
 }
@@ -185,7 +184,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 30px;
+  margin-top: 60px;
   padding: 15px;
 }
 
@@ -206,7 +205,7 @@
 /* 진행중 이벤트 */
 #content .eventing {
   width: 2000px;
-  height: 900px;
+  height: 1000px;
   margin: 0 auto;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../main_images/events_in_profess_background.png); /*linear-gradient(방향,시작색상,끝색상)*/
@@ -221,13 +220,14 @@
 #content .eventing .eventing_title {
   text-align: center;
   max-width: 800px;
-  margin-top: 340px;
+  margin-top: 200px;
 }
 
 #content .eventing .eventing_title h3 {
   text-align: center;
-  font-size: var(--font-size-no5);
+  font-size: var(--font-size-no3);
   color: var(--font-color-sub1);
+  font-weight: 500;
 }
 #content .eventing .eventing_title p {
   max-width: 500px;
@@ -283,8 +283,8 @@
 
 #content .eventing .eventing_more {
   position: absolute;
-  top: 180px;
-  right: 400px;
+  top: 200px;
+  right: 500px;
   padding: 10px 15px;
   border-radius: 20px;
   font-weight: 500;
@@ -300,17 +300,18 @@
   transform: translateY(-2px);
 }
 
-/* 세븐일레븐에서 이런조합 헤봤어? */
+/* 세븐일레븐에서 이런조합 해봤어? */
+
 #content .honey_recipe {
   width: 2000px;
-  height: 1050px;
+  height: 900px;
   margin: 0 auto;
-  border: 2px solid olivedrab;
-  box-sizing: border-box;
+
+  position: relative;
 }
 
 #content .honey_recipe .honey_recipe_title {
-  text-align: center;
+  margin-left: 390px;
   margin-top: 100px;
 }
 
@@ -325,34 +326,106 @@
 
 #content .honey_recipe .honey_recipe_title p {
   font-size: var(--font-size-no10);
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 #content .honey_recipe .honey_recipe_tuck_box {
-  width: 1400px;
+  width: 1300px;
   height: 600px;
-  border: 2px solid red;
-  margin: 0 auto; /*가로 가운데!*/
-  margin-top: 125px; /*세로 가운데!*/
-}
-
-#content .honey_recipe .honey_recipe_tuck_box li {
+  margin: 0 auto;
+  margin-top: 80px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  gap: 20px;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  gap: 10px;
+}
+
+#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(1) {
+  flex-basis: 500px;
+}
+
+#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(2) {
+  flex-basis: 400px;
+}
+
+#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(3) {
+  flex-basis: 300px;
+}
+
+#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(4) {
+  flex-basis: 300px;
+}
+
+#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(5) {
+  flex-basis: 400px;
+}
+
+#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(6) {
+  flex-basis: 500px;
 }
 
 #content .honey_recipe .honey_recipe_tuck_box dl {
-  /* width: 466px;
-  height: 270px; */
+  display: flex;
+  flex-direction: column;
+}
+
+#content .honey_recipe .honey_recipe_tuck_box dt {
+  padding: 20px;
+  margin-bottom: 1px;
+  border-radius: 30px 30px 0 0;
+  font-size: var(--font-size-no9);
+  border-bottom: 1px solid var(--font-color-sub1);
+  background: var(--font-color-sub1);
+  overflow: auto;
+}
+
+#content .honey_recipe .honey_recipe_tuck_box dd {
+  height: 150px;
+  padding: 20px;
+  border-radius: 0 0 30px 30px;
+  font-size: var(--font-size-no10);
+  background: var(--font-color-sub2);
+  overflow: auto;
+}
+
+#content .honey_recipe .honey_recipe_more {
+  position: absolute;
+  top: 25px;
+  right: 600px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  text-align: center;
+  font-size: var(--font-size-no12);
+  background: var(--font-color-point1);
+  color: var(--font-color-sub1);
+  transition: all 0.3s ease;
+}
+
+#content .honey_recipe .honey_recipe_more:hover {
+  background: var(--font-color-main);
+  transform: translateY(-2px);
 }
 
 #content .full_search {
   width: 2000px;
-  height: 450px;
+  height: 600px;
   margin: 0 auto;
   border: 2px solid blue;
-  box-sizing: border-box;
+}
+
+#content .start_up_guide {
+  width: 2000px;
+  height: 1050px;
+  margin: 0 auto;
+  background: var(--font-color-sub1);
+  border: 2px solid yellow;
+}
+
+#content .seven_eleven_story {
+  width: 2000px;
+  height: 1050px;
+  margin: 0 auto;
+  border: 2px solid black;
 }
