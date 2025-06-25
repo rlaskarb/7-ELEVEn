@@ -18,7 +18,7 @@
 }
 
 .visual dl dt {
-  font-size: var(--font-size-no3);
+  font-size: var(--font-size-no5);
   color: var(--font-color-sub2);
   font-weight: bold;
   position: absolute;
@@ -36,7 +36,7 @@
 }
 
 .visual dl dd {
-  font-size: var(--font-size-no6);
+  font-size: var(--font-size-no7);
   color: var(--font-color-sub2);
   position: absolute;
   left: 150px;
@@ -54,11 +54,13 @@
 
 /* 본문 컨텐츠 영역 */
 
+/* 이달의 신상 css */
 #content .new_menu {
   width: 2000px;
   height: 800px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -78,13 +80,13 @@
 }
 
 #content .new_menu_left_box h3 {
-  font-size: var(--font-size-no3);
+  font-size: var(--font-size-no5);
   color: var(--font-color-point1);
   margin-bottom: 10px;
 }
 
 #content .new_menu_left_box p {
-  font-size: var(--font-size-no8);
+  font-size: var(--font-size-no10);
   margin-bottom: 50px;
 }
 
@@ -98,39 +100,38 @@
   width: 690px;
   height: 310px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  padding: 30px 0 0 30px;
   border-radius: 50px;
 }
 
 #content #new_menu_change dl {
   display: flex;
-
   margin-bottom: 13px;
 }
 
 #content #new_menu_change dt {
   padding-right: 25px;
-  font-size: var(--font-size-no6);
+  font-size: var(--font-size-no9);
 }
 #content #new_menu_change dd {
-  font-size: var(--font-size-no7);
+  font-size: var(--font-size-no9);
 }
 
 #content #new_menu_change dd strong {
-  font-size: var(--font-size-no6);
+  font-size: var(--font-size-no9);
 }
 
 #content #new_menu_change dl:nth-of-type(4) dt span,
 #content #new_menu_change dl:nth-of-type(4) dd span {
   color: var(--font-color-main);
-  font-size: var(--font-size-no6);
+  font-size: var(--font-size-no8);
   font-weight: 500;
 }
 
 #content #new_menu_change dl:nth-of-type(5) dt span,
 #content #new_menu_change dl:nth-of-type(5) dd span {
   color: var(--font-color-point2);
-  font-size: var(--font-size-no6);
+  font-size: var(--font-size-no8);
   font-weight: 700;
 }
 
@@ -150,7 +151,7 @@
   border-radius: 20px;
   font-weight: 500;
   text-align: center;
-  font-size: var(--font-size-no10);
+  font-size: var(--font-size-no12);
   background: var(--font-color-point1);
   color: var(--font-color-sub1);
   transition: all 0.3s ease;
@@ -161,12 +162,114 @@
   transform: translateY(-2px);
 }
 
+#content .new_menu_slider_dots {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 15px;
+}
+
+#content .new_menu_slider_dots li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--font-color-point2);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+#content .new_menu_slider_dots li.active {
+  background: var(--font-color-main);
+  border-color: var(--font-color-point1);
+  transform: scale(1.2);
+}
+/* 진행중 이벤트 */
 #content .eventing {
   width: 2000px;
   height: 900px;
   margin: 0 auto;
-  border: 2px solid orange;
-  background: url(../main_images/events_in_profess_background.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../main_images/events_in_profess_background.png); /*linear-gradient(방향,시작색상,끝색상)*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  position: relative;
+}
+
+#content .eventing .eventing_title {
+  text-align: center;
+  max-width: 800px;
+  margin-top: -100px;
+}
+
+#content .eventing .eventing_title h3 {
+  text-align: center;
+  font-size: var(--font-size-no5);
+  color: var(--font-color-sub1);
+}
+#content .eventing .eventing_title p {
+  max-width: 500px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: var(--font-size-no10);
+  color: var(--font-color-sub1);
+  line-height: 1.5;
+}
+
+#content .eventing .event_categories {
+  display: flex;
+  gap: 50px;
+}
+
+#content .eventing .event_categories li {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(250, 248, 245, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#content .eventing .event_categories li a {
+  font-size: var(--font-size-no10);
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+#content .eventing .event_categories span {
+  font-size: 120px;
+}
+
+#content .eventing .event_categories a:hover {
+  animation: fa-bounce 1s ease-in-out infinite;
+}
+
+#content .eventing .eventing_more {
+  position: absolute;
+  top: 75px;
+  left: 500px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  text-align: center;
+  font-size: var(--font-size-no12);
+  background: var(--font-color-point1);
+  color: var(--font-color-sub1);
+  transition: all 0.3s ease;
+}
+
+#content .eventing .eventing_more:hover {
+  background: var(--font-color-main);
+  transform: translateY(-2px);
 }
 
 #content .honey_recipe {

@@ -2,18 +2,19 @@
 
 /* 사용방법 선택자{var(--font-color-point1)} */
 :root {
-  --font-size-no1: 5.63rem; /*90px*/
-  --font-size-no2: 3.44rem; /*55px*/
-  --font-size-no3: 3.13rem; /*50px*/
-  --font-size-no4: 3rem; /*48px*/
-  --font-size-no5: 2.5rem; /*40px*/
-  --font-size-no6: 1.88rem; /*30px*/
-  --font-size-no7: 1.63rem; /*26px*/
-  --font-size-no8: 1.5rem; /*24px*/
-  --font-size-no9: 1.38rem; /*22px*/
-  --font-size-no10: 1.25rem; /*20px*/
-  --font-size-no11: 1.13rem; /*18px*/
-  --font-size-no12: 1rem; /*16px*/
+  --font-size-no1: 6.25rem; /*100px*/
+  --font-size-no2: 5.63rem; /*90px*/
+  --font-size-no3: 3.44rem; /*55px*/
+  --font-size-no4: 3.13rem; /*50px*/
+  --font-size-no5: 3rem; /*48px*/
+  --font-size-no6: 2.5rem; /*40px*/
+  --font-size-no7: 1.88rem; /*30px*/
+  --font-size-no8: 1.63rem; /*26px*/
+  --font-size-no9: 1.5rem; /*24px*/
+  --font-size-no10: 1.38rem; /*22px*/
+  --font-size-no11: 1.25rem; /*20px*/
+  --font-size-no12: 1.13rem; /*18px*/
+  --font-size-no13: 1rem; /*16px*/
 
   --font-color-main: #d92629; /*빨강*/
   --font-color-point1: #e77e2d; /*주황*/
@@ -236,7 +237,7 @@ dd {
 }
 
 #headerArea #gnb ul li {
-  font-size: var(--font-size-no8);
+  font-size: var(--font-size-no10);
 }
 
 #headerArea #gnb ul a {
@@ -256,7 +257,7 @@ dd {
 }
 
 #headerArea .top_menu li {
-  font-size: var(--font-size-no10);
+  font-size: var(--font-size-no13);
 }
 
 #headerArea .top_menu a:hover {
