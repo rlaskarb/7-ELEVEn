@@ -593,12 +593,35 @@
   transform: translateY(-5px);
 }
 
+/* 창업안내 */
 #content .start_up_guide {
   width: 2000px;
   height: 1050px;
   margin: 0 auto;
   background: var(--font-color-sub1);
   border: 2px solid yellow;
+}
+
+#content .start_up_guide .start_up_guide_container {
+  width: 1600px;
+  height: 800px;
+  margin: 125px auto;
+  border: 5px solid blue;
+  background: url(../main_images/srart_up1.png);
+}
+
+#content .start_up_guide .start_up_guide_container h3 {
+  font-size: var(--font-size-no5);
+  color: var(--font-color-point2);
+  margin: 100px 0 0 50px;
+}
+
+#content .start_up_guide .start_up_guide_container p:nth-of-type(1),
+#content .start_up_guide .start_up_guide_container p:nth-of-type(2) {
+  font-size: var(--font-size-no10);
+  margin-top: 30px;
+  margin-left: 37px;
+  line-height: 1.7;
 }
 
 #content .seven_eleven_story {
