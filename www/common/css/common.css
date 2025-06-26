@@ -6,6 +6,7 @@
   --font-size-no2: 5.63rem; /*90px*/
   --font-size-no3: 5rem; /*80px*/
   --font-size-no4: 4.38rem; /*70px*/
+  --font-size-no44: 3.75rem; /*60px*/
   --font-size-no5: 3.13rem; /*50px*/
   --font-size-no6: 2.5rem; /*40px*/
   --font-size-no7: 1.88rem; /*30px*/
@@ -190,7 +191,7 @@ img {
   top: 0;
   left: 0;
   z-index: 100;
-  background: var(--font-color-sub1);
+  background: var(--font-color-sub2);
 }
 
 #headerArea .header_inner {

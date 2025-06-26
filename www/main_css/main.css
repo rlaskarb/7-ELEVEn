@@ -161,11 +161,11 @@
   align-items: center;
 }
 
-#content .new_menu_tuck_box a {
+#content .new_menu_tuck_box .new_menu_more {
   position: absolute;
   top: 75px;
   left: 500px;
-  padding: 10px 15px;
+  padding: 10px 30px;
   border-radius: 20px;
   font-weight: 500;
   text-align: center;
@@ -225,7 +225,7 @@
 
 #content .eventing .eventing_title h3 {
   text-align: center;
-  font-size: var(--font-size-no3);
+  font-size: var(--font-size-no);
   color: var(--font-color-sub1);
   font-weight: 500;
 }
@@ -285,7 +285,7 @@
   position: absolute;
   top: 200px;
   right: 500px;
-  padding: 10px 15px;
+  padding: 10px 30px;
   border-radius: 20px;
   font-weight: 500;
   text-align: center;
@@ -311,7 +311,7 @@
 }
 
 #content .honey_recipe .honey_recipe_title {
-  margin-left: 390px;
+  margin-left: 380px;
   margin-top: 100px;
 }
 
@@ -333,7 +333,7 @@
   width: 1300px;
   height: 600px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -371,29 +371,59 @@
 }
 
 #content .honey_recipe .honey_recipe_tuck_box dt {
-  padding: 20px;
-  margin-bottom: 1px;
+  height: 20px;
+  padding: 13px 0 24px 20px;
   border-radius: 30px 30px 0 0;
-  font-size: var(--font-size-no9);
-  border-bottom: 1px solid var(--font-color-sub1);
+  border: 1px solid var(--font-color-point1);
   background: var(--font-color-sub1);
-  overflow: auto;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+#content .honey_recipe .honey_recipe_tuck_box dt a {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: var(--font-size-no10);
+  color: var(--font-color-point1);
+  transition: all 0.3s ease-out;
 }
 
 #content .honey_recipe .honey_recipe_tuck_box dd {
   height: 150px;
   padding: 20px;
   border-radius: 0 0 30px 30px;
-  font-size: var(--font-size-no10);
+  word-break: break-all;
+  font-size: var(--font-size-no12);
+  border: 1px solid var(--font-color-point1);
   background: var(--font-color-sub2);
-  overflow: auto;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+#content .honey_recipe .honey_recipe_tuck_box dd a {
+  transition: all 0.3s ease-out;
+}
+
+#content .honey_recipe .honey_recipe_tuck_box dt:hover {
+  background: var(--font-color-point2);
+}
+
+#content .honey_recipe .honey_recipe_tuck_box dt:hover a {
+  transform: scale(1.05);
+  color: var(--font-color-sub2);
+}
+
+#content .honey_recipe .honey_recipe_tuck_box dd:hover a {
+  transform: scale(1.05);
 }
 
 #content .honey_recipe .honey_recipe_more {
   position: absolute;
   top: 25px;
   right: 600px;
-  padding: 10px 15px;
+  padding: 10px 30px;
   border-radius: 20px;
   font-weight: 500;
   text-align: center;
@@ -408,11 +438,104 @@
   transform: translateY(-2px);
 }
 
+/* 뭔가 땡기는데 뭔지 모르겠다면? */
 #content .full_search {
   width: 2000px;
-  height: 600px;
+  height: 500px;
   margin: 0 auto;
-  border: 2px solid blue;
+}
+
+#content .full_search .full_search_container {
+  width: 1300px;
+  margin: 100px auto 0;
+  padding: 30px;
+  display: flex;
+  gap: 100px;
+}
+
+#content .full_search .full_search_container .search_left_area h3 {
+  font-size: var(--font-size-no5);
+  color: var(--font-color-point1);
+}
+
+#content .full_search .full_search_container .search_left_area p {
+  font-size: var(--font-size-no10);
+  margin-top: 20px;
+}
+
+#content .full_search_container .search_left_area input {
+  width: 400px;
+  margin-top: 100px;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  border-bottom: 3px solid var(--font-color-point2);
+  color: var(--font-color-font);
+  font-size: var(--font-size-no8);
+}
+
+#content .full_search_container .search_left_area button {
+  margin-top: 100px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--font-size-no8);
+  color: var(--font-color-point2);
+}
+
+#content .full_search_container .full_search_speech_bubble {
+  width: 450px;
+  height: 300px;
+  position: relative;
+}
+
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(1) a {
+  position: absolute;
+  top: 67px;
+  left: 80px;
+  color: var(--font-color-point1);
+}
+
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(2) a {
+  position: absolute;
+  top: 95px;
+  right: 80px;
+  color: var(--font-color-point1);
+}
+
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(3) a {
+  position: absolute;
+  top: 140px;
+  left: 165px;
+  color: var(--font-color-main);
+}
+
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(4) a {
+  position: absolute;
+  bottom: 90px;
+  right: 140px;
+  color: var(--font-color-main);
+}
+
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(5) a {
+  position: absolute;
+  bottom: 45px;
+  left: 60px;
+  color: var(--font-color-point1);
+}
+
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(6) a {
+  position: absolute;
+  bottom: 30px;
+  left: 205px;
+  color: var(--font-color-point2);
+}
+
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(7) a {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  color: var(--font-color-point2);
 }
 
 #content .start_up_guide {
