@@ -181,7 +181,7 @@ img {
 /* 헤더 공통 영역 */
 #wrap {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: url(../images/round-logo_.cur) 25 25, pointer;
 }
 

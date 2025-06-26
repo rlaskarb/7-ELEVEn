@@ -73,7 +73,24 @@
 
 /* 본문 컨텐츠 영역 */
 
-/* 이달의 신상 css */
+/* a 태그 더보기 공통 */
+.more_btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: var(--font-color-point1);
+  color: var(--font-color-sub1);
+  font-size: var(--font-size-no10);
+  font-weight: 500;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.more_btn:hover {
+  background: var(--font-color-main);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
+}
+
+/* 이달의 신상 */
 #content .new_menu {
   width: 2000px;
   height: 1000px;
@@ -162,22 +179,8 @@
 }
 
 #content .new_menu_tuck_box .new_menu_more {
-  position: absolute;
   top: 75px;
   left: 500px;
-  padding: 10px 30px;
-  border-radius: 20px;
-  font-weight: 500;
-  text-align: center;
-  font-size: var(--font-size-no12);
-  background: var(--font-color-point1);
-  color: var(--font-color-sub1);
-  transition: all 0.3s ease;
-}
-
-#content .new_menu_tuck_box a:hover {
-  background: var(--font-color-main);
-  transform: translateY(-2px);
 }
 
 #content .new_menu_slider_dots {
@@ -225,7 +228,7 @@
 
 #content .eventing .eventing_title h3 {
   text-align: center;
-  font-size: var(--font-size-no);
+  font-size: var(--font-size-no4);
   color: var(--font-color-sub1);
   font-weight: 500;
 }
@@ -271,7 +274,7 @@
 
 #content .eventing .event_categories li:hover {
   animation: smooth_bounce_scale 1s ease-in-out infinite;
-  background: var(--font-color-main);
+  background: rgba(217, 38, 41, 0.9);
 }
 
 /* li를 따르라!!! */
@@ -282,17 +285,8 @@
 }
 
 #content .eventing .eventing_more {
-  position: absolute;
   top: 200px;
   right: 500px;
-  padding: 10px 30px;
-  border-radius: 20px;
-  font-weight: 500;
-  text-align: center;
-  font-size: var(--font-size-no12);
-  background: var(--font-color-point1);
-  color: var(--font-color-sub1);
-  transition: all 0.3s ease;
 }
 
 #content .eventing .eventing_more:hover {
@@ -376,7 +370,7 @@
   border-radius: 30px 30px 0 0;
   border: 1px solid var(--font-color-point1);
   background: var(--font-color-sub1);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 15px rgba(231, 126, 45, 0.4);
 }
 
 #content .honey_recipe .honey_recipe_tuck_box dt a {
@@ -399,7 +393,7 @@
   font-size: var(--font-size-no12);
   border: 1px solid var(--font-color-point1);
   background: var(--font-color-sub2);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 15px rgba(231, 126, 45, 0.4);
 }
 
 #content .honey_recipe .honey_recipe_tuck_box dd a {
@@ -407,7 +401,8 @@
 }
 
 #content .honey_recipe .honey_recipe_tuck_box dt:hover {
-  background: var(--font-color-point2);
+  background: rgba(1, 113, 33, 0.8);
+  box-shadow: 0 10px 15px rgba(1, 113, 33, 0.5);
 }
 
 #content .honey_recipe .honey_recipe_tuck_box dt:hover a {
@@ -420,22 +415,8 @@
 }
 
 #content .honey_recipe .honey_recipe_more {
-  position: absolute;
   top: 25px;
   right: 600px;
-  padding: 10px 30px;
-  border-radius: 20px;
-  font-weight: 500;
-  text-align: center;
-  font-size: var(--font-size-no12);
-  background: var(--font-color-point1);
-  color: var(--font-color-sub1);
-  transition: all 0.3s ease;
-}
-
-#content .honey_recipe .honey_recipe_more:hover {
-  background: var(--font-color-main);
-  transform: translateY(-2px);
 }
 
 /* 뭔가 땡기는데 뭔지 모르겠다면? */
@@ -489,53 +470,127 @@
   position: relative;
 }
 
+#content .full_search_container .full_search_speech_bubble a {
+  width: 150px;
+  height: 60px;
+  border-radius: 30px 30px 0 30px;
+  background: var(--font-color-sub2);
+  box-shadow: 0 10px 20px 0.9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #content .full_search_container .full_search_speech_bubble li:nth-of-type(1) a {
   position: absolute;
-  top: 67px;
-  left: 80px;
+  top: 5px;
+  left: 5px;
+  font-size: var(--font-size-no10);
   color: var(--font-color-point1);
 }
 
 #content .full_search_container .full_search_speech_bubble li:nth-of-type(2) a {
   position: absolute;
-  top: 95px;
-  right: 80px;
+  top: 30px;
+  right: 45px;
+  font-size: var(--font-size-no10);
   color: var(--font-color-point1);
 }
 
 #content .full_search_container .full_search_speech_bubble li:nth-of-type(3) a {
   position: absolute;
-  top: 140px;
-  left: 165px;
+  top: 90px;
+  left: 75px;
+  font-size: var(--font-size-no11);
   color: var(--font-color-main);
 }
 
 #content .full_search_container .full_search_speech_bubble li:nth-of-type(4) a {
   position: absolute;
-  bottom: 90px;
-  right: 140px;
+  bottom: 100px;
+  right: 35px;
+  font-size: var(--font-size-no11);
   color: var(--font-color-main);
 }
 
 #content .full_search_container .full_search_speech_bubble li:nth-of-type(5) a {
   position: absolute;
-  bottom: 45px;
-  left: 60px;
+  bottom: 55px;
+  left: 5px;
+  font-size: var(--font-size-no10);
   color: var(--font-color-point1);
 }
 
 #content .full_search_container .full_search_speech_bubble li:nth-of-type(6) a {
   position: absolute;
-  bottom: 30px;
-  left: 205px;
+  bottom: 0px;
+  left: 170px;
+  font-size: var(--font-size-no11);
   color: var(--font-color-point2);
 }
 
 #content .full_search_container .full_search_speech_bubble li:nth-of-type(7) a {
   position: absolute;
-  bottom: 40px;
-  right: 60px;
+  bottom: 15px;
+  right: -50px;
+  font-size: var(--font-size-no11);
   color: var(--font-color-point2);
+}
+
+/* 주황색 그룹 (1, 2, 5번) */
+#content
+  .full_search_container
+  .full_search_speech_bubble
+  li:nth-of-type(1):hover
+  a,
+#content
+  .full_search_container
+  .full_search_speech_bubble
+  li:nth-of-type(2):hover
+  a,
+#content
+  .full_search_container
+  .full_search_speech_bubble
+  li:nth-of-type(5):hover
+  a {
+  background: rgba(231, 126, 45, 0.8);
+  color: var(--font-color-sub2);
+  box-shadow: 0 15px 30px rgba(231, 126, 45, 0.6);
+  transform: translateY(-5px);
+}
+
+/* 빨간색 그룹 (3, 4번) */
+#content
+  .full_search_container
+  .full_search_speech_bubble
+  li:nth-of-type(3):hover
+  a,
+#content
+  .full_search_container
+  .full_search_speech_bubble
+  li:nth-of-type(4):hover
+  a {
+  background: rgba(217, 38, 41, 0.8);
+  color: var(--font-color-sub2);
+  box-shadow: 0 15px 30px rgba(217, 38, 41, 0.6);
+  transform: translateY(-5px);
+}
+
+/* 초록색 그룹 (6, 7번) */
+#content
+  .full_search_container
+  .full_search_speech_bubble
+  li:nth-of-type(6):hover
+  a,
+#content
+  .full_search_container
+  .full_search_speech_bubble
+  li:nth-of-type(7):hover
+  a {
+  background: rgba(1, 113, 33, 0.8);
+  color: var(--font-color-sub2);
+  box-shadow: 0 15px 30px rgba(1, 113, 33, 0.6);
+  transform: translateY(-5px);
 }
 
 #content .start_up_guide {
