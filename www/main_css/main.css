@@ -651,7 +651,7 @@
 
 #content .start_up_guide .start_up_guide_container a {
   color: rgba(51, 51, 51, 0.9);
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 
 #content .start_up_guide .start_up_guide_container li:hover {
@@ -672,7 +672,7 @@
   width: 2000px;
   height: 1050px;
   margin: 0 auto;
-  border: 2px solid rgba(231, 126, 45, 1);
+
   position: relative;
 }
 
@@ -697,7 +697,6 @@
   .seven_eleven_story_container
   .seven_eleven_story_shorts {
   width: 1000px;
-  border: 1px solid purple;
 }
 
 #content .seven_eleven_story .seven_eleven_story_more {
