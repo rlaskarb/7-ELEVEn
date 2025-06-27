@@ -209,7 +209,9 @@
 #content .eventing {
   width: 2000px;
   height: 1000px;
-  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../main_images/events_in_profess_background.png); /*linear-gradient(방향,시작색상,끝색상)*/
   display: flex;
@@ -217,7 +219,6 @@
   justify-content: center;
   align-items: center;
   gap: 200px;
-  position: relative;
 }
 
 #content .eventing .eventing_title {
@@ -595,38 +596,111 @@
 
 /* 창업안내 */
 #content .start_up_guide {
-  width: 2000px;
+  width: 100%;
   height: 1050px;
   margin: 0 auto;
-  background: var(--font-color-sub1);
-  border: 2px solid yellow;
+  position: relative;
+  background: var(--font-color-sub2);
+  border: 1px solid #fff;
+  box-shadow: 10px 10px 30px (255, 255, 255, 3);
 }
 
 #content .start_up_guide .start_up_guide_container {
   width: 1600px;
   height: 800px;
+  overflow: hidden;
+  border-radius: 40px;
   margin: 125px auto;
-  border: 5px solid blue;
-  background: url(../main_images/srart_up1.png);
+  box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.3);
+  background: url(../main_images/start_up1.png);
 }
 
 #content .start_up_guide .start_up_guide_container h3 {
   font-size: var(--font-size-no5);
   color: var(--font-color-point2);
-  margin: 100px 0 0 50px;
+  margin: 100px 0 0 80px;
 }
 
-#content .start_up_guide .start_up_guide_container p:nth-of-type(1),
-#content .start_up_guide .start_up_guide_container p:nth-of-type(2) {
+#content .start_up_guide .start_up_guide_container p {
   font-size: var(--font-size-no10);
   margin-top: 30px;
-  margin-left: 37px;
+  margin-left: 80px;
   line-height: 1.7;
 }
 
+#content .start_up_guide .start_up_guide_container ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 190px auto;
+}
+
+#content .start_up_guide .start_up_guide_container li {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: var(--font-size-no7);
+  /* 글래스 효과!! */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#content .start_up_guide .start_up_guide_container a {
+  color: rgba(51, 51, 51, 0.9);
+  transition: all 0.3 ease;
+}
+
+#content .start_up_guide .start_up_guide_container li:hover {
+  background: rgba(100, 100, 100, 0.4);
+  backdrop-filter: blur(15px);
+}
+
+#content .start_up_guide .start_up_guide_container li:hover a {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+#content .start_up_guide .start_up_guide_more {
+  bottom: 330px;
+  left: 235px;
+}
+/* 7-ELEVEn STORY */
 #content .seven_eleven_story {
   width: 2000px;
   height: 1050px;
   margin: 0 auto;
-  border: 2px solid black;
+  border: 2px solid rgba(231, 126, 45, 1);
+  position: relative;
+}
+
+#content .seven_eleven_story .seven_eleven_story_container {
+  width: 1400px;
+  height: 800px;
+  border: 1px solid red;
+  margin: 125px auto;
+  display: flex;
+}
+
+#content
+  .seven_eleven_story
+  .seven_eleven_story_container
+  .seven_eleven_story_title {
+  width: 400px;
+  border: 1px solid black;
+}
+
+#content
+  .seven_eleven_story
+  .seven_eleven_story_container
+  .seven_eleven_story_shorts {
+  width: 1000px;
+  border: 1px solid purple;
+}
+
+#content .seven_eleven_story .seven_eleven_story_more {
+  top: 0;
+  left: 0;
 }
