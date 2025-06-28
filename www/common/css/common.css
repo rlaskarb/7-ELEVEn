@@ -318,10 +318,11 @@ img {
 #footerArea .footer_right .family #footer_family {
   width: 100%;
   border: 3px solid var(--font-color-sub2);
-  font-size: var(--font-size-no7);
+  font-size: var(--font-size-no10);
+  color: var(--font-color-font);
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
+
+  margin-bottom: 30px;
 }
 
 #footerArea .footer_sns {
