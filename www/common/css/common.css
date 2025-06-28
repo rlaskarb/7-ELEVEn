@@ -207,7 +207,7 @@ img {
 
 #headerArea .logo {
   width: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #headerArea .logo a {
@@ -250,11 +250,10 @@ img {
 
 #headerArea .top_menu li {
   font-size: var(--font-size-no13);
-
 }
 
-#headerArea .top_menu a{
-    transition: all 0.3s ease;
+#headerArea .top_menu a {
+  transition: all 0.3s ease;
 }
 
 #headerArea .top_menu a:hover {
@@ -316,7 +315,7 @@ img {
   width: 50%;
 }
 
-#footerArea .footer_right .family {
+#footerArea .footer_right .family #footer_family {
   width: 100%;
   border: 3px solid var(--font-color-sub2);
   font-size: var(--font-size-no7);
@@ -336,22 +335,29 @@ img {
   transition: all 0.3s ease;
 }
 
-#footerArea .footer_quick_menu a:hover{
-  color: rgba(231,126,45,0.8);
+#footerArea .footer_quick_menu a:hover {
+  color: rgba(231, 126, 45, 0.8);
 }
 
 #footerArea .footer_sns .fa-youtube {
-  background:  #FF0000;
+  background: #ff0000;
 }
 
-#footerArea .footer_sns .fa-instagram{
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+#footerArea .footer_sns .fa-instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
 }
 
-#footerArea .footer_sns .fa-facebook{
-  background: #1877F2;
+#footerArea .footer_sns .fa-facebook {
+  background: #1877f2;
 }
 
-#footerArea .footer_sns .fa-x-twitter{
+#footerArea .footer_sns .fa-x-twitter {
   background: #333;
 }
