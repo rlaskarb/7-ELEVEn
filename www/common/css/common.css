@@ -142,9 +142,18 @@ body {
   -webkit-font-smoothing: antialiased; /* 맥에서 폰트 렌더링 개선 */
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: inherit; /* 부모의 폰트 상속 */
+}
+
 /* 용도별 폰트 클래스 */
 .font-eng {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 ol,
@@ -182,7 +191,7 @@ img {
 #wrap {
   width: 100%;
   overflow: hidden;
-  cursor: url(../images/7-eleven-cur.cur) 15 15, pointer;
+  cursor: url(../images/love.cur) 15 15, pointer;
 }
 
 #headerArea {
@@ -321,7 +330,7 @@ img {
   font-size: var(--font-size-no10);
   color: var(--font-color-font);
   text-align: center;
-
+  border-radius: 10px;
   margin-bottom: 30px;
 }
 
@@ -340,25 +349,43 @@ img {
   color: rgba(231, 126, 45, 0.8);
 }
 
-#footerArea .footer_sns .fa-youtube {
-  background: #ff0000;
+#footerArea .footer_sns a:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-#footerArea .footer_sns .fa-instagram {
-  background: linear-gradient(
-    45deg,
-    #f09433,
-    #e6683c,
-    #dc2743,
-    #cc2366,
-    #bc1888
-  );
+/* 탑 으로 올리기 고정 */
+
+#content .scroll_tools {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
 }
 
-#footerArea .footer_sns .fa-facebook {
-  background: #1877f2;
+#content .scroll_tools .scroll_tools_top_button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: rgba(231, 126, 45, 0.9);
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-#footerArea .footer_sns .fa-x-twitter {
-  background: #333;
+#content .scroll_tools .scroll_tools_top_button a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#content .scroll_tools .scroll_tools_top_button a::after {
+  content: "TOP";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto", sans-serif;
+  color: var(--font-color-point2);
+  font-weight: 900;
 }
