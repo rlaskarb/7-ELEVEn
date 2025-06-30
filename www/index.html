@@ -21,6 +21,12 @@
     ></script>
   </head>
   <body>
+    <!--리더기 접근성 향상 코드! 서비스 -->
+    <div id="skipNav">
+      <a href="#content">본문영역으로 바로가기</a>
+      <a href="#gnb">세븐일레븐 네비게이션 바로가기</a>
+    </div>
+
     <div id="wrap">
       <header id="headerArea">
         <div class="header_inner">
@@ -74,7 +80,7 @@
             <div class="new_menu_left_box">
               <h3>이달의 신상</h3>
               <p>이번달을 특별하게 만들어줄 그맛</p>
-              <div id="new_menu_change">
+              <div class="new_menu_change">
                 <dl>
                   <dt><strong>상품 </strong></dt>
                   <dd><strong>막창볶음밤 삼각</strong></dd>
@@ -101,7 +107,7 @@
               </div>
             </div>
 
-            <div id="new_menu_right_box">
+            <div class="new_menu_right_box">
               <img src="./main_images/new_menu01.png" alt="삼감김밥이미지" />
             </div>
             <a href="#" class="more_btn new_menu_more"> + 더보기</a>
@@ -447,14 +453,9 @@
             <a href="#" class="more_btn seven_eleven_story_more"> + 더보기 </a>
           </div>
         </section>
-
-        <div class="scroll_tools">
-          <div class="scroll_tools_top_button">
-            <a href="#top"> </a>
-          </div>
-        </div>
       </article>
       <footer id="footerArea">
+        <a class="top_move" href="#">TOP</a>
         <div class="footer_inner">
           <div class="footer_left">
             <img src="./common/images/711+Logo1.png" alt="풋터로고" />
@@ -530,6 +531,33 @@
       </footer>
     </div>
 
-    <!-- <script src="./main_js/seven_eleven_story.js"></script> -->
+    <div class="pop_up_container">
+      <div class="project_pop_up">
+        <img
+          src="./common/images/7-eleven-logo.png"
+          alt="세븐일레븐 로고 이미지"
+        />
+        <p>
+          본사이트는 상업적 목적이 아닌 <br />
+          <span>개인 포트폴리오 용도</span>로 제작되었습니다. 홈페이지의 일부
+          내용과 기타 이미지 등은 그출처가 따로 있음을 밝힘니다.
+        </p>
+      </div>
+      <div class="pop_up_controls">
+        <input
+          type="checkbox"
+          name="pop_up"
+          id="pop_up"
+          value=""
+          title="오늘은 이창을 열지 않음 선택상자"
+        />
+        <label for="pop_up">하루동안 열지 않기!</label>
+      </div>
+      <button class="pop_up_close" onclick="closePopup()">닫기</button>
+    </div>
+
+    <!-- <script src="./main_js/seven_eleven_story.js"></scrip> -->
+
+    <script src="./main_js/mainpopup.js"></script>
   </body>
 </html>

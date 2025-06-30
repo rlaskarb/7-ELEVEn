@@ -140,7 +140,7 @@
   box-sizing: border-box;
 }
 
-#content #new_menu_change {
+#content .new_menu_change {
   width: 690px;
   height: 310px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -148,40 +148,40 @@
   border-radius: 50px;
 }
 
-#content #new_menu_change dl {
+#content .new_menu_change dl {
   display: flex;
   margin-bottom: 13px;
 }
 
-#content #new_menu_change dt {
+#content .new_menu_change dt {
   padding-right: 25px;
   font-size: var(--font-size-no9);
 }
-#content #new_menu_change dd {
+#content .new_menu_change dd {
   font-size: var(--font-size-no9);
 }
 
-#content #new_menu_change dd strong {
+#content .new_menu_change dd strong {
   font-size: var(--font-size-no9);
 }
 
-#content #new_menu_change dl:nth-of-type(4) dt span,
-#content #new_menu_change dl:nth-of-type(4) dd span {
+#content .new_menu_change dl:nth-of-type(4) dt span,
+#content .new_menu_change dl:nth-of-type(4) dd span {
   color: var(--font-color-main);
   font-size: var(--font-size-no8);
   font-weight: 500;
 }
 
-#content #new_menu_change dl:nth-of-type(5) dt span,
-#content #new_menu_change dl:nth-of-type(5) dd span {
+#content .new_menu_change dl:nth-of-type(5) dt span,
+#content .new_menu_change dl:nth-of-type(5) dd span {
   color: var(--font-color-point2);
   font-size: var(--font-size-no8);
   font-weight: 700;
 }
 
-#content #new_menu_right_box {
+#content .new_menu_right_box {
   width: 40%;
-  margin: 50px;
+  margin-top: 170px;
   display: flex;
   justify-content: center;
   align-items: center;

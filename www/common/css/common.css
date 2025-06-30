@@ -187,12 +187,38 @@ img {
   color: #fff;
 }
 
-/* 헤더 공통 영역 */
 #wrap {
   width: 100%;
   overflow: hidden;
   cursor: url(../images/bobcur-1.cur) 15 15, pointer;
 }
+
+/* skip nav (버로가기 메뉴) */
+
+#skipNav {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 110;
+}
+
+#skipNav a {
+  height: 1px;
+  margin-bottom: -1px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#skipNav a:focus {
+  height: auto;
+  padding: 15px 0;
+  background: var(--font-color-main);
+}
+
+/* 헤더 공통 영역 */
 
 #headerArea {
   width: 100%;
@@ -354,38 +380,94 @@ img {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* 탑 으로 올리기 고정 */
+/* 탑 이동 버튼 */
 
-#content .scroll_tools {
+#footerArea .top_move {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--font-color-point1);
+  color: var(--font-color-sub2);
+  font-size: var(--font-size-no11);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
   position: fixed;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
-
-#content .scroll_tools .scroll_tools_top_button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  background: rgba(231, 126, 45, 0.9);
-  overflow: hidden;
+  left: 50%;
+  bottom: 160px;
+  margin-left: 830px;
+  z-index: 90;
   transition: all 0.3s ease;
 }
 
-#content .scroll_tools .scroll_tools_top_button a {
-  width: 100%;
-  height: 100%;
-  position: relative;
+#footerArea .top_move:hover {
+  background: var(--font-color-main);
+  transform: scale(1.2);
 }
 
-#content .scroll_tools .scroll_tools_top_button a::after {
-  content: "TOP";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Roboto", sans-serif;
-  color: var(--font-color-point2);
-  font-weight: 900;
+/* 팝업창 */
+
+.pop_up_container {
+  position: fixed;
+  right: 200px;
+  top: 120px;
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.pop_up_container .project_pop_up {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid var(--font-color-main);
+  background: rgba(250, 248, 245, 0.7);
+  font-size: var(--font-size-no13);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.pop_up_container .project_pop_up img {
+  margin-top: 15px;
+}
+
+.pop_up_container .project_pop_up span {
+  color: var(--font-color-main);
+}
+
+.pop_up_container .pop_up_controls {
+  background: rgba(250, 248, 245, 0.7);
+  padding: 5px;
+  color: var(--font-color-font);
+  font-size: var(--font-size-no13);
+  font-weight: 700;
+  border-radius: 15px;
+}
+
+.pop_up_container .pop_up_controls label {
+  cursor: pointer;
+}
+
+.pop_up_container .pop_up_close {
+  background: var(--font-color-point2);
+  color: var(--font-color-sub2);
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pop_up_container .pop_up_close:hover {
+  background: rgba(231, 126, 45, 0.9);
+  color: var(--font-color-sub1);
 }
