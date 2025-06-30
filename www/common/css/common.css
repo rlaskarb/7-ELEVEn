@@ -191,7 +191,7 @@ img {
 #wrap {
   width: 100%;
   overflow: hidden;
-  cursor: url(../images/love.cur) 15 15, pointer;
+  cursor: url(../images/bobcur-1.cur) 15 15, pointer;
 }
 
 #headerArea {
