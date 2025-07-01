@@ -11,12 +11,16 @@
   background: pink;
 }
 
+.visual img {
+  width: 2000px;
+}
+
 .visual strong {
   width: 100%;
   display: block;
   font-size: var(--font-size-no7);
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   position: absolute;
   top: 50%;
   left: 0;
@@ -27,8 +31,8 @@
 
 .sub_nav {
   width: 1000px;
-
   margin: 0 auto;
+  margin-top: 50px;
 }
 
 .sub_nav ul {
@@ -37,20 +41,21 @@
 
 .sub_nav ul li {
   width: 25%;
+
   box-sizing: border-box;
   text-align: center;
 }
 
 .sub_nav ul li a {
   font-size: var(--font-size-no11);
+  border-radius: 20px;
   font-weight: 600;
   padding: 15px 0;
   transition: all 0.3s ease;
 }
 
-.sub_nav ul li a:hover,
-.sub_nav ul li a.current {
-  background: orange;
+.sub_nav ul li a:hover {
+  background: var(--font-color-point1);
   color: #fff;
 }
 

@@ -1,3 +1,193 @@
 @charset "utf-8";
 
 /* 브랜드 스토리 */
+
+#content .content_area {
+  width: 1400px;
+  height: 1050px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 150px;
+  border: 1px solid blue;
+}
+
+#content .content_area ul {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  border-bottom: 3px solid var(--font-color-point2);
+}
+
+#content .content_area ul a {
+  font-size: var(--font-size-no8);
+  font-weight: 600;
+  background: var(--font-color-sub2);
+  padding: 20px;
+  border-radius: 25px;
+}
+
+#content .content_area p {
+  font-size: var(--font-size-no9);
+  text-align: center;
+  margin-top: 100px;
+}
+
+#content .content_area p span {
+  color: var(--font-color-main);
+}
+
+#content .seven_eleven_in_the_world {
+  width: 2000px;
+  height: 1100px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../images/content1/world_map1.png);
+  border: 1px solid red;
+}
+
+#content .seven_eleven_in_the_world img {
+  width: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+}
+
+#content .seven_eleven_in_the_world p {
+}
+
+#content .global_expansion .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+#content .global_expansion .country_pin {
+  color: var(--font-color-main);
+  cursor: pointer;
+  font-size: var(--font-size-no6);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+#content .global_expansion .country_pin:hover {
+  color: var(--font-color-point1);
+  transform: scale(1.2);
+}
+/* 미국 */
+#content .global_expansion .united_states {
+  left: 21%;
+  top: 37%;
+}
+
+/* 캐나다 */
+#content .global_expansion .canada {
+  left: 21%;
+  top: 22%;
+}
+
+/* 맥시코 */
+#content .global_expansion .mexico {
+  left: 21%;
+  top: 54%;
+}
+
+/* 덴마크 */
+#content .global_expansion .denmark {
+  left: 48%;
+  top: 30%;
+}
+
+/* 노르웨이 */
+#content .global_expansion .norway {
+  left: 48%;
+  top: 23%;
+}
+
+/* 스웨덴 */
+#content .global_expansion .sweden {
+  left: 49%;
+  top: 26%;
+}
+
+/* 한국 */
+#content .global_expansion .korea {
+  right: 20%;
+  top: 41%;
+}
+
+/* 일본 */
+#content .global_expansion .japan {
+  right: 17%;
+  top: 42%;
+}
+
+/* 중국 */
+#content .global_expansion .china {
+  right: 21%;
+  top: 33%;
+}
+
+/* 홍콩 */
+#content .global_expansion .hong_kong {
+  right: 22%;
+  top: 48%;
+}
+
+/* 마카오 */
+#content .global_expansion .macau {
+  right: 23%;
+  top: 48%;
+}
+
+/* 대만 */
+#content .global_expansion .taiwan {
+  right: 21%;
+  top: 48%;
+}
+
+/* 필리핀 */
+#content .global_expansion .philippines {
+  right: 20%;
+  top: 53%;
+}
+
+/* 태국 */
+#content .global_expansion .thailand {
+  right: 26%;
+  top: 52%;
+}
+
+/* 말레이시아 */
+#content .global_expansion .malaysia {
+  right: 25%;
+  top: 58%;
+}
+
+/* 베트남 */
+#content .global_expansion .vietnam {
+  right: 24%;
+  top: 54%;
+}
+
+/* 싱가포르 */
+#content .global_expansion .singapore {
+  right: 25%;
+  top: 60%;
+}
+
+/* 아랍에미리트 */
+#content .global_expansion .uae {
+  right: 38%;
+  top: 48%;
+}
+
+/* 호주 */
+#content .global_expansion .australia {
+  right: 16%;
+  bottom: 24%;
+}

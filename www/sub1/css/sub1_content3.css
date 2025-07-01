@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* 채용안내 */
+
+#content .content_area {
+  width: 1400px;
+  margin: 0 auto;
+  background: blue;
+  padding-bottom: 150px;
+}
