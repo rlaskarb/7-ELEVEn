@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/* 공통 비주얼 영역 */
+.visual {
+  width: 2000px;
+  height: 400px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: pink;
+}
+
+.visual strong {
+  width: 100%;
+  display: block;
+  font-size: var(--font-size-no7);
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+}
+
+/* 공통 서브 메뉴 영역 */
+
+.sub_nav {
+  width: 1000px;
+
+  margin: 0 auto;
+}
+
+.sub_nav ul {
+  display: flex;
+}
+
+.sub_nav ul li {
+  width: 25%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.sub_nav ul li a {
+  font-size: var(--font-size-no11);
+  font-weight: 600;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.sub_nav ul li a:hover,
+.sub_nav ul li a.current {
+  background: orange;
+  color: #fff;
+}
+
+/* 콘텐츠의 타이틀 영역 */
+#content {
+  width: 100%;
+}
+
+#content .title_area {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 150px 0 200px;
+  position: relative;
+}
+
+#content .title_area h2 {
+  font-size: var(--font-size-no44);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#content .title_area p {
+  font-size: var(--font-size-no9);
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+}
+
+#content .title_area p::after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 4px;
+  height: 100px;
+  background: red;
+}
+
+#content .title_area .line_map {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: var(--font-size-no13);
+}
