@@ -4,7 +4,55 @@
 
 #content .content_area {
   width: 1400px;
+  height: 600px;
   margin: 0 auto;
-  background: blue;
-  padding-bottom: 150px;
+  border: 1px solid red;
+  background: var(--font-color-sub2);
+}
+
+#content .content_area_details p {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid red;
+  font-size: var(--font-size-no8);
+  font-weight: 500;
+}
+
+#content .content_area_details p span {
+  color: var(--font-color-main);
+  font-size: var(--font-size-no13);
+  padding-top: 15px;
+  padding-left: 25px;
+}
+
+#content .content_area_details dl {
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#content .content_area_details dl dt {
+  width: 150px;
+  border: 1px solid red;
+  text-align: center;
+  font-weight: 900;
+  padding: 15px;
+  color: red;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#content .content_area_details dl dd {
+  width: calc(100% - 150px);
+  text-align: left;
+  padding: 15px;
+  box-sizing: border-box;
+  align-items: center;
+  border: 1px solid blue;
 }

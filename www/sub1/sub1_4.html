@@ -20,6 +20,9 @@
       src="https://kit.fontawesome.com/347816e35e.js"
       crossorigin="anonymous"
     ></script>
+    <!-- 카카오지도 API 불러오는 스크립트 -->
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e082e66d941d9125b7472912f6cc2cf&libraries=services"></script>
+    <script src="./js/map_one.js"></script>
   </head>
   <body>
     <!--리더기 접근성 향상 코드! 서비스 -->
@@ -66,7 +69,10 @@
       </header>
 
       <div class="visual">
-        <img src="#" alt="" />
+        <img
+          src="./common/images/sub_visual1.png"
+          alt="서브페이지 비주얼이미지"
+        />
         <strong>오시는길</strong>
       </div>
 
@@ -85,12 +91,38 @@
             home &gt; 회사소개 &gt; <strong>오시는길</strong>
           </div>
           <h2>오시는길</h2>
-          <p>
-            세븐 일레븐은 세계속에서 끊임없는 발전과 경영, 혁신을 통하여 진화를
-            거듭하고 있습니다.
-          </p>
+          <p>세븐 일레븐은 고객 여려분께 항상 열려있습니다!</p>
         </div>
-        <div class="content_area">본문 내용 컨탠츠</div>
+
+        <div class="content_area" id="content_area_map">
+          자 그럼 여기에다가 지도를 삽입을 한번 해보겠습니다!
+        </div>
+
+        <div class="content_area_details">
+          <p>7-ELEVEn 본사<span>Head office</span></p>
+
+          <dl>
+            <dt>주소</dt>
+            <dd>서울시 강동구 천호대로 1077 이스트센트럴타워 16~18층</dd>
+            <dt>대표번호</dt>
+            <dd>1577-0711</dd>
+            <dt>오시는길</dt>
+            <dd>
+              <strong>주차안내</strong>
+              <span>건물 지하 1~3층 방문자 주차 2시간 무료 ⁜주차권 지급</span>
+              &nbsp;<strong>지하철</strong>
+              <span>강동역 1분출구 방면</span>
+              &nbsp;<strong>일반버스</strong>
+              <span>1-4, 112-1, 112-5, 30-3 </span>
+              &nbsp;<strong>간선버스</strong>
+              <span>341, 342, 370</span>
+              &nbsp;<strong>지선버스</strong>
+              <span>3214, 3316</span>
+              &nbsp;<strong>직행버스</strong>
+              <span>1113, 1113-1, 1113-2</span>
+            </dd>
+          </dl>
+        </div>
       </article>
 
       <footer id="footerArea">

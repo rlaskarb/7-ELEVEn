@@ -4,11 +4,9 @@
 
 #content .content_area {
   width: 1400px;
-  height: 1050px;
+  min-height: 800px;
+  margin: 0 auto;
   position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   padding-bottom: 150px;
   border: 1px solid blue;
 }
@@ -30,13 +28,13 @@
   border-radius: 25px;
 }
 
-#content .content_area p {
+#content .content_area > p {
   font-size: var(--font-size-no9);
   text-align: center;
-  margin-top: 100px;
+  margin: 100px 0 200px;
 }
 
-#content .content_area p span {
+#content .content_area > p span {
   color: var(--font-color-main);
 }
 
@@ -51,15 +49,28 @@
   border: 1px solid red;
 }
 
-#content .seven_eleven_in_the_world img {
+#content .seven_eleven_in_the_world .start_up_story_img {
   width: 300px;
   border-radius: 50%;
   position: absolute;
-  top: 300px;
-  left: 300px;
+  top: 27%;
+  left: 16%;
 }
 
-#content .seven_eleven_in_the_world p {
+#content .seven_eleven_in_the_world .start_up_story_text1 {
+  position: absolute;
+  top: 34%;
+  left: 37%;
+  font-size: var(--font-size-no7);
+  border: 1px solid red;
+}
+
+#content .seven_eleven_in_the_world .start_up_story_text2 {
+  position: absolute;
+  top: 45%;
+  left: 37%;
+  font-size: var(--font-size-no7);
+  border: 1px solid red;
 }
 
 #content .global_expansion .material-symbols-outlined {
@@ -80,114 +91,114 @@
 }
 /* 미국 */
 #content .global_expansion .united_states {
-  left: 21%;
-  top: 37%;
+  left: 8%;
+  top: 54%;
 }
 
 /* 캐나다 */
 #content .global_expansion .canada {
-  left: 21%;
-  top: 22%;
+  left: 10%;
+  top: 45%;
 }
 
 /* 맥시코 */
 #content .global_expansion .mexico {
-  left: 21%;
-  top: 54%;
+  left: 7%;
+  top: 62%;
 }
 
 /* 덴마크 */
 #content .global_expansion .denmark {
-  left: 48%;
-  top: 30%;
+  left: 47%;
+  top: 49%;
 }
 
 /* 노르웨이 */
 #content .global_expansion .norway {
-  left: 48%;
-  top: 23%;
+  left: 47%;
+  top: 45%;
 }
 
 /* 스웨덴 */
 #content .global_expansion .sweden {
   left: 49%;
-  top: 26%;
+  top: 47%;
 }
 
 /* 한국 */
 #content .global_expansion .korea {
-  right: 20%;
-  top: 41%;
+  right: 8%;
+  top: 56%;
 }
 
 /* 일본 */
 #content .global_expansion .japan {
-  right: 17%;
-  top: 42%;
+  right: 4%;
+  top: 56%;
 }
 
 /* 중국 */
 #content .global_expansion .china {
-  right: 21%;
-  top: 33%;
+  right: 9%;
+  top: 50%;
 }
 
 /* 홍콩 */
 #content .global_expansion .hong_kong {
-  right: 22%;
-  top: 48%;
+  right: 10%;
+  top: 59%;
 }
 
 /* 마카오 */
 #content .global_expansion .macau {
-  right: 23%;
-  top: 48%;
+  right: 11%;
+  top: 60%;
 }
 
 /* 대만 */
 #content .global_expansion .taiwan {
-  right: 21%;
-  top: 48%;
+  right: 9%;
+  top: 60%;
 }
 
 /* 필리핀 */
 #content .global_expansion .philippines {
-  right: 20%;
-  top: 53%;
+  right: 7%;
+  top: 63%;
 }
 
 /* 태국 */
 #content .global_expansion .thailand {
-  right: 26%;
-  top: 52%;
+  right: 16%;
+  top: 62%;
 }
 
 /* 말레이시아 */
 #content .global_expansion .malaysia {
-  right: 25%;
-  top: 58%;
+  right: 16%;
+  top: 64%;
 }
 
 /* 베트남 */
 #content .global_expansion .vietnam {
-  right: 24%;
-  top: 54%;
+  right: 13%;
+  top: 63%;
 }
 
 /* 싱가포르 */
 #content .global_expansion .singapore {
-  right: 25%;
-  top: 60%;
+  right: 14%;
+  top: 66%;
 }
 
 /* 아랍에미리트 */
 #content .global_expansion .uae {
-  right: 38%;
-  top: 48%;
+  right: 33%;
+  top: 61%;
 }
 
 /* 호주 */
 #content .global_expansion .australia {
-  right: 16%;
-  bottom: 24%;
+  right: 0%;
+  bottom: 23%;
 }
