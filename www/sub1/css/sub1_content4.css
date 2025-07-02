@@ -3,56 +3,66 @@
 /* 오시는길 */
 
 #content .content_area {
-  width: 1400px;
+  width: 1200px;
   height: 600px;
   margin: 0 auto;
-  border: 1px solid red;
-  background: var(--font-color-sub2);
+  margin-top: 100px;
+  border: 3px solid var(--font-color-main);
+  box-shadow: 0 10px 20px rgba(217, 38, 41, 0.6);
 }
 
-#content .content_area_details p {
-  width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  border: 1px solid red;
+#content .company_info {
+  width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+}
+
+#content .company_info > p {
   font-size: var(--font-size-no8);
-  font-weight: 500;
+  margin-bottom: 30px;
 }
 
-#content .content_area_details p span {
+.company_info strong {
   color: var(--font-color-main);
-  font-size: var(--font-size-no13);
-  padding-top: 15px;
-  padding-left: 25px;
 }
 
-#content .content_area_details dl {
-  width: 1000px;
-  height: 300px;
-  margin: 0 auto;
-  text-align: center;
-  border: 1px solid red;
+#content .basic_info {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  border-bottom: 2px solid var(--font-color-sub1);
+}
+
+#content .transport_info > p {
+  margin-top: 30px;
+}
+
+#content .bus_info {
+  display: flex;
+  gap: 30px;
+}
+#content .transport_info dl {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
-#content .content_area_details dl dt {
-  width: 150px;
-  border: 1px solid red;
-  text-align: center;
-  font-weight: 900;
-  padding: 15px;
-  color: red;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+#content .bus_info dl {
+  display: flex;
+  gap: 20px;
 }
 
-#content .content_area_details dl dd {
-  width: calc(100% - 150px);
-  text-align: left;
-  padding: 15px;
-  box-sizing: border-box;
-  align-items: center;
-  border: 1px solid blue;
+#content .bus_info dt {
+  display: flex;
+  font-weight: 600;
+  color: var(--font-color-point2);
+}
+
+.basic_info > dt,
+.transport_info > p,
+.bus_info > p {
+  font-size: var(--font-size-no10);
+  margin-bottom: 15px;
+  padding-left: 10px;
+  border-left: 4px solid var(--font-color-point2);
 }
