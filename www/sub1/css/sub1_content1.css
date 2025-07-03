@@ -8,7 +8,6 @@
   margin: 0 auto;
   position: relative;
   padding-bottom: 150px;
-  border: 1px solid blue;
 }
 
 #content .content_area ul {
@@ -46,7 +45,6 @@
   left: 50%;
   transform: translateX(-50%);
   background: url(../images/content1/world_map1.png);
-  border: 1px solid red;
 }
 
 #content .start_up_story_img {
@@ -62,7 +60,6 @@
   top: 34%;
   left: 37%;
   font-size: var(--font-size-no7);
-  border: 1px solid red;
 }
 
 #content .start_up_story_text2 {
@@ -70,7 +67,6 @@
   top: 45%;
   left: 37%;
   font-size: var(--font-size-no7);
-  border: 1px solid red;
 }
 
 #content .start_up_story_btn {
@@ -102,123 +98,122 @@
 /* 미국 */
 #content .united_states {
   left: 8%;
-  top: 54%;
+  top: 51%;
 }
 
 /* 캐나다 */
 #content .canada {
   left: 10%;
-  top: 45%;
+  top: 43%;
 }
 
 /* 맥시코 */
 #content .mexico {
   left: 7%;
-  top: 62%;
+  top: 60%;
 }
 
 /* 덴마크 */
 #content .denmark {
   left: 47%;
-  top: 49%;
+  top: 45%;
 }
 
 /* 노르웨이 */
 #content .norway {
   left: 47%;
-  top: 45%;
+  top: 41%;
 }
 
 /* 스웨덴 */
 #content .sweden {
   left: 49%;
-  top: 47%;
+  top: 44%;
 }
 
 /* 한국 */
 #content .korea {
   right: 8%;
-  top: 56%;
+  top: 53%;
 }
 
 /* 일본 */
-#content.japan {
+#content .japan {
   right: 4%;
-  top: 56%;
+  top: 53%;
 }
 
 /* 중국 */
 #content .china {
-  right: 9%;
-  top: 50%;
+  right: 11%;
+  top: 48%;
 }
 
 /* 홍콩 */
 #content .hong_kong {
-  right: 10%;
-  top: 59%;
+  right: 11%;
+  top: 57%;
 }
 
 /* 마카오 */
 #content .macau {
   right: 11%;
-  top: 60%;
+  top: 58%;
 }
 
 /* 대만 */
 #content .taiwan {
   right: 9%;
-  top: 60%;
+  top: 57%;
 }
 
 /* 필리핀 */
 #content .philippines {
   right: 7%;
-  top: 63%;
+  top: 61%;
 }
 
 /* 태국 */
-#content.thailand {
-  right: 16%;
-  top: 62%;
+#content .thailand {
+  right: 14%;
+  top: 61%;
 }
 
 /* 말레이시아 */
 #content .malaysia {
   right: 16%;
-  top: 64%;
+  top: 61%;
 }
 
 /* 베트남 */
 #content .vietnam {
   right: 13%;
-  top: 63%;
+  top: 60%;
 }
 
 /* 싱가포르 */
 #content .singapore {
   right: 14%;
-  top: 66%;
+  top: 64%;
 }
 
 /* 아랍에미리트 */
 #content .uae {
   right: 33%;
-  top: 61%;
+  top: 58%;
 }
 
 /* 호주 */
 #content .australia {
   right: 0%;
-  bottom: 23%;
+  bottom: 25%;
 }
 
-#content .global_expansion p {
-  font-size: var(--font-size-no7);
+#content .seven_eleven_in_the_world .start_up_story_text2 {
   position: absolute;
-  top: 43%;
-  left: 5%;
-  border: 1px solid red;
+  top: 45%;
+  left: 37%;
+  font-size: var(--font-size-no7);
 }
 
 /* 애니매이션 초기에 숨김 처리*/
@@ -226,4 +221,72 @@
   opacity: 0;
   transform: scale(0.8);
   transition: all 0.8s ease;
+}
+
+#content .pin-ready {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+#content .message-ready {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+/* 애니메이션 활성화 클래스 */
+#content .fade-ready.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#content .pin-ready.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#content .message-ready.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 줌인 애니메이션 키프레임 */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* 특별한 줌인 효과 */
+#content .zoom-in {
+  animation: zoomIn 0.8s ease forwards;
+}
+
+#content .korea_special_message {
+  position: absolute;
+  right: -15%;
+  top: 49%;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: var(--font-size-no11);
+  background: rgba(217, 38, 41, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.final_message {
+  position: absolute;
+  bottom: 22%;
+  left: 18%;
+  width: 69%;
+  font-size: var(--font-size-no8);
+  font-weight: 700;
+  line-height: 2;
+  color: var(--font-color-point2);
 }
