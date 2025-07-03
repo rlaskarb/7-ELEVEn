@@ -2,6 +2,10 @@
 
 /* 브랜드 스토리 */
 
+/* 세계속의 일레븐 버튼 공통 */
+#content .seven_eleven_in_the_world .world_btn {
+}
+
 #content .content_area {
   width: 1400px;
   min-height: 800px;
@@ -71,6 +75,16 @@
   left: 37%;
   font-size: var(--font-size-no7);
   border: 1px solid red;
+}
+
+#content .seven_eleven_in_the_world .start_up_story_btn {
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  border: 0;
+  font-size: var(--font-size-no10);
+  color: var(--font-color-sub2);
+  background: var(--font-color-point1);
 }
 
 #content .global_expansion .material-symbols-outlined {
@@ -201,4 +215,12 @@
 #content .global_expansion .australia {
   right: 0%;
   bottom: 23%;
+}
+
+#content .global_expansion p {
+  font-size: var(--font-size-no7);
+  position: absolute;
+  top: 43%;
+  left: 5%;
+  border: 1px solid red;
 }

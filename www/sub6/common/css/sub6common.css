@@ -33,6 +33,8 @@
   width: 1000px;
   margin: 0 auto;
   margin-top: 50px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
 }
 
 .sub_nav ul {
@@ -41,7 +43,7 @@
 }
 
 .sub_nav ul li {
-  width: 25%;
+  width: 33.33%;
   box-sizing: border-box;
   text-align: center;
 }

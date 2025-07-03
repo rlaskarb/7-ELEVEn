@@ -189,7 +189,7 @@ img {
 
 #wrap {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: url(../images/bobcur-1.cur) 15 15, pointer;
 }
 
@@ -248,7 +248,7 @@ img {
 #headerArea .logo a {
   width: 100px;
   height: 100px;
-  background: url(../images/7-eleven-logo.png);
+  background: url(../images/main_logo.png);
   text-indent: -999px;
   overflow: hidden;
 }
