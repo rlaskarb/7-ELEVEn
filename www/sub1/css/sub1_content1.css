@@ -10,27 +10,17 @@
   padding-bottom: 150px;
 }
 
-#content .content_area ul {
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 100px;
-  border-bottom: 3px solid var(--font-color-point2);
-}
-
-#content .content_area ul a {
-  font-size: var(--font-size-no8);
-  font-weight: 600;
-  background: var(--font-color-sub2);
-  padding: 20px;
-  border-radius: 25px;
+#content .content_area > h3 {
+  font-size: var(--font-size-no6);
+  text-align: center;
+  margin-top: 50px;
 }
 
 #content .content_area > p {
   font-size: var(--font-size-no9);
   text-align: center;
-  margin: 100px 0 200px;
+  margin-top: 50px;
+  margin-bottom: 70px;
 }
 
 #content .content_area > p span {
@@ -38,17 +28,17 @@
 }
 
 #content .seven_eleven_in_the_world {
-  width: 2000px;
-  height: 1100px;
+  width: 1600px;
+  height: 840px;
   position: relative;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: url(../images/content1/world_map1.png);
+  background: url(../images/content1/map.png);
 }
 
 #content .start_up_story_img {
-  width: 300px;
+  width: 250px;
   border-radius: 50%;
   position: absolute;
   top: 27%;
@@ -59,14 +49,18 @@
   position: absolute;
   top: 34%;
   left: 37%;
-  font-size: var(--font-size-no7);
+  font-size: var(--font-size-no10);
+  font-weight: 700;
+  color: var(--font-color-font);
 }
 
 #content .start_up_story_text2 {
   position: absolute;
   top: 45%;
   left: 37%;
-  font-size: var(--font-size-no7);
+  font-size: var(--font-size-no10);
+  font-weight: 700;
+  color: var(--font-color-font);
 }
 
 #content .start_up_story_btn {
@@ -97,31 +91,31 @@
 }
 /* 미국 */
 #content .united_states {
-  left: 8%;
+  left: 17%;
   top: 51%;
 }
 
 /* 캐나다 */
 #content .canada {
-  left: 10%;
+  left: 16%;
   top: 43%;
 }
 
 /* 맥시코 */
 #content .mexico {
-  left: 7%;
+  left: 15%;
   top: 60%;
 }
 
 /* 덴마크 */
 #content .denmark {
   left: 47%;
-  top: 45%;
+  top: 47%;
 }
 
 /* 노르웨이 */
 #content .norway {
-  left: 47%;
+  left: 48%;
   top: 41%;
 }
 
@@ -133,87 +127,80 @@
 
 /* 한국 */
 #content .korea {
-  right: 8%;
+  right: 16%;
   top: 53%;
 }
 
 /* 일본 */
 #content .japan {
-  right: 4%;
+  right: 12%;
   top: 53%;
 }
 
 /* 중국 */
 #content .china {
-  right: 11%;
+  right: 17%;
   top: 48%;
 }
 
 /* 홍콩 */
 #content .hong_kong {
-  right: 11%;
+  right: 18%;
   top: 57%;
 }
 
 /* 마카오 */
 #content .macau {
-  right: 11%;
+  right: 19%;
   top: 58%;
 }
 
 /* 대만 */
 #content .taiwan {
-  right: 9%;
-  top: 57%;
+  right: 17%;
+  top: 58%;
 }
 
 /* 필리핀 */
 #content .philippines {
-  right: 7%;
+  right: 15%;
   top: 61%;
 }
 
 /* 태국 */
 #content .thailand {
-  right: 14%;
+  right: 21%;
   top: 61%;
 }
 
 /* 말레이시아 */
 #content .malaysia {
-  right: 16%;
+  right: 23%;
   top: 61%;
 }
 
 /* 베트남 */
 #content .vietnam {
-  right: 13%;
-  top: 60%;
+  right: 19%;
+  top: 61%;
 }
 
 /* 싱가포르 */
 #content .singapore {
-  right: 14%;
+  right: 21%;
   top: 64%;
 }
 
 /* 아랍에미리트 */
 #content .uae {
-  right: 33%;
+  right: 36%;
   top: 58%;
 }
 
 /* 호주 */
 #content .australia {
-  right: 0%;
+  right: 10%;
   bottom: 25%;
-}
-
-#content .seven_eleven_in_the_world .start_up_story_text2 {
-  position: absolute;
-  top: 45%;
-  left: 37%;
-  font-size: var(--font-size-no7);
 }
 
 /* 애니매이션 초기에 숨김 처리*/
@@ -269,7 +256,7 @@
 
 #content .korea_special_message {
   position: absolute;
-  right: -15%;
+  right: -8%;
   top: 49%;
   color: white;
   padding: 10px 15px;
@@ -282,11 +269,163 @@
 
 .final_message {
   position: absolute;
-  bottom: 22%;
-  left: 18%;
-  width: 69%;
-  font-size: var(--font-size-no8);
+  bottom: 30%;
+  left: 13%;
+  width: 70%;
+  font-size: var(--font-size-no11);
   font-weight: 700;
-  line-height: 2;
+  line-height: 2rem;
+  color: var(--font-color-font);
+}
+
+/* 세븐일레븐 이야기 */
+#content .seven_eleven_story_telling {
+  width: 2000px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 400px;
+}
+
+#content .seven_eleven_story_telling::after {
+  content: "";
+  position: absolute;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 4px;
+  height: 150px;
+  background: red;
+}
+
+#content .seven_eleven_story_telling > h3 {
+  font-size: var(--font-size-no6);
+  text-align: center;
+  margin-top: 150px;
+}
+
+#content .seven_eleven_story_telling > p {
+  font-size: var(--font-size-no9);
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+#content .seven_story_shots {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#content .seven_story_shots ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 150px;
+  position: relative;
+}
+
+#content .seven_story_shots ul:nth-of-type(2) {
+  margin-bottom: 200px;
+}
+
+#content .seven_story_shots li {
+  width: 400px;
+  height: 600px;
+  border-radius: 25px;
+}
+
+#content .seven_story_shots li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+  transition: all 1s ease-out;
+}
+
+#content .seven_story_shots .fa-youtube {
+  color: red;
+  font-size: var(--font-size-no8);
+}
+
+#content .seven_story_shots dl {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 30px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+#content .seven_story_shots dt {
+  color: var(--font-color-main);
+  font-weight: 700;
+}
+
+#content .seven_story_shots dd {
   color: var(--font-color-point2);
+  font-weight: 700;
+}
+
+#content .seven_story_shots a {
+  width: 90px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: var(--font-color-sub2);
+  font-size: var(--font-size-no12);
+  background: var(--font-color-point1);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+#content .seven_story_shots_top_box li:nth-of-type(1) a {
+  position: absolute;
+  top: 87%;
+  left: 13%;
+}
+
+#content .seven_story_shots_top_box li:nth-of-type(2) a {
+  position: absolute;
+  top: 87%;
+  left: 46%;
+}
+
+#content .seven_story_shots_top_box li:nth-of-type(3) a {
+  position: absolute;
+  top: 87%;
+  right: 13%;
+}
+
+#content .seven_story_shots_bottom_box li:nth-of-type(1) a {
+  position: absolute;
+  bottom: 5%;
+  left: 13%;
+}
+
+#content .seven_story_shots_bottom_box li:nth-of-type(2) a {
+  position: absolute;
+  bottom: 5%;
+  left: 46%;
+}
+
+#content .seven_story_shots_bottom_box li:nth-of-type(3) a {
+  position: absolute;
+  bottom: 5%;
+  right: 13%;
+}
+
+#content .seven_story_shots li:hover img {
+  transform: scale(1.03);
+}
+
+#content .seven_story_shots li:hover a {
+  opacity: 1;
+}
+
+#content .seven_story_shots li a:hover {
+  opacity: 1;
+  background: var(--font-color-main);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
 }

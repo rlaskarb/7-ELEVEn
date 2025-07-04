@@ -21,21 +21,21 @@ document.addEventListener("DOMContentLoaded", function () {
       text2.classList.add("show", "zoom-in");
     }, 4000);
 
-    // 4단계: 버튼 등장 (5.5초 후)
+    // 4단계: 버튼 등장 (5초 후)
     setTimeout(() => {
       const btn = document.querySelector(".start_up_story_btn");
       btn.classList.add("show", "zoom-in");
-    }, 5500);
+    }, 5000);
 
-    // 5단계: 모든 요소 사라짐 (10.5초 후 - 5초 유지 후)
+    // 5단계: 모든 요소 사라짐 (8초 후 - 3초 유지 후)
     setTimeout(() => {
       hideStoryElements();
-    }, 10500);
+    }, 8000);
 
     // 6단계: 지도 핀들 순차 등장 (11초 후 시작)
     setTimeout(() => {
       showCountryPins();
-    }, 11000);
+    }, 9000);
   }
 
   function hideStoryElements() {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     [img, text1, text2, btn].forEach((element) => {
       if (element) {
         element.style.opacity = "0";
-        element.style.transform = "scale(0.8)";
+        element.style.transform = "scale(0.3)";
         // 완전히 안보이게 하려면 이것도 추가
         element.style.visibility = "hidden";
       }
@@ -66,17 +66,17 @@ document.addEventListener("DOMContentLoaded", function () {
         pin.classList.add("show");
 
         // 핀 등장 시 튕기는 효과
-        pin.style.animation = "pinBounce 0.6s ease";
+        pin.style.animation = "pinBounce 0.8s ease";
 
         // 툴팁 효과 (국가명 표시)
-        showCountryTooltip(pin);
-      }, (order - 1) * 200); // 0.2초 간격
+        // showCountryTooltip(pin);
+      }, (order - 1) * 300); // 0.5초 간격
     });
 
     // 모든 핀이 나타난 후 최종 메시지들 표시 (19개 * 0.2초 + 1초 여유)
     setTimeout(() => {
       showFinalMessages();
-    }, 19 * 200 + 1000);
+    }, 19 * 300 + 1000);
   }
 
   // 최종 메시지들 표시
@@ -120,12 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
             pointer-events: none;
             z-index: 1000;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.5s ease;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         `;
 
