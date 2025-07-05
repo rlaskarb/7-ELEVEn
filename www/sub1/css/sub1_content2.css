@@ -5,6 +5,123 @@
 #content .content_area {
   width: 1400px;
   margin: 0 auto;
-  background: blue;
   padding-bottom: 150px;
+}
+
+#content .ceo_greeting {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 250px 0 350px 0;
+  padding-top: 50px;
+  position: relative;
+}
+
+#content .greeting_text {
+  width: 100%;
+  padding: 30px;
+}
+
+#content .greeting_text > h3 {
+  position: absolute;
+  top: -135px;
+  left: 40%;
+  font-size: var(--font-size-no5);
+}
+
+#content .greeting_text dt {
+  font-size: var(--font-size-no7);
+  margin-bottom: 50px;
+  line-height: 3.5rem;
+  font-weight: 600;
+}
+
+#content .greeting_text dd {
+  font-size: var(--font-size-no8);
+  line-height: 2.2rem;
+}
+
+#content .greeting_text dd::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 4px;
+  height: 130px;
+  background: red;
+}
+
+#content .management_ideology {
+  width: 1400px;
+  height: 800px;
+  padding-top: 50px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid red;
+}
+
+#content .management_ideology > h3 {
+  text-align: center;
+  font-size: var(--font-size-no5);
+  padding-bottom: 200px;
+}
+
+#content .management_ideology p {
+  text-align: center;
+  font-size: var(--font-size-no8);
+  line-height: 2.2rem;
+  margin-bottom: 100px;
+}
+
+#content .management_ideology p::before {
+  content: "Mission";
+  font-size: var(--font-size-no10);
+  color: var(--font-color-font);
+  position: absolute;
+  top: 31%;
+  left: 48%;
+
+  display: block;
+  width: 4px;
+  height: 130px;
+}
+#content .management_ideology p::after {
+  content: "Vision";
+  font-size: var(--font-size-no10);
+  color: var(--font-color-font);
+  position: absolute;
+  top: 48%;
+  left: 48%;
+
+  display: block;
+  width: 4px;
+  height: 130px;
+}
+
+#content .management_ideology span {
+  color: var(--font-color-main);
+}
+
+#content .management_vision {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#content .management_vision li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#content .management_vision img {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  background: var(--font-color-sub2);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }

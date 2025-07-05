@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // 5단계: 모든 요소 사라짐 (8초 후 - 3초 유지 후)
     setTimeout(() => {
       hideStoryElements();
-    }, 8000);
+    }, 6000);
 
     // 6단계: 지도 핀들 순차 등장 (11초 후 시작)
     setTimeout(() => {
       showCountryPins();
-    }, 9000);
+    }, 7000);
   }
 
   function hideStoryElements() {

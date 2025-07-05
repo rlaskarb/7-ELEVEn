@@ -91,116 +91,116 @@
 }
 /* 미국 */
 #content .united_states {
-  left: 17%;
-  top: 51%;
+  left: 16%;
+  top: 16%;
 }
 
 /* 캐나다 */
 #content .canada {
-  left: 16%;
-  top: 43%;
+  left: 18%;
+  top: 12%;
 }
 
 /* 맥시코 */
 #content .mexico {
   left: 15%;
-  top: 60%;
+  top: 19%;
 }
 
 /* 덴마크 */
 #content .denmark {
   left: 47%;
-  top: 47%;
+  top: 14%;
 }
 
 /* 노르웨이 */
 #content .norway {
-  left: 48%;
-  top: 41%;
+  left: 49%;
+  top: 11%;
 }
 
 /* 스웨덴 */
 #content .sweden {
   left: 49%;
-  top: 44%;
+  top: 12%;
 }
 
 /* 한국 */
 #content .korea {
   right: 16%;
-  top: 53%;
+  top: 16%;
 }
 
 /* 일본 */
 #content .japan {
   right: 12%;
-  top: 53%;
+  top: 16%;
 }
 
 /* 중국 */
 #content .china {
   right: 17%;
-  top: 48%;
+  top: 14%;
 }
 
 /* 홍콩 */
 #content .hong_kong {
   right: 18%;
-  top: 57%;
+  top: 18%;
 }
 
 /* 마카오 */
 #content .macau {
   right: 19%;
-  top: 58%;
+  top: 18%;
 }
 
 /* 대만 */
 #content .taiwan {
   right: 17%;
-  top: 58%;
+  top: 18%;
 }
 
 /* 필리핀 */
 #content .philippines {
   right: 15%;
-  top: 61%;
+  top: 20%;
 }
 
 /* 태국 */
 #content .thailand {
-  right: 21%;
-  top: 61%;
+  right: 22%;
+  top: 19%;
 }
 
 /* 말레이시아 */
 #content .malaysia {
-  right: 23%;
-  top: 61%;
+  right: 22%;
+  top: 20%;
 }
 
 /* 베트남 */
 #content .vietnam {
-  right: 19%;
-  top: 61%;
+  right: 20%;
+  top: 19%;
 }
 
 /* 싱가포르 */
 #content .singapore {
   right: 21%;
-  top: 64%;
+  top: 21%;
 }
 
 /* 아랍에미리트 */
 #content .uae {
   right: 36%;
-  top: 58%;
+  top: 18%;
 }
 
 /* 호주 */
 #content .australia {
   right: 10%;
-  bottom: 25%;
+  top: 24%;
 }
 
 /* 애니매이션 초기에 숨김 처리*/
@@ -257,7 +257,7 @@
 #content .korea_special_message {
   position: absolute;
   right: -8%;
-  top: 49%;
+  top: 14%;
   color: white;
   padding: 10px 15px;
   border-radius: 15px;
@@ -269,7 +269,7 @@
 
 .final_message {
   position: absolute;
-  bottom: 30%;
+  top: 22%;
   left: 13%;
   width: 70%;
   font-size: var(--font-size-no11);
@@ -292,12 +292,12 @@
 #content .seven_eleven_story_telling::after {
   content: "";
   position: absolute;
-  top: -250px;
+  top: -16%;
   left: 50%;
   transform: translateX(-50%);
   display: block;
   width: 4px;
-  height: 150px;
+  height: 170px;
   background: red;
 }
 
