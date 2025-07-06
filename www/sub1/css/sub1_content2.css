@@ -56,13 +56,11 @@
 
 #content .management_ideology {
   width: 1400px;
-  height: 800px;
   padding-top: 50px;
   position: relative;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid red;
 }
 
 #content .management_ideology > h3 {
@@ -71,36 +69,30 @@
   padding-bottom: 200px;
 }
 
-#content .management_ideology p {
+#content .management_ideology > p {
   text-align: center;
-  font-size: var(--font-size-no8);
+  font-size: var(--font-size-no7);
   line-height: 2.2rem;
   margin-bottom: 100px;
+  font-weight: 500;
 }
 
-#content .management_ideology p::before {
+#content .management_ideology > p:first-of-type::before {
   content: "Mission";
+  display: block;
   font-size: var(--font-size-no10);
   color: var(--font-color-font);
-  position: absolute;
-  top: 31%;
-  left: 48%;
-
-  display: block;
-  width: 4px;
-  height: 130px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-#content .management_ideology p::after {
+
+#content .management_ideology > p:last-of-type::before {
   content: "Vision";
+  display: block;
   font-size: var(--font-size-no10);
   color: var(--font-color-font);
-  position: absolute;
-  top: 48%;
-  left: 48%;
-
-  display: block;
-  width: 4px;
-  height: 130px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #content .management_ideology span {
@@ -108,14 +100,19 @@
 }
 
 #content .management_vision {
+  padding-top: 70px;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 
 #content .management_vision li {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 10px;
+  text-align: center;
+  font-size: var(--font-size-no10);
+  margin-bottom: 40px;
 }
 
 #content .management_vision img {
@@ -124,4 +121,101 @@
   border-radius: 30px;
   background: var(--font-color-sub2);
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+#content .management_ideology_flex {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+}
+
+#content .changing_experience {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 10px 10px 10px;
+  margin: 130px 0 100px 0;
+}
+
+#content .changing_experience > p {
+  font-family: "Roboto" serif;
+  font-size: var(--font-size-no5);
+  color: var(--font-color-point2);
+  text-align: center;
+  line-height: 4rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid var(--font-color-point2);
+}
+#content .changing_experience > span {
+  display: block;
+  font-size: var(--font-size-no7);
+  color: #333 !important;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+#content .changing_experience li {
+  margin-bottom: 50px;
+  padding: 15px 20px;
+  background: rgba(240, 240, 242, 0.3);
+  border-radius: 10px;
+  border-left: 3px solid var(--font-color-point2);
+  transition: all 0.3s ease;
+}
+
+#content .changing_experience li:hover {
+  transform: translateX(7px);
+  box-shadow: 1px 4px 15px 1px (240, 240, 242, 0.1);
+}
+
+#content .changing_experience li > p {
+  font-size: var(--font-size-no9);
+  line-height: 2rem;
+}
+
+#content .management_ect {
+  width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 400px;
+}
+
+#content .management_ect::after {
+  content: "";
+  position: absolute;
+  bottom: 300%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 4px;
+  height: 130px;
+  background: red;
+}
+
+#content .management_ect ul {
+  border-radius: 15px;
+  box-shadow: 1px 3px 20px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 10px;
+}
+
+#content .management_ect ul li {
+  width: 33.33%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#content .management_ect ul li a {
+  font-size: var(--font-size-no11);
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+#content .management_ect ul li a:hover {
+  background: rgba(217, 38, 41, 0.9);
+  color: var(--font-color-sub2);
 }
