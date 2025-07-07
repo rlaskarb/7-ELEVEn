@@ -5,6 +5,61 @@
 #content .content_area {
   width: 1400px;
   margin: 0 auto;
-  background: blue;
   padding-bottom: 150px;
+}
+
+#content .company_history {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+#content .company_history::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+}
+
+#content .company_history ul {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+#content .history_2020 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: left;
+  width: 100%;
+  border: 1px solid red;
+}
+
+#content .history_2010 {
+  width: 100%;
+  border: 1px solid red;
+}
+
+#content .history_2000 {
+  width: 100%;
+  border: 1px solid red;
+}
+
+#content .history_1990 {
+  width: 100%;
+  border: 1px solid red;
+}
+
+#content .history_1980 {
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
