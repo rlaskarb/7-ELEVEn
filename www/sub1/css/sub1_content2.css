@@ -118,9 +118,9 @@
 #content .management_vision img {
   width: 200px;
   height: 200px;
-  border-radius: 30px;
+  border-radius: 20px;
   background: var(--font-color-sub2);
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 #content .management_ideology_flex {
