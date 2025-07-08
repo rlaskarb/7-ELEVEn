@@ -90,10 +90,13 @@
   text-align: left;
 }
 
-#content .history_2020::after {
+#content .history_2020::after,
+#content .history_2010::after,
+#content .history_2000::after,
+#content .history_1990::after,
+#content .history_1980::after {
   content: "";
   position: absolute;
-  top: 67px;
   left: 50%;
   transform: translateX(-50%);
   width: 30px;
@@ -102,22 +105,30 @@
   background: var(--font-color-point1);
 }
 
+#content .history_2020::after {
+  top: 67px;
+}
+
+#content .history_2010::after {
+  top: 2442px;
+}
+
+#content .history_2000::after {
+  bottom: 1598px;
+}
+
+#content .history_1990::after {
+  bottom: 900px;
+}
+
+#content .history_1980::after {
+  bottom: 210px;
+}
+
 #content .history_2010 {
   text-align: left;
   width: 50%;
   margin-left: -5%;
-}
-
-#content .history_2010::after {
-  content: "";
-  position: absolute;
-  top: 67px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--font-color-main);
 }
 
 #content .history_2000 {
