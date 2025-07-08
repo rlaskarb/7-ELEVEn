@@ -37,7 +37,6 @@
   transition: all 0.3s ease;
 }
 
-#content .history_nav .current,
 #content .history_nav ul li a:hover {
   background: rgba(217, 38, 41, 0.9);
   color: var(--font-color-sub2);
