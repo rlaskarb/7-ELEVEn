@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/* 채용안내 */
+
+#content .content_area {
+  width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 150px;
+}
+
+#content .history_nav {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+#content .history_nav ul {
+  display: flex;
+  gap: 10px;
+  border-radius: 25px;
+  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+#content .history_nav li {
+  width: 20%;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#content .history_nav li a {
+  font-size: var(--font-size-no11);
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+#content .history_nav ul li a:hover {
+  background: rgba(217, 38, 41, 0.9);
+  color: var(--font-color-sub2);
+}
+
+#content .company_history {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+#content .company_history::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--font-color-point1);
+}
+
+#content .company_history ul {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+#content .company_history span {
+  color: var(--font-color-main);
+}
+
+#content .company_history dt {
+  font-size: var(--font-size-no6);
+  color: var(--font-color-point2);
+  font-weight: 700;
+  line-height: 10rem;
+}
+
+#content .company_history dd {
+  font-size: var(--font-size-no11);
+  text-indent: 2px;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+#content .history_2020 {
+  width: 60%;
+  margin-left: 55%;
+  text-align: left;
+}
+
+#content .history_2020::after,
+#content .history_2010::after,
+#content .history_2000::after,
+#content .history_1990::after,
+#content .history_1980::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--font-color-point1);
+}
+
+#content .history_2020::after {
+  top: 67px;
+}
+
+#content .history_2010::after {
+  top: 2442px;
+}
+
+#content .history_2000::after {
+  bottom: 1598px;
+}
+
+#content .history_1990::after {
+  bottom: 900px;
+}
+
+#content .history_1980::after {
+  bottom: 210px;
+}
+
+#content .history_2010 {
+  text-align: left;
+  width: 50%;
+  margin-left: -5%;
+}
+
+#content .history_2000 {
+  text-align: left;
+  width: 50%;
+  margin-left: 55%;
+}
+
+#content .history_1990 {
+  text-align: left;
+  width: 50%;
+  margin-left: -5%;
+}
+
+#content .history_1980 {
+  text-align: left;
+  width: 50%;
+  margin-left: 55%;
+}

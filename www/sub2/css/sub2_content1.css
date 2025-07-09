@@ -1,0 +1,431 @@
+@charset "utf-8";
+
+/* 브랜드 스토리 */
+
+#content .content_area {
+  width: 1400px;
+  min-height: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 150px;
+}
+
+#content .content_area > h3 {
+  font-size: var(--font-size-no6);
+  text-align: center;
+  margin-top: 50px;
+}
+
+#content .content_area > p {
+  font-size: var(--font-size-no9);
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+#content .content_area > p span {
+  color: var(--font-color-main);
+}
+
+#content .seven_eleven_in_the_world {
+  width: 1600px;
+  height: 840px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../images/content1/map.png);
+}
+
+#content .start_up_story_img {
+  width: 250px;
+  border-radius: 50%;
+  position: absolute;
+  top: 27%;
+  left: 16%;
+}
+
+#content .start_up_story_text1 {
+  position: absolute;
+  top: 34%;
+  left: 37%;
+  font-size: var(--font-size-no10);
+  font-weight: 700;
+  color: var(--font-color-font);
+}
+
+#content .start_up_story_text2 {
+  position: absolute;
+  top: 45%;
+  left: 37%;
+  font-size: var(--font-size-no10);
+  font-weight: 700;
+  color: var(--font-color-font);
+}
+
+#content .start_up_story_btn {
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  border: 0;
+  font-size: var(--font-size-no10);
+  color: var(--font-color-sub2);
+  background: var(--font-color-point1);
+}
+
+#content .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+#content .country_pin {
+  color: var(--font-color-main);
+  cursor: pointer;
+  font-size: var(--font-size-no6);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+#content .country_pin:hover {
+  color: var(--font-color-point1);
+  transform: scale(1.2);
+}
+/* 미국 */
+#content .united_states {
+  left: 16%;
+  top: 16%;
+}
+
+/* 캐나다 */
+#content .canada {
+  left: 18%;
+  top: 12%;
+}
+
+/* 맥시코 */
+#content .mexico {
+  left: 15%;
+  top: 19%;
+}
+
+/* 덴마크 */
+#content .denmark {
+  left: 47%;
+  top: 14%;
+}
+
+/* 노르웨이 */
+#content .norway {
+  left: 49%;
+  top: 11%;
+}
+
+/* 스웨덴 */
+#content .sweden {
+  left: 49%;
+  top: 12%;
+}
+
+/* 한국 */
+#content .korea {
+  right: 16%;
+  top: 16%;
+}
+
+/* 일본 */
+#content .japan {
+  right: 12%;
+  top: 16%;
+}
+
+/* 중국 */
+#content .china {
+  right: 17%;
+  top: 14%;
+}
+
+/* 홍콩 */
+#content .hong_kong {
+  right: 18%;
+  top: 18%;
+}
+
+/* 마카오 */
+#content .macau {
+  right: 19%;
+  top: 18%;
+}
+
+/* 대만 */
+#content .taiwan {
+  right: 17%;
+  top: 18%;
+}
+
+/* 필리핀 */
+#content .philippines {
+  right: 15%;
+  top: 20%;
+}
+
+/* 태국 */
+#content .thailand {
+  right: 22%;
+  top: 19%;
+}
+
+/* 말레이시아 */
+#content .malaysia {
+  right: 22%;
+  top: 20%;
+}
+
+/* 베트남 */
+#content .vietnam {
+  right: 20%;
+  top: 19%;
+}
+
+/* 싱가포르 */
+#content .singapore {
+  right: 21%;
+  top: 21%;
+}
+
+/* 아랍에미리트 */
+#content .uae {
+  right: 36%;
+  top: 18%;
+}
+
+/* 호주 */
+#content .australia {
+  right: 10%;
+  top: 24%;
+}
+
+/* 애니매이션 초기에 숨김 처리*/
+#content .fade-ready {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease;
+}
+
+#content .pin-ready {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+#content .message-ready {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+/* 애니메이션 활성화 클래스 */
+#content .fade-ready.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#content .pin-ready.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#content .message-ready.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 줌인 애니메이션 키프레임 */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* 특별한 줌인 효과 */
+#content .zoom-in {
+  animation: zoomIn 0.8s ease forwards;
+}
+
+#content .korea_special_message {
+  position: absolute;
+  right: -8%;
+  top: 14%;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: var(--font-size-no11);
+  background: rgba(217, 38, 41, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.final_message {
+  position: absolute;
+  top: 22%;
+  left: 13%;
+  width: 70%;
+  font-size: var(--font-size-no11);
+  font-weight: 700;
+  line-height: 2rem;
+  color: var(--font-color-font);
+}
+
+/* 세븐일레븐 이야기 */
+#content .seven_eleven_story_telling {
+  width: 2000px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 400px;
+}
+
+#content .seven_eleven_story_telling::after {
+  content: "";
+  position: absolute;
+  top: -16%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 4px;
+  height: 170px;
+  background: red;
+}
+
+#content .seven_eleven_story_telling > h3 {
+  font-size: var(--font-size-no6);
+  text-align: center;
+  margin-top: 150px;
+}
+
+#content .seven_eleven_story_telling > p {
+  font-size: var(--font-size-no9);
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+#content .seven_story_shots {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#content .seven_story_shots ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 150px;
+  position: relative;
+}
+
+#content .seven_story_shots ul:nth-of-type(2) {
+  margin-bottom: 200px;
+}
+
+#content .seven_story_shots li {
+  width: 400px;
+  height: 600px;
+  border-radius: 25px;
+}
+
+#content .seven_story_shots li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+  transition: all 1s ease-out;
+}
+
+#content .seven_story_shots .fa-youtube {
+  color: red;
+  font-size: var(--font-size-no8);
+}
+
+#content .seven_story_shots dl {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 30px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+#content .seven_story_shots dt {
+  color: var(--font-color-main);
+  font-weight: 700;
+}
+
+#content .seven_story_shots dd {
+  color: var(--font-color-point2);
+  font-weight: 700;
+}
+
+#content .seven_story_shots a {
+  width: 90px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: var(--font-color-sub2);
+  font-size: var(--font-size-no12);
+  background: var(--font-color-point1);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+#content .seven_story_shots_top_box li:nth-of-type(1) a {
+  position: absolute;
+  top: 87%;
+  left: 13%;
+}
+
+#content .seven_story_shots_top_box li:nth-of-type(2) a {
+  position: absolute;
+  top: 87%;
+  left: 46%;
+}
+
+#content .seven_story_shots_top_box li:nth-of-type(3) a {
+  position: absolute;
+  top: 87%;
+  right: 13%;
+}
+
+#content .seven_story_shots_bottom_box li:nth-of-type(1) a {
+  position: absolute;
+  bottom: 5%;
+  left: 13%;
+}
+
+#content .seven_story_shots_bottom_box li:nth-of-type(2) a {
+  position: absolute;
+  bottom: 5%;
+  left: 46%;
+}
+
+#content .seven_story_shots_bottom_box li:nth-of-type(3) a {
+  position: absolute;
+  bottom: 5%;
+  right: 13%;
+}
+
+#content .seven_story_shots li:hover img {
+  transform: scale(1.03);
+}
+
+#content .seven_story_shots li:hover a {
+  opacity: 1;
+}
+
+#content .seven_story_shots li a:hover {
+  opacity: 1;
+  background: var(--font-color-main);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
+}
