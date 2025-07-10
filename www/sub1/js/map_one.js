@@ -58,8 +58,8 @@ window.onload = function () {
     // 정보창
     const infoWindow = new kakao.maps.InfoWindow({
       content: `
-      <div style="padding:15px; text-align:center; min-width:250px;">
-        <h4 style="margin:0 0 10px 0; color:red;">${companyInfo.name}</h4>
+      <div style="padding:12px; text-align:center; min-width:250px;">
+        <h4 style="margin:0 0 7px 0; color:red;">${companyInfo.name}</h4>
         <p style="color:green;">${companyInfo.address}</p>
       </div>
     `,
