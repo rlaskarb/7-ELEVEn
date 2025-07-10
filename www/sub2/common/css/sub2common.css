@@ -55,7 +55,7 @@
   padding: 15px 0;
   transition: all 0.3s ease;
 }
-.sub_nav .current,
+.sub_nav .current a,
 .sub_nav ul li a:hover {
   background: rgba(217, 38, 41, 0.9);
   color: var(--font-color-sub2);
