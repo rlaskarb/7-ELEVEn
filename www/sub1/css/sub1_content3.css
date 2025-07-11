@@ -147,3 +147,101 @@
   width: 50%;
   margin-left: 55%;
 }
+
+#content .h2000_s::before,
+#content .h1990_s::before,
+#content .h1980_s::before {
+  content: " ";
+  position: absolute;
+  color: var(--font-color-main);
+  font-size: var(--font-size-no10);
+  font-weight: 600;
+}
+
+#content .h1980_s {
+  position: absolute;
+  bottom: -25px;
+  left: 0%;
+}
+
+#content .h1980_s::before {
+  content: "세븐일레븐 1호점 '올림픽선수촌점'";
+  bottom: 280px;
+  left: 93px;
+}
+
+#content .h1990_s {
+  position: absolute;
+  bottom: 487px;
+  right: 1%;
+}
+
+#content .h1990_s img {
+  width: 550px;
+}
+
+#content .h1990_s::before {
+  content: "(주)코리아세븐 설립";
+  bottom: 335px;
+  left: 185px;
+}
+
+#content .h2000_s {
+  position: absolute;
+  bottom: 1185px;
+  left: 0;
+}
+
+#content .h2000_s img {
+  width: 550px;
+}
+
+#content .h2000_s::before {
+  content: "업계 최초 TV CF 방영시작";
+  bottom: 335px;
+  left: 163px;
+}
+
+#content .h2010_s {
+  position: absolute;
+  bottom: 1915px;
+  right: 0%;
+}
+
+#content .h2010_s ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#content .h2010_s img {
+  width: 550px;
+}
+
+#content .h2010_s::before {
+  content: "ssss";
+  bottom: 335px;
+  left: 163px;
+}
+
+#content .h2020_s {
+  position: absolute;
+  top: 15px;
+  left: 0%;
+}
+
+#content .h2020_s ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#content .h2020_s img {
+  width: 550px;
+}
+
+#content .h2020_s::before {
+  content: "ssss";
+  bottom: 335px;
+  left: 163px;
+}
