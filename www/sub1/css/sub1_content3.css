@@ -215,7 +215,8 @@
 }
 
 #content .h2010_s img {
-  width: 550px;
+  max-width: 500px;
+  max-height: 450px;
 }
 
 #content .h2010_s::before {
