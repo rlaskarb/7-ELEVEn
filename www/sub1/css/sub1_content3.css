@@ -83,12 +83,6 @@
   line-height: 3rem;
 }
 
-#content .history_2020 {
-  width: 60%;
-  margin-left: 55%;
-  text-align: left;
-}
-
 #content .history_2020::after,
 #content .history_2010::after,
 #content .history_2000::after,
@@ -117,17 +111,23 @@
 }
 
 #content .history_1990::after {
-  bottom: 900px;
+  bottom: 902px;
 }
 
 #content .history_1980::after {
   bottom: 210px;
 }
 
+#content .history_2020 {
+  width: 60%;
+  margin-left: 55%;
+  text-align: left;
+}
+
 #content .history_2010 {
   text-align: left;
   width: 50%;
-  margin-left: -5%;
+  margin-left: -3%;
 }
 
 #content .history_2000 {
@@ -139,7 +139,7 @@
 #content .history_1990 {
   text-align: left;
   width: 50%;
-  margin-left: -5%;
+  margin-left: 0%;
 }
 
 #content .history_1980 {
@@ -148,26 +148,31 @@
   margin-left: 55%;
 }
 
-#content .h2000_s::before,
-#content .h1990_s::before,
-#content .h1980_s::before {
-  content: " ";
-  position: absolute;
+#content .h1990_s img,
+#content .h1990_s img,
+#content .h2000_s img,
+#content .h2010_s img,
+#content .h2020_s img {
+  max-width: 500px;
+  max-height: 450px;
+}
+
+#content .h1980_s p,
+#content .h1990_s p,
+#content .h2000_s p,
+#content .h2010_s p,
+#content .h2020_s p {
+  font-size: var(--font-size-no11);
   color: var(--font-color-main);
-  font-size: var(--font-size-no10);
-  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
 #content .h1980_s {
   position: absolute;
-  bottom: -25px;
+  bottom: -20px;
   left: 0%;
-}
-
-#content .h1980_s::before {
-  content: "세븐일레븐 1호점 '올림픽선수촌점'";
-  bottom: 280px;
-  left: 93px;
 }
 
 #content .h1990_s {
@@ -176,73 +181,27 @@
   right: 1%;
 }
 
-#content .h1990_s img {
-  width: 550px;
-}
-
-#content .h1990_s::before {
-  content: "(주)코리아세븐 설립";
-  bottom: 335px;
-  left: 185px;
-}
-
 #content .h2000_s {
   position: absolute;
   bottom: 1185px;
   left: 0;
 }
 
-#content .h2000_s img {
-  width: 550px;
-}
-
-#content .h2000_s::before {
-  content: "업계 최초 TV CF 방영시작";
-  bottom: 335px;
-  left: 163px;
-}
-
 #content .h2010_s {
   position: absolute;
-  bottom: 1915px;
+  bottom: 1910px;
   right: 0%;
 }
 
+#content .h2020_s ul,
 #content .h2010_s ul {
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
-#content .h2010_s img {
-  max-width: 500px;
-  max-height: 450px;
-}
-
-#content .h2010_s::before {
-  content: "ssss";
-  bottom: 335px;
-  left: 163px;
-}
-
 #content .h2020_s {
   position: absolute;
-  top: 15px;
+  top: 135px;
   left: 0%;
-}
-
-#content .h2020_s ul {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-
-#content .h2020_s img {
-  width: 550px;
-}
-
-#content .h2020_s::before {
-  content: "ssss";
-  bottom: 335px;
-  left: 163px;
 }
