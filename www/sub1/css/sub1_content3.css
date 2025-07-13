@@ -155,6 +155,7 @@
 #content .h2020_s img {
   max-width: 500px;
   max-height: 450px;
+  border-radius: 15px;
 }
 
 #content .h1980_s p,

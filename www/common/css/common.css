@@ -385,17 +385,18 @@ img {
 /* 탑 이동 버튼 */
 
 #footerArea .top_move {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  background: var(--font-color-point1);
-  color: var(--font-color-sub2);
-  font-size: var(--font-size-no11);
-  font-weight: 600;
+  background: rgba(250, 248, 245, 0.9);
+  border: 3px solid rgba(1, 113, 33, 0.9);
+  box-shadow: 1px 1px 10px 1px rgba(1, 113, 33, 0.2);
+  color: #333;
+  font-size: var(--font-size-no12);
+  font-weight: 800;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
   position: fixed;
   left: 50%;
   bottom: 160px;
@@ -405,8 +406,11 @@ img {
 }
 
 #footerArea .top_move:hover {
-  background: var(--font-color-main);
-  transform: scale(1.2);
+  border: 3px solid rgba(217, 38, 41, 0.9);
+  background: rgba(250, 248, 245, 0.9);
+  color: #333;
+  transform: translateY(-3px);
+  box-shadow: 1px 1px 20px 1px rgba(217, 38, 41, 0.3);
 }
 
 /* 팝업창 */
