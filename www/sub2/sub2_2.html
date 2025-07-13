@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="../common/css/common.css" />
     <link rel="stylesheet" href="./common/css/sub2common.css" />
+    <link rel="stylesheet" href="./common/css/sub2commonbox.css" />
     <link rel="stylesheet" href="./css/sub2_content2.css" />
     <!-- Noto Sans Korean , Roboto 폰트링크 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,7 +94,196 @@
           <h2>세븐카페</h2>
           <p>커피한잔 ? 아직 안꾸몄어요!.</p>
         </div>
-        <div class="content_area"></div>
+        <div class="content_area">
+          <div class="food_search">
+            <input type="text" placeholder="상품 이름을 입력해주세요" />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="fresh_food_inquiry">
+            <strong>카테고리</strong>
+            <ul>
+              <li data-filter="all">
+                <p class="food_inquiry_btn active">전체</p>
+              </li>
+              <li data-filter="lunch">
+                <p class="food_inquiry_btn">도시락</p>
+              </li>
+              <li data-filter="rice_roll">
+                <p class="food_inquiry_btn">김밥</p>
+              </li>
+              <li data-filter="hamburger">
+                <p class="food_inquiry_btn">햄버거</p>
+              </li>
+              <li data-filter="sandwich">
+                <p class="food_inquiry_btn">샌드위치</p>
+              </li>
+              <li data-filter="instant">
+                <p class="food_inquiry_btn">즉석요리</p>
+              </li>
+            </ul>
+            <select name="food_sorting" id="food_sorting">
+              <option value="latest">최신순</option>
+              <option value="low_priced">가격낮은순</option>
+              <option value="high-priced">가격높은순</option>
+              <option value="popularity">인기순</option>
+            </select>
+          </div>
+          <div class="food_img_list">
+            <ul>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>k불고기버거</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>치폴레핫치킨샐러드도시락</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>골드후라이드치킨버거</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>대만샌드위치</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>대만식딸기샌드위치</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>더블치킨버거</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>뚠뚠참치에그샌드</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>명란마요삼각김밥</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>미노리키친간장닭삼각김밥</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>식사이론넛츠포테이토센드위치</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>식사이론치킨타르타르삼각김밥</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>이정후포크바베큐플래터도시락</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>이건못참치삼각김밥</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>이정후포크바베큐플래터도시락</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>이정후함박스테이크김밥</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>인기가요샌드위치</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>인기가요샌드위치2</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>전남친샌드위치</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>전남친토스트 샌드위치2</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>트윈샐러드샌드</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
       </article>
 
       <footer id="footerArea">
