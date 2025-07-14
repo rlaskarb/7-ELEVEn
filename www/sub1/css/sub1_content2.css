@@ -80,6 +80,7 @@
 #content .management_ideology > p:first-of-type::before {
   content: "Mission";
   display: block;
+  font-family: "Roboto", serif;
   font-size: var(--font-size-no10);
   color: var(--font-color-font);
   text-align: center;
@@ -89,6 +90,7 @@
 #content .management_ideology > p:last-of-type::before {
   content: "Vision";
   display: block;
+  font-family: "Roboto", serif;
   font-size: var(--font-size-no10);
   color: var(--font-color-font);
   text-align: center;
@@ -137,7 +139,7 @@
 }
 
 #content .changing_experience > p {
-  font-family: "Roboto" serif;
+  font-family: "Roboto", serif;
   font-size: var(--font-size-no5);
   color: var(--font-color-point2);
   text-align: center;
@@ -147,6 +149,7 @@
   padding-bottom: 30px;
   border-bottom: 3px solid var(--font-color-point2);
 }
+
 #content .changing_experience > span {
   display: block;
   font-size: var(--font-size-no7);
@@ -167,7 +170,7 @@
 
 #content .changing_experience li:hover {
   transform: translateX(7px);
-  box-shadow: 1px 4px 15px 1px (240, 240, 242, 0.1);
+  box-shadow: 1px 4px 15px 1px rgba(240, 240, 242, 0.1);
 }
 
 #content .changing_experience li > p {

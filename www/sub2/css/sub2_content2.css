@@ -2,7 +2,7 @@
 
 #content .seven_beans_management,
 #content .seven_cafe {
-  width: 1400px;
+  width: 1600px;
   margin: 100px auto 0;
   display: flex;
   justify-content: space-evenly;
@@ -10,11 +10,13 @@
   gap: 30px;
 }
 
+#content .seven_beans_characteristics h3,
 #content .seven_beans_management h3,
 #content .seven_cafe h3 {
   font-size: var(--font-size-no7); /*30px*/
   margin-bottom: 50px;
 }
+
 #content .seven_beans_management dt,
 #content .seven_cafe dt {
   font-size: var(--font-size-no8); /*26px*/
@@ -22,6 +24,7 @@
   margin-bottom: 5px;
 }
 
+#content .seven_beans_characteristics p,
 #content .seven_beans_management dl dd,
 #content .seven_cafe dl dd {
   font-size: var(--font-size-no10); /*22px*/
@@ -34,6 +37,31 @@
 }
 
 .seven_beans_management li img {
-  width: 420px;
-  height: 450px;
+  width: 470px;
+  height: 440px;
+  margin-bottom: 50px;
+}
+
+#content hr {
+  width: 80%;
+  border: 1px solid rgba(217, 38, 41, 0.7);
+}
+
+#content .seven_beans_characteristics {
+  width: 1600px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+#content .seven_beans_characteristics ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#content table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid red;
 }

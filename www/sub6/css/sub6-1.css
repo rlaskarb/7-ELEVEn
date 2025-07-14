@@ -43,7 +43,7 @@
 
 #content .email_box input:focus,
 #content .email_box textarea:focus {
-  box-shadow: 1px 1xp 20px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);
   background: rgba(1, 113, 33, 0.4);
   font-weight: 700;
