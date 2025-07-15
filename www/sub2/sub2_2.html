@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>상품소개-세븐카페</title>
+    <title>상품소개-이달의 신상</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="../common/css/common.css" />
     <link rel="stylesheet" href="./common/css/sub2common.css" />
-
+    <link rel="stylesheet" href="./common/css/sub2commonbox.css" />
     <link rel="stylesheet" href="./css/sub2_content2.css" />
     <!-- Noto Sans Korean , Roboto 폰트링크 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,12 +20,14 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@1,100..900&display=swap"
       rel="stylesheet"
     />
-
     <!-- 아이콘 링크 -->
     <script
       src="https://kit.fontawesome.com/347816e35e.js"
       crossorigin="anonymous"
     ></script>
+    <!-- 카카오지도 API 불러오는 스크립트 -->
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e082e66d941d9125b7472912f6cc2cf&libraries=services"></script>
+    <script src="./js/map_one.js"></script>
   </head>
   <body>
     <!--리더기 접근성 향상 코드! 서비스 -->
@@ -76,210 +78,216 @@
           src="./common/images/Productintroduction_visual1.png"
           alt="서브 비주얼 이미지"
         />
-        <strong>세븐 카페</strong>
+        <strong>이달의 신상</strong>
       </div>
+
       <div class="sub_nav">
         <ul>
-          <li><a href="./sub2_1.html" class="current">Fresh Food</a></li>
-          <li><a href="./sub2_2.html">세븐 카페</a></li>
+          <li><a href="./sub2_1.html" class="current">세븐카페</a></li>
+          <li><a href="./sub2_2.html">이달의 신상</a></li>
           <li><a href="./sub2_3.html">차별화 상품</a></li>
-          <li><a href="./sub2_4.html">이달의 신상</a></li>
+          <li><a href="./sub2_4.html">Fresh Food</a></li>
         </ul>
       </div>
 
       <article id="content">
         <div class="title_area">
           <div class="line_map">
-            home &gt; 상품소개 &gt; <strong>세븐 카페</strong>
+            home &gt; 상품소개 &gt; <strong>이달의 신상</strong>
           </div>
-          <h2>세븐카페</h2>
-          <p>
-            100% 고급 아라비카 원두를 리얼 드립 방식으로 한 잔씩 내려드리며,<br />
-            엄격한 품질 관리를 통해 신선한 커피를 합리적인 가격에 만나보세요.
-          </p>
+          <h2>이달의 신상</h2>
+          <p>세븐 일레븐에서 !!!</p>
         </div>
+
         <div class="content_area">
-          <div class="seven_cafe">
+          <div class="food_search">
+            <input type="text" placeholder="상품 이름을 입력해주세요" />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="fresh_food_inquiry">
+            <strong>카테고리</strong>
+            <ul>
+              <li data-filter="all">
+                <p class="food_inquiry_btn active">전체</p>
+              </li>
+              <li data-filter="beverage">
+                <p class="food_inquiry_btn">음료</p>
+              </li>
+              <li data-filter="ice_cream">
+                <p class="food_inquiry_btn">아이스크림</p>
+              </li>
+              <li data-filter="snacks">
+                <p class="food_inquiry_btn">과자류</p>
+              </li>
+              <li data-filter="Candies">
+                <p class="food_inquiry_btn">캔디류</p>
+              </li>
+              <li data-filter="Salty_and_sweet">
+                <p class="food_inquiry_btn">짭짤&달달</p>
+              </li>
+            </ul>
+            <select name="food_sorting" id="food_sorting">
+              <option value="latest">최신순</option>
+              <option value="low_priced">가격낮은순</option>
+              <option value="high-priced">가격높은순</option>
+              <option value="popularity">인기순</option>
+            </select>
+          </div>
+          <div class="food_img_list">
             <ul>
               <li>
-                <h3>세븐카페 드립커피</h3>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>k불고기버거</dt>
+                  <dd>3000원</dd>
+                </dl>
               </li>
               <li>
+                <img src="#" alt="" />
                 <dl>
-                  <dt>국내 최초 리얼 드립 방식</dt>
-                  <dd>
-                    커피 본연의 맛을 즐길 수 있게 한잔씩 정성스럽게 추출합니다.
-                  </dd>
-                  <dt>세븐일레븐 자체 개발 커피 드립 머신</dt>
-                  <dd>
-                    위생적인 페이퍼 드립 추출 방식으로 깊은 향과 맛을
-                    유지합니다.
-                  </dd>
+                  <dt>치폴레핫치킨샐러드도시락</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>골드후라이드치킨버거</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>대만샌드위치</dt>
+                  <dd>3000원</dd>
                 </dl>
               </li>
             </ul>
             <ul>
               <li>
-                <img src="./images/content2/에스프레소.jpg" alt="" />
-              </li>
-            </ul>
-          </div>
-          <br />
-          <hr />
-          <div class="seven_beans_management">
-            <ul>
-              <li>
-                <h3>생두 관리 및 원두 생산</h3>
-              </li>
-              <li>
+                <img src="#" alt="" />
                 <dl>
-                  <dt>생두 보관</dt>
-                  <dd>각 생두 별로 최적의 향온, 향습 조건으로 보관합니다.</dd>
-                  <dt>세계적 수준의 설비를 갖춘 원두공장</dt>
-                  <dd>
-                    생두 공급, 로스팅, 포장에 이르는 전 과정을 자동화된
-                    시스템으로 철저하게 위생 관리합니다. HACCP, FSSC22000 유기
-                    농산물 가공 인증 획득으로 철저한 품질 관리를 진행하고
-                    있습니다.
-                  </dd>
+                  <dt>대만식딸기샌드위치</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>더블치킨버거</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>뚠뚠참치에그샌드</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>명란마요삼각김밥</dt>
+                  <dd>3000원</dd>
                 </dl>
               </li>
             </ul>
             <ul>
               <li>
-                <img src="./images/content2/커피생두.jpg" alt="" />
-                <img src="./images/content2/로스팅원두.jpg" alt="" />
+                <img src="#" alt="" />
+                <dl>
+                  <dt>미노리키친간장닭삼각김밥</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>식사이론넛츠포테이토센드위치</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>식사이론치킨타르타르삼각김밥</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>이정후포크바베큐플래터도시락</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>이건못참치삼각김밥</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>이정후포크바베큐플래터도시락</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>이정후함박스테이크김밥</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>인기가요샌드위치</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>인기가요샌드위치2</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>전남친샌드위치</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>전남친토스트 샌드위치2</dt>
+                  <dd>3000원</dd>
+                </dl>
+              </li>
+              <li>
+                <img src="#" alt="" />
+                <dl>
+                  <dt>트윈샐러드샌드</dt>
+                  <dd>3000원</dd>
+                </dl>
               </li>
             </ul>
           </div>
-        </div>
-        <div class="seven_beans_characteristics">
-          <ul>
-            <li>
-              <h3>세븐 카페 원두 특징</h3>
-              <p>
-                롯데 중앙연구소 다수의 Q-grader가 커핑 테스트 진행하며,<br />
-                세븐카페만의 개성있고 차별화된 제품 개발에 매진하고 있습니다.
-              </p>
-            </li>
-            <li>
-              <img src="./images/content2/원두특징.jpg" alt="" />
-            </li>
-          </ul>
-          <table>
-            <thead>
-              <tr>
-                <th>주제</th>
-                <th>세븐카페 HOT 원두</th>
-                <th>세븐카페 ICE 원두</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Tasting Note</td>
-                <td>잘익은 베리류의 달콤함 , 깔끔하고 부드러운 산미</td>
-                <td>구운 견과류의 고소함 다크 초콜렛의 여운</td>
-              </tr>
-              <tr>
-                <td>블렌딩</td>
-                <td>
-                  <ul>
-                    <li>
-                      <img src="./images/content2/에티오피아.png" alt="" />
-                      <span>에티오피아 40%</span>
-                    </li>
-                    <li>
-                      <img src="./images/content2/브라질.png" alt="" />
-                      <span>브라질 30%</span>
-                    </li>
-                    <li>
-                      <img src="./images/content2/콜롬비아.png" alt="" />
-                      <span>브라질 20%</span>
-                    </li>
-                    <li>
-                      <img src="./images/content2/우간다.png" alt="" />
-                      <span>우간다 10%</span>
-                    </li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      <img src="./images/content2/과테말라.png" alt="" />
-                      <span>과테말라 30%</span>
-                    </li>
-                    <li>
-                      <img src="./images/content2/온드라스.png" alt="" />
-                      <span>온드라스 30%</span>
-                    </li>
-                    <li>
-                      <img src="./images/content2/브라질.png" alt="" />
-                      <span>브라질 20%</span>
-                    </li>
-                    <li>
-                      <img src="./images/content2/우간다.png" alt="" />
-                      <span>우간다 20%</span>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>로스팅</td>
-                <td>
-                  <img
-                    src="./images/content2/rostingimg 1.png"
-                    alt="로스팅이미지1"
-                  />
-                </td>
-                <td>
-                  <img
-                    src="./images/content2/rostingimg 1.png"
-                    alt="로스팅이미지2"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>아로마</td>
-                <td>
-                  <ul>
-                    <li class="emphasis">꿀향</li>
-                    <li class="emphasis">과일향</li>
-                    <li>카라멜향</li>
-                    <li class="emphasis">견과류향</li>
-                    <li>허브향</li>
-                    <li>매운향</li>
-                    <li>초콜릿향</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>꿀향</li>
-                    <li>과일향</li>
-                    <li class="emphasis">카라멜향</li>
-                    <li class="emphasis">견과류향</li>
-                    <li>허브향</li>
-                    <li>매운향</li>
-                    <li class="emphasis">초콜릿향</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>커핑점수</td>
-                <td>
-                  <img
-                    src="./images/content2/coffeenote1 1.png"
-                    alt="커핑노트이미지1"
-                  />
-                </td>
-                <td>
-                  <img
-                    src="./images/content2/coffeenote2.png"
-                    alt="커핑노트이미지2"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </article>
 
@@ -288,13 +296,13 @@
 
         <div class="footer_inner">
           <div class="footer_left">
-            <img src="../common/images/711+Logo1.png" alt="풋터로고" />
+            <img src="../common/images/711Logo1.png" alt="풋터로고" />
             <address>
               <p>서울특별시 강동구 천호대로 1077 이스트센트럴타워 16~18층</p>
               <p class="copy font-eng">
                 Copyright &copy;2025 Namgyu Kim - Portfolio Project<br />
                 <small>
-                  7-ELEVEn Clone Website <br />
+                  7-ELEVEn Clone Website<br />
                   Inspired by convenience store brands & student works<br />
                   Educational & Non-Commercial Purpose Only
                 </small>

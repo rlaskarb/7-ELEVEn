@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   // 애니메이션 시작 함수
+
   function startBrandStory() {
     // 1단계: 미국 국기 이미지 줌인 (1초 후)
     setTimeout(() => {
@@ -13,29 +14,29 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       const text1 = document.querySelector(".start_up_story_text1");
       text1.classList.add("show", "zoom-in");
-    }, 2500);
+    }, 2000);
 
-    // 3단계: 두 번째 텍스트 줌인 (4초 후)
+    // 3단계: 두 번째 텍스트 줌인 (3.5초 후)
     setTimeout(() => {
       const text2 = document.querySelector(".start_up_story_text2");
       text2.classList.add("show", "zoom-in");
-    }, 4000);
+    }, 3000);
 
     // 4단계: 버튼 등장 (5초 후)
     setTimeout(() => {
       const btn = document.querySelector(".start_up_story_btn");
       btn.classList.add("show", "zoom-in");
-    }, 5000);
+    }, 4000);
 
-    // 5단계: 모든 요소 사라짐 (8초 후 - 3초 유지 후)
+    // 5단계: 모든 요소 사라짐
     setTimeout(() => {
       hideStoryElements();
-    }, 6000);
+    }, 4000);
 
-    // 6단계: 지도 핀들 순차 등장 (11초 후 시작)
+    // 6단계: 지도 핀들 순차 등장
     setTimeout(() => {
       showCountryPins();
-    }, 7000);
+    }, 5000);
   }
 
   function hideStoryElements() {
@@ -48,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     [img, text1, text2, btn].forEach((element) => {
       if (element) {
         element.style.opacity = "0";
-        element.style.transform = "scale(0.3)";
+        element.style.transform = "scale(0.2)";
         // 완전히 안보이게 하려면 이것도 추가
         element.style.visibility = "hidden";
       }

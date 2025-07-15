@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>상품소개-이달의 신상</title>
+    <title>상품소개-Fresh Food</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../common/css/common.css" />
     <link rel="stylesheet" href="./common/css/sub2common.css" />
     <link rel="stylesheet" href="./common/css/sub2commonbox.css" />
-    <link rel="stylesheet" href="./css/sub2_content4.css" />
+    <link rel="stylesheet" href="./css/sub2_content1.css" />
     <!-- Noto Sans Korean , Roboto 폰트링크 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,14 +20,17 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- 구글 아이콘  -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
     <!-- 아이콘 링크 -->
     <script
       src="https://kit.fontawesome.com/347816e35e.js"
       crossorigin="anonymous"
     ></script>
-    <!-- 카카오지도 API 불러오는 스크립트 -->
-    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e082e66d941d9125b7472912f6cc2cf&libraries=services"></script>
-    <script src="./js/map_one.js"></script>
   </head>
   <body>
     <!--리더기 접근성 향상 코드! 서비스 -->
@@ -78,27 +81,28 @@
           src="./common/images/Productintroduction_visual1.png"
           alt="서브 비주얼 이미지"
         />
-        <strong>이달의 신상</strong>
+        <strong>Fresh Food</strong>
       </div>
 
       <div class="sub_nav">
         <ul>
-          <li><a href="./sub2_1.html" class="current">Fresh Food</a></li>
-          <li><a href="./sub2_2.html">세븐 카페</a></li>
+          <li><a href="./sub2_1.html" class="current">세븐 카페</a></li>
+          <li><a href="./sub2_2.html">이달의 신상</a></li>
           <li><a href="./sub2_3.html">차별화 상품</a></li>
-          <li><a href="./sub2_4.html">이달의 신상</a></li>
+          <li><a href="./sub2_4.html">Fresh Food</a></li>
         </ul>
       </div>
 
       <article id="content">
         <div class="title_area">
           <div class="line_map">
-            home &gt; 상품소개 &gt; <strong>이달의 신상</strong>
+            home &gt; 상품소개 &gt; <strong>Fresh Food</strong>
           </div>
-          <h2>이달의 신상</h2>
-          <p>세븐 일레븐에서 !!!</p>
+          <h2>Fresh Food</h2>
+          <p>
+            소중한 당신을 위해, 집밥의 정성을 가득 담아 든든하게 채워드릴께요.
+          </p>
         </div>
-
         <div class="content_area">
           <div class="food_search">
             <input type="text" placeholder="상품 이름을 입력해주세요" />
@@ -109,23 +113,20 @@
           <div class="fresh_food_inquiry">
             <strong>카테고리</strong>
             <ul>
-              <li data-filter="all">
-                <p class="food_inquiry_btn active">전체</p>
+              <li data-filter="lunch">
+                <p class="food_inquiry_btn">도시락</p>
               </li>
-              <li data-filter="beverage">
-                <p class="food_inquiry_btn">음료</p>
+              <li data-filter="rice_roll">
+                <p class="food_inquiry_btn">김밥</p>
               </li>
-              <li data-filter="ice_cream">
-                <p class="food_inquiry_btn">아이스크림</p>
+              <li data-filter="hamburger">
+                <p class="food_inquiry_btn">햄버거</p>
               </li>
-              <li data-filter="snacks">
-                <p class="food_inquiry_btn">과자류</p>
+              <li data-filter="sandwich">
+                <p class="food_inquiry_btn">샌드위치</p>
               </li>
-              <li data-filter="Candies">
-                <p class="food_inquiry_btn">캔디류</p>
-              </li>
-              <li data-filter="Salty_and_sweet">
-                <p class="food_inquiry_btn">짭짤&달달</p>
+              <li data-filter="instant">
+                <p class="food_inquiry_btn">즉석요리</p>
               </li>
             </ul>
             <select name="food_sorting" id="food_sorting">
@@ -296,7 +297,7 @@
 
         <div class="footer_inner">
           <div class="footer_left">
-            <img src="../common/images/711+Logo1.png" alt="풋터로고" />
+            <img src="../common/images/711Logo1.png" alt="풋터로고" />
             <address>
               <p>서울특별시 강동구 천호대로 1077 이스트센트럴타워 16~18층</p>
               <p class="copy font-eng">
@@ -370,5 +371,6 @@
     </div>
     <script src="./common/js/sub_nav.js"></script>
     <script src="../main_js/top_button.js"></script>
+    <script src="./js/sub1-1.js"></script>
   </body>
 </html>
