@@ -159,9 +159,7 @@
   font-size: var(--font-size-no10); /*22px*/
   vertical-align: middle;
 }
-#content .seven_beans_note tbody tr td:nth-of-type(even) {
-  background-color: #f9f9f9;
-}
+
 #content .seven_beans_note tbody tr:nth-of-type(4) ul {
   display: flex;
   justify-content: center;
@@ -181,7 +179,6 @@
   background: rgba(231, 126, 45, 0.8);
   color: var(--font-color-sub2);
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 #content .seven_beans_note tbody tr:nth-of-type(4) ul li:not(.emphasis):hover {
