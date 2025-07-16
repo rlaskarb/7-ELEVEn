@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>회사소개-오시는길</title>
+    <title>이벤트-행사상품</title>
     <link
       rel="icon"
       type="image/x-icon"
       href="../common/images/7-eleven-logo.ico"
     />
     <link rel="stylesheet" href="../common/css/common.css" />
-    <link rel="stylesheet" href="./common/css/sub1common.css" />
-    <link rel="stylesheet" href="./css/sub1_content4.css" />
+    <link rel="stylesheet" href="./common/css/sub3common.css" />
+
+    <link rel="stylesheet" href="./css/sub3_content1.css" />
     <!-- Noto Sans Korean , Roboto 폰트링크 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,14 +20,12 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@1,100..900&display=swap"
       rel="stylesheet"
     />
+
     <!-- 아이콘 링크 -->
     <script
       src="https://kit.fontawesome.com/347816e35e.js"
       crossorigin="anonymous"
     ></script>
-    <!-- 카카오지도 API 불러오는 스크립트 -->
-    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e082e66d941d9125b7472912f6cc2cf&libraries=services"></script>
-    <script src="./js/map_one.js"></script>
   </head>
   <body>
     <!--리더기 접근성 향상 코드! 서비스 -->
@@ -45,13 +44,13 @@
             <h2 class="hidden">세븐일레븐 네비게이션</h2>
             <ul>
               <li>
-                <a href="./sub1_1.html"><h3>회사소개</h3></a>
+                <a href="../sub1/sub1_1.html"><h3>회사소개</h3></a>
               </li>
               <li>
                 <a href="../sub2/sub2_1.html"><h3>상품소개</h3></a>
               </li>
               <li>
-                <a href="../sub3/sub3_1.html"><h3>이벤트</h3></a>
+                <a href="./sub3_1.html"><h3>이벤트</h3></a>
               </li>
               <li>
                 <a href="../sub4/sub4_1.html"><h3>창업안내</h3></a>
@@ -74,68 +73,28 @@
 
       <div class="visual">
         <img
-          src="./common/images/sub_visual1.png"
-          alt="서브페이지 비주얼이미지"
+          src="./common/images/Productintroduction_visual1.png"
+          alt="서브 비주얼 이미지"
         />
-        <strong>오시는 길</strong>
+        <strong>행사 상품</strong>
       </div>
-
       <div class="sub_nav">
         <ul>
-          <li><a href="./sub1_1.html" class="current">브랜드 스토리</a></li>
-          <li><a href="./sub1_2.html">경영 스토리</a></li>
-          <li><a href="./sub1_3.html">회사 연혁</a></li>
-          <li><a href="./sub1_4.html">오시는 길</a></li>
+          <li><a href="./sub3_1.html" class="current">행사 상품</a></li>
+          <li><a href="./sub3_2.html">진행중인 이벤트</a></li>
+          <li><a href="./sub3_3.html">종료된 이벤트</a></li>
         </ul>
       </div>
 
       <article id="content">
         <div class="title_area">
           <div class="line_map">
-            home &gt; 회사소개 &gt; <strong>오시는 길</strong>
+            home &gt; 이벤트 &gt; <strong>행사 상품</strong>
           </div>
-          <h2>오시는 길</h2>
-          <p>세븐 일레븐은 고객 여려분께 항상 열려있습니다!</p>
+          <h2>행사 상품</h2>
+          <p>1+1 , 2+1 은 우리의 필수 정보</p>
         </div>
-
-        <div class="content_area" id="content_area_map"></div>
-
-        <div class="company_info">
-          <p><strong>7-ELEVEn 본사</strong></p>
-
-          <dl class="basic_info">
-            <dt><strong>주소</strong></dt>
-            <dd>서울시 강동구 천호대로 1077 이스트센트럴타워 16~18층</dd>
-          </dl>
-          <dl class="basic_info">
-            <dt><strong>대표번호</strong></dt>
-            <dd>1577-0711</dd>
-          </dl>
-
-          <div class="transport_info">
-            <p><strong>교통수단 안내</strong></p>
-            <dl>
-              <dt><strong>주차안내</strong></dt>
-              <dd>지하 건물 1~3층 방문자 주차2시간 무료 ✨주차권 지급</dd>
-            </dl>
-            <dl>
-              <dt><strong>지하철</strong></dt>
-              <dd>강동역 1번출구 방면 도보 약 5분 소요</dd>
-            </dl>
-          </div>
-
-          <div class="bus_info">
-            <span><strong>버스노선</strong></span>
-            <dl>
-              <dt>일반버스</dt>
-              <dd>1-4, 112-1, 112-5</dd>
-              <dt>간선버스</dt>
-              <dd>341, 342, 370</dd>
-              <dt>지선버스</dt>
-              <dd>3214, 3316</dd>
-            </dl>
-          </div>
-        </div>
+        <div class="content_area"></div>
       </article>
 
       <footer id="footerArea">
@@ -149,7 +108,7 @@
               <p class="copy font-eng">
                 Copyright &copy;2025 Namgyu Kim - Portfolio Project<br />
                 <small>
-                  7-ELEVEn Clone Website<br />
+                  7-ELEVEn Clone Website <br />
                   Inspired by convenience store brands & student works<br />
                   Educational & Non-Commercial Purpose Only
                 </small>
@@ -163,9 +122,9 @@
                 <dt class="font-eng">Quick Menu</dt>
                 <dd><a href="#">매장찾기</a></dd>
                 <dd><a href="#">웹서비스 이용약관</a></dd>
-                <dd><a href="../sub4/sub4_2.html">창업상담</a></dd>
+                <dd><a href="#">창업상담</a></dd>
                 <dd><a href="#">개인정보처리방침</a></dd>
-                <dd><a href="../sub4/sub4_3.html">창업설명회</a></dd>
+                <dd><a href="#">창업설명회</a></dd>
                 <dd><a href="#">이메일무단수집거부</a></dd>
               </dl>
             </li>
