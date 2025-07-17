@@ -1,1 +1,70 @@
 @charset "utf-8";
+
+#content .content_area {
+  width: 1400px;
+  min-height: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 150px;
+}
+
+#content .start_up_guide_menu {
+  position: absolute;
+  bottom: 260px;
+  left: 165px;
+  display: flex;
+  gap: 10px;
+  border-radius: 25px;
+  background: var(--font-color-sub2);
+  box-shadow: 1px 1px 20px 1px rgba(255, 255, 255, 0.5);
+}
+
+#content .start_up_guide_menu li {
+  width: 350px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#content .start_up_guide_menu li a {
+  font-size: var(--font-size-no11);
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+#content .start_up_guide_menu li a:hover {
+  background: rgba(1, 113, 33, 0.9);
+  color: var(--font-color-sub2);
+}
+
+#content .start_guide_introduction {
+  width: 1400px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  border-radius: 40px;
+  margin: 100px auto;
+  position: relative;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  background: url(../images/content1/guidetext1.png);
+}
+
+#content .start_guide_introduction p {
+  font-size: 25px;
+  margin: 50px 0 0 30px;
+}
+
+#content .brand_Power {
+  display: none;
+}
+
+#content .lotte_infrastructure {
+  display: none;
+}
+
+#content .happiness_package {
+  display: block;
+}
