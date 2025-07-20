@@ -14,26 +14,22 @@
 
 /* 전체 영역 */
 #content .content_area {
-  width: 1400px;
+  width: 1600px;
   min-height: 800px;
   margin: 150px auto 0;
   padding-bottom: 150px;
 }
 
 #content .start_guide_introduction {
-  width: 1400px;
+  width: 1600px;
   height: 800px;
   display: flex;
-  flex-direction: column;
   gap: 10px;
   border-radius: 40px;
   margin: 50px auto;
-  position: relative;
+  color: var(--font-color-sub2);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  background-size: cover;
-  background-position: center;
   transition: all 0.6s ease-in-out;
-  color: white;
 }
 
 #content .start_guide_introduction.bg_1 {
@@ -106,7 +102,7 @@
 /* 롯데시너지 , 경영주혜택 */
 
 #content .lotte_infrastructure li p,
-#content .happiness_package ul p {
+#content .happiness_package li p {
   margin-bottom: 15px;
 }
 
@@ -121,7 +117,6 @@
 
 #content .lotte_infrastructure dl dt,
 #content .happiness_package dl dt {
-  margin-left: 60px;
   font-size: var(--font-size-no12); /*18px*/
   color: var(--font-color-point1);
   font-weight: 500;
@@ -129,12 +124,9 @@
 
 #content .lotte_infrastructure dl dd,
 #content .happiness_package dl dd {
-  margin-left: 90px;
   padding-bottom: 10px;
-
   font-size: var(--font-size-no13);
   margin-top: 10px;
-  text-align: justify;
   line-height: 1.6rem;
 }
 
