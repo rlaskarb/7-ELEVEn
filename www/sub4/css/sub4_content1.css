@@ -37,7 +37,7 @@
     url(../images/content1/guideimg1.png);
 }
 #content .start_guide_introduction.bg_2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(../images/content1/guideimg2.png);
 }
 
@@ -80,6 +80,8 @@
 #content .s_story_title,
 #content .happiness_package_title,
 #content .infrastructure_title {
+  width: 100%;
+  margin: 0 auto;
   margin-bottom: 20px;
   text-align: center;
   color: var(--font-color-sub2);
@@ -88,8 +90,13 @@
 
 /* 세븐일레븐 소개 */
 
+#content .s_story {
+  width: 100%;
+  margin: 0 auto;
+}
+
 #content .s_story p {
-  line-height: 2rem;
+  line-height: 1.8rem;
   font-size: var(--font-size-no12); /* 18px*/
   margin-bottom: 15px;
 }
@@ -101,11 +108,6 @@
 
 /* 롯데시너지 , 경영주혜택 */
 
-#content .lotte_infrastructure li p,
-#content .happiness_package li p {
-  margin-bottom: 15px;
-}
-
 #content .lotte_infrastructure ul,
 #content .happiness_package ul {
   width: 1000px;
@@ -115,11 +117,27 @@
   justify-content: space-between;
 }
 
+.lotte_infrastructure li,
+.happiness_package li {
+  width: 48%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#content .lotte_infrastructure li p,
+#content .happiness_package li p {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
 #content .lotte_infrastructure dl dt,
 #content .happiness_package dl dt {
   font-size: var(--font-size-no12); /*18px*/
   color: var(--font-color-point1);
-  font-weight: 500;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 70px;
 }
 
 #content .lotte_infrastructure dl dd,
@@ -128,6 +146,8 @@
   font-size: var(--font-size-no13);
   margin-top: 10px;
   line-height: 1.6rem;
+  text-align: left;
+  margin-left: 100px;
 }
 
 /* 탭영역 */
