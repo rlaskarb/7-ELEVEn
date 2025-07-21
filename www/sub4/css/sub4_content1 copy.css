@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+@keyframes fade_in {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 전체 영역 */
+#content .content_area {
+  width: 1600px;
+  min-height: 800px;
+  margin: 150px auto 0;
+  padding-bottom: 150px;
+}
+
+#content .start_guide_introduction {
+  width: 1600px;
+  height: 800px;
+  display: flex;
+  gap: 10px;
+  border-radius: 40px;
+  margin: 50px auto;
+  color: var(--font-color-sub2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.6s ease-in-out;
+}
+
+#content .start_guide_introduction.bg_1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/content1/guideimg1.png);
+}
+#content .start_guide_introduction.bg_2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../images/content1/guideimg2.png);
+}
+
+#content .start_guide_introduction.bg_3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/content1/guideimg3.png);
+}
+
+#content .guide_content_wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.guide_content {
+  display: none;
+  animation: fade_in 0.8s;
+}
+
+.guide_content.active {
+  display: block;
+}
+
+#content .start_guide_introduction p {
+  font-size: var(--font-size-no9); /*24px*/
+  margin: 50px 0 0 30px;
+}
+
+#conten .guide_content strong,
+#conten .guide_content p,
+#conten .guide_content dt,
+#conten .guide_content dd {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#content .s_story_title,
+#content .happiness_package_title,
+#content .infrastructure_title {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--font-color-sub2);
+  font-size: var(--font-size-no7); /*30px*/
+}
+
+/* 세븐일레븐 소개 */
+
+#content .s_story {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#content .s_story p {
+  line-height: 1.8rem;
+  font-size: var(--font-size-no12); /* 18px*/
+  margin-bottom: 15px;
+}
+
+#content .s_story p span {
+  color: var(--font-color-main);
+  font-weight: 500;
+}
+
+/* 롯데시너지 , 경영주혜택 */
+
+#content .lotte_infrastructure ul,
+#content .happiness_package ul {
+  width: 1000px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.lotte_infrastructure li,
+.happiness_package li {
+  width: 48%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#content .lotte_infrastructure li p,
+#content .happiness_package li p {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+#content .lotte_infrastructure dl dt,
+#content .happiness_package dl dt {
+  font-size: var(--font-size-no12); /*18px*/
+  color: var(--font-color-point1);
+  font-weight: 600;
+  text-align: left;
+  margin-left: 70px;
+}
+
+#content .lotte_infrastructure dl dd,
+#content .happiness_package dl dd {
+  padding-bottom: 10px;
+  font-size: var(--font-size-no13);
+  margin-top: 10px;
+  line-height: 1.6rem;
+  text-align: left;
+  margin-left: 100px;
+}
+
+/* 탭영역 */
+#content .start_up_guide_menu {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0;
+  gap: 20px;
+  border-radius: 25px;
+  order: 2;
+}
+
+#content .start_up_guide_menu li {
+  width: 350px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.start_up_guide_menu li.active h3 {
+  color: var(--font-color-sub2);
+}
+
+#content .start_up_guide_menu li a {
+  font-size: var(--font-size-no11); /* 20px */
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 15px 0;
+  color: var(--font-color-sub2);
+  background: rgba(231, 126, 45, 0.7);
+  transition: all 0.3s ease;
+}
+
+.start_up_guide_menu li.active a {
+  background: var(--font-color-point2);
+  color: var(--font-color-sub2);
+  transform: scale(1.05);
+  box-shadow: 1px 1px 15px rgba(231, 126, 45, 0.1);
+}
+
+#content .start_up_guide_menu li a:hover {
+  background: rgba(1, 113, 33, 0.8);
+  color: var(--font-color-sub2);
+}
+
+/*  창업절차 안내 */
+#content .start_up_proedures_container {
+  width: 1600px;
+  min-height: 1000px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+#content .start_up_proedures_title {
+  text-align: left;
+  margin: 30px 30px 30px 205px;
+}
+
+#content .start_up_proedures_title h3 {
+  font-size: var(--font-size-no7); /*30px*/
+  margin-bottom: 20px;
+}
+
+#content .start_up_proedures_title p {
+  font-size: var(--font-size-no12); /*18px*/
+  font-weight: 500;
+}
+
+#content .start_up_proedures_container ol {
+  width: 1400px;
+  min-height: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 20px 0;
+}
+
+#content .start_up_proedures_container li {
+  display: flex;
+  flex-direction: column;
+  width: calc(16.666% -30px); /*6개가 한줄에 오도록 ,여백 고려*/
+  padding: 30px 25px;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  line-height: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+#content .start_up_proedures_container li img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50px;
+  border: 1px solid red;
+}
+
+#content .start_up_proedures_container li:nth-of-type(n + 2)::before {
+  content: "\f061";
+  font-family: "Font Awesome 6 Free";
+  font-size: var(--font-size-no6); /*40px*/
+  font-weight: 900;
+  color: var(--font-color-point2);
+  margin: auto 30px;
+  position: absolute;
+  top: 66%;
+  left: -20px;
+  transform: translateY(-50%);
+}
+
+#content .start_up_proedures_container li p {
+  flex-grow: 1;
+  line-height: 1.6rem;
+}
+
+#content .start_up_proedures_container li:hover {
+  transform: scaleY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-color: rgba(231, 126, 45, 0.7);
+}
