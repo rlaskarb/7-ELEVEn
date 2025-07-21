@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
    
       const target_guide = this.getAttribute("data_guide");
 
-      // 1. 모든 요소에서 'active' 클래스 제거 (초기화)
+      // 1. 모든 요소에서 초기화
       nav_items.forEach(function (item) {
         item.classList.remove("active");
       });
