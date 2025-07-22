@@ -12,31 +12,36 @@
 }
 
 #content .benefits_container,
+#content .special_prize_container,
 #content .cooperative_container {
-  width: 1000px;
   margin: 100px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #content .benefits_title,
+#content .special_title,
 #content .cooperative_title {
   text-align: center;
   margin-bottom: 50px;
 }
 
 #content .benefits_title h3,
+#content .special_title h3,
 #content .cooperative_title h3 {
-  margin-bottom: 15px;
-  font-size: var(--font-size-no7); /*30px*/
+  margin-bottom: 30px;
+  font-size: var(--font-size-no5); /*50px*/
   font-weight: 700;
 }
 
 #content .benefits_title p,
+#content .special_title p,
 #content .cooperative_title p {
-  font-size: var(--font-size-no13); /*16px*/
+  font-size: var(--font-size-no9); /*24px*/
 }
 
 /* 1. 최상의 협력 시스템 */
-
 #content .cooperative_container {
   margin-bottom: 80px;
 }
@@ -44,23 +49,47 @@
 #content .cooperative_content {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 150px;
   padding: 40px;
   border-radius: 40px;
-  background: var(--font-color-sub1);
+  padding: 70px 40px 70px 200px;
 }
 
-#content .cooperative_content img {
-  width: 45%;
+#content .cooperative_img {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#content .cooperative_img img {
+  width: 100%;
   border-radius: 15px;
   object-fit: cover; /*이미지가 비율에 맞게 채워지기*/
+  box-shadow: 1px 3px 20px 1px rgba(0, 0, 0, 0.1);
 }
 
 #content .cooperative_content ul {
-  width: 55%;
+  flex: 1;
 }
 #content .cooperative_content ul li {
-  margin-bottom: 25px;
+  padding: 10px 10px 10px 50px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  transition: all 0.5s ease-out;
+}
+
+#content .cooperative_content ul li:hover {
+  transform: translateY(-10px);
+  background: rgba(231, 126, 45, 0.01);
+}
+
+#content .cooperative_content li:hover dt {
+  color: var(--font-color-point2);
+}
+
+#content .cooperative_content li:hover dd {
+  color: var(--font-color-point1);
 }
 
 #content .cooperative_content ul li:last-of-type {
@@ -68,27 +97,90 @@
 }
 
 #content .cooperative_content ul li > p {
-  font-size: var(--font-size-no10); /*22px*/
+  font-size: var(--font-size-no8); /*26px*/
   font-weight: 700;
   color: var(--font-color-main);
   margin-bottom: 20px;
 }
 
 #content .cooperative_content dl {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #content .cooperative_content dt {
-  margin-bottom: 5px;
+  padding-left: 15px;
+  margin-bottom: 8px;
+  font-size: 1.44rem; /*23px*/
   font-weight: 600;
 }
 
 #content .cooperative_content dd {
-  padding-left: 20px;
+  padding-left: 35px;
+  font-size: 1.19rem; /*19px*/
+  line-height: 1.6rem;
+}
+
+/* 고객이 찾아 오는 새로움 */
+
+#content .special_prize_content {
+  width: 1600px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+#content .prize_img {
+  width: 40%;
+  display: flex;
+  gap: 10px;
+}
+
+#content .prize_img img {
+  width: 50%;
+  max-height: 800px;
+}
+
+#content .special_explanation {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+#content .special_explanation strong {
+  display: block;
+  margin-bottom: 50px;
+  font-size: var(--font-size-no9); /*24px*/
+}
+
+#content .special_prize_content ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+}
+
+#content .special_prize_content ul li {
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+#content .special_prize_content dl dt {
+  font-size: var(--font-size-no11); /*20px*/
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#content .special_prize_content dl dd {
+  font-weight: 500;
 }
 
 /* 차별화된 혜택 */
-
 #content .benefits_container ul {
   display: grid;
   grid-template-columns: 1fr 1fr; /*2열 그리드*/
@@ -96,11 +188,10 @@
 }
 
 #content .benefits_container ul li {
-  background: var(--font-color-sub2);
   border: 1px solid var(--font-color-sub2);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.01);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -111,6 +202,7 @@
 
 .benefits_container ul li > p {
   font-size: var(--font-size-no9); /*24px*/
+  margin-bottom: 20px;
 }
 
 #content .benefits_container dl {
