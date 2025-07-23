@@ -198,7 +198,7 @@ img {
 #skipNav {
   position: relative;
   width: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
   z-index: 110;
 }
 
@@ -226,7 +226,9 @@ img {
   top: 0;
   left: 0;
   z-index: 100;
-  background: var(--font-color-sub2);
+  background: rgba(250, 248, 2245, 0.7);
+  height: 100px;
+  transition: background 0.5s ease-out;
 }
 
 #headerArea .header_inner {
@@ -237,12 +239,12 @@ img {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 
 #headerArea .logo {
   width: 100px;
-  margin-bottom: 10px;
+  margin-left: 50px;
 }
 
 #headerArea .logo a {
@@ -253,27 +255,62 @@ img {
   overflow: hidden;
 }
 
-#headerArea #gnb {
-  text-align: center;
+/* 글로벌 네비게이션 */
+
+#gnb {
+  width: 900px;
 }
 
-#headerArea #gnb ul {
+#gnb ul.dropdownmenu {
   display: flex;
-  margin: 0 15px;
-  gap: 80px;
+  width: 100%;
+}
+#gnb ul.dropdownmenu .menu {
+  position: relative;
+  width: 16.66%;
+  height: 50px;
 }
 
-#headerArea #gnb ul li {
-  font-size: var(--font-size-no10);
+#gnb .dropdownmenu .depth1 {
+  display: block;
+  padding: 10px 0 20px 0;
+  font-size: var(--font-size-no11); /*20px*/
+  text-align: center;
+  transition: all 0.5s;
 }
 
-#headerArea #gnb ul a {
+/* 2depth */
+#gnb .dropdownmenu .menu ul {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  padding: 15px 0;
+  line-height: 2.5rem;
+  font-size: var(--font-size-no13); /*16px*/
+  display: block;
+  display: none;
+}
+
+#gnb .dropdownmenu .menu ul li {
+  text-align: center;
+  font-weight: 600;
+}
+#gnb .dropdownmenu .menu ul li a {
+  display: block;
+  padding-top: 5px;
+  background-repeat: no-repeat;
+  background-position: center 100%;
+  background-size: 0 3px;
+  background-image: linear-gradient(#ff7700, #ff7700);
   transition: all 0.3s ease;
 }
 
-#headerArea #gnb ul a:hover {
-  color: var(--font-color-main);
-  transform: scale(1.2);
+#gnb .dropdownmenu .menu ul li a:hover {
+  transform: translateY(-5px);
+  background-size: 70% 3px;
+  font-weight: 800;
 }
 
 #headerArea .top_menu {

@@ -37,24 +37,66 @@
           </h1>
           <nav id="gnb">
             <h2 class="hidden">세븐일레븐 네비게이션</h2>
-            <ul>
-              <li>
-                <a href="../sub1/sub1_1.html"><h3>회사소개</h3></a>
+            <ul class="dropdownmenu">
+              <li class="m1 menu">
+                <h3>
+                  <a class="depth1" href="./sub1_1.html">회사소개</a>
+                </h3>
+                <ul>
+                  <li><a href="../sub1/sub1_1.html">브랜드스토리</a></li>
+                  <li><a href="../sub1/sub1_2.html">경영스토리</a></li>
+                  <li><a href="../sub1/sub1_3.html">회사연혁</a></li>
+                  <li><a href="../sub1/sub1_4.html">오시는길</a></li>
+                </ul>
               </li>
-              <li>
-                <a href="../sub2/sub2_1.html"><h3>상품소개</h3></a>
+              <li class="m2 menu">
+                <h3>
+                  <a class="depth1" href="../sub2/sub2_1.html">상품소개</a>
+                </h3>
+                <ul>
+                  <li><a href="../sub2/sub2_1.html">세븐카페</a></li>
+                  <li><a href="../sub2/sub2_2.html">이달의신상</a></li>
+                  <li><a href="../sub2/sub2_3.html">차별화상품</a></li>
+                  <li><a href="../sub2/sub2_4.html">Fresh Food</a></li>
+                </ul>
               </li>
-              <li>
-                <a href="../sub3/sub3_1.html"><h3>이벤트</h3></a>
+              <li class="m3 menu">
+                <h3><a class="depth1" href="../sub3/sub3_1.html">이벤트</a></h3>
+                <ul>
+                  <li><a href="../sub3/sub3_1.html">행사상품</a></li>
+                  <li><a href="../sub3/sub3_2.html">진행중인 이벤트</a></li>
+                  <li><a href="../sub3/sub3_3.html">종료된 이벤트</a></li>
+                </ul>
               </li>
-              <li>
-                <a href="../sub4/sub4_1.html"><h3>창업안내</h3></a>
+              <li class="m4 menu">
+                <h3>
+                  <a class="depth1" href="../sub4/sub4_1.html">창업안내</a>
+                </h3>
+                <ul>
+                  <li><a href="../sub4/sub4_1.html">창업포인트</a></li>
+                  <li><a href="../sub4/sub4_2.html">창업상담</a></li>
+                  <li><a href="../sub4/sub4_3.html">창업설명회</a></li>
+                  <li><a href="../sub4/sub4_4.html">창업성공기</a></li>
+                </ul>
               </li>
-              <li>
-                <a href="../sub5/sub5_1.html"><h3>매장안내</h3></a>
+              <li class="m5 menu">
+                <h3>
+                  <a class="depth1" href="../sub5/sub5-1.html">매장안내</a>
+                </h3>
+                <ul>
+                  <li><a href="../sub5/sub5-1.html">매장찾기</a></li>
+                  <li><a href="../sub5/sub5-2.html">서비스 안내</a></li>
+                </ul>
               </li>
-              <li>
-                <a href="./sub6-1.html"><h3>커뮤니티</h3></a>
+              <li class="m6 menu">
+                <h3>
+                  <a class="depth1" href=".sub6-1.html">커뮤니티</a>
+                </h3>
+                <ul>
+                  <li><a href="./sub6-1.html">상품제안</a></li>
+                  <li><a href="./sub6-2.html">나만의 꿀조합</a></li>
+                  <li><a href="./sub6-3.html">신상품 후기</a></li>
+                </ul>
               </li>
             </ul>
           </nav>
@@ -119,9 +161,9 @@
                 <dt class="font-eng">Quick Menu</dt>
                 <dd><a href="#">매장찾기</a></dd>
                 <dd><a href="#">웹서비스 이용약관</a></dd>
-                <dd><a href="#">창업상담</a></dd>
+                <dd><a href="../sub4/sub4_2.html">창업상담</a></dd>
                 <dd><a href="#">개인정보처리방침</a></dd>
-                <dd><a href="#">창업설명회</a></dd>
+                <dd><a href="../sub4/sub4_3.html">창업설명회</a></dd>
                 <dd><a href="#">이메일무단수집거부</a></dd>
               </dl>
             </li>
@@ -172,34 +214,9 @@
       </footer>
     </div>
 
-    <!-- 프론트 이메일 보내는 스크립트 복사 이메일 js 주소 :  https://www.emailjs.com/ -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-      (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init({
-          publicKey: "rTtduLQ4RksqiTvr5",
-        });
-      })();
-    </script>
-    <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          // these IDs from the previous steps
-          emailjs.sendForm("service_myl4gtm", "template_gf2byao", this).then(
-            () => {
-              console.log("SUCCESS!");
-              alert("메일 전송에 성공하였습니다.");
-            },
-            (error) => {
-              console.log("FAILED...", error);
-              alert("메일 전송에 실패하였습니다.");
-            }
-          );
-        });
-    </script>
+    <script src="../common/js/jquery-1.12.4.min.js"></script>
+    <script src="../common/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../common/js/fullnav_ex.js"></script>
     <script src="../main_js/top_button.js"></script>
     <script src="./common/js/sub_nav.js"></script>
   </body>
