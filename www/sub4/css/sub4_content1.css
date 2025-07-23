@@ -218,50 +218,51 @@
 /* 차별화된 혜택 */
 
 #content .benefits_container ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /*2열 그리드*/
-  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 }
 
 #content .benefits_container ul li {
-  border: 1px solid var(--font-color-sub2);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
-}
-
-.benefits_container ul li > p {
-  font-size: var(--font-size-no8); /*26px*/
-  font-weight: 800;
-  color: var(--font-color-point1);
-  margin-bottom: 20px;
-}
-
-#content .benefits_container dl {
-  padding: 20px 0 20px 40px;
-  box-shadow: 1px 1px 10px 1px rgba(1, 113, 33, 0.4);
+  width: 300px;
+  height: 300px;
+  text-align: center;
   border-radius: 20px;
-  margin-bottom: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
 }
 
-#content .benefits_container dl:hover {
-  transform: translateY(-5px);
-  box-shadow: 1px 1px 20px 1px rgba(1, 113, 33, 0.8);
+#content .benefits_container ul li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-#content .benefits_container dl:last-of-type {
-  margin-bottom: 0;
-}
-
-#content .benefits_container dt {
-  font-size: var(--font-size-no10); /*22px*/
-  color: var(--font-color-point2);
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-#content .benefits_container dd {
+#content .benefits_container ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: var(--font-size-no7); /*30px*/
   font-weight: 600;
-  line-height: 2rem;
+  transition: all 0.3s ease;
+}
+
+#content .benefits_container ul li img {
+  width: 200px;
+  height: 150px;
+
+  object-fit: contain;
+}
+
+#content .benefits_container ul li:hover span {
+  color: var(--font-color-main);
+}
+
+#content .benefits_container ul li a span {
+  display: block;
 }
