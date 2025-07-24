@@ -36,18 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
       pins.forEach((pin, index) => {
         setTimeout(() => {
           pin.classList.add("show");
-        }, index * 100);
+        }, index * 200);
       });
     }, 5000);
 
     setTimeout(() => {
       finalMessage.classList.add("show");
-    }, 7500);
+    }, 9500);
 
     setTimeout(() => {
       koreaMessage.classList.add("show");
       koreaPin.classList.add("highlight");
-    }, 9000); // 7500 +1500
+    }, 10500);
   }
 
   // 애니매이션 리셋

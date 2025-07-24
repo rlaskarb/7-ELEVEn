@@ -73,9 +73,9 @@
 }
 
 .visual:hover img {
-  filter: brightness(0.8) saturate(1.5);
-  transform: translateX(-15px);
-  transition: all 3s ease-out;
+  filter: brightness(0.9) saturate(1.8);
+  transform: scale(1.05);
+  transition: all 5s ease-out;
 }
 
 .dock {
