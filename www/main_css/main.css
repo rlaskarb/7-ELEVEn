@@ -28,32 +28,38 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
+  overflow: hidden; /*추가*/
 }
 
-.visual img {
+.visual .gallery {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 2000px;
+  height: 1050px;
+}
+
+.visual .gallery li {
+  display: none;
+  position: absolute; /*애는 왜쓴거지?*/
+}
+
+.visual .gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 1s ease-out;
 }
 
-.visual dl dt {
+.visual .gallery dl dt {
   font-size: var(--font-size-no5);
   color: var(--font-color-sub2);
   font-weight: bold;
   position: absolute;
   left: 150px;
-  top: 200px;
+  top: 260px;
   opacity: 0;
   transition: all 0.5s ease-out;
-}
-
-.visual:hover dl dt {
-  opacity: 1;
-  position: absolute;
-  left: 150px;
-  top: 130px;
-  transition: all 1s ease-out;
 }
 
 .visual dl dd {
@@ -61,23 +67,66 @@
   color: var(--font-color-sub2);
   position: absolute;
   left: 150px;
-  top: 290px;
+  top: 350px;
   opacity: 0;
   transition: all 0.5s ease-out;
-}
-
-.visual:hover dl dd {
-  opacity: 1;
-  position: absolute;
-  left: 150px;
-  top: 230px;
-  transition: all 1.5s ease-out;
 }
 
 .visual:hover img {
   filter: brightness(0.8) saturate(1.5);
   transform: translateX(-15px);
   transition: all 3s ease-out;
+}
+
+.dock {
+  width: 330px;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  bottom: 20%;
+}
+
+.dock .mbutton {
+  margin-right: 15px;
+  cursor: pointer;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: #017121;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+
+.dock .ps_icon {
+  margin-right: 15px;
+  margin-top: -5px;
+  cursor: pointer;
+  display: block;
+  float: left;
+  width: 25px;
+  height: 25px;
+}
+.dock .ps_icon i {
+  font-size: 30px;
+  color: #e77e2d;
+}
+
+.visual .btn_arrow {
+  display: block;
+  width: 40px;
+  height: 100px;
+  color: #017121;
+  position: absolute;
+  top: 500px;
+  cursor: pointer;
+  font-size: var(--font-size-no4);
+  font-weight: 800;
+}
+.visual .btn_arrow.btnLeft {
+  left: 5%;
+}
+.visual .btn_arrow.btnRight {
+  right: 5%;
 }
 
 /* 본문 컨텐츠 영역 */
