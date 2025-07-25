@@ -423,22 +423,29 @@ img {
 #footerArea .top_move {
   width: 55px;
   height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background: rgba(250, 248, 245, 0.9);
   border: 3px solid rgba(1, 113, 33, 0.9);
   box-shadow: 1px 1px 10px 1px rgba(1, 113, 33, 0.2);
-  color: #333;
-  font-size: var(--font-size-no12);
-  font-weight: 800;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   left: 50%;
   bottom: 160px;
   margin-left: 830px;
   z-index: 90;
-  transition: all 0.3s ease;
+  font-weight: 800;
+  color: var(--font-color-font);
+  font-size: var(--font-size-no12);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#footerArea .top_move.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 #footerArea .top_move:hover {

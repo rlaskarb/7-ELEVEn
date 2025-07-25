@@ -80,3 +80,20 @@ $(document).ready(function () {
       $("#headerArea").animate({ height: 100 }, "normal").clearQueue();
     });
 });
+
+// //  상단 탑 이동코드
+
+// $(".top_move").click(function (event) {
+//   event.preventDefault();
+//   $("html , body").stop().animate({ scrollTop: 0 });
+// });
+
+// $(window).on("scroll", function () {
+//   var scroll = $(window).scrollTop();
+//   //console.log(scroll);
+//   if (scroll > 1000) {
+//     $(".top_move").fadeIn("slow");
+//   } else {
+//     $(".top_move").fadeOut("fast");
+//   }
+// });

@@ -12,8 +12,8 @@ $(document).ready(function () {
   // 비주얼 사진 천천이 드러와
   $(".gallery .link1").fadeIn("slow");
 
-  $(".gallery .link1 dt").delay(1000).animate({ top: 270, opacity: 1 }, "slow");
-  $(".gallery .link1 dd").delay(2000).animate({ top: 370, opacity: 1 }, "slow");
+  $(".gallery .link1 dt").delay(1000).animate({ top: 230, opacity: 1 }, "slow");
+  $(".gallery .link1 dd").delay(2000).animate({ top: 330, opacity: 1 }, "slow");
 
   function moveing() {
     cnt++;
@@ -21,8 +21,8 @@ $(document).ready(function () {
       cnt = 1;
     }
 
-    $(".gallery li dt").css({ opacity: 0, top: "220px" }); // 애니매이션 시작 전 위치
-    $(".gallery li dd").css({ opacity: 0, top: "320px" }); // 애니매이션 시작 전 위치
+    $(".gallery li dt").css({ opacity: 0, top: "180px" }); // 애니매이션 시작 전 위치
+    $(".gallery li dd").css({ opacity: 0, top: "280px" }); // 애니매이션 시작 전 위치
 
     $(".gallery li").fadeOut("slow"); // 모든 이미지가 안보이게
 
@@ -30,11 +30,11 @@ $(document).ready(function () {
       $(this)
         .find("dt")
         .delay(1000)
-        .animate({ top: "270px", opacity: 1 }, "slow");
+        .animate({ top: "230px", opacity: 1 }, "slow");
       $(this)
         .find("dd")
         .delay(2000)
-        .animate({ top: "370px", opacity: 1 }, "slow");
+        .animate({ top: "330px", opacity: 1 }, "slow");
     });
 
     $(".mbutton").css({ background: "#017121", width: "16px" });
@@ -74,11 +74,11 @@ $(document).ready(function () {
     $(".gallery .link" + cnt)
       .find("dt")
       .delay(1000)
-      .animate({ top: "270px", opacity: 1 }, "slow");
+      .animate({ top: "230px", opacity: 1 }, "slow");
     $(".gallery .link" + cnt)
       .find("dd")
       .delay(2000)
-      .animate({ top: "370px", opacity: 1 }, "slow");
+      .animate({ top: "330px", opacity: 1 }, "slow");
 
     if (cnt == imageCount) cnt = 0; // 초기화
 
@@ -135,11 +135,11 @@ $(document).ready(function () {
     $(".gallery .link" + cnt)
       .find("dt")
       .delay(500)
-      .animate({ top: "300px", opacity: 1 }, "slow");
+      .animate({ top: "230px", opacity: 1 }, "slow");
     $(".gallery .link" + cnt)
       .find("dd")
       .delay(1000)
-      .animate({ top: "390px", opacity: 1 }, "slow");
+      .animate({ top: "330px", opacity: 1 }, "slow");
 
     timeOnOff = setInterval(moveing, 5000); // 원 위치!!
 

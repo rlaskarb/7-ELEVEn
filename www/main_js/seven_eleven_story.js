@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(changeStoryImages, 3000);
 
   // 🧪 테스트용 콘솔 로그 (나중에 삭제)
-  console.log("세븐일레븐 스토리 스크립트 로드 완료!");
-  console.log(
-    "찾은 슬롯 개수:",
-    document.querySelectorAll(".seven_story_shorts_slot").length
-  );
+  // console.log("세븐일레븐 스토리 스크립트 로드 완료!");
+  // console.log(
+  //   "찾은 슬롯 개수:",
+  //   document.querySelectorAll(".seven_story_shorts_slot").length
+  // );
 });

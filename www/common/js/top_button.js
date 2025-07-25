@@ -1,13 +1,22 @@
 // top 버튼 스므스하게 이동시키기
 document.addEventListener("DOMContentLoaded", function () {
   const topButton = document.querySelector(".top_move");
+  const visual = document.querySelector(".visual");
 
-  if (topButton) {
+  if (topButton && visual) {
+    const visualHeight = visual.offsetHeight;
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > visualHeight) {
+        topButton.classList.add("show");
+      } else {
+        topButton.classList.remove("show");
+      }
+    });
     topButton.addEventListener("click", function (event) {
       event.preventDefault();
       window.scrollTo({
         top: 0,
-        behavior: "smooth",
+        behovior: "smooth",
       });
     });
   }

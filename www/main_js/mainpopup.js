@@ -38,7 +38,7 @@ function closePopup() {
 
 // 2단계  페이지 로드시 팝업 표시 여부 확인
 function checkShouldShowPopup() {
-  console.log("팝업 표시 여부 확인중...");
+  //console.log("팝업 표시 여부 확인중...");
 
   // 2-1 저장된 숨김 정보 가져오기
   const hideUntil = localStorage.getItem("hidePopupUntil");
@@ -56,11 +56,11 @@ function checkShouldShowPopup() {
 
   if (now < savedTime) {
     //아직 숨김 기간이 남아있음
-    console.log("아직 숨김 기간임 - 팝업숨김");
+    //console.log("아직 숨김 기간임 - 팝업숨김");
     hidePopup();
   } else {
     // 숨김 기간이 지났음
-    console.log("숨김 기간 지남 - 팝업 표시");
+    //console.log("숨김 기간 지남 - 팝업 표시");
     localStorage.removeItem("hidePopupUntil"); // 저장된 정보 삭제
     showPopup();
   }
@@ -75,7 +75,7 @@ function showPopup() {
   popupContainer.style.opacity = "1";
   popupContainer.style.transform = "scale(1)";
 
-  console.log("팝업 표시됨!");
+  //console.log("팝업 표시됨!");
 }
 
 // 4단계 팝업 숨기기 함수
@@ -83,7 +83,7 @@ function hidePopup() {
   const popupContainer = document.querySelector(".pop_up_container");
   // 4-1 팝업 숨김기
   popupContainer.style.display = "none";
-  console.log("팝업 숨겨짐!");
+  //console.log("팝업 숨겨짐!");
 }
 
 // 5단계 : 부드러운 애니매이션을 위한 css 추가 준비
@@ -102,7 +102,7 @@ function addPopupAnimation() {
 // HTML이 모두 준비가 되면 실행하기
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("페이지 로드 완료! 팝업 시스템 시작");
+  //  console.log("페이지 로드 완료! 팝업 시스템 시작");
 
   //1. 애니메이션 효과 준비
   addPopupAnimation();
@@ -120,18 +120,18 @@ document.addEventListener("DOMContentLoaded", function () {
 */
 
 // 테스트용 : 저장된 설정 초기화
-function resetPopup() {
-  localStorage.removeItem("hidePopupUntil");
-  console.log("팝업 설정 최기화 완료!");
-  location.reload(); // 페이지 새로고침
-}
+// function resetPopup() {
+//   localStorage.removeItem("hidePopupUntil");
+//   console.log("팝업 설정 최기화 완료!");
+//   location.reload(); // 페이지 새로고침
+// }
 
 // 테스트용: 강제로 팝업 보이기
-function forceShowPopup() {
-  showPopup();
-}
+// function forceShowPopup() {
+//   showPopup();
+// }
 
-// 테스트용 : 강제로 팝업 숨기기
-function forceHidePopup() {
-  hidePopup();
-}
+// // 테스트용 : 강제로 팝업 숨기기
+// function forceHidePopup() {
+//   hidePopup();
+// }
