@@ -45,7 +45,7 @@ $(document).ready(function () {
     if (cnt == imgageCount) cnt = 0; // 초기화
   }
 
-  timeOnOff = setInterval(moveing, 6000); //setInterval(알람시계)
+  timeOnOff = setInterval(moveing, 5000); //setInterval(알람시계)
 
   //  도트 클릭할때 이벤트
 
@@ -82,13 +82,13 @@ $(document).ready(function () {
 
     if (cnt == imageCount) cnt = 0; // 초기화
 
-    timeOnOff = setInterval(moveing, 6000); // 원 위치로!
+    timeOnOff = setInterval(moveing, 5000); // 원 위치로!
 
     if (onOff == false) {
       onOff == true;
       $(".ps_icon").html(
-        `<span class="hidden">stop</span>
-          <i class="fa-regular fa-circle-stop"></i>`
+        `<li class="hidden">stop</li>
+          <li><i class="fa-regular fa-circle-stop"></i></li>`
       );
     }
   });
@@ -97,15 +97,15 @@ $(document).ready(function () {
   $(".ps_icon").click(function () {
     if (onOff == true) {
       clearInterval(timeOnOff);
-      $(this).html(`<span class="hidden">play</span>
-            <i class="fa-regular fa-circle-play"> </i>
-          </span>`);
+      $(this).html(`<li class="hidden">play</li>
+           <li><i class="fa-regular fa-circle-play"> </i>
+          </li>`);
       onOff = false;
     } else {
-      timeOnOff = setInterval(moveing, 6000); // 원 위치!
-      $(this).html(`span class="hidden">stop</span>
-            <i class="fa-regular fa-circle-stop"> </i>
-          </span>`);
+      timeOnOff = setInterval(moveing, 5000); // 원 위치!
+      $(this).html(`<li class="hidden">stop</li>
+            <li><i class="fa-regular fa-circle-stop"></i>
+          </li>`);
       onOff = true;
     }
   });
@@ -134,20 +134,20 @@ $(document).ready(function () {
 
     $(".gallery .link" + cnt)
       .find("dt")
-      .delay(500)
+      .delay(1000)
       .animate({ top: "230px", opacity: 1 }, "slow");
     $(".gallery .link" + cnt)
       .find("dd")
-      .delay(1000)
+      .delay(2000)
       .animate({ top: "330px", opacity: 1 }, "slow");
 
     timeOnOff = setInterval(moveing, 5000); // 원 위치!!
 
     if (onOff == false) {
       onOff = true;
-      $(".ps_icon").html(`<span class="hidden">stop</span>
-            <i class="fa-regular fa-circle-stop"></i>
-          </span>`);
+      $(".ps_icon").html(`<li class="hidden">stop</li>
+            <li><i class="fa-regular fa-circle-stop"></i>
+          </li>`);
     }
   });
 });

@@ -5,15 +5,19 @@
   0% {
     transform: scale(1.3) translateY(0);
   }
+
   25% {
     transform: scale(1.35) translateY(-10px);
   }
+
   50% {
     transform: scale(1.3) translateY(0);
   }
+
   75% {
     transform: scale(1.35) translateY(-5px);
   }
+
   100% {
     transform: scale(1.3) translateY(0);
   }
@@ -28,7 +32,8 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  overflow: hidden; /*추가*/
+  overflow: hidden;
+  /*추가*/
 }
 
 .visual .gallery {
@@ -41,7 +46,8 @@
 
 .visual .gallery li {
   display: none;
-  position: absolute; /*애는 왜쓴거지?*/
+  position: absolute;
+  /*애는 왜쓴거지?*/
 }
 
 .visual .gallery img {
@@ -77,17 +83,31 @@
   transition: all 5s ease-out;
 }
 
-.dock {
+.visual .dock {
+  width: 250px;
   position: absolute;
-  display: flex;
   left: 8%;
   bottom: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 0px 20px;
+  box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.3);
+
+
 }
 
-.dock .mbutton {
+.visual .dock ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual .dock .mbutton {
   margin-right: 15px;
   cursor: pointer;
-  display: block;
   width: 16px;
   height: 16px;
   background: #017121;
@@ -95,36 +115,23 @@
   transition: all 0.5s;
 }
 
-.dock .ps_icon {
-  margin-right: 15px;
-  margin-top: -5px;
+.visual .dock .ps_icon {
   cursor: pointer;
-  display: block;
-  float: left;
   width: 25px;
   height: 25px;
 }
-.dock .ps_icon i {
-  font-size: 30px;
+
+.visual .dock .ps_icon i {
+  font-size: var(--font-size-no7);
   color: #e77e2d;
 }
 
 .visual .btn_arrow {
-  display: block;
-  width: 40px;
-  height: 100px;
   color: #017121;
-  position: absolute;
-  top: 500px;
   cursor: pointer;
+  padding-left: 20px;
   font-size: var(--font-size-no7);
-  font-weight: 800;
-}
-.visual .btn_arrow.btnLeft {
-  left: 5%;
-}
-.visual .btn_arrow.btnRight {
-  right: 5%;
+  font-weight: bold;
 }
 
 /* 본문 컨텐츠 영역 */
@@ -140,6 +147,7 @@
   position: absolute;
   transition: all 0.3s ease;
 }
+
 .more_btn:hover {
   background: var(--font-color-main);
   transform: translateY(-2px);
@@ -204,6 +212,7 @@
   padding-right: 25px;
   font-size: var(--font-size-no9);
 }
+
 #content .new_menu_change dd {
   font-size: var(--font-size-no9);
 }
@@ -237,8 +246,9 @@
 #content .new_menu_right_box img {
   width: 400px;
   height: 500px;
+  border-radius: 50px;
   object-fit: contain;
-  transition: transform 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #content .new_menu_tuck_box .new_menu_more {
@@ -284,7 +294,8 @@
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../main_images/events_in_profess_background.png); /*linear-gradient(방향,시작색상,끝색상)*/
+    url(../main_images/events_in_profess_background.png);
+  /*linear-gradient(방향,시작색상,끝색상)*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,6 +314,7 @@
   color: var(--font-color-sub1);
   font-weight: 500;
 }
+
 #content .eventing .eventing_title p {
   max-width: 500px;
   text-align: center;
@@ -351,7 +363,8 @@
 #content .eventing .event_categories li:hover a {
   font-size: var(--font-size-no8);
   color: var(--font-color-sub2);
-  transition: all 0.5s ease; /*부드러운 변화*/
+  transition: all 0.5s ease;
+  /*부드러운 변화*/
 }
 
 #content .eventing .eventing_more {
@@ -612,21 +625,9 @@
 }
 
 /* 주황색 그룹 (1, 2, 5번) */
-#content
-  .full_search_container
-  .full_search_speech_bubble
-  li:nth-of-type(1):hover
-  a,
-#content
-  .full_search_container
-  .full_search_speech_bubble
-  li:nth-of-type(2):hover
-  a,
-#content
-  .full_search_container
-  .full_search_speech_bubble
-  li:nth-of-type(5):hover
-  a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(1):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(2):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(5):hover a {
   background: rgba(231, 126, 45, 0.8);
   color: var(--font-color-sub2);
   box-shadow: 0 15px 30px rgba(231, 126, 45, 0.6);
@@ -634,16 +635,8 @@
 }
 
 /* 빨간색 그룹 (3, 4번) */
-#content
-  .full_search_container
-  .full_search_speech_bubble
-  li:nth-of-type(3):hover
-  a,
-#content
-  .full_search_container
-  .full_search_speech_bubble
-  li:nth-of-type(4):hover
-  a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(3):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(4):hover a {
   background: rgba(217, 38, 41, 0.8);
   color: var(--font-color-sub2);
   box-shadow: 0 15px 30px rgba(217, 38, 41, 0.6);
@@ -651,16 +644,8 @@
 }
 
 /* 초록색 그룹 (6, 7번) */
-#content
-  .full_search_container
-  .full_search_speech_bubble
-  li:nth-of-type(6):hover
-  a,
-#content
-  .full_search_container
-  .full_search_speech_bubble
-  li:nth-of-type(7):hover
-  a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(6):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(7):hover a {
   background: rgba(1, 113, 33, 0.8);
   color: var(--font-color-sub2);
   box-shadow: 0 15px 30px rgba(1, 113, 33, 0.6);
@@ -740,6 +725,7 @@
   bottom: 195px;
   left: 80px;
 }
+
 /* 7-ELEVEn STORY */
 #content .seven_eleven_story {
   width: 100%;
@@ -759,10 +745,7 @@
   gap: 50px;
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_title {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_title {
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -770,72 +753,42 @@
   gap: 20px;
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_title
-  h3 {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_title h3 {
   width: 300px;
   font-size: var(--font-size-no5);
   color: var(--font-color-point1);
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_title
-  p {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_title p {
   width: 410px;
   font-size: var(--font-size-no10);
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_shorts {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_shorts {
   width: 1100px;
   height: 600px;
   /* overflow: hidden; */
   position: relative;
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_shorts
-  ul {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_shorts ul {
   display: flex;
   gap: 20px;
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_shorts
-  .seven_story_shorts_slot {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_shorts .seven_story_shorts_slot {
   position: relative;
   width: 350px;
   height: 600px;
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_shorts
-  .seven_story_shorts_slot
-  .seven_story_shorts_items {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_shorts .seven_story_shorts_slot .seven_story_shorts_items {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_shorts
-  .seven_story_shorts_slot
-  .seven_story_shorts_items
-  .seven_story_shorts_link {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_shorts .seven_story_shorts_slot .seven_story_shorts_items .seven_story_shorts_link {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -845,24 +798,11 @@
   transition: opacity 0.8s ease-in-out;
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_shorts
-  .seven_story_shorts_slot
-  .seven_story_shorts_items
-  .seven_story_shorts_link.active {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_shorts .seven_story_shorts_slot .seven_story_shorts_items .seven_story_shorts_link.active {
   opacity: 1;
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_shorts
-  .seven_story_shorts_slot
-  .seven_story_shorts_items
-  .seven_story_shorts_link
-  img {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_shorts .seven_story_shorts_slot .seven_story_shorts_items .seven_story_shorts_link img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -870,21 +810,11 @@
   transition: transform 0.3s ease;
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_shorts
-  .seven_story_shorts_slot
-  .seven_story_shorts_items
-  .seven_story_shorts_link:hover
-  img {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_shorts .seven_story_shorts_slot .seven_story_shorts_items .seven_story_shorts_link:hover img {
   transform: translateY(-5px);
 }
 
-#content
-  .seven_eleven_story
-  .seven_eleven_story_container
-  .seven_eleven_story_more {
+#content .seven_eleven_story .seven_eleven_story_container .seven_eleven_story_more {
   bottom: 100px;
   left: 0;
 }
