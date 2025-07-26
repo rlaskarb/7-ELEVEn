@@ -170,12 +170,22 @@
   width: 1400px;
   height: 600px;
   background: var(--font-color-sub2);
-  border: 5px solid var(--font-color-point1);
+  border: 3px solid var(--font-color-point1);
   border-radius: 30px;
-  display: flex;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+}
+
+#content .new_menu .new_menu_content_wrapper {
+  width: 100%;
+  height: 450px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: flex;
+  align-items: center;
+
 }
 
 #content .new_menu_left_box h3 {
@@ -190,54 +200,57 @@
 }
 
 #content .new_menu_left_box {
-  width: 60%;
+  width: 50%;
   padding: 50px;
   box-sizing: border-box;
 }
 
 #content .new_menu_change {
-  width: 690px;
-  height: 310px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  padding: 30px 0 0 30px;
+  width: 700px;
+  height: 300px;
+  margin: 180px 0 0 70px;
+  box-shadow: 1px 2px 15px 1px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px 20px 50px;
   border-radius: 50px;
 }
 
 #content .new_menu_change dl {
   display: flex;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 }
 
 #content .new_menu_change dt {
-  padding-right: 25px;
-  font-size: var(--font-size-no9);
+  padding-right: 20px;
+  font-size: var(--font-size-no8);
+  font-weight: 500;
 }
 
 #content .new_menu_change dd {
   font-size: var(--font-size-no9);
 }
 
-#content .new_menu_change dd strong {
-  font-size: var(--font-size-no9);
+#content .new_menu_change dl:nth-of-type(1) dd {
+  font-size: var(--font-size-no8);
+  font-weight: 600;
 }
 
 #content .new_menu_change dl:nth-of-type(4) dt span,
 #content .new_menu_change dl:nth-of-type(4) dd span {
   color: var(--font-color-main);
   font-size: var(--font-size-no8);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 #content .new_menu_change dl:nth-of-type(5) dt span,
 #content .new_menu_change dl:nth-of-type(5) dd span {
   color: var(--font-color-point2);
   font-size: var(--font-size-no8);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 #content .new_menu_right_box {
-  width: 40%;
-  margin-top: 10px;
+  width: 50%;
+  margin: 25px 0 0 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,7 +266,7 @@
 
 #content .new_menu_tuck_box .new_menu_more {
   top: 75px;
-  left: 500px;
+  left: 450px;
 }
 
 #content .new_menu_slider_dots {
@@ -265,12 +278,13 @@
 }
 
 #content .new_menu_slider_dots li {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: var(--font-color-point2);
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 
 #content .new_menu_slider_dots .new_menu_dot.active {
