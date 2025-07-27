@@ -48,7 +48,7 @@ $(document).ready(function () {
       mdReview: " 딸기 랑그드샤..샤랑해…💕 ",
       price: "3,000원",
     },
-    {
+    { 
       image: "./sub2/images/content2/new7.jpg",
       productName: "스윙칩고수타코맛 ",
       company: "오리온",

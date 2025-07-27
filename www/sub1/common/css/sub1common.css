@@ -3,7 +3,7 @@
 /* 공통 비주얼 영역 */
 .visual {
   width: 2000px;
-  height: 400px;
+  max-height: 400px;
   position: relative;
   top: 0;
   left: 50%;
@@ -12,7 +12,8 @@
 }
 
 .visual img {
-  width: 2000px;
+  width: 100%;
+  height: 100%;
 }
 
 .visual strong {
@@ -55,6 +56,7 @@
   padding: 15px 0;
   transition: all 0.3s ease;
 }
+
 .sub_nav .current a,
 .sub_nav ul li a:hover {
   background: rgba(217, 38, 41, 0.9);
