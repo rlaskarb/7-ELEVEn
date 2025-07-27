@@ -42,7 +42,7 @@
 }
 
 .sub_nav ul li {
-  width: 33.33%;
+  width: 50%;
   box-sizing: border-box;
   text-align: center;
 }
@@ -54,6 +54,7 @@
   padding: 15px 0;
   transition: all 0.3s ease;
 }
+
 .sub_nav .current a,
 .sub_nav ul li a:hover {
   background: rgba(217, 38, 41, 0.9);
