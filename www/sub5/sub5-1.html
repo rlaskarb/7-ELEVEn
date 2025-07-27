@@ -17,6 +17,9 @@
     rel="stylesheet" />
   <!-- 아이콘 링크 -->
   <script src="https://kit.fontawesome.com/347816e35e.js" crossorigin="anonymous"></script>
+
+  <!--카카오 맵API 라이브러리  -->
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e082e66d941d9125b7472912f6cc2cf&libraries=services"></script>
 </head>
 
 <body>
@@ -124,12 +127,22 @@
         </div>
         <h2>매장찾기</h2>
         <p>
-          모든 아이디어, 우리 동네 아쉬운 제품까지! 여러분의 소중한 이야기를
-          기다립니다.
+          매장을 찾아봐요
         </p>
       </div>
 
-      <div class="content_area"></div>
+      <div class="content_area">
+        <div class="store_search">
+          <select name="sido" id="sido">
+            <option value="">시/도 선택</option>
+          </select>
+          <select name="gugun" id="gugun">
+            <option value="">구/군 선택</option>
+          </select>
+          <button id="search_btn">검색</button>
+        </div>
+        <div id="map_search"></div>
+      </div>
     </article>
 
     <footer id="footerArea">
@@ -232,6 +245,7 @@
   <script src="../common/js/fullnav_ex.js"></script>
   <script src="../common/js/top_button.js"></script>
   <script src="../common/js/sub_nav.js"></script>
+  <script src="./js/map_search.js"></script>
 </body>
 
 </html>
