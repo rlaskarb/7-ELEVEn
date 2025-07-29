@@ -10,7 +10,7 @@ $(document).ready(function () {
 			startMore: "./sub4/sub4_1.html",
 		},
 		{
-			backgroudImg: "./main_images/start_up2.png",
+			backgroudImg: "./main_images/start_up3.png",
 			starth3: "창업 상담은 <br /> 언제나 환영!",
 			startp1:
 				"세븐일레븐 창업에 관심 있으신가요? <br /> 전문가와 1:1 상담을 통해 궁금증을 해결하고 <br /> 성공적인 창업을 준비하세요.",
@@ -18,7 +18,7 @@ $(document).ready(function () {
 			startMore: "./sub4/sub4_2.html",
 		},
 		{
-			backgroudImg: "./main_images/start_up2.png",
+			backgroudImg: "./main_images/start_up4.png",
 			starth3: "창업 설명회에서 <br /> 모든 것을!",
 			startp1:
 				"세븐일레븐 창업 설명회에 참여하여 <br /> 성공적인 창업 노하우와 최신 정보를 얻어가세요.",
@@ -26,7 +26,7 @@ $(document).ready(function () {
 			startMore: "./sub4/sub4_3.html",
 		},
 		{
-			backgroudImg: "./main_images/start_up2.png",
+			backgroudImg: "./main_images/start_up5.png",
 			starth3: "성공적인 <br /> 창업 스토리",
 			startp1:
 				"실제 세븐일레븐 점주들의 생생한 창업 성공 스토리를 들어보세요. <br /> 그들의 경험이 여러분의 성공에 영감을 줄 것입니다.",
