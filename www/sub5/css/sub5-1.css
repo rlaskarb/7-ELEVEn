@@ -1,11 +1,13 @@
 #content .content_area {
-  width: 1600px;
-  margin: 0 auto;
-  padding: 100px 0;
+	width: 1600px;
+	margin: 0 auto;
+	padding: 100px 0;
+	display: flex;
+	justify-content: center;
 }
 
 #content #map_search {
-  width: 100%;
-  height: 800px;
-  border: 1px solid red;
+	width: 1000px;
+	height: 800px;
+	border: 1px solid red;
 }

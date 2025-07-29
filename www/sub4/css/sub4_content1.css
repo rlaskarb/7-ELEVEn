@@ -2,267 +2,381 @@
 
 /* 전체 영역 */
 #content .content_area {
-  width: 1600px;
-  min-height: 800px;
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-bottom: 150px;
+	width: 1600px;
+	min-height: 800px;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-bottom: 150px;
 }
 
 #content .benefits_container,
 #content .special_prize_container,
 #content .cooperative_container {
-  margin: 100px auto 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	margin: 100px auto 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #content .benefits_title,
 #content .special_title,
 #content .cooperative_title {
-  text-align: center;
-  margin-bottom: 50px;
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 #content .benefits_title h3,
 #content .special_title h3,
 #content .cooperative_title h3 {
-  margin-bottom: 30px;
-  font-size: var(--font-size-no5); /*50px*/
-  font-weight: 700;
+	margin-bottom: 30px;
+	font-size: var(--font-size-no5); /*50px*/
+	font-weight: 700;
 }
 
 #content .benefits_title p,
 #content .special_title p,
 #content .cooperative_title p {
-  font-size: var(--font-size-no9); /*24px*/
+	font-size: var(--font-size-no9); /*24px*/
 }
 
 /* 1. 최상의 협력 시스템 */
 #content .cooperative_container {
-  margin-bottom: 80px;
+	margin-bottom: 80px;
 }
 
 #content .cooperative_content {
-  display: flex;
-  align-items: center;
-  gap: 150px;
-  padding: 40px;
-  border-radius: 40px;
-  padding: 70px 40px 70px 200px;
+	display: flex;
+	align-items: center;
+	gap: 150px;
+	padding: 40px;
+	border-radius: 40px;
+	padding: 70px 40px 70px 200px;
 }
 
 #content .cooperative_img {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
 }
 
 #content .cooperative_img img {
-  width: 100%;
-  border-radius: 15px;
-  object-fit: cover; /*이미지가 비율에 맞게 채워지기*/
-  box-shadow: 1px 3px 20px 1px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	border-radius: 15px;
+	object-fit: cover; /*이미지가 비율에 맞게 채워지기*/
+	box-shadow: 1px 3px 20px 1px rgba(0, 0, 0, 0.1);
 }
 
 #content .cooperative_content ul {
-  flex: 1;
+	flex: 1;
 }
 #content .cooperative_content ul li {
-  padding: 10px 10px 10px 50px;
-  border-radius: 15px;
-  margin-bottom: 40px;
-  transition: all 0.5s ease-out;
+	padding: 10px 10px 10px 50px;
+	border-radius: 15px;
+	margin-bottom: 40px;
+	transition: all 0.5s ease-out;
 }
 
 #content .cooperative_content ul li:hover {
-  transform: translateY(-10px);
-  background: rgba(231, 126, 45, 0.01);
+	transform: translateY(-10px);
+	background: rgba(231, 126, 45, 0.01);
 }
 
 #content .cooperative_content li:hover dt {
-  color: var(--font-color-point2);
+	color: var(--font-color-point2);
 }
 
 #content .cooperative_content li:hover dd {
-  color: var(--font-color-point1);
+	color: var(--font-color-point1);
 }
 
 #content .cooperative_content ul li:last-of-type {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 #content .cooperative_content ul li > p {
-  font-size: var(--font-size-no8); /*26px*/
-  font-weight: 700;
-  color: var(--font-color-main);
-  margin-bottom: 20px;
+	font-size: var(--font-size-no8); /*26px*/
+	font-weight: 700;
+	color: var(--font-color-main);
+	margin-bottom: 20px;
 }
 
 #content .cooperative_content dl {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 #content .cooperative_content dt {
-  padding-left: 15px;
-  margin-bottom: 8px;
-  font-size: 1.44rem; /*23px*/
-  font-weight: 600;
+	padding-left: 15px;
+	margin-bottom: 8px;
+	font-size: 1.44rem; /*23px*/
+	font-weight: 600;
 }
 
 #content .cooperative_content dd {
-  padding-left: 35px;
-  font-size: 1.19rem; /*19px*/
-  line-height: 1.6rem;
+	padding-left: 35px;
+	font-size: 1.19rem; /*19px*/
+	line-height: 1.6rem;
 }
 
 /* 고객이 찾아 오는 새로움 */
 
 #content .special_prize_content {
-  width: 1600px;
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
+	width: 1600px;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow: hidden;
 }
 
 #content .prize_img {
-  width: 50%;
-  display: flex;
-  gap: 10px;
+	width: 50%;
+	display: flex;
+	gap: 10px;
 }
 
 #content .prize_img img {
-  width: 50%;
-  max-height: 800px;
+	width: 50%;
+	max-height: 800px;
 }
 
 #content .special_explanation {
-  width: 100%;
-  margin: 50px auto;
-  text-align: center;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	margin: 50px auto;
+	text-align: center;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
 }
 
 #content .special_explanation strong {
-  display: block;
-  margin-bottom: 50px;
-  font-size: var(--font-size-no7); /*24px*/
+	display: block;
+	margin-bottom: 50px;
+	font-size: var(--font-size-no7); /*24px*/
 }
 
 #content .special_prize_content ul {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
 }
 
 #content .special_prize_content ul li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  overflow: hidden; /*이미지가 모서리를 못 삐져나가지 않게 함*/
-  transition: all 0.3s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	background: #fff;
+	overflow: hidden; /*이미지가 모서리를 못 삐져나가지 않게 함*/
+	transition: all 0.3s ease;
 }
 
 #content .special_prize_content ul li:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	transform: translateY(-10px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 #content .special_prize_content .card_img {
-  width: 100px;
-  height: 100px;
-  border-radius: 12px;
-  margin-left: 10px;
-  flex-shrink: 0;
+	width: 100px;
+	height: 100px;
+	border-radius: 12px;
+	margin-left: 10px;
+	flex-shrink: 0;
 }
 
 #content .special_prize_content .card_img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 0.3s ease;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 0.3s ease;
 }
 
 #content .special_prize_content ul li:hover img {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 #content .special_prize_content dl {
-  padding: 20px;
-  text-align: center;
+	padding: 20px;
+	text-align: center;
 }
 
 #content .special_prize_content dl dt {
-  font-size: var(--font-size-no11); /*20px*/
-  font-weight: 600;
-  margin-bottom: 15px;
+	font-size: var(--font-size-no11); /*20px*/
+	font-weight: 600;
+	margin-bottom: 15px;
 }
 
 #content .special_prize_content dl dd {
-  font-size: var(--font-size-no13);
-  line-height: 1.6rem;
-  font-weight: 500;
+	font-size: var(--font-size-no13);
+	line-height: 1.6rem;
+	font-weight: 500;
 }
 
 /* 차별화된 혜택 */
 
 #content .benefits_container ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
 }
 
 #content .benefits_container ul li {
-  width: 300px;
-  height: 300px;
-  text-align: center;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-  background: #fff;
-  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	border-radius: 20px;
+	transition: all 0.3s ease;
+	background: #fff;
+	box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
 }
 
 #content .benefits_container ul li:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	transform: translateY(-10px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 #content .benefits_container ul li a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  font-size: var(--font-size-no7); /*30px*/
-  font-weight: 600;
-  transition: all 0.3s ease;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	font-size: var(--font-size-no7); /*30px*/
+	font-weight: 600;
+	transition: all 0.3s ease;
 }
 
 #content .benefits_container ul li img {
-  width: 200px;
-  height: 150px;
+	width: 200px;
+	height: 150px;
 
-  object-fit: contain;
+	object-fit: contain;
 }
 
 #content .benefits_container ul li:hover span {
-  color: var(--font-color-main);
+	color: var(--font-color-main);
 }
 
 #content .benefits_container ul li a span {
-  display: block;
+	display: block;
+}
+
+/* 모달창 */
+
+.is_hidden {
+	display: none !important;
+}
+
+#modal_overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 100;
+}
+
+#modal_container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	max-width: 800px;
+	max-height: 1200px;
+	overflow-y: auto;
+	padding: 30px;
+	background-color: var(--font-color-sub2);
+	border-radius: 20px;
+	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+	z-index: 101;
+}
+
+#modal_container .modal_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px;
+	border-bottom: 3px solid rgba(1, 113, 33, 0.3);
+}
+
+#modal_container .modal_title {
+	color: rgba(217, 38, 41, 0.9);
+	font-size: var(--font-size-no7); /*26px*/
+	font-weight: 800;
+}
+
+#modal_container #modal_close_btn {
+	border: none;
+	background: none;
+	cursor: pointer;
+	color: rgba(231, 126, 45, 0.8);
+	font-size: var(--font-size-no7); /*30px*/
+	transition: transform 0.3s ease;
+}
+
+#modal_container #modal_close_btn:hover {
+	transform: rotate(90deg);
+	font-weight: 700;
+}
+
+#modal_container .modal_body {
+	padding: 30px;
+	margin-top: 20px;
+}
+
+.benefit_card {
+	background-color: var(250, 248, 245, 0.8);
+	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	padding: 30px 20px 20px 40px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+
+	transition: all 0.3s ease;
+}
+
+.benefit_card:hover {
+	transform: translateY(-5px);
+	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card_icon {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: rgba(1, 113, 33, 0.9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.card_icon i {
+	color: var(--font-color-sub2);
+	font-size: var(--font-size-no9);
+}
+
+.benefit_card dl {
+	position: relative;
+	z-index: 1;
+}
+
+.benefit_card dt {
+	font-size: var(--font-size-no11); /*20px*/
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.benefit_card dd {
+	line-height: 2rem;
 }
