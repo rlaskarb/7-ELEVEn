@@ -26,16 +26,16 @@
 // 제이 쿼리 버전
 
 $(document).ready(function () {
-  const scrollOffset = 100;
+	const scrollOffset = 100;
 
-  $(".history_nav a").on("click", function (event) {
-    event.preventDefault();
+	$(".history_nav a").on("click", function (event) {
+		event.preventDefault();
 
-    const targetSelector = $(this).data("target");
-    const targetElement = $(targetSelector);
-    if (targetElement.length) {
-      const offsetPosition = targetElement.offset().top - scrollOffset;
-      $("html ,body").animate({ scrollTop: offsetPosition }, 1000);
-    }
-  });
+		const targetSelector = $(this).data("target");
+		const targetElement = $(targetSelector);
+		if (targetElement.length) {
+			const offsetPosition = targetElement.offset().top - scrollOffset;
+			$("html ,body").animate({ scrollTop: offsetPosition }, 1000);
+		}
+	});
 });

@@ -101,7 +101,7 @@
 	margin-bottom: 0;
 }
 
-#content .cooperative_content ul li>p {
+#content .cooperative_content ul li > p {
 	font-size: var(--font-size-no8);
 	/*26px*/
 	font-weight: 700;
@@ -137,18 +137,24 @@
 	left: 50%;
 	transform: translateX(-50%);
 	overflow: hidden;
+}
 
+#content .prize_viewport {
+	width: 100%;
+	overflow: hidden;
 }
 
 #content .prize_img {
-	width: 50%;
 	display: flex;
-	gap: 10px;
+	position: relative;
+	left: 0;
 }
 
 #content .prize_img img {
-	width: 50%;
-	max-height: 800px;
+	border-radius: 30px;
+	max-height: 400px;
+	flex-shrink: 0;
+	margin-right: 20px;
 }
 
 #content .special_explanation {
@@ -242,12 +248,25 @@
 	border-radius: 20px;
 	transition: all 0.3s ease;
 	background: #fff;
+	position: relative;
 	box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
 }
 
 #content .benefits_container ul li:hover {
 	transform: translateY(-10px);
 	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+#content .benefits_container ul li:hover::after {
+	content: "Click! 자세한 내용을 보실 수 있습니다.";
+	display: block;
+	position: absolute;
+	bottom: -70px;
+	padding: 15px 0;
+	width: 300px;
+	background: red;
+	color: #fff;
+	border-radius: 20px;
 }
 
 #content .benefits_container ul li a {
@@ -267,7 +286,7 @@
 #content .benefits_container ul li img {
 	width: 200px;
 	height: 150px;
-
+	border-radius: 50px;
 	object-fit: contain;
 }
 
