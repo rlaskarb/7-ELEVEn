@@ -639,21 +639,9 @@
 }
 
 /* 주황색 그룹 (1, 2, 5번) */
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(1):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(2):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(5):hover
-	a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(1):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(2):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(5):hover a {
 	background: rgba(231, 126, 45, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(231, 126, 45, 0.6);
@@ -661,16 +649,8 @@
 }
 
 /* 빨간색 그룹 (3, 4번) */
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(3):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(4):hover
-	a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(3):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(4):hover a {
 	background: rgba(217, 38, 41, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(217, 38, 41, 0.6);
@@ -678,16 +658,8 @@
 }
 
 /* 초록색 그룹 (6, 7번) */
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(6):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(7):hover
-	a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(6):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(7):hover a {
 	background: rgba(1, 113, 33, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(1, 113, 33, 0.6);
@@ -791,147 +763,22 @@
 #content .seven_eleven_story {
 	width: 100%;
 	height: 1050px;
+	padding-top: 300px;
 	margin: 0 auto;
+}
+
+#content .seven_story_container {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-}
-
-#content .seven_eleven_story .seven_eleven_story_container {
-	width: 1600px;
-	height: 800px;
-	position: relative;
-	display: flex;
 	align-items: center;
-	gap: 50px;
 }
 
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_title {
+#content .seven_story_title {
 	width: 500px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	gap: 20px;
 }
 
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_title
-	h3 {
-	width: 300px;
-	font-size: var(--font-size-no5);
-	color: var(--font-color-point1);
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_title
-	p {
-	width: 410px;
-	font-size: var(--font-size-no10);
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_shorts {
-	width: 1100px;
-	height: 600px;
-	/* overflow: hidden; */
-	position: relative;
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_shorts
-	ul {
+#content .seven_story_shorts ul {
 	display: flex;
-	gap: 20px;
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_shorts
-	.seven_story_shorts_slot {
-	position: relative;
-	width: 350px;
-	height: 600px;
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_shorts
-	.seven_story_shorts_slot
-	.seven_story_shorts_items {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_shorts
-	.seven_story_shorts_slot
-	.seven_story_shorts_items
-	.seven_story_shorts_link {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: opacity 0.8s ease-in-out;
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_shorts
-	.seven_story_shorts_slot
-	.seven_story_shorts_items
-	.seven_story_shorts_link.active {
-	opacity: 1;
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_shorts
-	.seven_story_shorts_slot
-	.seven_story_shorts_items
-	.seven_story_shorts_link
-	img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 30px;
-	transition: transform 0.3s ease;
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_shorts
-	.seven_story_shorts_slot
-	.seven_story_shorts_items
-	.seven_story_shorts_link:hover
-	img {
-	transform: translateY(-5px);
-}
-
-#content
-	.seven_eleven_story
-	.seven_eleven_story_container
-	.seven_eleven_story_more {
-	bottom: 100px;
-	left: 0;
 }
