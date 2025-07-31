@@ -1,1 +1,120 @@
 @charset "utf-8";
+
+#content .content_area {
+	width: 1600px;
+	min-height: 800px;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-bottom: 150px;
+	margin-top: 100px;
+}
+#content .content_area::after {
+	content: "";
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	width: 4px;
+	height: 2700px;
+	background: rgba(1, 113, 33, 0.8);
+}
+
+.procedures_nav ul {
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+	font-size: var(--font-size-no7); /*30px*/
+}
+
+.train_order_area {
+	width: 1400px;
+	margin: 0 auto;
+}
+
+.train_order_content {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.train_order_content div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30%;
+	margin-bottom: 100px;
+}
+
+.train_order_content div h4 {
+	width: 40%;
+	text-align: left;
+	font-size: var(--font-size-no7); /*30px*/
+	font-weight: 700;
+	margin-left: 100px;
+	color: rgba(1, 113, 33, 0.8);
+}
+
+.train_order_content div ul {
+	padding: 40px;
+	width: 55%;
+	border-radius: 20px;
+	border: 3px solid rgba(217, 38, 41, 0.8);
+	background: var(--font-color-sub2);
+	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.train_order_content div ul li {
+	font-size: var(--font-size-no12); /*18px*/
+	font-weight: 500;
+	margin-bottom: 15px;
+	line-height: 1.9rem;
+	letter-spacing: 0.05rem;
+}
+
+.train_order_content div ul li a {
+	margin-top: 20px;
+	padding: 10px;
+	border-radius: 25px;
+	text-align: center;
+	background: var(--font-color-point1);
+	color: var(--font-color-sub1);
+	font-size: var(--font-size-no11); /*20px*/
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.train_order_content div ul li a:hover {
+	background: var(--font-color-main);
+	transform: translateY(3px);
+	box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
+}
+
+.train_order_content div:last-of-type {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+	color: var(--font-color-sub2);
+	font-weight: 700;
+	text-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.9);
+	position: absolute;
+	bottom: 550px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+img {
+	width: 1000px;
+	margin: 50px auto;
+}
