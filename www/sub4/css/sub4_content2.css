@@ -19,7 +19,7 @@
 	transform: translateX(-50%);
 	display: block;
 	width: 4px;
-	height: 3500px;
+	height: 3400px;
 	background: rgba(1, 113, 33, 0.8);
 }
 
@@ -31,7 +31,6 @@
 	width: 60%;
 	margin: 0 auto;
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	gap: 30px;
 	font-size: var(--font-size-no7);
@@ -39,16 +38,16 @@
 }
 
 .procedures_nav ul li a {
-	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
-	padding: 5px 15px;
+	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+	padding: 5px 20px 10px;
 	border-radius: 20px;
 	text-align: center;
 	transition: all 0.3s ease;
-	background: var(--font-color-sub2);
+
 }
 
 .procedures_nav ul li a:hover {
-	background: rgba(217, 38, 41, 0.8);
+	background: rgba(217, 38, 41, 0.9);
 	color: var(--font-color-sub2);
 	transform: translateY(-3px);
 }
@@ -63,62 +62,61 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 80px;
-	height: 80px;
+	width: 120px;
+	height: 120px;
 	margin: 0 auto 250px;
 	border-radius: 50%;
-	background: rgba(217, 38, 41, 1);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	background-image: url(../images/content2/ico_info_circle.png);
+	background-repeat: no-repeat;
 	border: 3px solid rgba(217, 38, 41, 0.8);
+	background-size: 100% auto;
 	transition: all 0.5s ease;
 	z-index: 1;
 }
 
 .icon_area ul li:nth-of-type(1) {
-	position: absolute;
 	top: 245px;
+	background-position: 0 -3218px;
 }
 
 .icon_area ul li:nth-of-type(2) {
-	position: absolute;
-	top: 680px;
+	top: 650px;
+	background-position: 0 0;
 }
 
 .icon_area ul li:nth-of-type(3) {
-	position: absolute;
 	top: 1120px;
+	background-position: 0 -2940px;
 }
 
 .icon_area ul li:nth-of-type(4) {
-	position: absolute;
 	top: 1560px;
+	background-position: 0 -3760px;
 }
 
 .icon_area ul li:nth-of-type(5) {
-	position: absolute;
 	top: 2025px;
+	background-position: 0 -494px;
 }
 
 .icon_area ul li:nth-of-type(6) {
-	position: absolute;
 	top: 2480px;
+	background-position: 0 -2586px;
 }
 
 .icon_area ul li:nth-of-type(7) {
-	position: absolute;
 	top: 2840px;
+	background-position: 0 -237px;
 }
 
 .icon_area ul li:nth-of-type(8) {
-	position: absolute;
 	top: 3270px;
+	background-position: 0 -3490px;
 }
 
 .icon_area ul li:nth-of-type(9) {
-	position: absolute;
-	top: 3695px;
+	top: 3675px;
+	background-position: 0 -1946px;
 }
 
 .icon_area ul li i {
@@ -127,6 +125,8 @@
 	color: var(--font-color-sub2);
 	transition: color 0.4s, transform 0.4s;
 }
+
+
 
 .description_area {
 	width: 1400px;
@@ -177,7 +177,73 @@
 	margin-bottom: 15px;
 	line-height: 1.9rem;
 	letter-spacing: 0.05rem;
+	position: relative;
 }
+
+.train_order_content #desc2::before {
+	content: "STEP 01";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.train_order_content #desc3::before {
+	content: "STEP 02";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.train_order_content #desc4::before {
+	content: "STEP 03";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.train_order_content #desc5::before {
+	content: "STEP 04";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.train_order_content #desc6::before {
+	content: "STEP 05";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.train_order_content #desc7::before {
+	content: "STEP 06";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.train_order_content #desc8::before {
+	content: "STEP 07";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.train_order_content #desc9::before {
+	content: "STEP 08";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.train_order_content #desc10::before {
+	content: "STEP 09";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
 
 .train_order_content div ul li a {
 	margin-top: 20px;
@@ -198,7 +264,7 @@
 	box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
 }
 
-#desc9 > div {
+#desc9>div {
 	position: relative;
 }
 
