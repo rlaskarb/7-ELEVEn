@@ -11,7 +11,6 @@
 	margin-top: 100px;
 }
 
-
 #content .content_area::after {
 	content: "";
 	position: absolute;
@@ -24,11 +23,9 @@
 	background: rgba(1, 113, 33, 0.8);
 }
 
-
 .procedures_nav {
 	margin-top: 200px;
 }
-
 
 .procedures_nav ul {
 	width: 60%;
@@ -56,7 +53,6 @@
 	transform: translateY(-3px);
 }
 
-
 .timeline_wrapper {
 	display: flex;
 	position: relative;
@@ -77,7 +73,7 @@
 	align-items: center;
 	border: 3px solid rgba(217, 38, 41, 0.8);
 	transition: all 0.5s ease;
-	z-index: 10;
+	z-index: 1;
 }
 
 .icon_area ul li:nth-of-type(1) {
@@ -125,15 +121,12 @@
 	top: 3695px;
 }
 
-
 .icon_area ul li i {
 	font-size: var(--font-size-no7);
 	/*30px*/
 	color: var(--font-color-sub2);
 	transition: color 0.4s, transform 0.4s;
 }
-
-
 
 .description_area {
 	width: 1400px;
@@ -186,7 +179,6 @@
 	letter-spacing: 0.05rem;
 }
 
-
 .train_order_content div ul li a {
 	margin-top: 20px;
 	padding: 10px;
@@ -206,8 +198,7 @@
 	box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
 }
 
-
-#desc9 {
+#desc9 > div {
 	position: relative;
 }
 
@@ -217,7 +208,6 @@
 	margin-left: 70px;
 	border-radius: 25px;
 	margin-top: 70px;
-	position: relative;
 }
 
 .image_caption {
@@ -230,4 +220,20 @@
 	padding: 3px 10px;
 	border-radius: 10px;
 	border: 3px solid rgba(217, 38, 41, 0.8);
+}
+
+#content .procedures_nav.fixed {
+	position: fixed;
+	top: -100px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1800px;
+	border-radius: 20px;
+	background: var(--font-color-point2);
+	z-index: 100;
+	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+#content .procedures_nav.fixed a {
+	color: var(--font-color-sub2);
 }
