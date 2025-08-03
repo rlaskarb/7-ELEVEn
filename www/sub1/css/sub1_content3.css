@@ -30,8 +30,8 @@
 #content .history_nav li a {
 	font-size: var(--font-size-no11);
 	border-radius: 25px;
-	font-weight: 600;
-	padding: 15px 0;
+	font-weight: 500;
+	padding: 7px 15px;
 	transition: all 0.3s ease;
 }
 
@@ -45,15 +45,15 @@
 	top: -100px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 1800px;
-	border-radius: 20px;
-	background: var(--font-color-point2);
+	width: 1600px;
+	border-radius: 30px;
+	background: #fff;
 	z-index: 100;
 	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
 }
 
 #content .history_nav.fixed a {
-	color: var(--font-color-sub2);
+	padding: 13px 0;
 }
 
 #content .history_nav li.on a {

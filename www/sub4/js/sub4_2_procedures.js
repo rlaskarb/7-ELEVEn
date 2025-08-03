@@ -1,40 +1,42 @@
-// $(document).ready(function () {
-// 	const $header = $("#headerArea");
-// 	const $proceduresNav = $(".procedures_nav");
-// 	const $navLinks = $proceduresNav.find("a");
-// 	const $descriptionItem = $(".description_item");
-// 	const stickyNavTop = $proceduresNav.offset().top;
-// 	const navHeight = $proceduresNav.outerHeight();
+$(document).ready(function () {
+	const $header = $("#headerArea");
+	const $proceduresNav = $(".procedures_nav");
+	const $navLinks = $proceduresNav.find("li a");
+	const $descriptionItem = $(".description_item");
+	const $timelineWrapper = $(".timeline_wrapper");
+	const navHeight = $proceduresNav.outerHeight();
+	let navTop = $proceduresNav.offset().top;
 
-// 	$(window).on("scroll", function () {
-// 		const scrollTop = $(this).scrollTop();
-// 		if (scrollTop >= stickyNavTop) {
-// 			$header.hide();
-// 			$proceduresNav.addClass("fixed");
-// 		} else {
-// 			$header.show();
-// 			$proceduresNav.removeClass("fixed");
-// 		}
+	$(window).on("scroll", function () {
+		const scrollTop = $(this).scrollTop();
 
-// 		$descriptionItem.each(function (index) {
-// 			const itemTop = $(this).offset().top;
+		if (scrollTop >= navTop - 150) {
+			$header.hide();
+			$proceduresNav.addClass("fixed");
+		} else {
+			$header.show();
+			$proceduresNav.removeClass("fixed");
+		}
 
-// 			if (scrollTop >= itemTop - navHeight - 100) {
-// 				$navLinks.parent().removeClass("on");
-// 				$navLinks.eq(index).parent().addClass("on");
-// 			}
-// 		});
-// 	});
+		$descriptionItem.each(function (index) {
+			const itemTop = $(this).offset().top;
 
-// 	$navLinks.on("click", function (event) {
-// 		event.preventDefault();
+			if (scrollTop >= itemTop - navHeight - 200) {
+				$navLinks.parent().removeClass("on");
+				$navLinks.eq(index).parent().addClass("on");
+			}
+		});
+	});
 
-// 		const targetSelector = $(this).data(target);
-// 		const $targetElement = $(targetSelector);
+	$navLinks.on("click", function (event) {
+		event.preventDefault();
 
-// 		if ($targetElement.length) {
-// 			const offsetPosition = $targetElement.offset().top - navHeight - 100;
-// 			$("html,body").animate({ scrollTop: offsetPosition }, 1000);
-// 		}
-// 	});
-// });
+		const targetId = $(this).attr("href");
+		const $targetElement = $(targetId);
+
+		if ($targetElement.length) {
+			const offsetPosition = $targetElement.offset().top - navHeight - 20;
+			$("html,body").animate({ scrollTop: offsetPosition }, 500);
+		}
+	});
+});

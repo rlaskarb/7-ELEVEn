@@ -106,7 +106,7 @@
 		</header>
 
 		<div class="visual">
-			<img src="./common/images/Productintroduction_visual1.png" alt="서브 비주얼 이미지" />
+			<img src="../sub1/common/images/company_visual.png" alt="서브 비주얼 이미지" />
 			<strong>창업안내</strong>
 		</div>
 
@@ -128,24 +128,27 @@
 				<p>가게를 여는 일, 삶의 방향을 함께 그려가는 시작입니다.</p>
 			</div>
 
-			<div class="content_area">
-				<div class="procedures_nav">
-					<ul>
-						<li>
-							<h3><a href="#">창업절차</a></h3>
-						</li>
-						<li><a href="#desc2" data-target="#desc2">창업설명</a></li>
-						<li><a href="#desc3" data-target="#desc3">상권분석</a></li>
-						<li><a href="#desc4" data-target="#desc4">개별상담</a></li>
-						<li><a href="#desc5" data-target="#desc5">가맹신청</a></li>
-						<li><a href="#desc6" data-target="#desc6">계약체결</a></li>
-						<li><a href="#desc7" data-target="#desc7">가맹입문교육</a></li>
-						<li><a href="#desc8" data-target="#desc8">공사착공</a></li>
-						<li><a href="#desc9" data-target="#desc9">개점준비</a></li>
-						<li><a href="#desc10" data-target="#desc10">점포오픈</a></li>
-					</ul>
-				</div>
+			<!-- 
+				[수정] .procedures_nav를 .content_area 밖으로 이동시켰습니다.
+				이유: .content_area에 적용된 transform 속성이 자식 요소인 .procedures_nav의 position: fixed 속성을 방해하기 때문입니다.
+				이렇게 구조를 변경하면 스크롤 시 네비게이션이 화면 상단에 정상적으로 고정됩니다.
+			-->
+			<div class="procedures_nav">
+				<h3 class="hidden">창업절차</h3>
+				<ul>
+					<li><a href="#desc2" data-target="#desc2">창업설명</a></li>
+					<li><a href="#desc3" data-target="#desc3">상권분석</a></li>
+					<li><a href="#desc4" data-target="#desc4">개별상담</a></li>
+					<li><a href="#desc5" data-target="#desc5">계약체결</a></li>
+					<li><a href="#desc6" data-target="#desc6">가맹입문교육</a></li>
+					<li><a href="#desc7" data-target="#desc7">공사착공</a></li>
+					<li><a href="#desc8" data-target="#desc8">개점준비</a></li>
+					<li><a href="#desc9" data-target="#desc9">최종점검</a></li>
+					<li><a href="#desc10" data-target="#desc10">점포오픈</a></li>
+				</ul>
+			</div>
 
+			<div class="content_area">
 				<div class="timeline_wrapper">
 					<div class="icon_area">
 						<ul>
@@ -169,12 +172,13 @@
 								</h4>
 								<ul class="scroll_fade_in from_right">
 									<li>
-										고객센터로 1:1 상담 신청이 가능합니다.<br />
+										• 고객센터로 1:1 상담 신청이 가능합니다.<br />
 										(유선 / 홈페이지).
 									</li>
 
 									<li>
-										‘점포물건정보’ 메뉴에서 지역별 담당자 및 연락처 확인
+										<br>
+										• 점포물건정보 메뉴에서 지역별 담당자 및 연락처 확인
 										가능합니다
 										<a href="#">창업설명회 안내</a>
 									</li>
@@ -185,12 +189,13 @@
 								<h4 class="scroll_fade_in from_left">점포 상권 분석</h4>
 								<ul class="scroll_fade_in from_right">
 									<li>
-										상담 전 점포을 확인할 수 있습니다.<br />
+										• 상담 전 점포을 확인할 수 있습니다.<br />
 										①PURPLE 타입: 보유한 점포가 있거나 직접 임차하시는 경우<br />
 										② GREEN 타입: 본부 보유 점포로 진행하시는 경우
 									</li>
 									<li>
-										상세 설명은 가맹 상품 소개 메뉴를 확인해 주세요.
+										<br>
+										• 상세 설명은 가맹 상품 소개 메뉴를 확인해 주세요.
 										<a href="#">가맹상품 소개 더보기</a>
 									</li>
 								</ul>
@@ -203,15 +208,17 @@
 								</h4>
 								<ul class="scroll_fade_in from_right">
 									<li>
-										창업을 결정 시 상담 후 정보공개서를 받으시게 됩니다.
+										• 창업을 결정 시 상담 후 정보공개서를 받으시게 됩니다.
 									</li>
 									<li>
-										관련 법상 정보공개서 서명 후 14일이 지나야 가맹 계약이
-										가능합니다. ①정보공개서 ② 인근점포리스트 ③
+										<br>
+										• 관련 법상 정보공개서 서명 후 14일이 지나야 가맹 계약이
+										가능합니다. <br> ①정보공개서 <br>② 인근점포리스트<br> ③
 										사전교부용계약서
 									</li>
 									<li>
-										정보공개서 서명은 사전 절차로 계약 의무가 발생하지
+										<br>
+										• 정보공개서 서명은 사전 절차로 계약 의무가 발생하지
 										않습니다.
 									</li>
 								</ul>
@@ -223,13 +230,13 @@
 								</h4>
 								<ul class="scroll_fade_in from_right">
 									<li>
-										CU 가맹 계약 총괄 담당자(CSP)와 본계약을 진행하는
+										• CU 가맹 계약 총괄 담당자(CSP)와 본계약을 진행하는
 										단계입니다.
 									</li>
-									<li>계약 후 투자금 납부가 완료되면 착공에 들어갑니다</li>
-									<li>
-										투자금에는 무엇이 있나요? ① purple 타입 : 가입비+상품대금
-										② green 타입 : 가입비+상품대금+투자예치금
+									<li><br> • 계약 후 투자금 납부가 완료되면 착공에 들어갑니다</li>
+									<li><br>
+										• 투자금에는 무엇이 있나요? <br>① purple 타입 : 가입비+상품대금
+										<br>② green 타입 : 가입비+상품대금+투자예치금
 										<a href="#">가맹상품소개 더보기</a>
 									</li>
 								</ul>
@@ -239,19 +246,23 @@
 								<h4 class="scroll_fade_in from_left">가맹 입문 교육</h4>
 								<ul class="scroll_fade_in from_right">
 									<li>
-										가맹입문교육은 총 7일이며, 교육 미이수 시 개점이
+										• 가맹입문교육은 총 7일이며, 교육 미이수 시 개점이
 										불가합니다.
 									</li>
-									<li>가맹입문교육은 계약 전/후로 입과 가능합니다</li>
+									<br>
+									<li>• 가맹입문교육은 계약 전/후로 입과 가능합니다</li>
+									<br>
 									<li>
-										현재 서울/부산/대구/광주/대전에서 교육장을 운영하고
+										• 현재 서울/부산/대구/광주/대전에서 교육장을 운영하고
 										있습니다.
 									</li>
+									<br>
 									<li>
-										점포 운영에 필요한 CU의 노하우를 배우고 실습할 수
+										• 점포 운영에 필요한 CU의 노하우를 배우고 실습할 수
 										있습니다.
 									</li>
-									<li>최대 2인까지 동시 입과 가능합니다.</li>
+									<br>
+									<li> • 최대 2인까지 동시 입과 가능합니다.</li>
 								</ul>
 							</div>
 
@@ -261,14 +272,16 @@
 								</h4>
 								<ul class="scroll_fade_in from_right">
 									<li>
-										점포 공사는 평균 9일이 소요됩니다. *현장 상황에 따라 ± 2일
+										• 점포 공사는 평균 9일이 소요됩니다. 현장 상황에 따라 ± 2일
 										변동 가능합니다.
 									</li>
+									<br>
 									<li>
-										점포 공사 등에 대해 각 분야의 전문 담당자가 지원합니다.
+										• 점포 공사 등에 대해 각 분야의 전문 담당자가 지원합니다.
 									</li>
+									<br>
 									<li>
-										어떤 인허가를 취득하나요? 신용카드, 통신, 안전상비,
+										• 어떤 인허가를 취득하나요? <br> ⁂ 신용카드, 통신, 안전상비,
 										즉석조리, 종량제 등 점포 운영일반에 필요한 인허가 취득이
 										필요합니다.
 									</li>
@@ -279,10 +292,11 @@
 								<h4 class="scroll_fade_in from_left">진열 및 검수</h4>
 								<ul class="scroll_fade_in from_right">
 									<li>
-										공사가 완료되면 개점 이틀 전 부터 전문진열 용역이 진열을
+										• 공사가 완료되면 개점 이틀 전 부터 전문진열 용역이 진열을
 										진행합니다.
 									</li>
-									<li>개점 하루 전 점주님의 최종 검수가 진행됩니다.</li>
+									<br>
+									<li>• 개점 하루 전 점주님의 최종 검수가 진행됩니다.</li>
 								</ul>
 							</div>
 
@@ -297,7 +311,7 @@
 							<div id="desc10" class="description_item">
 								<h4 class="scroll_fade_in from_left">개점 D-DAY</h4>
 								<p class="scroll_fade_in from_right">
-									드디어 개점입니다! 개점일 전후로 총평을 진행하며,<br />
+									드디어 개점입니다! <br> 개점일 전후로 총평을 진행하며,<br />
 									시설 및 점포 미비사항을 보충합니다.
 								</p>
 							</div>
