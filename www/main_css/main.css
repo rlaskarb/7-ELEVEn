@@ -60,7 +60,7 @@
 .visual .gallery dl dt {
 	font-size: var(--font-size-no5);
 	color: var(--font-color-sub2);
-	text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.7);
+	text-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 	font-weight: bold;
 	position: absolute;
 	left: 150px;
@@ -72,7 +72,7 @@
 .visual dl dd {
 	font-size: var(--font-size-no7);
 	color: var(--font-color-sub2);
-	text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.7);
+	text-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 	position: absolute;
 	left: 150px;
 	top: 280px;
@@ -189,12 +189,14 @@
 
 #content .new_menu_left_box h3 {
 	font-size: var(--font-size-no5);
+	/*50px*/
 	color: var(--font-color-point1);
 	margin-bottom: 10px;
 }
 
 #content .new_menu_left_box p {
 	font-size: var(--font-size-no10);
+	/*22px*/
 	margin-bottom: 50px;
 }
 
@@ -761,26 +763,135 @@
 
 /* 7-ELEVEn STORY */
 #content .seven_eleven_story {
-	width: 100%;
-	height: 1050px;
-	padding-top: 300px;
+	width: 1600px;
+	height: 800px;
+	padding-top: 200px;
 	margin: 0 auto;
+
 }
 
 #content .seven_story_container {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+
 }
 
 #content .seven_story_title {
 	width: 500px;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	gap: 130px;
+	margin-bottom: 120px;
+
+}
+
+#content .seven_story_title h3 {
+	font-size: var(--font-size-no5);
+	/*50px*/
+	color: var(--font-color-point1);
+
+}
+
+#content .seven_story_title p {
+	width: 350px;
+	font-size: var(--font-size-no10);
+	line-height: 2.5rem;
+	/*22px*/
+}
+
+#content .seven_story_shorts {
+	width: 1070px;
+	overflow: hidden;
+}
+
+#content .seven_story_shorts ul {
+	width: 100%;
+	position: relative;
+	display: flex;
+	gap: 10px;
+
+}
+
+#content .seven_story_shorts li img {
+	width: 350px;
+	height: 600px;
+	border-radius: 50px;
+}
+
+.seven_eleven_story_more {
+	top: 125px;
+	left: 10px;
+}
+
+
+/* YouTube 팝업창 스타일 시작 */
+
+
+/* 팝업 배경 (오버레이) */
+#youtube_modal_overlay {
+	display: none;
+	/* 평소에는 숨김 */
+	position: fixed;
+	/* 화면에 고정 */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	/* 반투명 검은색 배경 */
+	z-index: 1000;
+	/* 다른 요소들보다 위에 표시 */
+	justify-content: center;
+	align-items: center;
+
 }
 
 
 
-#content .seven_story_shorts ul {
-	display: flex;
+/* 팝업 내용 (흰색 박스) */
+#youtube_modal_content {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+
+}
+
+
+
+/* 유튜브 영상 (iframe) */
+#youtube_modal_content iframe {
+	width: 80vw;
+	/* 화면 너비의 80% */
+	height: 45vw;
+	/* 16:9 비율 유지 */
+	max-width: 800px;
+	/* 최대 너비 제한 */
+	max-height: 450px;
+	/* 최대 높이 제한 */
+
+}
+
+
+
+/* 닫기 버튼 */
+#youtube_modal_close {
+	display: block;
+	margin: 15px auto 0;
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+
+}
+
+#youtube_modal_close:hover {
+	background-color: #555;
+
 }
