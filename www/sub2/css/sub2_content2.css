@@ -1,82 +1,130 @@
 @charset "utf-8";
 
 #content .content_area {
-  width: 1400px;
-  min-height: 1000px;
-  margin: 100px auto 0;
-  position: relative;
+	width: 1600px;
+	min-height: 1000px;
+	margin: 100px auto 0;
+	position: relative;
 }
 
 #content .food_search {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  padding: 5px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	padding: 5px;
 }
 
 #content .food_search input {
-  width: 800px;
-  height: 50px;
-  font-size: var(--font-size-no11);
-  border: 3px solid var(--font-color-point2);
-  outline: none;
+	width: 800px;
+	height: 50px;
+	font-size: var(--font-size-no11);
+	border: 3px solid var(--font-color-point2);
+	outline: none;
 }
 
 #content .food_search button {
-  width: 150px;
-  height: 55px;
-  margin-top: 2px;
-  vertical-align: top;
-  border: 0;
-  font-size: var(--font-size-no12);
-  color: var(--font-color-sub2);
-  background: rgba(1, 113, 33, 0.8);
-  font-weight: 400;
-  border-radius: 10px;
-  transition: all 0.5s ease-out;
+	width: 150px;
+	height: 55px;
+	margin-top: 2px;
+	vertical-align: top;
+	border: 0;
+	font-size: var(--font-size-no12);
+	color: var(--font-color-sub2);
+	background: rgba(1, 113, 33, 0.8);
+	font-weight: 400;
+	border-radius: 10px;
+	transition: all 0.5s ease-out;
 }
 
 #content .food_search button:hover {
-  background: rgba(231, 126, 45, 0.8);
-  font-size: var(--font-size-no12);
-  transform: scale(1.05);
+	background: rgba(231, 126, 45, 0.8);
+	font-size: var(--font-size-no12);
+	transform: scale(1.05);
 }
 
 #content .fresh_food_inquiry {
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  font-size: var(--font-size-no12);
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	font-size: var(--font-size-no12);
 }
 
 #content .fresh_food_inquiry strong {
-  padding: 18px 20px 10px 0;
-  font-size: var(--font-size-no10);
-  border-right: 3px solid var(--font-color-point2);
+	padding: 18px 20px 10px 0;
+	font-size: var(--font-size-no10);
+	border-right: 3px solid var(--font-color-point2);
 }
 
 #content .fresh_food_inquiry ul {
-  display: flex;
-  padding: 10px;
-  gap: 10px;
+	display: flex;
+	padding: 10px;
+	gap: 10px;
 }
 
 #content .food_inquiry_btn {
-  display: block;
-  width: 120px;
-  text-align: center;
-  padding: 10px;
-  border-radius: 20px 20px 5px 20px;
-  cursor: pointer;
-  transition: all 0.5s ease-out;
+	display: block;
+	width: 120px;
+	text-align: center;
+	padding: 10px;
+	border-radius: 20px 20px 5px 20px;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
 }
 
 #content .food_inquiry_btn.food_inquiry_btn:hover {
-  color: var(--font-color-sub2);
-  background: var(--font-color-point2);
-  transform: scale(1.03) translateY(-5px);
+	color: var(--font-color-sub2);
+	background: var(--font-color-point2);
+	transform: scale(1.03) translateY(-5px);
 }
 
 /* 상품 */
+#content .new_banner_container {
+	width: 1215px;
+	margin-top: 50px;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#content .new_banner_content {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+#content .new_banner_content li img {
+	width: 400px;
+	height: 550px;
+	object-fit: contain;
+}
+
+#content .new_banner_content dl {
+	position: absolute;
+	bottom: 60px;
+	font-weight: 600;
+	color: var(--font-color-sub2);
+	text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
+}
+
+#content .new_banner_content dl dt {
+	font-size: var(--font-size-no12); /*18px*/
+}
+#content .new_banner_content dl dd {
+	font-size: var(--font-size-no13); /*16px*/
+}
+
+#content .new_banner_content li:nth-of-type(1) dl {
+	left: 15px;
+}
+
+#content .new_banner_content li:nth-of-type(2) dl {
+	left: 420px;
+}
+
+#content .new_banner_content li:nth-of-type(3) dl {
+	left: 825px;
+}
