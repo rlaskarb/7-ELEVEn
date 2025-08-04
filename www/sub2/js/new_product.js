@@ -40,7 +40,6 @@ $(document).ready(function () {
           				<dl>
           					<dt>${name}</dt>
           					<dd>${price}원</dd>
-          					<dd> # ${flavor} , # ${menu}</dd>
           				</dl>
           				<a href="#" class="pop_open">자세히보기</a>
           			</li>`;
