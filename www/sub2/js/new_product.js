@@ -4,11 +4,11 @@ $(document).ready(function () {
 	// URL 파라미터 추출 함수 (검색 기능용)
 	function getParams() {
 		const url = decodeURIComponent(location.href);
-		url = decodeURIComponent(url);
+		const decodeUrl = decodeURIComponent(url);
 		let params = "";
 
 		//공부하자
-		params = url.substring(url.indexOf("?") + 1, url.length);
+		params = decodeUrl.substring(decodeUrl.indexOf("?") + 1, decodeUrl.length);
 
 		//split() 공부 공부
 		//함수는 문자열을 주어진 문자열 구분자나 정규식을 기준으로 나누어 배열로 변환하는 함수입니다
@@ -35,13 +35,12 @@ $(document).ready(function () {
 					const flavor = item.flavor;
 					const menu = item.menu;
 
-					return;
-					`<li>
-          				<img src"${image}" alt="${name}">
+					return `<li>
+          				<img src="${image}" alt="${name}">
           				<dl>
           					<dt>${name}</dt>
           					<dd>${price}원</dd>
-          					<dd> # ${flavor} | # ${menu}</dd>
+          					<dd> # ${flavor} , # ${menu}</dd>
           				</dl>
           				<a href="#" class="pop_open">자세히보기</a>
           			</li>`;
@@ -49,6 +48,7 @@ $(document).ready(function () {
 
 				$(".new_product_list").html("<ul>" + listItems.join("") + "</ul>");
 			}
+
 			let newArray = []; //검색 결과 저장할 배열
 			let search_on = false; // 검색 상태확인
 
@@ -59,10 +59,12 @@ $(document).ready(function () {
 				if (newArray.length != 0) {
 					dataPrint(newArray);
 				} else {
-					$(".new_product_list").html(
-						'<span style="display:block;text-align:center; font-size:30px; color:red">검색된 상품이 없습니다</span>'
-					);
+					$(".new_product_list").html("<span>검색된 상품이 없습니다</span>");
 				}
+				search_on = true;
+			} else {
+				dataPrint(useData);
+				search_on = false;
 			}
 		},
 	});

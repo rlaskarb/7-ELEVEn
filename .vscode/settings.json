@@ -1,3 +1,6 @@
 {
-  "liveServer.settings.port": 5501
+	"liveServer.settings.port": 5501,
+	"editor.suggest.snippetsPreventQuickSuggestions": true,
+	"editor.mouseWheelZoom": true,
+	"terminal.integrated.mouseWheelZoom": true
 }
