@@ -1,0 +1,160 @@
+body {
+	font-family: "Noto Sans KR", sans-serif;
+	background-color: #eee;
+	font-size: 16px;
+}
+
+.logo a {
+	margin-top: -5px;
+	margin-left: 100px;
+}
+
+.header_inner {
+	justify-content: flex-start !important;
+}
+
+#gnb {
+	margin-left: 200px;
+}
+
+#content {
+	width: 1600px;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 100px;
+}
+
+.login_container {
+	width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+}
+
+.login_img img {
+	margin-left: -150px;
+	width: 645px;
+}
+
+.login_content {
+	margin-left: 200px;
+	margin-bottom: 100px;
+}
+
+.login_content h2 {
+	width: 540px;
+	text-align: center;
+	font-size: var(--font-size-no7); /*30px*/
+	color: rgba(217, 38, 41, 0.9);
+	margin-bottom: 50px;
+}
+
+.login_content form input {
+	border: 1px solid rgba(1, 113, 33, 0.8);
+	font-size: var(--font-size-no12);
+	width: 500px;
+	height: 50px;
+	border-radius: 7px;
+	margin-bottom: 15px;
+	padding-left: 20px;
+}
+.login_content form input::placeholder {
+	font-family: "Noto Sans KR", sans-serif;
+	font-size: var(--font-size-no12);
+	font-weight: 500;
+	color: #999;
+}
+
+.login_content .login_btn1 {
+	width: 500px;
+	margin-left: 15px;
+	margin-top: 20px;
+	border: 0;
+	border-radius: 7px;
+	background: rgba(1, 113, 33, 0.8);
+	font-size: var(--font-size-no12);
+	color: var(--font-color-sub2);
+	font-weight: 400;
+	height: 50px;
+	cursor: pointer;
+}
+
+.login_content .login_btn2 {
+	width: 500px;
+	margin-left: 15px;
+	margin-top: 10px;
+	border: 0;
+	border-radius: 7px;
+	background: #fae100;
+	font-size: var(--font-size-no12);
+	color: var(--font-color-font);
+	font-weight: 400;
+	height: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
+
+.login_content .login_btn2 img {
+	width: 30px;
+}
+
+.find_eleven {
+	width: 550px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.join_eleven {
+	width: 530px;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.join_eleven p {
+	font-size: var(--font-size-no12);
+	color: var(--font-color-font);
+	text-align: center;
+	margin: 0;
+}
+
+.join_eleven .link_benefit {
+	font-size: var(--font-size-no12);
+	color: var(--font-color-font);
+	text-decoration: none;
+}
+
+.join_eleven .its_btn {
+	width: 500px;
+	height: 50px;
+	margin-top: 20px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0;
+	border-radius: 7px;
+	background: rgba(217, 38, 41, 0.9);
+	font-size: var(--font-size-no12);
+	color: var(--font-color-sub2);
+	font-weight: 400;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.join_eleven .its_btn:hover {
+	background: rgba(217, 38, 41, 1);
+	transform: translateY(-2px);
+}

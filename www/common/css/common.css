@@ -353,6 +353,7 @@ img {
 }
 
 #headerArea .search_title {
+	text-align: center;
 	font-size: var(--font-size-no7); /*30px*/
 	font-weight: bold;
 	color: rgba(231, 126, 45, 0.9);

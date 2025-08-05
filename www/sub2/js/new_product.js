@@ -1,21 +1,23 @@
 $(document).ready(function () {
-	let key, value;
-
 	// URL 파라미터 추출 함수 (검색 기능용)
 	function getParams() {
-		const url = decodeURIComponent(location.href);
-		const decodeUrl = decodeURIComponent(url);
-		let params = "";
+		const params = new URL(location.href).searchParams;
 
-		//공부하자
-		params = decodeUrl.substring(decodeUrl.indexOf("?") + 1, decodeUrl.length);
+		//첫번쨰 key ,value 추출
+		const firstKey = [...params.keys()][0];
+		const firstValue = params.get(firstKey);
 
-		//split() 공부 공부
-		//함수는 문자열을 주어진 문자열 구분자나 정규식을 기준으로 나누어 배열로 변환하는 함수입니다
-		key = params.split("=")[0];
-		value = params.split("=")[1];
+		console.log("첫번째key : ", firstKey);
+		console.log("첫번째value : ", firstValue);
+
+		//모든 파라미터 출력
+		for (const [k, v] of params) {
+			console.log(`key=${k},value=${v}`);
+		}
+		//필요하면 반환
+		return { key: firstKey, value: firstValue };
 	}
-	getParams();
+	const { key, value } = getParams(); // 외부에서도 사용가능
 
 	// Ajax로 JSON 데이터 불러오기
 
@@ -53,18 +55,106 @@ $(document).ready(function () {
 
 			if (value) {
 				newArray = useData.filter(function (element) {
-					return element.Name.includes(value);
+					return (
+						element.Name.includes(value) ||
+						element.flavor.includes(value) ||
+						element.menu.includes(value)
+					);
 				});
 				if (newArray.length != 0) {
 					dataPrint(newArray);
 				} else {
-					$(".new_product_list").html("<span>검색된 상품이 없습니다</span>");
+					$(".new_product_list").html("<>");
 				}
 				search_on = true;
 			} else {
 				dataPrint(useData);
 				search_on = false;
 			}
+
+			// 검색 버튼 클릭 이벤트
+			$(".new_food_btn").click(function (event) {
+				event.preventDefault();
+				const searchValue = $(".new_food_input").val();
+
+				if (searchValue) {
+					newArray = useData.filter(function (element) {
+						return element.Name.includes(searchValue);
+					});
+					if (newArray.length != 0) {
+						dataPrint(newArray);
+					} else {
+						$(".new_product_list").html("<span>검색된 상품이 없습니다.</span>");
+					}
+					search_on = true;
+					$(".new_food_input").val("");
+				} else {
+					dataPrint(useData);
+				}
+			});
+			//카테고리 필터링 이벤트
+			$(".food_inquiry_btn").click(function (event) {
+				event.preventDefault();
+
+				//활성화 버튼 스타일 변경
+				$(".food_inquiry_btn").removeClass("active");
+				$(this).addClass("active");
+
+				const filterType = $(this).parent().data("filter");
+
+				if (filterType == "all_food") {
+					dataPrint(useData);
+					search_on = false;
+				} else {
+					// 카테고리별 필터링 로직
+					let filteredData = [];
+
+					switch (filterType) {
+						case "beverage":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "음료";
+							});
+							break;
+						case "snacks":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "과자";
+							});
+							break;
+						case "bread":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "빵";
+							});
+							break;
+						case "candy":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "사탕";
+							});
+							break;
+						case "ice_cream":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "아이스크림";
+							});
+							break;
+						case "sweet":
+							filteredData = useData.filter(function (item) {
+								return item.flavor == "달달";
+							});
+							break;
+						case "salty":
+							filteredData = useData.filter(function (item) {
+								return item.flavor == "짭짤";
+							});
+							break;
+						default:
+							filteredData = useData;
+					}
+
+					newArray = filteredData;
+					dataPrint(newArray);
+					search_on = true;
+				}
+			});
+			// 팝업 변수와 함수
 		},
 	});
 });
