@@ -33,6 +33,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 100px;
+
 }
 
 .login_img img {
@@ -42,13 +43,15 @@ body {
 
 .login_content {
 	margin-left: 200px;
-	margin-bottom: 100px;
+	margin-top: 40px;
+
 }
 
 .login_content h2 {
 	width: 540px;
 	text-align: center;
-	font-size: var(--font-size-no7); /*30px*/
+	font-size: var(--font-size-no7);
+	/*30px*/
 	color: rgba(217, 38, 41, 0.9);
 	margin-bottom: 50px;
 }
@@ -62,6 +65,7 @@ body {
 	margin-bottom: 15px;
 	padding-left: 20px;
 }
+
 .login_content form input::placeholder {
 	font-family: "Noto Sans KR", sans-serif;
 	font-size: var(--font-size-no12);
