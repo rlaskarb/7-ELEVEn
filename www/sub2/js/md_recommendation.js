@@ -1,0 +1,130 @@
+$(document).ready(function () {
+	// HTML 문서가 모두 로드되면 이 안의 코드를 실행해줘! 라는 뜻입니다.
+
+	// [1] 필요한 HTML 요소들을 변수에 저장합니다. (배우들을 무대에 올리는 것과 같습니다)
+	const sliderContainer = $(".new_banner_container"); // 슬라이더 전체 영역
+	const slider = $(".new_banner_content"); // 실제로 움직일 <ul>
+	const originalSlides = slider.find("li"); // 원본 <li> 6개
+	const itemsPerView = 3; // 한 번에 보여줄 개수
+
+	// [2] ✨핵심✨ 맨 앞 3개 슬라이드를 복제해서 맨 뒤에 붙여넣습니다.
+	originalSlides
+		.slice(0, itemsPerView)
+		.clone()
+		.addClass("cloned")
+		.appendTo(slider);
+
+	// [3] 복제된 것을 포함한 모든 li와 그 너비를 다시 계산합니다.
+	const allSlides = slider.find("li"); // 이제 9개가 들어있음
+	const totalSlides = allSlides.length; // 9
+	const slideWidth = originalSlides.outerWidth(true); // li 하나가 차지하는 실제 너비
+
+	// [4] <ul>의 전체 너비를 'li너비 * 9개'로 설정해줍니다.
+	slider.width(totalSlides * slideWidth);
+
+	// [5] 슬라이더의 상태를 기억할 변수들을 만듭니다.
+	let currentIndex = 0; // 현재 페이지 번호 (0부터 시작)
+	let isAnimating = false; // 애니메이션이 겹치지 않도록 하는 '신호등' 역할
+	let interval; // 자동재생을 담을 그릇
+
+	// 이 함수는 슬라이더의 '엔진'과 같은 역할을 합니다. "몇 번째 페이지로 가!" 라는 명령을 받으면 실제로 슬라이더를 움직입니다.
+	function moveSlider(index) {
+		if (isAnimating) return; // 만약 애니메이션이 실행 중이면, 또 실행하지 말고 바로 탈출! (버튼 연타 방지)
+		isAnimating = true; // 이제 애니메이션 시작! (신호등을 빨간불로)
+
+		// [1] animate()를 이용해 left 속성을 바꿔서 부드럽게 움직입니다.
+		slider.stop().animate({ left: -index * slideWidth }, 500, function () {
+			// (애니메이션이 500ms(0.5초) 동안 끝난 후에 아래 코드를 실행)
+
+			// [2] ✨무한 루프의 비밀✨
+			if (index >= originalSlides.length) {
+				// 만약 마지막 페이지(복제된 페이지)에 도착했다면,
+				slider.css("left", 0); // 아무도 모르게 left 값을 0으로 '순간이동' 시킵니다.
+				currentIndex = 0; // 페이지 번호도 처음으로 리셋합니다.
+			}
+			isAnimating = false; // 애니메이션 끝! (신호등을 초록불로)
+		});
+	}
+
+	// 이제 사용자가 슬라이더를 제어할 수 있도록 이벤트를 연결합니다.
+
+	// [1] 다음/이전 버튼 클릭
+	$(".banner_arrow.next").on("click", function (e) {
+		e.preventDefault(); // a 태그의 기본 기능(페이지 이동)을 막습니다.
+		currentIndex++; // 페이지 번호를 1 증가시키고
+		moveSlider(currentIndex); // 엔진(moveSlider)을 돌립니다.
+	});
+
+	$(".banner_arrow.prev").on("click", function (e) {
+		e.preventDefault();
+		if (currentIndex === 0) {
+			// 만약 첫 페이지에서 '이전'을 누르면
+			// 맨 뒤(복제된 슬라이드 바로 앞)로 순간이동 시킨 후,
+			currentIndex = originalSlides.length;
+			slider.css("left", -currentIndex * slideWidth);
+		}
+		currentIndex--; // 페이지 번호를 1 감소시키고
+		moveSlider(currentIndex); // 엔진을 돌립니다.
+	});
+
+	// [2] 자동재생 기능
+	function startAutoplay() {
+		stopAutoplay(); // 혹시라도 켜져 있으면 일단 끄고,
+		interval = setInterval(function () {
+			// 3초(3000ms)마다
+			$(".banner_arrow.next").click(); // 다음 버튼을 강제로 클릭합니다.
+		}, 3000);
+	}
+
+	function stopAutoplay() {
+		clearInterval(interval); // 자동재생을 멈춥니다.
+	}
+
+	// [3] 마우스 드래그 기능
+	let isDragging = false;
+	let startPos = 0;
+
+	slider.on("mousedown", function (e) {
+		// 마우스를 눌렀을 때
+		e.preventDefault();
+		isDragging = true;
+		startPos = e.pageX; // 누른 지점의 가로 좌표를 기억
+		slider.css("cursor", "grabbing"); // 커서 모양 변경
+		stopAutoplay(); // 자동재생 멈춤
+	});
+
+	$(document).on("mouseup", function () {
+		// 마우스를 뗐을 때 (문서 전체에서)
+		if (isDragging) {
+			isDragging = false;
+			slider.css("cursor", "grab");
+			startAutoplay(); // 자동재생 다시 시작
+		}
+	});
+
+	slider.on("mousemove", function (e) {
+		// 마우스를 움직일 때
+		if (!isDragging) return;
+		const diff = startPos - e.pageX; // 처음 누른 곳과 현재 위치의 차이 계산
+
+		if (Math.abs(diff) > 50) {
+			// 50px 이상 움직였을 때만
+			if (diff > 0) {
+				// 오른쪽으로 끌었으면
+				$(".banner_arrow.next").click();
+			} else {
+				// 왼쪽으로 끌었으면
+				$(".banner_arrow.prev").click();
+			}
+			isDragging = false; // 한 번만 실행되도록!
+		}
+	});
+
+	// [4] 최종 실행
+	// 슬라이더에 마우스를 올리면 자동재생 멈춤
+	sliderContainer.on("mouseenter", stopAutoplay);
+	// 마우스가 벗어나면 자동재생 다시 시작
+	sliderContainer.on("mouseleave", startAutoplay);
+	// 페이지가 열리면 자동재생 바로 시작
+	startAutoplay();
+});
