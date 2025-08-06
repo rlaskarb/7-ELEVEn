@@ -162,19 +162,18 @@ $(document).ready(function () {
 			// 팝업 생성함수 만들기
 			let ind = 0; // 현재 선택된 아이템의 인덱스
 
-			function popUpChange(obj) {
-				obj.preventDefault();
-				const listItems = $.map(obj, function (item) {
-					const image = item.Image;
-					const name = item.Name;
-					const price = Number(item.Price).toLocaleString(); // 가격 천단위 콤마로 포멧
-					const dd1 = item.popDd1;
-					const dd2 = item.popDd2;
-					const dd3 = item.popDd3;
-					const flavor = item.flavor;
-					const menu = item.menu;
+			function popUpChange(item) {
+				const image = item.Image;
+				const name = item.Name;
+				const price = Number(item.Price).toLocaleString(); // 가격 천단위 콤마로 포멧
+				const dd1 = item.popDd1;
+				const dd2 = item.popDd2;
+				const dd3 = item.popDd3;
+				const flavor = item.flavor;
+				const menu = item.menu;
 
-					return `<li>
+				const popupHtml = `<ul>
+					 <li>
           				<img src="${image}" alt="${name}">
           				<dl>
           					<dt>${name}</dt>
@@ -182,14 +181,14 @@ $(document).ready(function () {
           					<dd>${dd2}</dd>
           					<dd>${dd3}</dd>
           					<dd>${price}원</dd>
-          					<dd>${flavor},${menu}</dd>
+          					<dd>${flavor} | ${menu}</dd>
           				</dl>
-          			</li>`;
-				});
+							<a href="#" class="close_pop">닫기</a>
+          			</li>
+					</ul>
+					`;
 
-				$(".new_modal_box .new_popup_con").html(
-					"<ul>" + listItems.join("") + "</ul>"
-				);
+				$(".new_modal_box .new_popup_con").html(popupHtml);
 			}
 
 			// 팝업 열기 이벤트 (동적으로 생성된 요소에 이벤트 바인딩)
@@ -207,11 +206,13 @@ $(document).ready(function () {
 					popUpChange(newArray[ind]);
 				}
 			});
+
 			// 팝업 닫기 이벤트
 			$(document).on("click", ".close_pop", ".new_modal_box", function (event) {
 				event.preventDefault();
 				$(".new_modal_box").fadeOut("fast");
 			});
+
 			// 팝업 내용 영역 클릭 시 팝업이 닫히지 않도록 방지
 			$(document).on("click", ".new_popup_content", function (event) {
 				event.stopPropagation();
