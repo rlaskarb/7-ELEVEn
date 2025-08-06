@@ -129,7 +129,6 @@
 }
 
 /* 고객이 찾아 오는 새로움 */
-
 #content .special_prize_content {
 	width: 1600px;
 	position: relative;
@@ -374,7 +373,6 @@
 	padding: 30px 20px 20px 40px;
 	margin-bottom: 20px;
 	border-radius: 20px;
-
 	transition: all 0.3s ease;
 }
 

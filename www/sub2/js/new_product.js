@@ -19,6 +19,23 @@ $(document).ready(function () {
 	}
 	const { key, value } = getParams(); // 외부에서도 사용가능
 
+	//검색결과 없을때 보여주는 html 템플릿
+	function getNoResultHTML() {
+		return `
+		<div class="no_result_container">
+			<img src="./images/content2/ddddd.png">
+			<div>
+			<span> 앗! 찾으시는 상품이 없네요⭐</span>
+			<span> 하지만 저희가 한번 만들어 보겠습니다!🚀</span>
+			<span>상품제안 하셔서 상품으로 출시되면 어마어한 상품이!!⭐</span>
+			<a href="../sub6/sub6-1.html" class="suggestion_button">
+						 상품제안 바로가기
+			</a>
+			</div>
+		</div>
+		`;
+	}
+
 	// Ajax로 JSON 데이터 불러오기
 
 	$.ajax({
@@ -53,6 +70,7 @@ $(document).ready(function () {
 			let newArray = []; //검색 결과 저장할 배열
 			let search_on = false; // 검색 상태확인
 
+			// URL 파라미터로 검색어가 있는 경우 초기 검색 실행
 			if (value) {
 				newArray = useData.filter(function (element) {
 					return (
@@ -88,7 +106,7 @@ $(document).ready(function () {
 					if (newArray.length != 0) {
 						dataPrint(newArray);
 					} else {
-						$(".new_product_list").html("<span>검색된 상품이 없습니다.</span>");
+						$(".new_product_list").html(getNoResultHTML());
 					}
 					search_on = true;
 					$(".new_food_input").val("");
@@ -180,10 +198,12 @@ $(document).ready(function () {
           					<dd>${dd1}</dd>
           					<dd>${dd2}</dd>
           					<dd>${dd3}</dd>
-          					<dd>${price}원</dd>
-          					<dd>${flavor} | ${menu}</dd>
+          					<dd> 가격 : ${price}원</dd>
+          					<dd> #${flavor}  #${menu}</dd>
           				</dl>
-							<a href="#" class="close_pop">닫기</a>
+							<a href="#" class="close_pop">
+							<i class="fa-solid fa-x"></i>
+							</a>
           			</li>
 					</ul>
 					`;
@@ -192,7 +212,7 @@ $(document).ready(function () {
 			}
 
 			// 팝업 열기 이벤트 (동적으로 생성된 요소에 이벤트 바인딩)
-			$(document).on("click", "pop_open", function (e) {
+			$(document).on("click", ".pop_open", function (e) {
 				e.preventDefault();
 				$(".new_modal_box").fadeIn("slow");
 

@@ -132,10 +132,15 @@
 						home &gt; 상품소개 &gt; <strong>이달의 신상</strong>
 					</div>
 					<h2>이달의 신상</h2>
-					<p>세븐 일레븐에서 !!!</p>
+					<p>
+						이번 달, 세븐일레븐이 엄선한 신상 모음!<br />
+						당신의 일상에 새로운 즐거움을 더하세요.
+					</p>
 				</div>
 				<div class="content_area">
 					<div class="new_banner_container">
+						<h3>MD 강력 추천 상품</h3>
+						<p>MD가 직접 골라드리는 베스트 신상</p>
 						<ul class="new_banner_content">
 							<li>
 								<img src="./images/content2/beverage1.jpg" alt="와인 이미지" />
@@ -161,13 +166,23 @@
 						</ul>
 					</div>
 					<div class="food_search">
+						<h3 class="hidden">신상품 목록</h3>
 						<input
 							class="new_food_input"
 							type="text"
-							placeholder="상품 이름을 입력해주세요" />
+							list="searchList"
+							placeholder="먹고 싶은 신상품을 검색하세요!" />
 						<button class="new_food_btn" type="button">
 							<i class="fa-solid fa-magnifying-glass"></i>
 						</button>
+						<datalist id="searchList">
+							<option value="밀키스포도"></option>
+							<option value="크림에 빠진 롤"></option>
+							<option value="롯샌멜론"></option>
+							<option value="부르봉블란츌딸기랑그드샤"></option>
+							<option value="스윙칩고수타코맛"></option>
+							<option value="딸기이즘콘"></option>
+						</datalist>
 					</div>
 					<div class="fresh_food_inquiry">
 						<strong>카테고리</strong>
