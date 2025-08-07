@@ -3,7 +3,7 @@ $(document).ready(function () {
 	function getParams() {
 		const params = new URL(location.href).searchParams;
 
-		//첫번쨰 key ,value 추출
+		//첫번째 key ,value 추출
 		const firstKey = [...params.keys()][0];
 		const firstValue = params.get(firstKey);
 
@@ -51,8 +51,6 @@ $(document).ready(function () {
 					const price = Number(item.Price).toLocaleString(); // 가격 천단위 콤마로 포멧
 					const name = item.Name;
 					const image = item.Image;
-					const flavor = item.flavor;
-					const menu = item.menu;
 
 					return `<li>
           				<img src="${image}" alt="${name}">
