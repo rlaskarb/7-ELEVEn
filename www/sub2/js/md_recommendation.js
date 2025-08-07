@@ -40,8 +40,8 @@ $(document).ready(function () {
 			if (index >= originalSlides.length) {
 				// 만약 마지막 페이지(복제된 페이지)에 도착했다면,
 
-				slider.css("left", 0); // '순간이동'
-				currentIndex = 0; // 페이지 번호도 처음으로 리셋합니다.
+				slider.css("left", 0); // 순간이동
+				currentIndex = 0; // 리셋
 			}
 			isAnimating = false; //신호등을 초록불로
 		});
@@ -49,10 +49,10 @@ $(document).ready(function () {
 
 	// 이제 사용자가 슬라이더를 제어할 수 있도록 이벤트를 연결합니다.
 
-	// [1] 다음/이전 버튼 클릭
+	//다음/이전 버튼 클릭
 	$(".banner_arrow.next").on("click", function (e) {
-		e.preventDefault(); // a 태그의 기본 기능(페이지 이동)을 막습니다.
-		currentIndex++; // 페이지 번호를 1 증가시키고
+		e.preventDefault();
+		currentIndex++; 
 		moveSlider(currentIndex); // 엔진(moveSlider)을 돌립니다.
 	});
 
