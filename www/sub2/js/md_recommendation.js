@@ -27,22 +27,23 @@ $(document).ready(function () {
 
 	let interval; // 자동재생을 담을 그릇
 
-	// 이 함수는 슬라이더의 '엔진'과 같은 역할을 합니다. "몇 번째 페이지로 가!" 라는 명령을 받으면 실제로 슬라이더를 움직입니다.
+	// 이 함수는 슬라이더의 '엔진'
 	function moveSlider(index) {
-		if (isAnimating) return; //(버튼 연타 방지)
-		isAnimating = true; //(신호등을 빨간불로)
+		if (isAnimating) return; //버튼 연타 방지
+		isAnimating = true; //신호등을 빨간불로
 
-		// animate()를 이용해 left 속성을 바꿔서 부드럽게 움직입니다.
+		
 		slider.stop().animate({ left: -index * slideWidth }, 500, function () {
-			// (애니메이션이 500ms(0.5초) 동안 끝난 후에 아래 코드를 실행)
+			
 
-			// [2] ✨무한 루프의 비밀✨
+			// ✨무한 루프의 비밀✨
 			if (index >= originalSlides.length) {
 				// 만약 마지막 페이지(복제된 페이지)에 도착했다면,
-				slider.css("left", 0); // 아무도 모르게 left 값을 0으로 '순간이동' 시킵니다.
+
+				slider.css("left", 0); // '순간이동'
 				currentIndex = 0; // 페이지 번호도 처음으로 리셋합니다.
 			}
-			isAnimating = false; // 애니메이션 끝! (신호등을 초록불로)
+			isAnimating = false; //신호등을 초록불로
 		});
 	}
 
@@ -70,9 +71,8 @@ $(document).ready(function () {
 	// 자동재생 기능
 	function startAutoplay() {
 		stopAutoplay(); // 혹시라도 켜져 있으면 일단 끄고,
-		interval = setInterval(function () {
-			// 3초(3000ms)마다
-			$(".banner_arrow.next").click(); // 다음 버튼을 강제로 클릭합니다.
+		interval = setInterval(function () {		
+			$(".banner_arrow.next").click();
 		}, 3000);
 	}
 
