@@ -65,6 +65,7 @@ $(document).ready(function () {
 				$(".new_product_list").html("<ul>" + listItems.join("") + "</ul>");
 			}
 
+			// 데이터 출력 함수
 			let newArray = []; //검색 결과 저장할 배열
 			let search_on = false; // 검색 상태확인
 
@@ -77,6 +78,7 @@ $(document).ready(function () {
 						element.menu.includes(value)
 					);
 				});
+
 				if (newArray.length != 0) {
 					dataPrint(newArray);
 				} else {

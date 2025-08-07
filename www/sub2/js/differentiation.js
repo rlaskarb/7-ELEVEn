@@ -73,6 +73,7 @@ $(document).ready(function () {
 						element.menu.includes(value)
 					);
 				});
+
 				if (newArray.length != 0) {
 					dataPrint(newArray);
 				} else {
@@ -85,7 +86,7 @@ $(document).ready(function () {
 			}
 
 			//4. 검색 버튼 클릭 이벤트
-			$(".new_food_bnt").click(function (event) {
+			$(".new_food_btn").click(function (event) {
 				event.preventDefault();
 				const searchValue = $(".new_food_input").val();
 
@@ -106,6 +107,37 @@ $(document).ready(function () {
 					$(".new_food_input").val("");
 				} else {
 					dataPrint(useData);
+				}
+			});
+
+			// 카테고리 필터링 이벤트
+			$(".food_inquiry_btn").click(function (event) {
+				event.preventDefault();
+
+				//버튼 스타일 변경
+				$(".food_inquiry_btn").removeClass("active");
+				$(this).addClass("active");
+
+				const filterType = $(this).parent().data("filter");
+
+				if (filterType == "all_food") {
+					dataPrint(useData);
+					search_on = false;
+				} else {
+					// 카테고리별 필터링 로직
+					let filteredData = [];
+
+					switch (filterType) {
+						case "beverage":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "음료";
+							});
+							break;
+						case "snacks":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "과자";
+							});
+					}
 				}
 			});
 		},
