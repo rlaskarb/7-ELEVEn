@@ -1,611 +1,650 @@
 <!DOCTYPE html>
 <html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>7-ELEVEn</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="./common/images/7-eleven-logo.ico" />
+		<link rel="stylesheet" href="./common/css/common.css" />
+		<link rel="stylesheet" href="./main_css/main.css" />
+		<!-- Noto Sans Korean , Roboto 폰트링크 -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@1,100..900&display=swap"
+			rel="stylesheet" />
+		<!-- 아이콘 링크 -->
+		<script
+			src="https://kit.fontawesome.com/347816e35e.js"
+			crossorigin="anonymous"></script>
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>7-ELEVEn</title>
-	<link rel="icon" type="image/x-icon" href="./common/images/7-eleven-logo.ico" />
-	<link rel="stylesheet" href="./common/css/common.css" />
-	<link rel="stylesheet" href="./main_css/main.css" />
-	<!-- Noto Sans Korean , Roboto 폰트링크 -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@1,100..900&display=swap"
-		rel="stylesheet" />
-	<!-- 아이콘 링크 -->
-	<script src="https://kit.fontawesome.com/347816e35e.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-	<!--리더기 접근성 향상 코드! 서비스 -->
-	<div id="skipNav">
-		<a href="#content">본문영역으로 바로가기</a>
-		<a href="#gnb">세븐일레븐 네비게이션 바로가기</a>
-	</div>
-
-	<div id="wrap">
-		<header id="headerArea">
-			<div class="header_inner">
-				<h1 class="logo">
-					<a href="./index.html"> 세븐일레븐 로고 </a>
-				</h1>
-				<nav id="gnb">
-					<h2 class="hidden">세븐일레븐 네비게이션</h2>
-					<ul class="dropdownmenu">
-						<li class="m1 menu">
-							<h3>
-								<a class="depth1" href="./sub1/sub1_1.html">회사소개</a>
-							</h3>
-							<ul>
-								<li><a href="./sub1/sub1_1.html">브랜드스토리</a></li>
-								<li><a href="./sub1/sub1_2.html">경영스토리</a></li>
-								<li><a href="./sub1/sub1_3.html">회사연혁</a></li>
-								<li><a href="./sub1/sub1_4.html">오시는길</a></li>
-							</ul>
-						</li>
-						<li class="m2 menu">
-							<h3>
-								<a class="depth1" href="./sub2/sub2_1.html">상품소개</a>
-							</h3>
-							<ul>
-								<li><a href="./sub2/sub2_1.html">세븐카페</a></li>
-								<li><a href="./sub2/sub2_2.html">이달의신상</a></li>
-								<li><a href="./sub2/sub2_3.html">차별화상품</a></li>
-								<li><a href="./sub2/sub2_4.html">Fresh Food</a></li>
-							</ul>
-						</li>
-						<li class="m3 menu">
-							<h3><a class="depth1" href="./sub3/sub3_1.html">이벤트</a></h3>
-							<ul>
-								<li><a href="./sub3/sub3_1.html">행사상품</a></li>
-								<li><a href="./sub3/sub3_2.html">진행중인 이벤트</a></li>
-								<li><a href="./sub3/sub3_3.html">종료된 이벤트</a></li>
-							</ul>
-						</li>
-						<li class="m4 menu">
-							<h3>
-								<a class="depth1" href="./sub4/sub4_1.html">창업안내</a>
-							</h3>
-							<ul>
-								<li><a href="./sub4/sub4_1.html">창업포인트</a></li>
-								<li><a href="./sub4/sub4_2.html">창업상담</a></li>
-								<li><a href="./sub4/sub4_3.html">창업설명회</a></li>
-								<li><a href="./sub4/sub4_4.html">창업성공기</a></li>
-							</ul>
-						</li>
-						<li class="m5 menu">
-							<h3>
-								<a class="depth1" href="./sub5/sub5-1.html">매장안내</a>
-							</h3>
-							<ul>
-								<li><a href="./sub5/sub5-1.html">매장찾기</a></li>
-								<li><a href="./sub5/sub5-2.html">서비스 안내</a></li>
-							</ul>
-						</li>
-						<li class="m6 menu">
-							<h3>
-								<a class="depth1" href="./sub6/sub6-1.html">커뮤니티</a>
-							</h3>
-							<ul>
-								<li><a href="./sub6/sub6-1.html">상품제안</a></li>
-								<li><a href="./sub6/sub6-2.html">나만의 꿀조합</a></li>
-								<li><a href="./sub6/sub6-3.html">신상품 후기</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-				<ul class="top_menu">
-					<li><a href="./login/login.html">로그인</a></li>
-					<li><a href="./member/member_check.html">회원가입</a></li>
-					<li><a href="#">검색</a></li>
-				</ul>
-			</div>
-			<div class="main_search_box">
-				<div class="search_title">
-					<p>세븐일레븐에 오신걸 환영합니다. 다나와요!</p>
-				</div>
-				<div class="select_box">
-					<select name="pageSelector" id="pageSelector">
-						<option value="./sub2/sub2_2.html">이달의신상</option>
-						<option value="./sub2/sub2_3.html">차별화상품</option>
-						<option value="./sub2/sub2_4.html">Fresh Food</option>
-						<option value="./sub3/sub3_1.html">행사상품</option>
-					</select>
-					<input type="text" id="searchInput" placeholder="아... 그거 있잖아, 그거!" />
-					<button class="main_btn" type="button">
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</button>
-				</div>
-			</div>
-		</header>
-		<div class="visual">
-			<div class="gallery">
-				<ul>
-					<li class="link1">
-						<a href="#">
-							<img src="./main_images/main_visual1.png" alt="비주얼사진1" />
-							<dl>
-								<dt>당신의 마음속 첫 번째 편의점</dt>
-								<dd>
-									언제나 당신 곁에서 소중한 일상을 함께하며<br />
-									따뜻한 마음으로 가치 있는순간을 만들어갑니다.
-								</dd>
-							</dl>
-						</a>
-					</li>
-					<li class="link2">
-						<a href="#">
-							<img src="./main_images/main_visual2.png" alt="비주얼사진2" />
-							<dl>
-								<dt>밥 한 숟가락의 감동</dt>
-								<dd>
-									HACCP 인증 제조공장에서 깨끗하고,<br />정직하게 만든
-									도시락으로당신의 건강을 소중히 지켜요.
-								</dd>
-							</dl>
-						</a>
-					</li>
-					<li class="link3">
-						<a href="#">
-							<img src="./main_images/main_visual3.png" alt="비주얼사진3" />
-							<dl>
-								<dt>매일, 수많은 사람들이 찾는 편안한 공간</dt>
-								<dd>
-									전 세계 곳곳에 퍼진 세븐일레븐에서<br />다양한 나라의 매력을
-									한자리에서 만나보세요.
-								</dd>
-							</dl>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="dock">
-				<ul>
-					<li class="mbutton btn1"></li>
-					<li class="mbutton btn2"></li>
-					<li class="mbutton btn3"></li>
-				</ul>
-
-				<ul class="ps_icon">
-					<li class="hidden">stop</li>
-					<li>
-						<i class="fa-regular fa-circle-stop"></i>
-					</li>
-				</ul>
-
-				<ul>
-					<li class="btn_arrow btnLeft">
-						<i class="fa-solid fa-angle-left"></i>
-					</li>
-
-					<li class="btn_arrow btnRight">
-						<i class="fa-solid fa-angle-right"> </i>
-					</li>
-				</ul>
-			</div>
+	<body>
+		<!--리더기 접근성 향상 코드! 서비스 -->
+		<div id="skipNav">
+			<a href="#content">본문영역으로 바로가기</a>
+			<a href="#gnb">세븐일레븐 네비게이션 바로가기</a>
 		</div>
 
-		<article id="content">
-			<h2 class="hidden">세븐일레븐 본문 컨텐츠 영역</h2>
-			<section class="new_menu">
-				<div class="new_menu_tuck_box">
-					<div class="new_menu_left_box">
-						<h3>이달의 신상</h3>
-						<p>이번달을 특별하게 만들어줄 그맛</p>
-						<div class="new_menu_content_wrapper">
-							<div class="new_menu_change">
-								<dl>
-									<dt><strong>상품 </strong></dt>
-									<dd><strong></strong></dd>
-								</dl>
-								<dl>
-									<dt>회사</dt>
-									<dd></dd>
-								</dl>
-								<dl>
-									<dt>설명</dt>
-									<dd></dd>
-								</dl>
-								<dl>
-									<dt><span>MD 한줄평</span></dt>
-									<dd><span></span></dd>
-								</dl>
-								<dl>
-									<dt><span>가격</span></dt>
-									<dd><span></span></dd>
-								</dl>
-							</div>
-
-							<div class="new_menu_right_box">
-								<img src="./sub2/images/content2/new1.jpg" alt="도시락 이미지" />
-							</div>
-						</div>
-					</div>
-					<a href="./sub2/sub2_2.html" class="more_btn new_menu_more">
-						+ 더보기</a>
-				</div>
-
-				<ul class="new_menu_slider_dots"></ul>
-			</section>
-
-			<section class="eventing">
-				<div class="eventing_title">
-					<h3>진행중 이벤트</h3>
-					<p>
-						세븐일레븐에서 준비한 깜짝 혜택들이 당신을 기다려요! 놓치면 아쉬운
-						이벤트, 지금 만나보세요!
-					</p>
-				</div>
-
-				<ul class="event_categories">
-					<li>
-						<a href="./sub3/sub3_2.html">
-							<span><i class="fas fa-tags"></i></span>
-							할인 이벤트
-						</a>
-					</li>
-					<li>
-						<a href="./sub3/sub3_1.html">
-							<span>1+1</span>
-							1+1 이벤트
-						</a>
-					</li>
-					<li>
-						<a href="./sub3/sub3_1.html">
-							<span>2+1</span>
-							2+1 이벤트
-						</a>
-					</li>
-					<li>
-						<a href="./sub3/sub3_2.html">
-							<span><i class="fas fa-gift"></i></span>
-							증정 이벤트
-						</a>
-					</li>
-				</ul>
-
-				<a href="./sub3/sub3_2.html" class="more_btn eventing_more">
-					+ 더보기</a>
-			</section>
-			<section class="honey_recipe">
-				<div class="honey_recipe_container">
-					<div class="honey_recipe_title">
-						<h3>세븐일레븐에서 <span>이런조합</span> 해봤어?</h3>
-						<p>
-							나만 알고 있기 아까운 편의점 꿀조합 편의점 꿀조합 레시피
-							공유해요!
-						</p>
-					</div>
-
-					<ul class="honey_recipe_tuck_box">
-						<li>
-							<dl>
-								<dt>
-									<a href="#">
-										🔥 야근러 구원자 ! 라면+계란+치즈 황금조합!
-									</a>
-								</dt>
-								<dd>
-									<a href="#">
-										야근하고 집에 와서 배고플 때 그냥 라면만 끓이셨나요?
-										매운맛 라면 계란 하나, 치즈 한 장만 추가하면 완전 다른
-										음식 이 돼요! 끓는 물에 라면 넣고 2분 후 계란 풀어넣고,
-										마지막 30초 에 치즈 올리면 크리미한 프리미엄 라면 완성!
-										맛있게 드시면 됩니다!
-									</a>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="#"> ☀️️ 아침 7시 출근길 5분 브런치!</a>
-								</dt>
-								<dd>
-									<a href="#">
-										바쁜 아침, 5분만 투자하면 든든한 브런치 완성! 세븐일레븐
-										샌드위치 하나와 아이스 아메리카노면 오전 내내 든든!!
-									</a>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="#"> 🎓 시험기간 필수 간식 셋트 </a>
-								</dt>
-								<dd>
-									<a href="#">밤샘 공부할 때 뭘 먹어야 할지 고민이신가요?
-										견과류+에너지드링크+ 초콜릿 한 조각이면 오늘은 버팅타임!
-									</a>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="#"> 💕 연인과 함께! 달달한 데이트! </a>
-								</dt>
-								<dd>
-									<a href="#"> 음... </a>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="#">
-										🌛 야근 후 지친 몸과 마음을 달래주는 나만의 픽
-									</a>
-								</dt>
-								<dd>
-									<a href="#">
-										새벽까지 일하고 나면 뭔가 달달한 게 당기죠?
-										아이스크림+탄산음료, 삼각김밥+바나나우유 이조합이면 지친
-										하루도 달콤하게 마무리! 오늘 하루도 고생했다고 나에게 주는
-										선물을 주세요!
-									</a>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="#"> 💚 샐러드+그릭요거트+견과류로 죄책감 ZERO! </a>
-								</dt>
-								<dd>
-									<a href="#">
-										다이어트 중인데 편의점에서 뭘 먹어야 할지 고민이셨죠?
-										세븐일레븐샐러드에 그릭요거트 한 컵, 견과류 한 봉지면 끝!
-										단백질도 충분하고 포만감도 오래가는 완벽한 한끼예요. 특히
-										점심시간에 먹으면 오후에도 배고프지 않아서 간식 유혹은
-										가뿐하게 이길수 있어요!
-									</a>
-								</dd>
-							</dl>
-						</li>
+		<div id="wrap">
+			<header id="headerArea">
+				<div class="header_inner">
+					<h1 class="logo">
+						<a href="./index.html"> 세븐일레븐 로고 </a>
+					</h1>
+					<nav id="gnb">
+						<h2 class="hidden">세븐일레븐 네비게이션</h2>
+						<ul class="dropdownmenu">
+							<li class="m1 menu">
+								<h3>
+									<a class="depth1" href="./sub1/sub1_1.html">회사소개</a>
+								</h3>
+								<ul>
+									<li><a href="./sub1/sub1_1.html">브랜드스토리</a></li>
+									<li><a href="./sub1/sub1_2.html">경영스토리</a></li>
+									<li><a href="./sub1/sub1_3.html">회사연혁</a></li>
+									<li><a href="./sub1/sub1_4.html">오시는길</a></li>
+								</ul>
+							</li>
+							<li class="m2 menu">
+								<h3>
+									<a class="depth1" href="./sub2/sub2_1.html">상품소개</a>
+								</h3>
+								<ul>
+									<li><a href="./sub2/sub2_1.html">세븐카페</a></li>
+									<li><a href="./sub2/sub2_2.html">이달의신상</a></li>
+									<li><a href="./sub2/sub2_3.html">차별화상품</a></li>
+									<li><a href="./sub2/sub2_4.html">Fresh Food</a></li>
+								</ul>
+							</li>
+							<li class="m3 menu">
+								<h3><a class="depth1" href="./sub3/sub3_1.html">이벤트</a></h3>
+								<ul>
+									<li><a href="./sub3/sub3_1.html">행사상품</a></li>
+									<li><a href="./sub3/sub3_2.html">진행중인 이벤트</a></li>
+									<li><a href="./sub3/sub3_3.html">종료된 이벤트</a></li>
+								</ul>
+							</li>
+							<li class="m4 menu">
+								<h3>
+									<a class="depth1" href="./sub4/sub4_1.html">창업안내</a>
+								</h3>
+								<ul>
+									<li><a href="./sub4/sub4_1.html">창업포인트</a></li>
+									<li><a href="./sub4/sub4_2.html">창업상담</a></li>
+									<li><a href="./sub4/sub4_3.html">창업설명회</a></li>
+									<li><a href="./sub4/sub4_4.html">창업성공기</a></li>
+								</ul>
+							</li>
+							<li class="m5 menu">
+								<h3>
+									<a class="depth1" href="./sub5/sub5-1.html">매장안내</a>
+								</h3>
+								<ul>
+									<li><a href="./sub5/sub5-1.html">매장찾기</a></li>
+									<li><a href="./sub5/sub5-2.html">서비스 안내</a></li>
+								</ul>
+							</li>
+							<li class="m6 menu">
+								<h3>
+									<a class="depth1" href="./sub6/sub6-1.html">커뮤니티</a>
+								</h3>
+								<ul>
+									<li><a href="./sub6/sub6-1.html">상품제안</a></li>
+									<li><a href="./sub6/sub6-2.html">나만의 꿀조합</a></li>
+									<li><a href="./sub6/sub6-3.html">신상품 후기</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<ul class="top_menu">
+						<li><a href="./login/login.html">로그인</a></li>
+						<li><a href="./member/member_check.html">회원가입</a></li>
+						<li><a href="#">검색</a></li>
 					</ul>
-					<a href="#" class="more_btn honey_recipe_more"> + 더보기 </a>
 				</div>
-			</section>
-			<section class="full_search">
-				<div class="full_search_container">
-					<div class="search_left_area">
-						<h3>뭔가 땡기는데 뭔지 모르겠다면?</h3>
-						<p>
-							괜찮아요! 대충 검색해도 나와요! "달달한 거", "짭짤한 거" 이런
-							식으로도 OK!
-						</p>
-
-						<input type="text" placeholder="아... 그거 있잖아, 그거!" />
-						<button type="button">
+				<div class="main_search_box">
+					<div class="search_title">
+						<p>세븐일레븐에 오신걸 환영합니다. 다나와요!</p>
+					</div>
+					<div class="select_box">
+						<select name="pageSelector" id="pageSelector">
+							<option value="./sub2/sub2_2.html">이달의신상</option>
+							<option value="./sub2/sub2_3.html">차별화상품</option>
+							<option value="./sub2/sub2_4.html">Fresh Food</option>
+							<option value="./sub3/sub3_1.html">행사상품</option>
+						</select>
+						<input
+							type="text"
+							id="searchInput"
+							placeholder="아... 그거 있잖아, 그거!" />
+						<button class="main_btn" type="button">
 							<i class="fa-solid fa-magnifying-glass"></i>
 						</button>
 					</div>
-
-					<ul class="full_search_speech_bubble">
-						<li><a href="./sub2/sub2_2.html">🍱도시락</a></li>
-						<li><a href="./sub2/sub2_2.html">🍹음료</a></li>
-						<li><a href="./sub2/sub2_2.html">🧂짭짤</a></li>
-						<li><a href="./sub2/sub2_2.html">🍬달달</a></li>
-						<li><a href="./sub2/sub2_2.html">🍧아이스크림</a></li>
-						<li><a href="./sub2/sub2_2.html">🍪과자</a></li>
-						<li><a href="./sub2/sub2_2.html">🍔즉석요리</a></li>
+				</div>
+			</header>
+			<div class="visual">
+				<div class="gallery">
+					<ul>
+						<li class="link1">
+							<a href="#">
+								<img src="./main_images/main_visual1.png" alt="비주얼사진1" />
+								<dl>
+									<dt>당신의 마음속 첫 번째 편의점</dt>
+									<dd>
+										언제나 당신 곁에서 소중한 일상을 함께하며<br />
+										따뜻한 마음으로 가치 있는순간을 만들어갑니다.
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="link2">
+							<a href="#">
+								<img src="./main_images/main_visual2.png" alt="비주얼사진2" />
+								<dl>
+									<dt>밥 한 숟가락의 감동</dt>
+									<dd>
+										HACCP 인증 제조공장에서 깨끗하고,<br />정직하게 만든
+										도시락으로당신의 건강을 소중히 지켜요.
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="link3">
+							<a href="#">
+								<img src="./main_images/main_visual3.png" alt="비주얼사진3" />
+								<dl>
+									<dt>매일, 수많은 사람들이 찾는 편안한 공간</dt>
+									<dd>
+										전 세계 곳곳에 퍼진 세븐일레븐에서<br />다양한 나라의 매력을
+										한자리에서 만나보세요.
+									</dd>
+								</dl>
+							</a>
+						</li>
 					</ul>
 				</div>
-			</section>
+				<div class="dock">
+					<ul>
+						<li class="mbutton btn1"></li>
+						<li class="mbutton btn2"></li>
+						<li class="mbutton btn3"></li>
+					</ul>
 
-			<section class="start_up_guide">
-				<div class="start_up_guide_container">
-					<h3>
-						상생 ,협력 <br />
-						<strong>그리고 더 큰 희망</strong>
-					</h3>
-					<p>
-						세계 1위 브랜드 세븐일레븐의 <br />
-						체계적인 창업 계획부터 운영 노하우까지, <br />
-						저희가 처음부터끝까지 함께합니다.
-					</p>
-
-					<p>
-						가치를 공유하고 함께 나아간다면,<br />
-						성공은 언제나 우리의 것입니다.
-					</p>
-
-					<ul class="start_up_list">
+					<ul class="ps_icon">
+						<li class="hidden">stop</li>
 						<li>
-							<h4><a href="#"> 창업 포인트 </a></h4>
-						</li>
-						<li>
-							<h4><a href="#"> 창업 상담 </a></h4>
-						</li>
-						<li>
-							<h4><a href="#"> 창업 설명회 </a></h4>
-						</li>
-						<li>
-							<h4><a href="#"> 창업 성공기 </a></h4>
+							<i class="fa-regular fa-circle-stop"></i>
 						</li>
 					</ul>
-					<a href="./sub4/sub4_1.html" class="more_btn start_up_guide_more">
-						+ 더보기
-					</a>
-				</div>
-			</section>
-			<section class="seven_eleven_story">
-				<div class="seven_story_container">
-					<div class="seven_story_title">
-						<h3>7-ELEVEn STORY</h3>
-						<p>
-							1927년 텍사스 작은 얼음공장에<br />
-							"신선함을 지키자"는 한 마음으로<br />시작된 세븐일레븐.<br /><br />
-							온도 하나까지 세심하게 챙기는<br />
-							그 정성으로 지금은 전 세계 19개국 사람들의 일상 속 든든한 친구가
-							되었어요. 변함없는 신선함과정성이 우리의 약속입니다.
-						</p>
-					</div>
-					<div class="seven_story_shorts">
-						<ul>
-							<li>
-								<a href="./sub1/sub1_1.html">
-									<img src="./sub1/images/content1/7elevenstory1.png" alt="도쿠시마라면홍보 유튜브숏츠 이미지" />
-								</a>
-							</li>
-							<li>
-								<a href="./sub1/sub1_1.html">
-									<img src="./sub1/images/content1/7elevenstory2.png" alt="선화예고 탐방기 유튜브숏츠 이미지" />
-								</a>
-							</li>
-							<li>
-								<a href="./sub1/sub1_1.html">
-									<img src="./sub1/images/content1/7elevenstory3.png" alt="요하볼 세븐일레븐출시 홍보영상 이미지" />
-								</a>
-							</li>
-							<li>
-								<a href="./sub1/sub1_1.html">
-									<img src="./sub1/images/content1/7elevenstory4.avif" alt="한도초과 가성비도시락 이미지" />
-								</a>
-							</li>
-							<li>
-								<a href="./sub1/sub1_1.html">
-									<img src="./sub1/images/content1/7elevenstory5.avif" alt="앙라마티스와인볼 쇼비뇽블랑 이미지" />
-								</a>
-							</li>
-							<li>
-								<a href="./sub1/sub1_1.html">
-									<img src="./sub1/images/content1/7elevenstory6.avif" alt="전남친샌드 이미지" />
-								</a>
-							</li>
-						</ul>
-					</div>
-					<a href="./sub1/sub1_1.html" class="more_btn seven_eleven_story_more">
-						+ 더보기
-					</a>
-				</div>
-			</section>
-		</article>
-		<footer id="footerArea">
-			<a class="top_move" href="#">TOP</a>
-			<div class="footer_inner">
-				<div class="footer_left">
-					<img src="./common/images/711Logo1.png" alt="풋터로고" />
-					<address>
-						<p>서울특별시 강동구 천호대로 1077 이스트센트럴타워 16~18층</p>
-						<p class="copy font-eng">
-							Copyright &copy;2025 NamKyu Kim - Portfolio Project<br />
-							<small>
-								7-ELEVEn Clone Website<br />
-								Inspired by convenience store brands & student works<br />
-								Educational & Non-Commercial Purpose Only
-							</small>
-						</p>
-						<p>세븐일레븐 고객센터 : 1577-0711</p>
-					</address>
-				</div>
-				<ul>
-					<li>
-						<dl class="footer_quick_menu">
-							<dt class="font-eng">Quick Menu</dt>
-							<dd><a href="./sub5/sub5-1.html">매장찾기</a></dd>
-							<dd><a href="#">웹서비스 이용약관</a></dd>
-							<dd><a href="./sub4/sub4_2.html">창업상담</a></dd>
-							<dd><a href="#">개인정보처리방침</a></dd>
-							<dd><a href="./sub4/sub4_3.html">창업설명회</a></dd>
-							<dd><a href="#">이메일무단수집거부</a></dd>
-						</dl>
-					</li>
-				</ul>
 
-				<div class="footer_right">
-					<div class="family">
-						<select name="footer_family" id="footer_family" class="font-eng">
-							<option value="#" disabled selected>Family Site</option>
-							<option value="https://www.lotte.co.kr/business/compDetail.do?compCd=L204">
-								코리아세븐
-							</option>
-							<option value="https://www.lotte.co.kr/">롯데그룹</option>
-							<option value="https://www.lpoint.com/">L-POINT</option>
-							<option value="https://www.lottewellfood.com/">
-								롯데웰푸드
-							</option>
-							<option value="https://www.lottechilsung.co.kr/">
-								롯데칠성음료
-							</option>
-							<option value="https://www.lotteria.com/">롯데리아</option>
-							<option value="https://www.angelinus.com/">엔제리너스</option>
-							<option value="https://www.lotteshopping.com/">
-								롯데백화점
-							</option>
-							<option value="https://www.lottehomeshopping.com/">
-								롯데마트
-							</option>
-							<option value="https://corp.e-himart.co.kr/">
-								롯데하이마트
-							</option>
-							<option value="https://www.uniqlo.com/kr/ko/">
-								롯데홈쇼핑
-							</option>
-							<option value="https://www.uniqlo.com/kr/ko/">유니클로</option>
-							<option value="https://www.lotteins.co.kr/">
-								롯데손해보험
-							</option>
-							<option value="https://www.lottecard.co.kr/">롯데카드</option>
-							<option value="https://www.lottecon.co.kr/">롯데건설</option>
-							<option value="https://www.lottefoundation.or.kr/">
-								롯데제단
-							</option>
-							<option value="https://www.lotteconcerthall.com/">
-								롯데콘서트홀
-							</option>
-						</select>
-					</div>
+					<ul>
+						<li class="btn_arrow btnLeft">
+							<i class="fa-solid fa-angle-left"></i>
+						</li>
 
-					<ul class="footer_sns">
-						<li>
-							<a href="#"><i class="fa-brands fa-youtube"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa-brands fa-instagram"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa-brands fa-facebook"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+						<li class="btn_arrow btnRight">
+							<i class="fa-solid fa-angle-right"> </i>
 						</li>
 					</ul>
 				</div>
 			</div>
-		</footer>
-	</div>
 
-	<div class="pop_up_container">
-		<div class="project_pop_up">
-			<img src="./common/images/main_logo.png" alt="세븐일레븐 로고 이미지" />
-			<p>
-				본사이트는 상업적 목적이 아닌 <br />
-				<span>개인 포트폴리오 용도</span>로 제작되었습니다. 홈페이지의 일부
-				내용과 기타 이미지 등은 그출처가 따로 있음을 밝힘니다.
-			</p>
+			<article id="content">
+				<h2 class="hidden">세븐일레븐 본문 컨텐츠 영역</h2>
+				<section class="new_menu">
+					<div class="new_menu_tuck_box">
+						<div class="new_menu_left_box">
+							<h3>이달의 신상</h3>
+							<p>이번달을 특별하게 만들어줄 그맛</p>
+							<div class="new_menu_content_wrapper">
+								<div class="new_menu_change">
+									<dl>
+										<dt><strong>상품 </strong></dt>
+										<dd><strong></strong></dd>
+									</dl>
+									<dl>
+										<dt>회사</dt>
+										<dd></dd>
+									</dl>
+									<dl>
+										<dt>설명</dt>
+										<dd></dd>
+									</dl>
+									<dl>
+										<dt><span>MD 한줄평</span></dt>
+										<dd><span></span></dd>
+									</dl>
+									<dl>
+										<dt><span>가격</span></dt>
+										<dd><span></span></dd>
+									</dl>
+								</div>
+
+								<div class="new_menu_right_box">
+									<img
+										src="./sub2/images/content2/new1.jpg"
+										alt="도시락 이미지" />
+								</div>
+							</div>
+						</div>
+						<a href="./sub2/sub2_2.html" class="more_btn new_menu_more">
+							+ 더보기</a
+						>
+					</div>
+
+					<ul class="new_menu_slider_dots"></ul>
+				</section>
+
+				<section class="eventing">
+					<div class="eventing_title">
+						<h3>진행중 이벤트</h3>
+						<p>
+							세븐일레븐에서 준비한 깜짝 혜택들이 당신을 기다려요! 놓치면 아쉬운
+							이벤트, 지금 만나보세요!
+						</p>
+					</div>
+
+					<ul class="event_categories">
+						<li>
+							<a href="./sub3/sub3_2.html">
+								<span><i class="fas fa-tags"></i></span>
+								할인 이벤트
+							</a>
+						</li>
+						<li>
+							<a href="./sub3/sub3_1.html">
+								<span>1+1</span>
+								1+1 이벤트
+							</a>
+						</li>
+						<li>
+							<a href="./sub3/sub3_1.html">
+								<span>2+1</span>
+								2+1 이벤트
+							</a>
+						</li>
+						<li>
+							<a href="./sub3/sub3_2.html">
+								<span><i class="fas fa-gift"></i></span>
+								증정 이벤트
+							</a>
+						</li>
+					</ul>
+
+					<a href="./sub3/sub3_2.html" class="more_btn eventing_more">
+						+ 더보기</a
+					>
+				</section>
+				<section class="honey_recipe">
+					<div class="honey_recipe_container">
+						<div class="honey_recipe_title">
+							<h3>세븐일레븐에서 <span>이런조합</span> 해봤어?</h3>
+							<p>
+								나만 알고 있기 아까운 편의점 꿀조합 편의점 꿀조합 레시피
+								공유해요!
+							</p>
+						</div>
+
+						<ul class="honey_recipe_tuck_box">
+							<li>
+								<dl>
+									<dt>
+										<a href="#">
+											🔥 야근러 구원자 ! 라면+계란+치즈 황금조합!
+										</a>
+									</dt>
+									<dd>
+										<a href="#">
+											야근하고 집에 와서 배고플 때 그냥 라면만 끓이셨나요?
+											매운맛 라면 계란 하나, 치즈 한 장만 추가하면 완전 다른
+											음식 이 돼요! 끓는 물에 라면 넣고 2분 후 계란 풀어넣고,
+											마지막 30초 에 치즈 올리면 크리미한 프리미엄 라면 완성!
+											맛있게 드시면 됩니다!
+										</a>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<a href="#"> ☀️️ 아침 7시 출근길 5분 브런치!</a>
+									</dt>
+									<dd>
+										<a href="#">
+											바쁜 아침, 5분만 투자하면 든든한 브런치 완성! 세븐일레븐
+											샌드위치 하나와 아이스 아메리카노면 오전 내내 든든!!
+										</a>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<a href="#"> 🎓 시험기간 필수 간식 셋트 </a>
+									</dt>
+									<dd>
+										<a href="#"
+											>밤샘 공부할 때 뭘 먹어야 할지 고민이신가요?
+											견과류+에너지드링크+ 초콜릿 한 조각이면 오늘은 버팅타임!
+										</a>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<a href="#"> 💕 연인과 함께! 달달한 데이트! </a>
+									</dt>
+									<dd>
+										<a href="#"> 음... </a>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<a href="#">
+											🌛 야근 후 지친 몸과 마음을 달래주는 나만의 픽
+										</a>
+									</dt>
+									<dd>
+										<a href="#">
+											새벽까지 일하고 나면 뭔가 달달한 게 당기죠?
+											아이스크림+탄산음료, 삼각김밥+바나나우유 이조합이면 지친
+											하루도 달콤하게 마무리! 오늘 하루도 고생했다고 나에게 주는
+											선물을 주세요!
+										</a>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<a href="#"> 💚 샐러드+그릭요거트+견과류로 죄책감 ZERO! </a>
+									</dt>
+									<dd>
+										<a href="#">
+											다이어트 중인데 편의점에서 뭘 먹어야 할지 고민이셨죠?
+											세븐일레븐샐러드에 그릭요거트 한 컵, 견과류 한 봉지면 끝!
+											단백질도 충분하고 포만감도 오래가는 완벽한 한끼예요. 특히
+											점심시간에 먹으면 오후에도 배고프지 않아서 간식 유혹은
+											가뿐하게 이길수 있어요!
+										</a>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+						<a href="#" class="more_btn honey_recipe_more"> + 더보기 </a>
+					</div>
+				</section>
+				<section class="full_search">
+					<div class="full_search_container">
+						<div class="search_left_area">
+							<h3>뭔가 땡기는데 뭔지 모르겠다면?</h3>
+							<p>
+								괜찮아요! 대충 검색해도 나와요! "달달한 거", "짭짤한 거" 이런
+								식으로도 OK!
+							</p>
+
+							<input type="text" placeholder="아... 그거 있잖아, 그거!" />
+							<button type="button">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</button>
+						</div>
+
+						<ul class="full_search_speech_bubble">
+							<li><a href="./sub2/sub2_2.html">🍱도시락</a></li>
+							<li><a href="./sub2/sub2_2.html">🍹음료</a></li>
+							<li><a href="./sub2/sub2_2.html">🧂짭짤</a></li>
+							<li><a href="./sub2/sub2_2.html">🍬달달</a></li>
+							<li><a href="./sub2/sub2_2.html">🍧아이스크림</a></li>
+							<li><a href="./sub2/sub2_2.html">🍪과자</a></li>
+							<li><a href="./sub2/sub2_2.html">🍔즉석요리</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="start_up_guide">
+					<div class="start_up_guide_container">
+						<h3>
+							상생 ,협력 <br />
+							<strong>그리고 더 큰 희망</strong>
+						</h3>
+						<p>
+							세계 1위 브랜드 세븐일레븐의 <br />
+							체계적인 창업 계획부터 운영 노하우까지, <br />
+							저희가 처음부터끝까지 함께합니다.
+						</p>
+
+						<p>
+							가치를 공유하고 함께 나아간다면,<br />
+							성공은 언제나 우리의 것입니다.
+						</p>
+
+						<ul class="start_up_list">
+							<li>
+								<h4><a href="#"> 창업 포인트 </a></h4>
+							</li>
+							<li>
+								<h4><a href="#"> 창업 상담 </a></h4>
+							</li>
+							<li>
+								<h4><a href="#"> 창업 설명회 </a></h4>
+							</li>
+							<li>
+								<h4><a href="#"> 창업 성공기 </a></h4>
+							</li>
+						</ul>
+						<a href="./sub4/sub4_1.html" class="more_btn start_up_guide_more">
+							+ 더보기
+						</a>
+					</div>
+				</section>
+				<section class="seven_eleven_story">
+					<div class="seven_story_container">
+						<div class="seven_story_title">
+							<h3>7-ELEVEn STORY</h3>
+							<p>
+								1927년 텍사스 작은 얼음공장에<br />
+								"신선함을 지키자"는 한 마음으로<br />시작된 세븐일레븐.<br /><br />
+								온도 하나까지 세심하게 챙기는<br />
+								그 정성으로 지금은 전 세계 19개국 사람들의 일상 속 든든한 친구가
+								되었어요. 변함없는 신선함과정성이 우리의 약속입니다.
+							</p>
+						</div>
+						<div class="seven_story_shorts">
+							<ul>
+								<li>
+									<a href="./sub1/sub1_1.html">
+										<img
+											src="./sub1/images/content1/7elevenstory1.png"
+											alt="도쿠시마라면홍보 유튜브숏츠 이미지" />
+									</a>
+								</li>
+								<li>
+									<a href="./sub1/sub1_1.html">
+										<img
+											src="./sub1/images/content1/7elevenstory2.png"
+											alt="선화예고 탐방기 유튜브숏츠 이미지" />
+									</a>
+								</li>
+								<li>
+									<a href="./sub1/sub1_1.html">
+										<img
+											src="./sub1/images/content1/7elevenstory3.png"
+											alt="요하볼 세븐일레븐출시 홍보영상 이미지" />
+									</a>
+								</li>
+								<li>
+									<a href="./sub1/sub1_1.html">
+										<img
+											src="./sub1/images/content1/7elevenstory4.avif"
+											alt="한도초과 가성비도시락 이미지" />
+									</a>
+								</li>
+								<li>
+									<a href="./sub1/sub1_1.html">
+										<img
+											src="./sub1/images/content1/7elevenstory5.avif"
+											alt="앙라마티스와인볼 쇼비뇽블랑 이미지" />
+									</a>
+								</li>
+								<li>
+									<a href="./sub1/sub1_1.html">
+										<img
+											src="./sub1/images/content1/7elevenstory6.avif"
+											alt="전남친샌드 이미지" />
+									</a>
+								</li>
+							</ul>
+							<div class="shorts_slider_arrows">
+								<a href="#" class="shorts_arrow prev">
+									<i class="fa-solid fa-chevron-left"></i>
+								</a>
+								<a href="#" class="shorts_arrow next">
+									<i class="fa-solid fa-chevron-right"></i>
+								</a>
+							</div>
+						</div>
+						<a
+							href="./sub1/sub1_1.html"
+							class="more_btn seven_eleven_story_more">
+							+ 더보기
+						</a>
+					</div>
+				</section>
+			</article>
+			<footer id="footerArea">
+				<a class="top_move" href="#">TOP</a>
+				<div class="footer_inner">
+					<div class="footer_left">
+						<img src="./common/images/711Logo1.png" alt="풋터로고" />
+						<address>
+							<p>서울특별시 강동구 천호대로 1077 이스트센트럴타워 16~18층</p>
+							<p class="copy font-eng">
+								Copyright &copy;2025 NamKyu Kim - Portfolio Project<br />
+								<small>
+									7-ELEVEn Clone Website<br />
+									Inspired by convenience store brands & student works<br />
+									Educational & Non-Commercial Purpose Only
+								</small>
+							</p>
+							<p>세븐일레븐 고객센터 : 1577-0711</p>
+						</address>
+					</div>
+					<ul>
+						<li>
+							<dl class="footer_quick_menu">
+								<dt class="font-eng">Quick Menu</dt>
+								<dd><a href="./sub5/sub5-1.html">매장찾기</a></dd>
+								<dd><a href="#">웹서비스 이용약관</a></dd>
+								<dd><a href="./sub4/sub4_2.html">창업상담</a></dd>
+								<dd><a href="#">개인정보처리방침</a></dd>
+								<dd><a href="./sub4/sub4_3.html">창업설명회</a></dd>
+								<dd><a href="#">이메일무단수집거부</a></dd>
+							</dl>
+						</li>
+					</ul>
+
+					<div class="footer_right">
+						<div class="family">
+							<select name="footer_family" id="footer_family" class="font-eng">
+								<option value="#" disabled selected>Family Site</option>
+								<option
+									value="https://www.lotte.co.kr/business/compDetail.do?compCd=L204">
+									코리아세븐
+								</option>
+								<option value="https://www.lotte.co.kr/">롯데그룹</option>
+								<option value="https://www.lpoint.com/">L-POINT</option>
+								<option value="https://www.lottewellfood.com/">
+									롯데웰푸드
+								</option>
+								<option value="https://www.lottechilsung.co.kr/">
+									롯데칠성음료
+								</option>
+								<option value="https://www.lotteria.com/">롯데리아</option>
+								<option value="https://www.angelinus.com/">엔제리너스</option>
+								<option value="https://www.lotteshopping.com/">
+									롯데백화점
+								</option>
+								<option value="https://www.lottehomeshopping.com/">
+									롯데마트
+								</option>
+								<option value="https://corp.e-himart.co.kr/">
+									롯데하이마트
+								</option>
+								<option value="https://www.uniqlo.com/kr/ko/">
+									롯데홈쇼핑
+								</option>
+								<option value="https://www.uniqlo.com/kr/ko/">유니클로</option>
+								<option value="https://www.lotteins.co.kr/">
+									롯데손해보험
+								</option>
+								<option value="https://www.lottecard.co.kr/">롯데카드</option>
+								<option value="https://www.lottecon.co.kr/">롯데건설</option>
+								<option value="https://www.lottefoundation.or.kr/">
+									롯데제단
+								</option>
+								<option value="https://www.lotteconcerthall.com/">
+									롯데콘서트홀
+								</option>
+							</select>
+						</div>
+
+						<ul class="footer_sns">
+							<li>
+								<a href="#"><i class="fa-brands fa-youtube"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa-brands fa-instagram"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa-brands fa-facebook"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
 		</div>
-		<div class="pop_up_controls">
-			<input type="checkbox" name="pop_up" id="pop_up" value="" title="오늘은 이창을 열지 않음 선택상자" />
-			<label for="pop_up">하루동안 열지 않기!</label>
+
+		<div class="pop_up_container">
+			<div class="project_pop_up">
+				<img src="./common/images/main_logo.png" alt="세븐일레븐 로고 이미지" />
+				<p>
+					본사이트는 상업적 목적이 아닌 <br />
+					<span>개인 포트폴리오 용도</span>로 제작되었습니다. 홈페이지의 일부
+					내용과 기타 이미지 등은 그출처가 따로 있음을 밝힘니다.
+				</p>
+			</div>
+			<div class="pop_up_controls">
+				<input
+					type="checkbox"
+					name="pop_up"
+					id="pop_up"
+					value=""
+					title="오늘은 이창을 열지 않음 선택상자" />
+				<label for="pop_up">하루동안 열지 않기!</label>
+			</div>
+			<button class="pop_up_close" onclick="closePopup()">닫기</button>
 		</div>
-		<button class="pop_up_close" onclick="closePopup()">닫기</button>
-	</div>
 
-	<script src="./main_js/mainpopup.js"></script>
-	<script src="./common/js/jquery-1.12.4.min.js"></script>
-	<script src="./common/js/jquery-migrate-1.4.1.min.js"></script>
-	<script src="./common/js/fullnav_ex.js"></script>
-	<script src="./main_js/main_visual.js"></script>
-	<script src="./main_js/new_meun_slider.js"></script>
-	<script src="./main_js/start_up_change.js"></script>
-	<script src="./main_js/seven_eleven_story.js"></script>
-	<script src="./common/js/top_button.js"></script>
-	<script src="./common/js/family_site.js"></script>
-</body>
-
+		<script src="./main_js/mainpopup.js"></script>
+		<script src="./common/js/jquery-1.12.4.min.js"></script>
+		<script src="./common/js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="./common/js/fullnav_ex.js"></script>
+		<script src="./main_js/main_visual.js"></script>
+		<script src="./main_js/new_meun_slider.js"></script>
+		<script src="./main_js/start_up_change.js"></script>
+		<script src="./main_js/seven_eleven_story.js"></script>
+		<script src="./common/js/top_button.js"></script>
+		<script src="./common/js/family_site.js"></script>
+	</body>
 </html>

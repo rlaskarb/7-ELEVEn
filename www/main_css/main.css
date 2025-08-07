@@ -641,9 +641,21 @@
 }
 
 /* 주황색 그룹 (1, 2, 5번) */
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(1):hover a,
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(2):hover a,
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(5):hover a {
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(1):hover
+	a,
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(2):hover
+	a,
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(5):hover
+	a {
 	background: rgba(231, 126, 45, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(231, 126, 45, 0.6);
@@ -651,8 +663,16 @@
 }
 
 /* 빨간색 그룹 (3, 4번) */
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(3):hover a,
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(4):hover a {
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(3):hover
+	a,
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(4):hover
+	a {
 	background: rgba(217, 38, 41, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(217, 38, 41, 0.6);
@@ -660,8 +680,16 @@
 }
 
 /* 초록색 그룹 (6, 7번) */
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(6):hover a,
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(7):hover a {
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(6):hover
+	a,
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(7):hover
+	a {
 	background: rgba(1, 113, 33, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(1, 113, 33, 0.6);
@@ -767,7 +795,6 @@
 	height: 800px;
 	padding-top: 200px;
 	margin: 0 auto;
-
 }
 
 #content .seven_story_container {
@@ -776,7 +803,6 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-
 }
 
 #content .seven_story_title {
@@ -786,14 +812,12 @@
 	justify-content: center;
 	gap: 130px;
 	margin-bottom: 120px;
-
 }
 
 #content .seven_story_title h3 {
 	font-size: var(--font-size-no5);
 	/*50px*/
 	color: var(--font-color-point1);
-
 }
 
 #content .seven_story_title p {
@@ -804,94 +828,63 @@
 }
 
 #content .seven_story_shorts {
-	width: 1070px;
+	width: 100%;
+	max-width: 1180px;
+	position: relative;
 	overflow: hidden;
 }
 
 #content .seven_story_shorts ul {
-	width: 100%;
 	position: relative;
+	left: 0;
+	cursor: grab;
 	display: flex;
-	gap: 10px;
+}
 
+#content .seven_story_shorts li {
+	width: 400px;
+	flex-shrink: 0;
+	padding: 0 20px;
+	box-sizing: border-box;
 }
 
 #content .seven_story_shorts li img {
-	width: 350px;
-	height: 600px;
-	border-radius: 50px;
+	width: 100%;
+	height: 590px;
+	display: block;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 1px 1px 10px r;
+	border-radius: 10px;
 }
 
 .seven_eleven_story_more {
-	top: 125px;
-	left: 10px;
+	top: 100px;
+	left: 0;
 }
 
-
-/* YouTube 팝업창 스타일 시작 */
-
-
-/* 팝업 배경 (오버레이) */
-#youtube_modal_overlay {
-	display: none;
-	/* 평소에는 숨김 */
-	position: fixed;
-	/* 화면에 고정 */
-	top: 0;
+.shorts_slider_arrows {
+	position: absolute;
+	top: 50%;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
-	/* 반투명 검은색 배경 */
-	z-index: 1000;
-	/* 다른 요소들보다 위에 표시 */
-	justify-content: center;
-	align-items: center;
-
+	transform: translateY(-50%);
+	display: flex;
+	padding: 0 31px;
+	justify-content: space-between;
+	pointer-events: none;
 }
 
-
-
-/* 팝업 내용 (흰색 박스) */
-#youtube_modal_content {
-	background-color: #fff;
-	padding: 20px;
-	border-radius: 10px;
-	text-align: center;
-
-}
-
-
-
-/* 유튜브 영상 (iframe) */
-#youtube_modal_content iframe {
-	width: 80vw;
-	/* 화면 너비의 80% */
-	height: 45vw;
-	/* 16:9 비율 유지 */
-	max-width: 800px;
-	/* 최대 너비 제한 */
-	max-height: 450px;
-	/* 최대 높이 제한 */
-
-}
-
-
-
-/* 닫기 버튼 */
-#youtube_modal_close {
-	display: block;
-	margin: 15px auto 0;
-	padding: 10px 20px;
-	background-color: #333;
+.shorts_slider_arrows .shorts_arrow {
+	pointer-events: auto;
+	width: 50px;
+	height: 50px;
 	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-
+	font-size: var(--font-size-no8);
+	transition: all 0.3s ease;
 }
 
-#youtube_modal_close:hover {
-	background-color: #555;
-
+.shorts_slider_arrows .shorts_arrow:hover {
+	color: #fff;
+	transform: scale(1.3);
 }

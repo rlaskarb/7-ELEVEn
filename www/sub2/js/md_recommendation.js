@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
 	const sliderContainer = $(".new_banner_container"); // 슬라이더 전체 영역
 	const slider = $(".new_banner_content"); // 실제로 움직일 ul
 	const originalSlides = slider.find("li"); // 원본 <li> 6개
@@ -13,8 +12,8 @@ $(document).ready(function () {
 		.appendTo(slider);
 
 	// 복제된 것을 포함한 모든 li와 그 너비를 다시 계산합니다.
-	const allSlides = slider.find("li"); 
-	const totalSlides = allSlides.length; 
+	const allSlides = slider.find("li");
+	const totalSlides = allSlides.length;
 	const slideWidth = originalSlides.outerWidth(true);
 
 	//<ul>의 전체 너비를 'li너비'로 설정해줍니다.
@@ -22,8 +21,8 @@ $(document).ready(function () {
 
 	// 슬라이더의 상태를 기억할 변수들을 만듭니다.
 	let currentIndex = 0; // 현재 페이지 번호
-	let isAnimating = false; 
-// 애니메이션이 겹치지 않도록 하는 '신호등' 역할
+	let isAnimating = false;
+	// 애니메이션이 겹치지 않도록 하는 '신호등' 역할
 
 	let interval; // 자동재생을 담을 그릇
 
@@ -32,10 +31,7 @@ $(document).ready(function () {
 		if (isAnimating) return; //버튼 연타 방지
 		isAnimating = true; //신호등을 빨간불로
 
-		
 		slider.stop().animate({ left: -index * slideWidth }, 500, function () {
-			
-
 			// ✨무한 루프의 비밀✨
 			if (index >= originalSlides.length) {
 				// 만약 마지막 페이지(복제된 페이지)에 도착했다면,
@@ -52,7 +48,7 @@ $(document).ready(function () {
 	//다음/이전 버튼 클릭
 	$(".banner_arrow.next").on("click", function (e) {
 		e.preventDefault();
-		currentIndex++; 
+		currentIndex++;
 		moveSlider(currentIndex); // 엔진(moveSlider)을 돌립니다.
 	});
 
@@ -71,7 +67,7 @@ $(document).ready(function () {
 	// 자동재생 기능
 	function startAutoplay() {
 		stopAutoplay(); // 혹시라도 켜져 있으면 일단 끄고,
-		interval = setInterval(function () {		
+		interval = setInterval(function () {
 			$(".banner_arrow.next").click();
 		}, 3000);
 	}
@@ -120,7 +116,6 @@ $(document).ready(function () {
 		}
 	});
 
-	// [4] 최종 실행
 	// 슬라이더에 마우스를 올리면 자동재생 멈춤
 	sliderContainer.on("mouseenter", stopAutoplay);
 	// 마우스가 벗어나면 자동재생 다시 시작
