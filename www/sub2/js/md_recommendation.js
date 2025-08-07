@@ -64,7 +64,7 @@ $(document).ready(function () {
 			currentIndex = originalSlides.length;
 			slider.css("left", -currentIndex * slideWidth);
 		}
-		currentIndex--; // 페이지 번호를 1 감소시키고
+		currentIndex--;
 		moveSlider(currentIndex); // 엔진을 돌립니다.
 	});
 
