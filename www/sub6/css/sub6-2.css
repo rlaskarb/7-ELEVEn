@@ -1,111 +1,108 @@
 #content .content_area {
-  width: 1400px;
-  height: 1200px;
-  margin: 0 auto;
-  padding: 100px 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(../images/content1/Rectangle\ 25.png);
+	width: 1400px;
+	height: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
 }
 
 #content .email_box {
-  width: 950px;
-  margin: 20px auto;
-  padding: 30px;
-  background: rgba(250, 248, 245, 0.7);
-  box-shadow: 1px 1px 10px 1px rgba(231, 126, 45, 0.4);
-  box-sizing: border-box;
+	width: 950px;
+	margin: 20px auto;
+	padding: 30px;
+	background: rgba(250, 248, 245, 0.7);
+	box-shadow: 1px 1px 10px 1px rgba(231, 126, 45, 0.4);
+	box-sizing: border-box;
 }
 
 #content .email_box div {
-  padding: 20px;
+	padding: 20px;
 }
 
 #content .email_box label {
-  font-size: var(--font-size-no11);
-  font-weight: 700;
+	font-size: var(--font-size-no11);
+	font-weight: 700;
 }
 
 #content .email_box input,
 #content .email_box select,
 #content .email_box textarea {
-  padding: 15px 5%;
-  width: 85%;
-  color: #333;
-  border: 0;
-  outline: none;
-  border-radius: 15px;
-  background: var(--font-color-sub2);
-  font-size: 0.9rem;
-  box-shadow: 1px 1px 10px 1px rgba(1, 113, 33, 0.4);
-  transition: all 0.5s ease-out;
+	padding: 15px 5%;
+	width: 85%;
+	color: #333;
+	border: 0;
+	outline: none;
+	border-radius: 15px;
+	background: var(--font-color-sub2);
+	font-size: 0.9rem;
+	box-shadow: 1px 1px 10px 1px rgba(1, 113, 33, 0.4);
+	transition: all 0.5s ease-out;
 }
 
 #content .email_box input:focus,
 #content .email_box textarea:focus {
-  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.4);
-  transform: scale(1.01);
-  background: rgba(1, 113, 33, 0.4);
-  font-weight: 700;
+	box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.4);
+	transform: scale(1.01);
+	background: rgba(1, 113, 33, 0.4);
+	font-weight: 700;
 }
 
 #content .email_box textarea {
-  height: 200px;
+	height: 200px;
 }
 
 #content .email_box button {
-  padding: 15px 50px;
-  border-radius: 15px;
-  color: var(--font-color-sub2);
-  font-size: var(--font-size-no11);
-  background: rgba(1, 113, 33, 0.9);
-  margin: 30px auto;
-  display: block;
-  cursor: pointer;
-  border: 0;
-  transition: all 0s ease;
+	padding: 15px 50px;
+	border-radius: 15px;
+	color: var(--font-color-sub2);
+	font-size: var(--font-size-no11);
+	background: rgba(1, 113, 33, 0.9);
+	margin: 30px auto;
+	display: block;
+	cursor: pointer;
+	border: 0;
+	transition: all 0s ease;
 }
 
 #content .email_box button:hover {
-  background: rgba(217, 38, 41, 0.9);
+	background: rgba(217, 38, 41, 0.9);
 }
 
 #content .agree_checkbox {
-  width: 750px;
-  height: 130px;
-  margin-top: 50px;
-  overflow-y: scroll;
+	width: 750px;
+	height: 130px;
+	margin-top: 50px;
+	overflow-y: scroll;
 }
 
 #content .agree_checkbox p {
-  font-size: var(--font-size-no10);
-  font-weight: 600;
-  margin-bottom: 20px;
+	font-size: var(--font-size-no10);
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
 #content .agree_checkbox dl {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 #content .agree_checkbox dt {
-  color: var(--font-color-main);
-  font-size: var(--font-size-no12);
-  margin-bottom: 5px;
+	color: var(--font-color-main);
+	font-size: var(--font-size-no12);
+	margin-bottom: 5px;
 }
 
 #content .agree_checkbox dd {
-  margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 #content .agree_checkbox .agree_refusal {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 #content .consent-checkbox .agree_text_check {
-  font-size: var(--font-size-no14);
+	font-size: var(--font-size-no14);
 }
 
 #content #agree_checkbox {
-  width: 20px;
-  height: 20px;
+	width: 20px;
+	height: 20px;
 }
