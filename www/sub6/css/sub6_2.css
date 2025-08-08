@@ -6,4 +6,16 @@
 	width: 1400px;
 	margin: 0 auto;
 	padding-bottom: 200px;
+	border: 1px solid red;
+}
+
+.honey_recipe_tuck_box {
+	width: 1000px;
+	height: 800px;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+
+.recipe_img img {
+	width: 200px;
 }
