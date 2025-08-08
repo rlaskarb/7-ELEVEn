@@ -1,11 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const subNavLinks = document.querySelectorAll(".sub_nav ul li a");
-  const currentPath = window.location.pathname.split("/").pop();
+$(document).ready(function () {
+	const currentPath = window.location.pathname.split("/").pop();
 
-  subNavLinks.forEach((link) => {
-    const linkPath = link.getAttribute("href").split("/").pop();
-    if (linkPath === currentPath) {
-      link.parentElement.classList.add("current");
-    }
-  });
+	const currentQuery = window.location.search; // ? 뒤에 붙는 파라미터
+
+	let currentPage = currentPath + currentQuery;
+
+	if (currentPage === "") {
+		currentPage = "index.html";
+	}
+	$(".sub_nav ul li a").removeClass("current");
+
+	$(".sub_nav ul li a").each(function () {
+		const linkHref = $(this).attr("href");
+
+		if (linkHref.includes(currentPage)) {
+			$(this).addClass("current");
+
+			return false;
+		}
+	});
 });

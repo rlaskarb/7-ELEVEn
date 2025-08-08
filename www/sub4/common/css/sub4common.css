@@ -18,7 +18,8 @@
 .visual strong {
   width: 100%;
   display: block;
-  font-size: var(--font-size-no7); /*30px*/
+  font-size: var(--font-size-no7);
+  /*30px*/
   color: #fff;
   font-weight: 700;
   position: absolute;
@@ -49,13 +50,15 @@
 }
 
 .sub_nav ul li a {
-  font-size: var(--font-size-no11); /*20px*/
+  font-size: var(--font-size-no11);
+  /*20px*/
   border-radius: 25px;
   font-weight: 600;
   padding: 15px 0;
   transition: all 0.3s ease;
 }
-.sub_nav .current a,
+
+.sub_nav ul li a.current,
 .sub_nav ul li a:hover {
   background: rgba(217, 38, 41, 0.9);
   color: var(--font-color-sub2);
@@ -74,13 +77,15 @@
 }
 
 #content .title_area h2 {
-  font-size: var(--font-size-no44); /*60px*/
+  font-size: var(--font-size-no44);
+  /*60px*/
   text-align: center;
   margin-bottom: 20px;
 }
 
 #content .title_area p {
-  font-size: var(--font-size-no9); /*24px*/
+  font-size: var(--font-size-no9);
+  /*24px*/
   text-align: center;
   font-weight: 500;
   position: relative;
