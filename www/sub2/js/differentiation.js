@@ -137,7 +137,43 @@ $(document).ready(function () {
 							filteredData = useData.filter(function (item) {
 								return item.menu == "과자";
 							});
+							break;
+						case "bread":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "빵";
+							});
+							break;
+						case "candy":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "사탕";
+							});
+							break;
+						case "ice_cream":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "아이스크림";
+							});
+							break;
+						case "lunch":
+							filteredData = useData.filter(function (item) {
+								return item.menu == "도시락";
+							});
+							break;
+						case "sweet":
+							filteredData = useData.filter(function (item) {
+								return item.flavor == "달달";
+							});
+							break;
+						case "slaty":
+							filteredData = useData.filter(function (item) {
+								return item.flavor == "짭짤";
+							});
+							break;
+						default:
+							filteredData = useData;
 					}
+					newArray = filteredData;
+					dataPrint(newArray);
+					search_on = true;
 				}
 			});
 		},
