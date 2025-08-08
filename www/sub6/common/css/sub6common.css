@@ -2,104 +2,105 @@
 
 /* 공통 비주얼 영역 */
 .visual {
-  width: 2000px;
-  height: 400px;
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+	width: 2000px;
+	height: 400px;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .visual img {
-  width: 2000px;
+	width: 2000px;
 }
 
 .visual strong {
-  width: 100%;
-  display: block;
-  font-size: var(--font-size-no7);
-  color: #fff;
-  font-weight: 700;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  text-align: center;
+	width: 100%;
+	display: block;
+	font-size: var(--font-size-no7);
+	color: #fff;
+	font-weight: 700;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	text-align: center;
 }
 
 /* 공통 서브 메뉴 영역 */
 
 .sub_nav {
-  width: 1000px;
-  margin: 0 auto;
-  margin-top: 50px;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 25px;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 50px;
+	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+	border-radius: 25px;
 }
 
 .sub_nav ul {
-  display: flex;
-  gap: 10px;
+	display: flex;
+	gap: 10px;
 }
 
 .sub_nav ul li {
-  width: 33.33%;
-  box-sizing: border-box;
-  text-align: center;
+	width: 50%;
+	box-sizing: border-box;
+	text-align: center;
 }
 
 .sub_nav ul li a {
-  font-size: var(--font-size-no11);
-  border-radius: 25px;
-  font-weight: 600;
-  padding: 15px 0;
-  transition: all 0.3s ease;
+	font-size: var(--font-size-no11);
+	border-radius: 25px;
+	font-weight: 600;
+	padding: 15px 0;
+	transition: all 0.3s ease;
 }
+
 .sub_nav .current a,
 .sub_nav ul li a:hover {
-  background: rgba(217, 38, 41, 0.9);
-  color: var(--font-color-sub2);
+	background: rgba(217, 38, 41, 0.9);
+	color: var(--font-color-sub2);
 }
 
 /* 콘텐츠의 타이틀 영역 */
 #content {
-  width: 100%;
+	width: 100%;
 }
 
 #content .title_area {
-  width: 1400px;
-  margin: 0 auto;
-  padding: 150px 0 200px;
-  position: relative;
+	width: 1400px;
+	margin: 0 auto;
+	padding: 150px 0 200px;
+	position: relative;
 }
 
 #content .title_area h2 {
-  font-size: var(--font-size-no44);
-  text-align: center;
-  margin-bottom: 20px;
+	font-size: var(--font-size-no44);
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 #content .title_area p {
-  font-size: var(--font-size-no9);
-  text-align: center;
-  font-weight: 500;
-  position: relative;
+	font-size: var(--font-size-no9);
+	text-align: center;
+	font-weight: 500;
+	position: relative;
 }
 
 #content .title_area p::after {
-  content: "";
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 4px;
-  height: 100px;
-  background: red;
+	content: "";
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	width: 4px;
+	height: 100px;
+	background: red;
 }
 
 #content .title_area .line_map {
-  position: absolute;
-  top: 20px;
-  right: 10px;
-  font-size: var(--font-size-no13);
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	font-size: var(--font-size-no13);
 }
