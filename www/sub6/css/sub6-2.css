@@ -1,8 +1,11 @@
+#headerArea #gnb {
+	background: none;
+}
+
 #content .content_area {
 	width: 1400px;
-	height: 1200px;
 	margin: 0 auto;
-	padding: 100px 0;
+	padding-bottom: 200px;
 }
 
 #content .email_box {
