@@ -6,16 +6,165 @@
 	width: 1400px;
 	margin: 0 auto;
 	padding-bottom: 200px;
-	border: 1px solid red;
+
 }
 
+.board_write_section {
+	width: 800px;
+	margin: 50px auto;
+	padding: 30px;
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+	background: #fff;
+}
+
+.board_write_section form dl {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+
+}
+
+.board_write_section form dt {
+	flex-basis: 120px;
+	font-size: var(--font-size-no13);
+	color: #555;
+	font-weight: bold;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.board_write_section form dd {
+	flex-grow: 1;
+}
+
+.board_write_section form input [type="text"],
+.board_write_section form input [type="email"],
+.board_write_section form textarea {
+	width: 90%;
+	padding: 12px 15px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	transition: border-color 0.3s;
+
+}
+
+.board_write_section form input [type="text"]:focus,
+.board_write_section form input [type="email"]:focus,
+.board_write_section form textarea :focus {
+	border-color: rgba(1, 113, 33, 0.8);
+	/*포커스 시 색상 변경 */
+	outline: none;
+
+}
+
+.board_write_section form textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.board_write_section .write_buttons {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.board_write_section .write_buttons button {
+	padding: 15px 30px;
+	background-color: rgba(1, 113, 33, 0.8);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.board_write_section .write_buttons button:hover {
+	background-color: rgba(217, 38, 41, 0.8);
+}
+
+
 .honey_recipe_tuck_box {
-	width: 1000px;
-	height: 800px;
-	margin: 0 auto;
-	border: 1px solid red;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+}
+
+.honey_recipe_tuck_box li {
+	width: calc(33.333% -14px);
+	border: 1px solid #eee;
+	transition: transform 0.3s;
+}
+
+.honey_recipe_tuck_box li:hover {
+	transform: translateY(-5px);
+}
+
+.honey_recipe_tuck_box li a {
+	display: flex;
+	flex-direction: column;
+}
+
+.recipe_img {
+	width: 100%;
+	height: 200px;
+	padding: 50px 0;
+	overflow: hidden;
 }
 
 .recipe_img img {
-	width: 200px;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.recipe_content {
+	height: 100%;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.recipe_content dl {
+	width: 420px;
+	flex-grow: 1;
+	margin-bottom: 10px;
+}
+
+.recipe_content dt {
+	width: 300px;
+	font-size: var(--font-size-no11);
+	/*20px*/
+	font-weight: bold;
+	margin-bottom: 10px;
+	white-space: nowrap;
+	/* 제목길면 ...표시*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.recipe_content dd:nth-of-type(1) {
+	width: 300px;
+	margin-bottom: 25px;
+	font-size: var(--font-size-no13);
+	/*16px*/
+	color: #666;
+	white-space: nowrap;
+	/* 제목길면 ...표시*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.recipe_info {
+	border-top: 1px solid #999;
+	display: flex;
+	justify-content: space-between;
+	color: #333;
+	padding-top: 10px;
 }

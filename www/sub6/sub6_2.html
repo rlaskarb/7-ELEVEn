@@ -95,8 +95,7 @@
 									<a href="./sub6_2.html">나만의 꿀조합</a>
 								</li>
 								<li>
-									<a href="./sub6_3.html">신상품
-										후기</a>
+									<a href="./sub6_3.html">신상품 후기</a>
 								</li>
 							</ul>
 						</li>
@@ -140,29 +139,62 @@
 			</div>
 
 			<div class="content_area">
+				<div class="board_write_section">
+					<form id="post-form">
+
+						<dl>
+							<dt>
+								<label for="post-nickname">닉네임</label>
+							</dt>
+							<dd>
+								<input type="text" id="post-nickname" placeholder="닉네임을 입력해주세요">
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<label for="post-email">이메일</label>
+							</dt>
+							<dd>
+								<input type="email" id="post-email" placeholder="rlaskarb20@naver.com">
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<label for="post-file">파일 첨부</label>
+							</dt>
+							<dd>
+								<input type="file" id="post-file" accept="image/*" />
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<label for="post-title">레시피 이름</label>
+							</dt>
+							<dd>
+								<input type="text" id="post-title" placeholder="예: 불닭볶음면 + 투게더 아이스크림" required>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<label for="post-content">나만의 설명</label>
+							</dt>
+							<dd>
+								<textarea id="post-content" placeholder="이 조합을 어떻게 생각하게 됐는지, 맛은 어떤지 자세히알려주세요!" required>
+
+							</textarea>
+							</dd>
+						</dl>
+						<div class="write_buttons">
+							<button type="submit">꿀조합 등록하기</button>
+						</div>
+					</form>
+				</div>
+
 				<ul class="honey_recipe_tuck_box">
 					<!--  -->
 				</ul>
-			</div>
-			<!-- 글쓰기 폼 영역 (새로 추가) -->
-			<div class="board_write_section">
-				<form id="post-form">
-					<dl>
-						<dt><label for="post-title">레시피 이름</label></dt>
-						<dd><input type="text" id="post-title" placeholder="예: 불닭볶음면 + 투게더 아이스크림" required></dd>
-					</dl>
-					<dl>
-						<dt><label for="post-content">나만의 설명</label>
-						</dt>
-						<dd><textarea id="post-content" placeholder="이 조합을 어떻게 생각하게 됐는지, 맛은 어떤지 자세히알려주세요!"
-								required></textarea></dd>
-					</dl>
-					<div class="write_buttons">
-						<button type="submit">꿀조합 등록하기</button>
-					</div>
-				</form>
-			</div>
 
+			</div>
 
 
 		</article>
