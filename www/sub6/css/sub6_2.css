@@ -1,89 +1,181 @@
-#headerArea #gnb {
-	background: none;
-}
-
 #content .content_area {
-	width: 1400px;
+	width: 1600px;
 	margin: 0 auto;
 	padding-bottom: 200px;
-
 }
 
 .board_write_section {
-	width: 800px;
+	width: 1000px;
 	margin: 50px auto;
-	padding: 30px;
-	border: 1px solid #e0e0e0;
-	border-radius: 10px;
-	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+	padding: 0;
+	border: none;
+	border-radius: 20px;
+	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
 	background: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+
+
+/* 제목 스타일 개선 */
+.board_write_section form strong {
+	display: block;
+	text-align: center;
+	padding: 20px;
+	background: rgba(1, 113, 33, 0.8);
+	color: white;
+	font-size: var(--font-size-no7);
+	/*30px*/
+	font-weight: 700;
+	text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+	margin-bottom: 40px;
+
+}
+
+
+
+.board_write_section form dl:first-of-type {
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .board_write_section form dl {
 	display: flex;
-	align-items: center;
-	margin-bottom: 20px;
-
+	margin-bottom: 25px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .board_write_section form dt {
 	flex-basis: 120px;
 	font-size: var(--font-size-no13);
-	color: #555;
-	font-weight: bold;
+	color: #333;
+	font-weight: 600;
 	padding-right: 20px;
 	text-align: right;
+	padding-top: 15px;
 }
 
 .board_write_section form dd {
 	flex-grow: 1;
 }
 
-.board_write_section form input [type="text"],
-.board_write_section form input [type="email"],
+/* 입력 필드 스타일 개선 */
+.board_write_section form input[type="text"],
+.board_write_section form input[type="email"],
 .board_write_section form textarea {
-	width: 90%;
-	padding: 12px 15px;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	transition: border-color 0.3s;
-
+	width: 95%;
+	padding: 15px 20px;
+	border: 2px solid #e9ecef;
+	border-radius: 12px;
+	font-size: 15px;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
 }
 
-.board_write_section form input [type="text"]:focus,
-.board_write_section form input [type="email"]:focus,
-.board_write_section form textarea :focus {
+.board_write_section form input[type="text"]:focus,
+.board_write_section form input[type="email"]:focus,
+.board_write_section form textarea:focus {
 	border-color: rgba(1, 113, 33, 0.8);
-	/*포커스 시 색상 변경 */
 	outline: none;
-
+	box-shadow: 1px 1px 15px rgba(1, 113, 33, 0.3);
+	transform: translateY(-2px);
 }
 
 .board_write_section form textarea {
 	resize: vertical;
-	min-height: 120px;
+	min-height: 150px;
+
 }
+
+.board_write_section form textarea::placeholder {
+	text-align: left;
+	vertical-align: top;
+	color: #9ca3af;
+	line-height: 1.5;
+	white-space: pre-line;
+}
+
+.board_write_section form input[type="file"] {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.board_write_section form dd {
+	position: relative;
+}
+
+.file_input_display {
+	display: block;
+	width: 95%;
+	padding: 15px 20px;
+	border: 2px dashed #999;
+	border-radius: 12px;
+	text-align: center;
+	color: #999;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+
+
+.tip_box {
+	background: var(--font-color-sub2);
+	border-left: 4px solid #017121;
+	padding: 20px;
+	margin: 30px;
+	border-radius: 0 8px 8px 0;
+}
+
+.tip_box>span {
+	display: block;
+	padding-bottom: 20px;
+	color: rgba(1, 113, 33, 0.8);
+	font-weight: 600;
+}
+
+.tip_box ul {
+	margin: 0;
+	padding-left: 20px;
+	color: #666;
+}
+
+.tip_box li {
+	margin-bottom: 8px;
+
+	line-height: 1.5;
+}
+
 
 .board_write_section .write_buttons {
 	text-align: center;
-	margin-top: 30px;
+	margin: 40px 30px 30px;
 }
 
 .board_write_section .write_buttons button {
-	padding: 15px 30px;
-	background-color: rgba(1, 113, 33, 0.8);
+	padding: 18px 40px;
+	background: rgba(1, 113, 33, 0.8);
 	color: #fff;
 	border: none;
-	border-radius: 5px;
-	font-size: 18px;
-	font-weight: bold;
+	border-radius: 12px;
+	font-size: var(--font-size-no12);
+	font-weight: 600;
 	cursor: pointer;
-	transition: background-color 0.3s;
+	transition: all 0.3s ease;
+	box-shadow: 1px 1px 15px rgba(1, 113, 33, 0.2);
 }
 
 .board_write_section .write_buttons button:hover {
-	background-color: rgba(217, 38, 41, 0.8);
+	transform: translateY(-4px);
+	box-shadow: 1px 1px 15px rgba(217, 38, 33, 0.2);
+	background: rgba(217, 38, 33, 0.8);
 }
+
 
 
 .honey_recipe_tuck_box {
@@ -91,18 +183,21 @@
 	height: auto;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 20px;
-
+	gap: 15px;
 }
 
 .honey_recipe_tuck_box li {
-	width: calc(33.333% -14px);
+	width: calc(33.333% - 14px);
 	border: 1px solid #eee;
 	transition: transform 0.3s;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .honey_recipe_tuck_box li:hover {
 	transform: translateY(-5px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .honey_recipe_tuck_box li a {
@@ -112,8 +207,8 @@
 
 .recipe_img {
 	width: 100%;
-	height: 200px;
-	padding: 50px 0;
+	height: 300px;
+	padding: 30px 0;
 	overflow: hidden;
 }
 
@@ -140,11 +235,9 @@
 .recipe_content dt {
 	width: 300px;
 	font-size: var(--font-size-no11);
-	/*20px*/
 	font-weight: bold;
 	margin-bottom: 10px;
 	white-space: nowrap;
-	/* 제목길면 ...표시*/
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -153,10 +246,8 @@
 	width: 300px;
 	margin-bottom: 25px;
 	font-size: var(--font-size-no13);
-	/*16px*/
 	color: #666;
 	white-space: nowrap;
-	/* 제목길면 ...표시*/
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
