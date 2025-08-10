@@ -1,24 +1,157 @@
 #content .content_area {
-	width: 1600px;
+	width: 1400px;
 	margin: 0 auto;
 	padding-bottom: 200px;
 }
 
-.board_write_section {
+
+/* 글쓰기 버튼 */
+.write_btn_container {
+	text-align: right;
+	margin: 20px 0;
+}
+
+.write_btn {
+	display: inline-block;
+	padding: 12px 25px;
+	background: var(--font-color-point2);
+	color: #fff;
+	border-radius: 30px;
+	font-size: var(--font-size-no10);
+	font-weight: 600;
+	box-shadow: 0 4px 15px rgba(1, 132, 61, 0.2);
+	transition: all 0.3s ease;
+	text-decoration: none;
+}
+
+.write_btn:hover {
+	background: var(--font-color-point1);
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(231, 83, 21, 0.3);
+}
+
+.write_btn i {
+	margin-right: 10px;
+}
+
+/* ====================================
+   📌 모달 기본 설정 - 두 모달 공통
+   ==================================== */
+
+.write_modal_box,
+.edit_modal_box {
+	/* 화면 전체 덮기 */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+
+	/* 배경 */
+	background-color: rgba(0, 0, 0, 0.6);
+
+	/* 레이어 순서 */
+	z-index: 9999;
+
+	/* 중앙 정렬 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* 📌 숨김 처리 - !important 없이 */
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+
+	/* 애니메이션 */
+	transition: all 0.3s ease;
+}
+
+/* 📌 모달 활성화 상태 */
+.write_modal_box.show,
+.edit_modal_box.show {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* ====================================
+   📌 글쓰기 모달 스타일
+   ==================================== */
+
+.write_modal_box .board_write_section {
 	width: 1000px;
-	margin: 50px auto;
+	max-height: 90vh;
+	margin: 0;
 	padding: 0;
 	border: none;
 	border-radius: 20px;
-	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
 	background: #fff;
-	overflow: hidden;
+	overflow-y: auto;
 	position: relative;
+
+	/* 모달 콘텐츠 애니메이션 */
+	transform: translateY(-30px) scale(0.95);
+	transition: transform 0.3s ease;
 }
 
+.write_modal_box.show .board_write_section {
+	transform: translateY(0) scale(1);
+}
 
+/* ====================================
+   📌 수정 모달 스타일  
+   ==================================== */
 
-/* 제목 스타일 개선 */
+.edit_modal_box .edit_popup_content {
+	width: 100%;
+	max-width: 1400px;
+	max-height: 1000px;
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+	position: relative;
+	overflow-y: auto;
+
+	/* 모달 콘텐츠 애니메이션 */
+	transform: translateY(-30px) scale(0.95);
+	transition: transform 0.3s ease;
+}
+
+.edit_modal_box.show .edit_popup_content {
+	transform: translateY(0) scale(1);
+}
+
+/* ====================================
+   📌 닫기 버튼 공통 스타일
+   ==================================== */
+
+.close_pop {
+	position: absolute;
+	top: 25px;
+	right: 30px;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: var(--font-size-no10);
+	z-index: 10;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.close_pop:hover {
+	color: rgba(255, 255, 255, 1);
+	transform: rotate(90deg);
+}
+
+/* ====================================
+   📌 폼 스타일 (기존 스타일 유지)
+   ==================================== */
+
 .board_write_section form strong {
 	display: block;
 	text-align: center;
@@ -26,14 +159,10 @@
 	background: rgba(1, 113, 33, 0.8);
 	color: white;
 	font-size: var(--font-size-no7);
-	/*30px*/
 	font-weight: 700;
 	text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
 	margin-bottom: 40px;
-
 }
-
-
 
 .board_write_section form dl:first-of-type {
 	margin-left: 30px;
@@ -61,7 +190,6 @@
 	flex-grow: 1;
 }
 
-/* 입력 필드 스타일 개선 */
 .board_write_section form input[type="text"],
 .board_write_section form input[type="email"],
 .board_write_section form textarea {
@@ -86,7 +214,6 @@
 .board_write_section form textarea {
 	resize: vertical;
 	min-height: 150px;
-
 }
 
 .board_write_section form textarea::placeholder {
@@ -97,6 +224,7 @@
 	white-space: pre-line;
 }
 
+/* 파일 업로드 */
 .board_write_section form input[type="file"] {
 	opacity: 0;
 	position: absolute;
@@ -123,7 +251,7 @@
 	box-sizing: border-box;
 }
 
-
+/* 팁 박스 */
 .tip_box {
 	background: var(--font-color-sub2);
 	border-left: 4px solid #017121;
@@ -147,11 +275,10 @@
 
 .tip_box li {
 	margin-bottom: 8px;
-
 	line-height: 1.5;
 }
 
-
+/* 버튼 */
 .board_write_section .write_buttons {
 	text-align: center;
 	margin: 40px 30px 30px;
@@ -176,224 +303,41 @@
 	background: rgba(217, 38, 33, 0.8);
 }
 
-
-
-.honey_recipe_tuck_box {
-	width: 100%;
-	height: auto;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 25px;
-	/* 간격 증가 */
-	margin-top: 40px;
-	padding: 0 10px;
-}
-
-.honey_recipe_tuck_box li {
-	width: calc(33.333% - 20px);
-	background: #fff;
-	border-radius: 20px;
-	/* 더 둥근 모서리 */
-	overflow: hidden;
-	position: relative;
-
-	/* 📌 아름다운 그림자와 테두리 */
-	box-shadow:
-		0 4px 20px rgba(0, 0, 0, 0.08),
-		0 1px 4px rgba(0, 0, 0, 0.06);
-	border: 1px solid rgba(1, 113, 33, 0.1);
-
-	/* 호버 효과를 위한 트랜지션 */
-	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-	transform: translateY(0);
-}
-
-/* 📌 호버 시 카드가 살짝 떠오르는 효과 */
-.honey_recipe_tuck_box li:hover {
-	transform: translateY(-10px);
-	box-shadow:
-		0 15px 40px rgba(0, 0, 0, 0.12),
-		0 5px 15px rgba(0, 0, 0, 0.08);
-	border-color: rgba(1, 113, 33, 0.2);
-}
-
-/* 📌 카드 내부 링크 */
-.honey_recipe_tuck_box li a {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	text-decoration: none;
-	color: inherit;
-}
-
-/* 📌 이미지 영역 스타일링 */
-.recipe_img {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	overflow: hidden;
-	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-
-	/* 📌 이미지 상단에 그라데이션 오버레이 */
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 60px;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
-		z-index: 2;
-	}
-}
-
-.recipe_img img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transition: transform 0.4s ease;
-}
-
-.honey_recipe_tuck_box li:hover .recipe_img img {
-	transform: scale(1.05);
-}
-
-.recipe_content {
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	position: relative;
-}
-
-.recipe_content dl {
-	width: 420px;
-	flex-grow: 1;
-	margin-bottom: 10px;
-}
-
-.recipe_content dt {
-	width: 300px;
-	font-size: var(--font-size-no11);
-	font-weight: bold;
-	margin-bottom: 10px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.recipe_content dd:nth-of-type(1) {
-	width: 300px;
-	margin-bottom: 25px;
-	font-size: var(--font-size-no13);
-	color: #666;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.recipe_info {
-	border-top: 1px solid #999;
-	display: flex;
-	justify-content: space-between;
-	color: #333;
-	padding-top: 10px;
-}
-
-
-/* 📌 모달 배경 오버레이 - 화면 전체를 덮고 어둡게 처리 */
-.edit_modal_box {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-
-	background-color: rgba(0, 0, 0, 0.6);
-	/* 반투명 검은 배경 */
-	z-index: 1000;
-	/* 다른 요소보다 위에 표시 */
-
-	/* 📌 플렉스박스로 완벽한 중앙 정렬 */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	/* 부드러운 애니메이션 효과 */
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-/* 모달이 보일 때 */
-.edit_modal_box.show {
-	opacity: 1;
-}
-
-/* 📌 모달 콘텐츠 박스 */
-.edit_popup_content {
-	width: 100%;
-	max-width: 1000px;
-	max-height: 90vh;
-	background-color: #fff;
-	border-radius: 20px;
-	box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
-	z-index: 1001;
-	position: relative;
-
-	/* 스크롤 처리 */
-	overflow-y: auto;
-
-	/* 모달이 나타날 때 애니메이션 */
-	transform: translateY(-30px);
-	transition: transform 0.3s ease;
-}
-
-.edit_modal_box.show .edit_popup_content {
-	transform: translateY(0);
-}
+/* ====================================
+   📌 수정 모달 관련 스타일
+   ==================================== */
 
 .edit_popup_content ul {
-	padding: 40px 50px;
+	padding: 40px;
 }
 
 .edit_popup_content li {
 	display: flex;
 	align-items: flex-start;
-	gap: 40px;
+	gap: 30px;
 	position: relative;
 }
 
 .edit_popup_content .recipe_img_edit {
-	width: 350px;
+	width: 600px;
+	height: 650px;
+	object-fit: cover;
 	flex-shrink: 0;
 }
 
 .edit_popup_content .recipe_img_edit img {
 	width: 100%;
-	height: 400px;
+	height: 100%;
 	object-fit: cover;
 	border-radius: 10px;
 }
 
 .edit_popup_content .recipe_img_edit p {
-	font-size: 14px;
+
 	color: #888;
 	text-align: center;
 	margin-top: 10px;
 }
-
-/* 📌 닫기 버튼 스타일 개선 */
-.edit_popup_content .close_pop {
-	position: absolute;
-	top: 10px;
-	right: 15px;
-	color: rgba(217, 38, 33, 0.8);
-	font-size: 20px;
-	transition: all 0.3s ease;
-	z-index: 10;
-}
-
 
 /* 수정 폼 스타일 */
 #edit-form {
@@ -442,10 +386,10 @@
 }
 
 #edit-form textarea {
-	height: 120px;
+	height: 400px;
 }
 
-/* 📌 버튼 컨테이너 - 수정/삭제 버튼을 나란히 배치 */
+/* 모달 버튼들 */
 .modal_buttons {
 	display: flex;
 	gap: 15px;
@@ -466,7 +410,6 @@
 	min-width: 100px;
 }
 
-/* 수정 버튼 */
 .modal_buttons .edit-btn {
 	background-color: #007121;
 	color: white;
@@ -477,7 +420,6 @@
 	transform: translateY(-2px);
 }
 
-/* 삭제 버튼 */
 .modal_buttons .delete-btn {
 	background-color: #dc3545;
 	color: white;
@@ -488,14 +430,163 @@
 	transform: translateY(-2px);
 }
 
-/* 버튼 비활성화 상태 */
 .modal_buttons button:disabled {
 	background-color: #ccc;
 	cursor: not-allowed;
 	transform: none;
 }
 
-/* 📌 목록에서 삭제 버튼 숨기기 (모달에서만 보이게) */
-.honey_recipe_tuck_box .recipe_buttons {
-	display: none;
+/* ====================================
+   📌 게시판 목록 스타일 (기존 유지)
+   ==================================== */
+
+.honey_recipe_tuck_box {
+	width: 1600px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 100px auto;
+	padding: 30px 10px;
+}
+
+.honey_recipe_tuck_box li {
+	width: 350px;
+	height: 450px;
+	background: #fff;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	transform: translateY(0);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.honey_recipe_tuck_box li:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08);
+	border-color: rgba(1, 113, 33, 0.2);
+}
+
+.honey_recipe_tuck_box li a {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	text-decoration: none;
+	color: inherit;
+}
+
+.recipe_img {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+
+.recipe_img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.recipe_content {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	position: relative;
+}
+
+.recipe_content dl {
+	flex-grow: 1;
+	margin-bottom: 15px;
+}
+
+.recipe_content dt {
+	font-size: var(--font-size-no10);
+	font-weight: 700;
+	margin-bottom: 10px;
+	color: rgba(217, 38, 33, 0.8);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.recipe_content dd:nth-of-type(1) {
+	width: 300px;
+	margin-bottom: 15px;
+	font-size: var(--font-size-no12);
+	color: #666;
+	line-height: 1.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.recipe_content dd:nth-of-type(2) {
+	font-size: 14px;
+	color: rgba(1, 113, 33, 0.8);
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.recipe_content dd:nth-of-type(2)::before {
+	content: "👤 ";
+	margin-right: 4px;
+}
+
+.recipe_info {
+	margin-top: auto;
+	padding-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 13px;
+	color: #868e96;
+	border-top: 2px solid #f1f3f4;
+	position: relative;
+}
+
+.recipe_info::before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 480px;
+	height: 3px;
+	background: rgba(1, 113, 33, 0.6);
+	border-radius: 1px;
+}
+
+.recipe_date {
+	font-weight: 500;
+}
+
+.recipe_date::before {
+	content: "📅 ";
+	margin-right: 4px;
+}
+
+/* 빈 목록 메시지 */
+.empty_list_message {
+	width: 100%;
+	text-align: center;
+	padding: 80px 20px;
+	color: #6c757d;
+	font-size: 18px;
+	background: #f8f9fa;
+	border-radius: 15px;
+	border: 2px dashed #dee2e6;
+}
+
+.empty_list_message::before {
+	content: "🍯";
+	display: block;
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+/* 📌 로딩 상태 */
+.honey_recipe_tuck_box.loading {
+	opacity: 0.7;
+	pointer-events: none;
 }

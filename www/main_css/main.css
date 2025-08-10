@@ -393,134 +393,138 @@
 	transform: translateY(-2px);
 }
 
+
+
 /* 세븐일레븐에서 이런조합 해봤어? */
 
 #content .honey_recipe {
 	width: 100%;
-	height: 900px;
+	min-height: 850px;
 	margin: 0 auto;
+	padding: 80px 0;
+
 }
 
 #content .honey_recipe .honey_recipe_container {
 	width: 1400px;
 	margin: 0 auto;
 	position: relative;
+	padding-top: 50px;
 }
 
 #content .honey_recipe .honey_recipe_title {
-	margin-left: 90px;
-	margin-top: 100px;
+	text-align: left;
+	margin-bottom: 60px;
 }
 
 #content .honey_recipe .honey_recipe_title h3 {
 	font-size: var(--font-size-no5);
-	color: var(--font-color-point1);
+	color: var(--font-color-main);
+	margin-bottom: 20px;
 }
 
 #content .honey_recipe .honey_recipe_title h3 span {
-	color: var(--font-color-point2);
+	color: var(--font-color-point2)
 }
 
 #content .honey_recipe .honey_recipe_title p {
 	font-size: var(--font-size-no10);
-	margin-top: 20px;
+	color: #666;
+	line-height: 1.6rem;
 }
 
 #content .honey_recipe .honey_recipe_tuck_box {
-	width: 1300px;
-	height: 600px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
 	margin: 0 auto;
-	margin-top: 50px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-content: space-evenly;
-	gap: 20px;
+	max-width: 1400px;
 }
 
-#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(1) {
-	flex-basis: 500px;
+#content .honey_recipe .honey_recipe_tuck_box li {
+	background: #fff;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	border: 1px solid #f0f0f0;
 }
 
-#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(2) {
-	flex-basis: 400px;
+#content .honey_recipe .honey_recipe_tuck_box li:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 30px rgba(217, 38, 41, 0.15);
+	border-color: #d92629;
 }
 
-#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(3) {
-	flex-basis: 300px;
-}
-
-#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(4) {
-	flex-basis: 300px;
-}
-
-#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(5) {
-	flex-basis: 400px;
-}
-
-#content .honey_recipe .honey_recipe_tuck_box li:nth-of-type(6) {
-	flex-basis: 500px;
-}
-
-#content .honey_recipe .honey_recipe_tuck_box dl {
-	display: flex;
-	flex-direction: column;
-}
-
+/* 제목 영역 */
 #content .honey_recipe .honey_recipe_tuck_box dt {
-	height: 20px;
-	padding: 13px 0 24px 20px;
-	border-radius: 30px 30px 0 0;
-	border: 1px solid var(--font-color-point1);
-	background: var(--font-color-sub1);
-	box-shadow: 0 10px 15px rgba(231, 126, 45, 0.4);
+	background: rgba(231, 126, 45, 0.8);
+	color: var(--font-color-sub2);
+	padding: 18px 20px;
+	font-size: var(--font-size-no12);
+	font-weight: 600;
+	line-height: 1.4;
+	min-height: 24px;
+	display: flex;
+	align-items: center;
 }
 
 #content .honey_recipe .honey_recipe_tuck_box dt a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	width: 100%;
 	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 1;
-	-webkit-box-orient: vertical;
-	line-height: 1.5;
-	font-weight: 600;
-	font-size: var(--font-size-no10);
-	color: var(--font-color-point1);
-	transition: all 0.3s ease-out;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
-#content .honey_recipe .honey_recipe_tuck_box dd {
-	height: 150px;
+
+/* 본문 내용 */
+#content .honey_recipe .honey_recipe_tuck_box .content {
 	padding: 20px;
-	border-radius: 0 0 30px 30px;
-	word-break: break-all;
-	font-size: var(--font-size-no12);
-	border: 1px solid var(--font-color-point1);
-	background: var(--font-color-sub2);
-	box-shadow: 0 10px 15px rgba(231, 126, 45, 0.4);
+	font-size: 14px;
+	line-height: 1.5rem;
+	color: #333;
+	min-height: 100px;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	border-bottom: 1px solid #f0f0f0;
 }
 
-#content .honey_recipe .honey_recipe_tuck_box dd a {
-	transition: all 0.3s ease-out;
+#content .honey_recipe .honey_recipe_tuck_box .info {
+	padding: 15px 20px;
+	background: #fafafa;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 13px;
 }
 
-#content .honey_recipe .honey_recipe_tuck_box dt:hover {
-	background: rgba(1, 113, 33, 0.8);
-	box-shadow: 0 10px 15px rgba(1, 113, 33, 0.5);
+#content .honey_recipe .honey_recipe_tuck_box .info .nickname {
+	color: var(--font-color-point2);
+	font-weight: 600;
+	padding: 4px 12px;
+	background: rgba(1, 113, 33, 0.1);
+	border-radius: 12px;
+	border: 1px solid rgba(1, 113, 33, 0.2);
 }
 
-#content .honey_recipe .honey_recipe_tuck_box dt:hover a {
-	transform: scale(1.05);
-	color: var(--font-color-sub2);
+#content .honey_recipe .honey_recipe_tuck_box .info .date {
+	color: var(--font-color-point1);
+	font-weight: 500;
+	font-size: 0.8rem;
 }
 
-#content .honey_recipe .honey_recipe_tuck_box dd:hover a {
-	transform: scale(1.05);
-}
+
 
 #content .honey_recipe .honey_recipe_more {
-	top: 20px;
-	right: 270px;
+	top: 70px;
+	right: 460px;
 }
+
 
 /* 뭔가 땡기는데 뭔지 모르겠다면? */
 #content .full_search {
@@ -641,21 +645,9 @@
 }
 
 /* 주황색 그룹 (1, 2, 5번) */
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(1):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(2):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(5):hover
-	a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(1):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(2):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(5):hover a {
 	background: rgba(231, 126, 45, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(231, 126, 45, 0.6);
@@ -663,16 +655,8 @@
 }
 
 /* 빨간색 그룹 (3, 4번) */
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(3):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(4):hover
-	a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(3):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(4):hover a {
 	background: rgba(217, 38, 41, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(217, 38, 41, 0.6);
@@ -680,16 +664,8 @@
 }
 
 /* 초록색 그룹 (6, 7번) */
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(6):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(7):hover
-	a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(6):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(7):hover a {
 	background: rgba(1, 113, 33, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(1, 113, 33, 0.6);
@@ -844,17 +820,15 @@
 #content .seven_story_shorts li {
 	width: 400px;
 	flex-shrink: 0;
-	padding: 0 20px;
 	box-sizing: border-box;
 }
 
 #content .seven_story_shorts li img {
-	width: 100%;
+	width: 95%;
 	height: 590px;
 	display: block;
 	user-select: none;
 	pointer-events: none;
-	box-shadow: 1px 1px 10px r;
 	border-radius: 10px;
 }
 

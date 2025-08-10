@@ -136,69 +136,77 @@
 			</div>
 
 			<div class="content_area">
-				<div class="board_write_section">
-					<form id="post-form">
-						<strong>
-							나만의 꿀조합 레시피 공유하기 ✨
-						</strong>
-						<dl>
-							<dt>
-								<label for="post-nickname">닉네임</label>
-							</dt>
-							<dd>
-								<input type="text" id="post-nickname" placeholder="어떤 이름으로 불릴까요? 🙂">
-							</dd>
-						</dl>
-						<dl>
-							<dt>
-								<label for="post-email">이메일</label>
-							</dt>
-							<dd>
-								<input type="email" id="post-email" placeholder="rlaskarb20@naver.com">
-							</dd>
-						</dl>
-						<dl>
-							<dt>
-								<label for="post-file">파일 첨부</label>
-							</dt>
-							<dd>
-								<input type="file" id="post-file" accept="image/*" />
-								<span class="file_input_display">
-									📷 사진을 올려보세요! (클릭해서 선택)
-								</span>
-							</dd>
-						</dl>
-						<dl>
-							<dt>
-								<label for="post-title">레시피 이름</label>
-							</dt>
-							<dd>
-								<input type="text" id="post-title" placeholder="이건 모두 먹어봐야해!" required>
-							</dd>
-						</dl>
-						<dl>
-							<dt>
-								<label for="post-content">나만의 설명</label>
-							</dt>
-							<dd>
-								<textarea id="post-content" placeholder="🤔 어떻게 이 조합을 발견했나요?
+				<div class="write_btn_container">
+					<a href="#" id="open_write_modal" class="write_btn">
+						<i class="fa-solid fa-pencil"></i> 꿀조합 등록하기
+					</a>
+				</div>
+				<div class="write_modal_box">
+					<div class="board_write_section">
+						<a href="#" class="close_pop"><i class="fa-solid fa-xmark"></i></a>
+						<form id="post-form">
+							<strong>
+								나만의 꿀조합 레시피 공유하기 ✨
+							</strong>
+							<dl>
+								<dt>
+									<label for="post-nickname">닉네임</label>
+								</dt>
+								<dd>
+									<input type="text" id="post-nickname" placeholder="어떤 이름으로 불릴까요? 🙂">
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<label for="post-email">이메일</label>
+								</dt>
+								<dd>
+									<input type="email" id="post-email" placeholder="rlaskarb20@naver.com">
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<label for="post-file">파일 첨부</label>
+								</dt>
+								<dd>
+									<input type="file" id="post-file" accept="image/*" />
+									<span class="file_input_display">
+										📷 사진을 올려보세요! (클릭해서 선택)
+									</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<label for="post-title">레시피 이름</label>
+								</dt>
+								<dd>
+									<input type="text" id="post-title" placeholder="이건 모두 먹어봐야해!" required>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<label for="post-content">나만의 설명</label>
+								</dt>
+								<dd>
+									<textarea id="post-content" placeholder="🤔 어떻게 이 조합을 발견했나요?
 									😋 맛은 정말 어떤가요?
 									💡 다른 사람들에게 추천하고 싶은 포인트가 있나요?	
 										자세히 들려주세요!" required></textarea>
-							</dd>
-						</dl>
-						<div class="tip_box">
-							<span>💡 꿀조합 작성 TIP </span>
-							<ul>
-								<li>구체적인 상품명을 적어주시면 더 좋아요!</li>
-								<li>먹는 방법이나 순서가 있다면 알려주세요</li>
-								<li>어떤 상황에서 먹으면 좋은지도 함께 써주세요</li>
-							</ul>
-						</div>
-						<div class="write_buttons">
-							<button type="submit">내 꿀조합 자랑하기 </button>
-						</div>
-					</form>
+								</dd>
+							</dl>
+							<div class="tip_box">
+								<span>💡 꿀조합 작성 TIP </span>
+								<ul>
+									<li>구체적인 상품명을 적어주시면 더 좋아요!</li>
+									<li>먹는 방법이나 순서가 있다면 알려주세요</li>
+									<li>어떤 상황에서 먹으면 좋은지도 함께 써주세요</li>
+								</ul>
+							</div>
+							<div class="write_buttons">
+								<button type="submit">내 꿀조합 자랑하기 </button>
+							</div>
+						</form>
+					</div>
 				</div>
 
 				<ul class="honey_recipe_tuck_box">

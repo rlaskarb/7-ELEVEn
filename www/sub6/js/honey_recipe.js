@@ -4,24 +4,31 @@ $(document).ready(function () {
 		"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96dW1teGJ5dHFpeXpwbGp3YmxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2Njg5NTksImV4cCI6MjA3MDI0NDk1OX0.s7SmnNVrasiE52xZD1ALRXOUzWkwMcIrLzUkfe18aeo";
 
 	const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
 	const $modalBox = $(".edit_modal_box");
 	const $modalContent = $(".edit_popup_content");
+	const $writeModalBox = $(".write_modal_box");
 
 	console.log("2. Supabase 클라이언트 초기화 완료");
 
-	// 📌 모달 열기 함수 (애니메이션 효과 포함)
-	function openModal() {
-		$modalBox.show().addClass("show");
-		$("body").css("overflow", "hidden"); // 스크롤 방지
+	// 📌 모달 열기 함수
+	function openModal(modalType) {
+		const $modal = modalType === "edit" ? $modalBox : $writeModalBox;
+		$modal.addClass("show");
+		$("body").css("overflow", "hidden");
 	}
 
-	// 📌 모달 닫기 함수 (애니메이션 효과 포함)
-	function closeModal() {
-		$modalBox.removeClass("show");
-		setTimeout(() => {
-			$modalBox.hide();
-		}, 300); // 애니메이션 시간과 맞춤
-		$("body").css("overflow", "auto"); // 스크롤 복구
+	// 📌 모달 닫기 함수
+	function closeModal(modalType) {
+		const $modal = modalType === "edit" ? $modalBox : $writeModalBox;
+		$modal.removeClass("show");
+		// 두 모달이 모두 닫혔을 때만 스크롤복구
+		if (
+			!$(".edit_modal_box").hasClass("show") &&
+			!$(".write_modal_box").hasClass("show")
+		) {
+			$("body").css("overflow", "auto");
+		}
 	}
 
 	async function loadPosts() {
@@ -64,6 +71,18 @@ $(document).ready(function () {
 			const imageUrl = post.filePath || ".././common/images/7-eleven-logo.ico";
 			const displayDate = post.created_at.substring(0, 10);
 
+			// 내용이 너무 길면 자르기
+			const truncatedContent =
+				post.content.length > 50
+					? post.content.substring(0, 50) + "..."
+					: post.content;
+
+			// 제목이 너무 길면 자르기
+			const truncatedTitle =
+				post.title.length > 20
+					? post.title.substring(0, 20) + "..."
+					: post.title;
+
 			// 📌 개선된 카드 HTML
 			const postHtml = `
                         <li>
@@ -73,8 +92,8 @@ $(document).ready(function () {
                                 </div>
 								<div class="recipe_content">
                                 	<dl>
-                                    	<dt>${post.title}</dt>
-                                    	<dd>${post.content}</dd>
+                                    	<dt>${truncatedTitle}</dt>
+                                    	<dd>${truncatedContent}</dd>
 										<dd>${post.name}</dd>	
                                 	</dl>
 									<div class="recipe_info">
@@ -141,6 +160,7 @@ $(document).ready(function () {
 			} else {
 				alert("새로운 꿀조합이 성공적으로등록되었습니다!");
 				$("#post-form")[0].reset();
+				closeModal("write"); // 글쓰기 팝업닫기;
 				loadPosts();
 			}
 		} catch (e) {
@@ -174,7 +194,7 @@ $(document).ready(function () {
 				deleteButton.prop("disabled", false).text("삭제");
 			} else {
 				alert("게시글이 성공적으로 삭제되었습니다.");
-				closeModal(); // 모달 닫기
+				closeModal("edit"); // 모달 닫기
 				loadPosts(); // 목록 새로고침
 			}
 		} catch (e) {
@@ -206,7 +226,7 @@ $(document).ready(function () {
 		// 📌 수정/삭제 버튼이 포함된 모달 HTML
 		const postHtml = `
 			     <ul>
-                   <li>
+                   <li> 
                     	<div class="recipe_img_edit">
                         	<img src="${imageUrl}" alt="${post.title} 이미지">
                         	<p>※ 이미지 수정은 현재 지원되지 않습니다.</p>
@@ -244,7 +264,7 @@ $(document).ready(function () {
             `;
 
 		$modalContent.html(postHtml);
-		openModal(); // 📌 새로운 모달 열기 함수 사용
+		openModal("edit"); // 📌 새로운 모달 열기 함수 사용
 	});
 
 	// 수정 폼 제출 이벤트
@@ -276,7 +296,7 @@ $(document).ready(function () {
 				deleteButton.prop("disabled", false);
 			} else {
 				alert("게시글이 성공적으로 수정되었습니다.");
-				closeModal(); // 📌 새로운 모달 닫기 함수 사용
+				closeModal("edit"); // 📌 새로운 모달 닫기 함수 사용
 				loadPosts();
 			}
 		} catch (e) {
@@ -297,23 +317,40 @@ $(document).ready(function () {
 	// X 버튼 클릭
 	$(document).on("click", ".close_pop", function (e) {
 		e.preventDefault();
-		closeModal();
+		if ($(this).closest(".edit_modal_box").length) {
+			closeModal("edit");
+		} else if ($(this).closest(".write_modal_box").length) {
+			closeModal("write");
+		}
 	});
 
 	// 배경 클릭 시 모달 닫기
-	$(document).on("click", ".edit_modal_box", function (e) {
+	$(document).on("click", ".edit_modal_box, .write_modal_box", function (e) {
 		if (e.target === this) {
-			// 배경을 직접 클릭했을 때만
-			closeModal();
+			if ($(this).hasClass("edit_modal_box")) {
+				closeModal("edit");
+			} else if ($(this).hasClass("write_modal_box")) {
+				closeModal("write");
+			}
 		}
 	});
 
 	// ESC 키로 모달 닫기
 	$(document).on("keydown", function (e) {
-		if (e.keyCode === 27 && $modalBox.hasClass("show")) {
-			// ESC 키
-			closeModal();
+		if (e.key === "Escape") {
+			if ($(".edit_modal_box").hasClass("show")) {
+				closeModal("edit");
+			}
+			if ($(".write_modal_box").hasClass("show")) {
+				closeModal("write");
+			}
 		}
+	});
+
+	// '꿀조합 등록하기' 버튼 클릭 이벤트
+	$("#open_write_modal").on("click", function (e) {
+		e.preventDefault();
+		openModal("write"); // '글쓰기' 팝업열기
 	});
 
 	// 페이지 로드 시 글 목록 불러오기
