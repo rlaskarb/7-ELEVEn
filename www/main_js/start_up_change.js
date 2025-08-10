@@ -25,14 +25,6 @@ $(document).ready(function () {
 			startp2: "성공적인 창업의 기회를 <br /> 놓치지 마세요!",
 			startMore: "./sub4/sub4_3.html",
 		},
-		{
-			backgroudImg: "./main_images/start_up5.png",
-			starth3: "성공적인 <br /> 창업 스토리",
-			startp1:
-				"실제 세븐일레븐 점주들의 생생한 창업 성공 스토리를 들어보세요. <br /> 그들의 경험이 여러분의 성공에 영감을 줄 것입니다.",
-			startp2: "성공은 준비된 자에게 찾아옵니다.",
-			startMore: "./sub4/sub4_4.html",
-		},
 	];
 
 	function updateContent(index) {

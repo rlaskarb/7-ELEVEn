@@ -36,10 +36,10 @@ $(document).ready(function () {
 
 	// 2. Ajax로 json 불러오기
 	$.ajax({
-		url: "./data/differentiation.json",
+		url: "./data/event_product.json",
 		dataType: "json",
 		success: function (data) {
-			const useData = data.differentiation;
+			const useData = data.event_product;
 
 			function dataPrint(arr) {
 				const listItems = $.map(arr, function (item) {
@@ -128,44 +128,29 @@ $(document).ready(function () {
 					let filteredData = [];
 
 					switch (filterType) {
-						case "beverage":
+						case "on_sale":
 							filteredData = useData.filter(function (item) {
-								return item.menu == "음료";
+								return item.menu == "할인중";
 							});
 							break;
-						case "snacks":
+						case "one_plus":
 							filteredData = useData.filter(function (item) {
-								return item.menu == "과자";
+								return item.menu == "1+1";
 							});
 							break;
-						case "bread":
+						case "two_plus":
 							filteredData = useData.filter(function (item) {
-								return item.menu == "빵";
+								return item.menu == "2+1";
 							});
 							break;
-						case "candy":
+						case "presentation":
 							filteredData = useData.filter(function (item) {
-								return item.menu == "사탕";
+								return item.menu == "증정품";
 							});
 							break;
 						case "ice_cream":
 							filteredData = useData.filter(function (item) {
 								return item.menu == "아이스크림";
-							});
-							break;
-						case "lunch":
-							filteredData = useData.filter(function (item) {
-								return item.menu == "도시락";
-							});
-							break;
-						case "sweet":
-							filteredData = useData.filter(function (item) {
-								return item.flavor == "달달";
-							});
-							break;
-						case "salty":
-							filteredData = useData.filter(function (item) {
-								return item.flavor == "짭짤";
 							});
 							break;
 						default:

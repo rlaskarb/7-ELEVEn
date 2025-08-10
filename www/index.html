@@ -295,20 +295,29 @@
 							식으로도 OK!
 						</p>
 
-						<input type="text" placeholder="아... 그거 있잖아, 그거!" />
+						<input type="text" list="searchList" placeholder="아... 그거 있잖아, 그거!" />
+						<datalist id="searchList">
+							<option value="아삭귤젤리"></option>
+							<option value="스윙칩"></option>
+							<option value="딸기"></option>
+							<option value="슈가"></option>
+							<option value="빼빼로"></option>
+							<option value="메론"></option>
+						</datalist>
 						<button type="button">
 							<i class="fa-solid fa-magnifying-glass"></i>
 						</button>
+
 					</div>
 
 					<ul class="full_search_speech_bubble">
-						<li><a href="./sub2/sub2_2.html">🍱도시락</a></li>
-						<li><a href="./sub2/sub2_2.html">🍹음료</a></li>
-						<li><a href="./sub2/sub2_2.html">🧂짭짤</a></li>
-						<li><a href="./sub2/sub2_2.html">🍬달달</a></li>
-						<li><a href="./sub2/sub2_2.html">🍧아이스크림</a></li>
-						<li><a href="./sub2/sub2_2.html">🍪과자</a></li>
-						<li><a href="./sub2/sub2_2.html">🍔즉석요리</a></li>
+						<li><a href="./sub2/sub2_2.html?query=빵">🥖빵</a></li>
+						<li><a href="./sub2/sub2_2.html?query=음료">🍹음료</a></li>
+						<li><a href="./sub2/sub2_2.html?query=짭짤">🧂짭짤</a></li>
+						<li><a href="./sub2/sub2_2.html?query=달달">❤️달달</a></li>
+						<li><a href="./sub2/sub2_2.html?query=아이스크림">🍧아이스크림</a></li>
+						<li><a href="./sub2/sub2_2.html?query=과자">🍪과자</a></li>
+						<li><a href="./sub2/sub2_2.html?query=사탕">🍬사탕</a></li>
 					</ul>
 				</div>
 			</section>
@@ -340,9 +349,7 @@
 						<li>
 							<h4><a href="#"> 창업 설명회 </a></h4>
 						</li>
-						<li>
-							<h4><a href="#"> 창업 성공기 </a></h4>
-						</li>
+
 					</ul>
 					<a href="./sub4/sub4_1.html" class="more_btn start_up_guide_more">
 						+ 더보기
@@ -539,6 +546,7 @@
 	<script src="./main_js/seven_eleven_story.js"></script>
 	<script src="./common/js/top_button.js"></script>
 	<script src="./common/js/family_site.js"></script>
+	<script src="./main_js/main_search.js"></script>
 </body>
 
 </html>

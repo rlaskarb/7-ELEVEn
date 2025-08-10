@@ -8,7 +8,7 @@
 	<link rel="icon" type="image/x-icon" href="../common/images/7-eleven-logo.ico" />
 	<link rel="stylesheet" href="../common/css/common.css" />
 	<link rel="stylesheet" href="./common/css/sub3common.css" />
-
+	<link rel="stylesheet" href="../sub2/css/sub2_content2.css" />
 	<link rel="stylesheet" href="./css/sub3_content1.css" />
 	<!-- Noto Sans Korean , Roboto 폰트링크 -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -130,9 +130,110 @@
 					home &gt; 이벤트 &gt; <strong>행사 상품</strong>
 				</div>
 				<h2>행사 상품</h2>
-				<p>1+1 , 2+1 은 우리의 필수 정보</p>
+				<p>놓치면 아쉬운 1+1 · 2+1 특가! 지금 확인하세요</p>
 			</div>
-			<div class="content_area"></div>
+			<div class="content_area">
+				<div class="new_banner_container">
+					<h3>7-ELEVEn 이번 주 BEST 특가!</h3>
+					<p>MD가 직접 고른 ‘할인+증정’ 꿀조합, 재고 소진 전 서둘러 담아가세요!</p>
+					<ul class="new_banner_content">
+						<li>
+							<img src="./images/content1/1puls3.jpg" alt="바움쿠헨 이미지" />
+							<dl>
+								<dt>사랑하지 않을 수 있냐쿠헨 </dt>
+								<dd>1+1 EVENT</dd>
+							</dl>
+						</li>
+						<li>
+							<img src="./images/content1/presentation3.jpg" alt=" 한정 초콜렛 이미지" />
+							<dl>
+								<dt>DM도 구매하러 뛰어간 한정판</dt>
+								<dd>증정 EVENT</dd>
+							</dl>
+						</li>
+						<li>
+							<img src="./images/content1/onSale2.jpg" alt="피치하이볼 이미지" />
+							<dl>
+								<dt>어른용 복숭아 아이스티</dt>
+								<dd>할인 EVENT</dd>
+							</dl>
+						</li>
+						<li>
+							<img src="./images/content1/1puls4.jpg" alt="젤리 이미지" />
+							<dl>
+								<dt>겉은 아삭! 속은말랑~🧡</dt>
+								<dd>1+1 EVENT</dd>
+							</dl>
+						</li>
+						<li>
+							<img src="./images/content1/2puls5.jpg" alt="자몽사베트 이미지" />
+							<dl>
+								<dt>올여름은 자몽자몽해!🧡</dt>
+								<dd>2+1 EVENT</dd>
+							</dl>
+						</li>
+						<li>
+							<img src="./images/content1/1puls2.jpg" alt="초코 찍먹 이미지" />
+							<dl>
+								<dt>500원에 1+1? 실화에요!</dt>
+								<dd>1+1 EVENT</dd>
+							</dl>
+						</li>
+					</ul>
+					<div class="banner_slider_arrows">
+						<a href="#" class="banner_arrow prev"><i class="fa-solid fa-chevron-left"></i></a>
+						<a href="#" class="banner_arrow next"><i class="fa-solid fa-chevron-right"></i></a>
+					</div>
+				</div>
+				<div class="food_search">
+					<h3 class="hidden">신상품 목록</h3>
+					<input class="new_food_input" type="text" list="searchList" placeholder=" 1+1 을 검색하세요!" />
+					<button class="new_food_btn" type="button">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+					<datalist id="searchList">
+						<option value="아삭귤젤리"></option>
+						<option value="바움쿠헨"></option>
+						<option value="롯샌멜론"></option>
+						<option value="랑그드샤"></option>
+						<option value="사베트"></option>
+						<option value="스텔라"></option>
+					</datalist>
+				</div>
+				<div class="fresh_food_inquiry">
+					<strong>카테고리</strong>
+					<ul>
+						<li data-filter="all_food">
+							<a href="#" class="food_inquiry_btn active">전체</a>
+						</li>
+						<li data-filter="on_sale">
+							<a href="#" class="food_inquiry_btn">할인중</a>
+						</li>
+						<li data-filter="one_plus">
+							<a href="#" class="food_inquiry_btn">1+1</a>
+						</li>
+						<li data-filter="two_plus">
+							<a href="#" class="food_inquiry_btn">2+1</a>
+						</li>
+						<li data-filter="presentation">
+							<a href="#" class="food_inquiry_btn">증정품</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="new_product_list">
+					<!-- 검색 리스트 -->
+				</div>
+
+				<div class="new_modal_box">
+					<div class="new_popup_content">
+						<div class="new_popup_con">
+							<!--  -->
+							<a href="#" class="close_pop">x</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</article>
 
 		<footer id="footerArea">
@@ -233,6 +334,8 @@
 	<script src="../common/js/jquery-migrate-1.4.1.min.js"></script>
 	<script src="../common/js/fullnav_ex.js"></script>
 	<script src="../common/js/sub_nav.js"></script>
+	<script src="./js/event_product.js"></script>
+	<script src="../sub2/js/md_recommendation.js"></script>
 	<script src="../common/js/top_button.js"></script>
 	<script src="../common/js/family_site.js"></script>
 </body>

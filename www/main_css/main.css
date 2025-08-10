@@ -708,10 +708,10 @@
 
 #content .start_up_guide .start_up_guide_container ul {
 	display: flex;
-	gap: 50px;
+	gap: 200px;
 	position: absolute;
-	bottom: 50px;
-	left: 110px;
+	bottom: 40px;
+	left: 120px;
 }
 
 #content .start_up_guide .start_up_guide_container li a {
