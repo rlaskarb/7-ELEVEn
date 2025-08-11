@@ -108,13 +108,13 @@ function renderSimpleEventCards(events, pageType) {
                     <div class="event_image">
                         <img src="${event.image}" alt="${event.title}" loading="lazy">
                     </div>
-                    <div class="event_info">
-                        <h3 class="event_title">${event.title}</h3>
-                        <p class="event_period">
-                            ${event.startDate} ~ ${event.endDate}
-                        </p>
-                    </div>
-                    <button class="event_detail_btn">자세히 보기</button>
+                    <dl> 
+                        <dt>${event.startDate} ~ ${event.endDate}</dt>
+                        <dd>
+                           ${event.title}
+                        </dd>
+                    </dl>
+                  
                 </div>
             </li>
         `;
@@ -165,7 +165,9 @@ function findEventById(eventId) {
 	return globalEventsData.find((event) => (event.di || event.id) == eventId);
 }
 
-// 이벤트 팝업 열기
+
+
+// 이벤트 팝업 열기 
 function openEventPopup(eventId) {
 	const event = findEventById(eventId);
 
@@ -175,58 +177,58 @@ function openEventPopup(eventId) {
 	}
 
 	// 기존 팝업이 있다면 제거
-	$(".event_popup_overlay").remove();
+	$(".popup_overlay").remove();
 
-	// content를 줄바꿈으로 분리하여 처리
-	const contentLines = event.content
+	// content를 줄바꿈으로 분리하여 dd 태그로 처리
+	const contentItems = event.content
 		.split(",")
-		.map((line) => `<p class="popup_content_line">${line.trim()}</p>`)
+		.map((line) => `<dd>${line.trim()}</dd>`)
 		.join("");
 
-	// 팝업 HTML 생성
+	// div 기반의 깔끔한 팝업 HTML 생성
 	const popupHtml = `
-        <div class="event_popup_overlay">
-            <div class="event_popup_container">
+        <div class="popup_overlay">
+            <div class="popup_container">
                 <div class="popup_header">
-                    <h2 class="popup_title">${event.title}</h2>
-                    <button class="popup_close_btn">&times;</button>
+                    <strong>${event.title}</strong>
+                    <button type="button" class="close_btn">&times;</button>
                 </div>
                 
                 <div class="popup_content">
-                    <div class="popup_image_section">
-                        <img src="${event.image}" alt="${
-		event.title
-	}" class="popup_image">
+                    <div class="popup_image">
+                        <img src="${event.image}" alt="${event.title}">
                     </div>
                     
-                    <div class="popup_info_section">
-                        <div class="popup_period">
-                            <strong>이벤트 기간:</strong> ${
-															event.startDate
-														} ~ ${event.endDate}
-                        </div>
-                        
-                        <div class="popup_details">
-                            <strong>이벤트 내용:</strong>
-                            <div class="popup_content_details">
-                                ${contentLines}
-                            </div>
-                        </div>
-                        
+                    <ul class="event_info">
+                        <li>
+                            <dl>
+                                <dt>이벤트 기간</dt>
+                                <dd>${event.startDate} ~ ${event.endDate}</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>이벤트 내용</dt>
+                                ${contentItems}
+                            </dl>
+                        </li>
                         ${
 													event.url && event.url !== "#"
-														? `<div class="popup_link_section">
-                                <a href="${event.url}" target="_blank" class="popup_external_link">
-                                    이벤트 페이지로 이동
-                                </a>
-                            </div>`
+														? `<li>
+                                <dl>
+                                    <dt>참여 링크</dt>
+                                    <dd>
+                                        <a href="${event.url}" target="_blank">이벤트 페이지로 이동</a>
+                                    </dd>
+                                </dl>
+                            </li>`
 														: ""
 												}
-                    </div>
+                    </ul>
                 </div>
                 
                 <div class="popup_footer">
-                    <button class="popup_close_btn secondary">닫기</button>
+                    <button type="button" class="close_btn">닫기</button>
                 </div>
             </div>
         </div>
@@ -235,24 +237,47 @@ function openEventPopup(eventId) {
 	// body에 팝업 추가
 	$("body").append(popupHtml);
 
-	// 팝업 활성화 (애니메이션 효과를 위해 약간의 딜레이)
+	// 팝업 활성화
 	setTimeout(() => {
-		$(".event_popup_overlay").addClass("active");
+		$(".popup_overlay").addClass("active");
 	}, 10);
 
 	// body 스크롤 방지
 	$("body").addClass("popup_open");
 }
 
-// 이벤트 팝업 닫기
+// 이벤트 팝업 닫기 - 클래스명 변경에 맞춰 수정
 function closeEventPopup() {
-	$(".event_popup_overlay").removeClass("active");
+	$(".popup_overlay").removeClass("active");
 
-	// 애니메이션 완료 후 DOM에서 제거
 	setTimeout(() => {
-		$(".event_popup_overlay").remove();
+		$(".popup_overlay").remove();
 		$("body").removeClass("popup_open");
 	}, 300);
+}
+
+// 팝업 이벤트 리스너 바인딩 - 클래스명 변경에 맞춰 수정
+function bindPopupEvents() {
+	// 이벤트 카드 클릭 시 팝업 열기
+	$(document).on("click", ".event_card", function () {
+		const eventId = $(this).data("event-id");
+		openEventPopup(eventId);
+	});
+
+	// 팝업 닫기 이벤트들 - 수정된 클래스명 적용
+	$(document).on("click", ".close_btn", closeEventPopup);
+	$(document).on("click", ".popup_overlay", function (e) {
+		if (e.target === this) {
+			closeEventPopup();
+		}
+	});
+
+	// ESC 키로 팝업 닫기
+	$(document).on("keydown", function (e) {
+		if (e.key === "Escape" && $(".popup_overlay").hasClass("active")) {
+			closeEventPopup();
+		}
+	});
 }
 
 // 이벤트가 없을 때 메시지 표시
