@@ -100,7 +100,7 @@ function renderSimpleEventCards(events, pageType) {
 
 	// 간단한 카드 형태로 이벤트 렌더링
 	events.forEach((event) => {
-		const eventId = event.di || event.id; // di 또는 id 필드 사용
+		const eventId = event.id;
 
 		eventHtml += `
             <li class="${itemClass}">
