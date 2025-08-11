@@ -1,17 +1,14 @@
 @charset "utf-8";
 
-/* 이벤트 카드 스타일 */
-.ongoing_event_list_container,
-.finished_event_list_container {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-	gap: 20px;
-	padding: 20px 0;
+.content_area {
+	width: 1600px;
+	margin: 150px auto;
 }
 
-.ongoing_event_item,
-.finished_event_item {
-	list-style: none;
+.content_area #event_list {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .event_card {
@@ -26,20 +23,26 @@
 	flex-direction: column;
 }
 
+.ongoing_event_list_container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
 .event_card:hover {
 	transform: translateY(-8px);
 	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .event_image {
-	width: 100%;
-	height: 200px;
+	width: 500px;
+	height: 400px;
 	overflow: hidden;
 }
 
 .event_image img {
-	width: 100%;
-	height: 100%;
+	width: 500px;
+	height: 500px;
 	object-fit: cover;
 	transition: transform 0.3s ease;
 }
@@ -82,7 +85,7 @@
 .event_detail_btn {
 	margin: 15px 20px 20px;
 	padding: 10px 20px;
-	background: #007bff;
+	background: var(--font-color-main);
 	color: white;
 	border: none;
 	border-radius: 6px;
@@ -93,7 +96,7 @@
 }
 
 .event_detail_btn:hover {
-	background: #0056b3;
+	background: var(--font-color-main);
 }
 
 /* 종료된 이벤트 스타일 */
@@ -197,7 +200,7 @@
 
 .popup_close_btn:hover {
 	background: #f5f5f5;
-	color: #333;
+	color: var(--font-color-point1);
 }
 
 .popup_content {
@@ -230,7 +233,7 @@
 }
 
 .popup_period strong {
-	color: #007bff;
+	color: var(--font-color-main);
 }
 
 .popup_details strong {
@@ -242,9 +245,8 @@
 
 .popup_content_details {
 	background: #fafbfc;
-	padding: 16px;
-	border-radius: 8px;
-	border-left: 4px solid #007bff;
+	padding: 10px;
+	border-left: 4px solid var(--font-color-main);
 }
 
 .popup_content_line {
@@ -264,7 +266,7 @@
 
 .popup_external_link {
 	display: inline-block;
-	background: #007bff;
+	background: var(--font-color-main);
 	color: white;
 	padding: 12px 24px;
 	border-radius: 8px;
@@ -274,7 +276,7 @@
 }
 
 .popup_external_link:hover {
-	background: #0056b3;
+	background: var(--font-color-main);
 }
 
 .popup_footer {
@@ -316,79 +318,4 @@ body.popup_open {
 .no_events_message p {
 	margin: 0 0 10px 0;
 	font-size: 16px;
-}
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-	.ongoing_event_list_container,
-	.finished_event_list_container {
-		grid-template-columns: 1fr;
-		gap: 16px;
-		padding: 16px 0;
-	}
-
-	.event_popup_overlay {
-		padding: 10px;
-	}
-
-	.event_popup_container {
-		max-height: 95vh;
-	}
-
-	.popup_header {
-		padding: 20px 16px;
-	}
-
-	.popup_title {
-		font-size: 18px;
-	}
-
-	.popup_image_section {
-		height: 200px;
-	}
-
-	.popup_info_section {
-		padding: 20px 16px;
-	}
-
-	.popup_footer {
-		padding: 16px;
-	}
-}
-
-@media (max-width: 480px) {
-	.ongoing_event_list_container,
-	.finished_event_list_container {
-		grid-template-columns: 1fr;
-		gap: 12px;
-	}
-
-	.event_card {
-		border-radius: 8px;
-	}
-
-	.event_image {
-		height: 160px;
-	}
-
-	.event_info {
-		padding: 16px;
-	}
-
-	.event_title {
-		font-size: 15px;
-	}
-
-	.event_detail_btn {
-		margin: 12px 16px 16px;
-		padding: 8px 16px;
-	}
-
-	.popup_title {
-		font-size: 16px;
-	}
-
-	.popup_image_section {
-		height: 180px;
-	}
 }
