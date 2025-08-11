@@ -22,7 +22,7 @@ $(document).ready(function () {
 			</div>
 		</div>
 		`;
-	}
+	} 
 
 	// 상품 리스트 HTML 생성 함수
 	function dataPrint(arr) {
