@@ -5,9 +5,9 @@ $(document).ready(function () {
 
 	const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
-	const $modalBox = $(".edit_modal_box");
-	const $modalContent = $(".edit_popup_content");
-	const $writeModalBox = $(".write_modal_box");
+	const $modalBox = $(".edit_modal_box"); // 등록된 글 조회되는 큰박스 창
+	const $modalContent = $(".edit_popup_content");  // 실제 조회값이 담기는 박스 창
+	const $writeModalBox = $(".write_modal_box"); //꿀조합레시피공유하기 등록창
 
 	console.log("2. Supabase 클라이언트 초기화 완료");
 
@@ -21,7 +21,7 @@ $(document).ready(function () {
 	// 📌 모달 닫기 함수
 	function closeModal(modalType) {
 		const $modal = modalType === "edit" ? $modalBox : $writeModalBox;
-		$modal.removeClass("show");
+		$modal.removeClass("show"); 
 		// 두 모달이 모두 닫혔을 때만 스크롤복구
 		if (
 			!$(".edit_modal_box").hasClass("show") &&
