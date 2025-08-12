@@ -1,6 +1,6 @@
 /* 전체 컨텐츠 영역 */
 #content .content_area {
-	width: 1600px;
+	width: 1400px;
 	margin: 0 auto;
 	padding: 50px 0;
 	display: flex;
@@ -8,17 +8,22 @@
 	gap: 30px;
 }
 
-/* 🎨 검색 영역 스타일링 */
 .store_search {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 15px;
+	gap: 20px;
 	padding: 30px;
-	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 	border-radius: 15px;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-	border: 2px solid #E31E24;
+	border: 2px solid rgba(217, 38, 41, 0.9);
+}
+
+
+/* 지도 위에 표시되는 정보 */
+.store_search strong {
+	color: rgba(217, 38, 41, 0.9);
+	padding: 15px;
+
 }
 
 /* 드롭다운 스타일 */
@@ -35,20 +40,20 @@
 }
 
 .store_search select:focus {
-	border-color: #E31E24;
+	border-color: rgba(217, 38, 41, 0.9);
 	box-shadow: 0 4px 15px rgba(227, 30, 36, 0.2);
 	transform: translateY(-1px);
 }
 
 .store_search select:hover {
-	border-color: #E31E24;
+	border-color: rgba(217, 38, 41, 0.9);
 	transform: translateY(-1px);
 }
 
 /* 검색 버튼 스타일 */
 .store_search button {
 	padding: 12px 30px;
-	background: linear-gradient(135deg, #E31E24 0%, #c41e3a 100%);
+	background: rgba(217, 38, 41, 0.9);
 	color: white;
 	border: none;
 	border-radius: 25px;
@@ -56,69 +61,34 @@
 	font-weight: bold;
 	cursor: pointer;
 	transition: all 0.3s ease;
-	box-shadow: 0 4px 15px rgba(227, 30, 36, 0.3);
 	min-width: 100px;
 }
 
 .store_search button:hover {
-	background: linear-gradient(135deg, #c41e3a 0%, #E31E24 100%);
+	background: rgba(227, 30, 36, 0.9);
 	transform: translateY(-2px);
-	box-shadow: 0 6px 20px rgba(227, 30, 36, 0.4);
 }
 
-.store_search button:active {
-	transform: translateY(0);
-	box-shadow: 0 2px 10px rgba(227, 30, 36, 0.3);
-}
 
 /* 내 위치 버튼 스타일 */
 #current_location_btn {
-	padding: 12px 25px !important;
-	background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
-	color: white !important;
-	border: none !important;
-	border-radius: 25px !important;
-	font-size: 15px !important;
-	font-weight: bold !important;
+	background: rgba(1, 113, 33, 0.8);
 	cursor: pointer !important;
 	transition: all 0.3s ease !important;
-	box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3) !important;
 }
 
-#current_location_btn:hover {
-	background: linear-gradient(135deg, #20c997 0%, #28a745 100%) !important;
-	transform: translateY(-2px) !important;
-	box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4) !important;
-}
 
 /* 🗺️ 지도 영역 스타일링 */
 #content #map_search {
 	width: 100%;
-	height: 700px;
+	height: 600px;
 	border-radius: 15px;
-	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-	border: 3px solid #E31E24;
+	border: 3px solid rgba(227, 30, 36, 0.9);
 	overflow: hidden;
 	position: relative;
 }
 
-/* 지도 위에 표시되는 정보 */
-#map_search::before {
-	content: "📍 원하는 지역을 선택하고 검색해보세요!";
-	position: absolute;
-	top: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	background: rgba(227, 30, 36, 0.9);
-	color: white;
-	padding: 10px 20px;
-	border-radius: 20px;
-	font-size: 14px;
-	font-weight: bold;
-	z-index: 1000;
-	pointer-events: none;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
+
 
 /* 카카오 지도 컨트롤 버튼 스타일 개선 */
 .MapTypeControl {
