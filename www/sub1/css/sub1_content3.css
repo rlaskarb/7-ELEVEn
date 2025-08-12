@@ -29,24 +29,24 @@
 
 #content .history_nav li a {
 	font-size: var(--font-size-no11);
-	border-radius: 25px;
+	border-radius: 15px;
 	font-weight: 500;
 	padding: 7px 15px;
 	transition: all 0.3s ease;
 }
 
 #content .history_nav ul li a:hover {
-	background: var(--font-color-main);
+	background: rgba(217, 38, 41, 1);
 	color: var(--font-color-sub2);
 }
 
 #content .history_nav.fixed {
+	width: 100%;
 	position: fixed;
 	top: -100px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 1600px;
-	border-radius: 30px;
+	border-radius: 10px;
 	background: #fff;
 	z-index: 100;
 	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
@@ -57,7 +57,7 @@
 }
 
 #content .history_nav li.on a {
-	background: var(--font-color-main);
+	background: rgba(217, 38, 41, 0.8);
 	color: var(--font-color-sub2);
 }
 

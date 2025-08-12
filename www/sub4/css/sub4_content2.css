@@ -29,12 +29,11 @@
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
-	border-radius: 25px;
-	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
-	gap: 10px;
+	border-radius: 20px;
+	box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.05);
+	gap: 5px;
 	font-size: var(--font-size-no10);
 	/*22px*/
-
 }
 
 .procedures_nav ul li {
@@ -45,16 +44,15 @@
 }
 
 .procedures_nav ul li a {
-	border-radius: 25px;
+	border-radius: 10px;
 	font-weight: 500;
-	padding: 7px 15px;
+	padding: 15px 25px;
 	transition: all 0.3s ease;
 }
 
 .procedures_nav ul li a:hover {
-	background: rgba(217, 38, 41, 0.9);
-	color: var(--font-color-sub2);
-	transform: translateY(-3px);
+	background: rgba(217, 38, 41, 0.8);
+	color: #fff;
 }
 
 .procedures_nav.fixed {
@@ -62,27 +60,22 @@
 	top: -100px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 1600px;
+	width: 100%;
 	z-index: 10;
 	background: #fff;
 	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
 	font-size: var(--font-size-no10);
-	border-radius: 30px;
+	border-radius: 10px;
 }
-
 
 .procedures_nav.fixed a {
-	padding: 13px 0;
+	padding: 10px 25px;
 }
-
-
 
 .procedures_nav ul li.on a {
-	background: rgba(217, 38, 41, 1);
-	color: var(--font-color-sub2);
+	background: rgba(217, 38, 41, 0.8);
+	color: #fff;
 }
-
-
 
 .timeline_wrapper {
 	display: flex;
@@ -210,7 +203,6 @@
 	position: relative;
 }
 
-
 .description_item::before {
 	content: "";
 	position: absolute;
@@ -246,7 +238,6 @@
 	content: "Start";
 	bottom: 50px;
 }
-
 
 .train_order_content #desc3::before {
 	content: "STEP 02";
@@ -328,7 +319,6 @@
 	left: -9999px;
 }
 
-
 .train_order_content div ul li a {
 	margin-top: 20px;
 	padding: 10px;
@@ -348,7 +338,7 @@
 	box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
 }
 
-#desc9>div {
+#desc9 > div {
 	position: relative;
 }
 

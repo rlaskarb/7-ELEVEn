@@ -393,8 +393,6 @@
 	transform: translateY(-2px);
 }
 
-
-
 /* 세븐일레븐에서 이런조합 해봤어? */
 
 #content .honey_recipe {
@@ -402,7 +400,6 @@
 	min-height: 850px;
 	margin: 0 auto;
 	padding: 80px 0;
-
 }
 
 #content .honey_recipe .honey_recipe_container {
@@ -424,7 +421,7 @@
 }
 
 #content .honey_recipe .honey_recipe_title h3 span {
-	color: var(--font-color-point2)
+	color: var(--font-color-point2);
 }
 
 #content .honey_recipe .honey_recipe_title p {
@@ -479,7 +476,6 @@
 	white-space: nowrap;
 }
 
-
 /* 본문 내용 */
 #content .honey_recipe .honey_recipe_tuck_box .content {
 	padding: 20px;
@@ -518,13 +514,10 @@
 	font-size: 0.8rem;
 }
 
-
-
 #content .honey_recipe .honey_recipe_more {
 	top: 70px;
 	right: 460px;
 }
-
 
 /* 뭔가 땡기는데 뭔지 모르겠다면? */
 #content .full_search {
@@ -645,9 +638,21 @@
 }
 
 /* 주황색 그룹 (1, 2, 5번) */
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(1):hover a,
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(2):hover a,
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(5):hover a {
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(1):hover
+	a,
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(2):hover
+	a,
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(5):hover
+	a {
 	background: rgba(231, 126, 45, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(231, 126, 45, 0.6);
@@ -655,8 +660,16 @@
 }
 
 /* 빨간색 그룹 (3, 4번) */
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(3):hover a,
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(4):hover a {
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(3):hover
+	a,
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(4):hover
+	a {
 	background: rgba(217, 38, 41, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(217, 38, 41, 0.6);
@@ -664,8 +677,16 @@
 }
 
 /* 초록색 그룹 (6, 7번) */
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(6):hover a,
-#content .full_search_container .full_search_speech_bubble li:nth-of-type(7):hover a {
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(6):hover
+	a,
+#content
+	.full_search_container
+	.full_search_speech_bubble
+	li:nth-of-type(7):hover
+	a {
 	background: rgba(1, 113, 33, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(1, 113, 33, 0.6);
@@ -696,14 +717,17 @@
 #content .start_up_guide .start_up_guide_container h3 {
 	font-size: var(--font-size-no5);
 	color: var(--font-color-point2);
+
 	margin: 100px 0 0 80px;
 }
 
 #content .start_up_guide .start_up_guide_container p {
 	font-size: var(--font-size-no10);
+	color: #333;
+	text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1);
 	margin-top: 30px;
 	margin-left: 80px;
-	line-height: 1.7;
+	line-height: 2.7rem;
 }
 
 #content .start_up_guide .start_up_guide_container ul {
@@ -761,7 +785,7 @@
 }
 
 #content .start_up_guide .start_up_guide_more {
-	bottom: 195px;
+	bottom: 180px;
 	left: 80px;
 }
 
