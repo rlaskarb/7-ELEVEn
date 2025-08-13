@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 	// JSON 파일에서 매장 데이터 불러오기
 	$.getJSON("./data/store_address.json", function (data) {
-		storeData = data.store_address; // JSON 파일의 store_address 배열을 할당
+		storeData = data.store_address; 
 
 		// 데이터 로드 후 초기화 및 이벤트 바인딩
 		initializeMapAndEvents();
@@ -32,9 +32,9 @@ $(document).ready(function () {
 
 		const geocoder = new kakao.maps.services.Geocoder();
 
-		// 🎯 로고 크기 줄이기 (40x40 → 25x25)
+		
 		const imageSrc = "../common/images/main_logo.png";
-		const imageSize = new kakao.maps.Size(25, 25); // 크기 줄임
+		const imageSize = new kakao.maps.Size(25, 25); // 
 		const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
 
 		const $sidoSelect = $("#sido");
