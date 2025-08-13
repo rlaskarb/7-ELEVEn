@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 		
 		const imageSrc = "../common/images/main_logo.png";
-		const imageSize = new kakao.maps.Size(25, 25); // 크기 줄임
+		const imageSize = new kakao.maps.Size(25, 25); // 
 		const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
 
 		const $sidoSelect = $("#sido");
