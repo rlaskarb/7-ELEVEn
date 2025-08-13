@@ -2,7 +2,7 @@
 #content .content_area {
 	width: 1400px;
 	margin: 0 auto;
-	padding: 50px 0;
+	padding: 50px 0 150px 0;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
@@ -18,12 +18,10 @@
 	border: 2px solid rgba(217, 38, 41, 0.9);
 }
 
-
 /* 지도 위에 표시되는 정보 */
 .store_search strong {
 	color: rgba(217, 38, 41, 0.9);
 	padding: 15px;
-
 }
 
 /* 드롭다운 스타일 */
@@ -69,14 +67,12 @@
 	transform: translateY(-2px);
 }
 
-
 /* 내 위치 버튼 스타일 */
 #current_location_btn {
 	background: rgba(1, 113, 33, 0.8);
 	cursor: pointer !important;
 	transition: all 0.3s ease !important;
 }
-
 
 /* 🗺️ 지도 영역 스타일링 */
 #content #map_search {
@@ -87,8 +83,6 @@
 	overflow: hidden;
 	position: relative;
 }
-
-
 
 /* 카카오 지도 컨트롤 버튼 스타일 개선 */
 .MapTypeControl {
@@ -102,6 +96,6 @@
 }
 
 .MapTypeControl .btn_comm:hover {
-	background: #E31E24 !important;
+	background: #e31e24 !important;
 	color: white !important;
 }
