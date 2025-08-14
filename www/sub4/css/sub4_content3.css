@@ -10,13 +10,14 @@
 }
 
 .prs_intro_content h3 {
-	font-size: var(--font-size-no6); /*40px*/
+	font-size: var(--font-size-no6);
+	/*40px*/
 	color: var(--font-color-main);
 	margin-bottom: 20px;
 	font-weight: bold;
 }
 
-.prs_intro_content > p {
+.prs_intro_content>p {
 	margin-bottom: 60px;
 	line-height: 2rem;
 }
@@ -40,7 +41,8 @@
 }
 
 .presentation_intro dt {
-	font-size: var(--font-size-no8); /*26px*/
+	font-size: var(--font-size-no8);
+	/*26px*/
 	font-weight: bold;
 	color: var(--font-color-point2);
 	text-align: left;
@@ -61,13 +63,14 @@
 }
 
 .presentation_content h3 {
-	font-size: var(--font-size-no6); /*40px*/
+	font-size: var(--font-size-no6);
+	/*40px*/
 	color: var(--font-color-main);
 	margin-bottom: 20px;
 	font-weight: bold;
 }
 
-.presentation_content > p {
+.presentation_content>p {
 	color: #333;
 	margin-bottom: 50px;
 	line-height: 1.8rem;
@@ -99,7 +102,8 @@
 }
 
 .presentation li a {
-	font-size: var(--font-size-no10); /*22px*/
+	font-size: var(--font-size-no10);
+	/*22px*/
 	font-weight: bold;
 	text-align: center;
 }
@@ -156,7 +160,8 @@
 }
 
 .pre_modal #pre_modal_title {
-	font-size: var(--font-size-no9); /*24px*/
+	font-size: var(--font-size-no9);
+	/*24px*/
 	background: rgba(247, 38, 41, 0.9);
 	border-radius: 10px;
 	color: #fff;
@@ -169,7 +174,8 @@
 	position: absolute;
 	right: 25px;
 	top: 10px;
-	font-size: var(--font-size-no7); /*30px*/
+	font-size: var(--font-size-no7);
+	/*30px*/
 	font-weight: bold;
 	color: #fff;
 	cursor: pointer;
@@ -184,6 +190,7 @@
 /* 테이블 스타일 */
 .presentation_table {
 	width: 100%;
+	min-height: 250px;
 	border-collapse: collapse;
 	background-color: #fff;
 }
@@ -221,6 +228,7 @@
 }
 
 .place {
+	font-size: var(--font-size-no13);
 	font-weight: 600;
 	width: 25%;
 	text-align: center;
@@ -228,7 +236,8 @@
 
 .address {
 	width: 35%;
-	font-size: 13px;
+	font-size: 0.9rem;
+	font-weight: 500;
 	line-height: 1.5rem;
 }
 
@@ -253,30 +262,4 @@
 
 .phone_btn:hover {
 	transform: translateY(-3px);
-}
-
-/* 데이터가 없을 때 */
-.no_data {
-	text-align: center;
-	padding: 40px 20px;
-	color: var(--font-color-sub1);
-	line-height: 1.6rem;
-}
-
-.table_wrapper::-webkit-scrollbar {
-	width: 8px;
-}
-
-.table_wrapper::-webkit-scrollbar-track {
-	background: var(--seven-light-gray);
-	border-radius: 10px;
-}
-
-.table_wrapper::-webkit-scrollbar-thumb {
-	background: var(--seven-green);
-	border-radius: 10px;
-}
-
-.table_wrapper::-webkit-scrollbar-thumb:hover {
-	background: var(--seven-red);
 }

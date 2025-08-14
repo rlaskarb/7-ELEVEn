@@ -40,10 +40,10 @@ $(document).ready(function () {
                 <table class="presentation_table">
                     <thead>
                         <tr>
-                            <th>일시</th>
-                            <th>장소명</th>
-                            <th>주소</th>
-                            <th>상담전화</th>
+                            <th scope="col">일시</th>
+                            <th scope="col">장소명</th>
+                            <th scope="col">주소</th>
+                            <th scope="col">상담전화</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,15 +64,6 @@ $(document).ready(function () {
                     </tr>
                 `;
 			});
-		} else {
-			tableHTML += `
-                <tr>
-                    <td colspan="4" class="no_data">
-                        해당 지역의 설명회 정보를 준비 중입니다.<br>
-                        대표번호 080-870-0711로 문의해주세요.
-                    </td>
-                </tr>
-            `;
 		}
 
 		tableHTML += `
