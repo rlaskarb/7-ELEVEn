@@ -451,7 +451,9 @@
 
 .honey_recipe_tuck_box li {
 	width: 350px;
-	height: 450px;
+	height: 500px;
+	margin-top: 10px;
+	padding-top: 20px;
 	background: #fff;
 	border-radius: 20px;
 	overflow: hidden;
@@ -484,7 +486,7 @@
 .recipe_img img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .recipe_content {
@@ -570,6 +572,7 @@
 .empty_list_message {
 	width: 100%;
 	text-align: center;
+	margin-right: 200px;
 	padding: 80px 20px;
 	color: #6c757d;
 	font-size: 18px;
@@ -581,7 +584,7 @@
 .empty_list_message::before {
 	content: "🍯";
 	display: block;
-	font-size: 48px;
+	font-size: var(--font-size-no5);
 	margin-bottom: 20px;
 }
 

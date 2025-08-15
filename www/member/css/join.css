@@ -1,17 +1,4 @@
-body {
-	background-color: #eee;
-	font-size: 16px;
-}
-h1 a {
-	margin: 50px auto 0;
-	display: block;
-	width: 300px;
-	height: 60px;
-	text-indent: -9999px;
-	overflow: hidden;
-	background: url(../../common/images/711Logo1_waifu2x_photo_noise3.png) center
-		no-repeat;
-}
+
 #content {
 	width: 750px;
 	margin: 50px auto;
@@ -22,7 +9,7 @@ h1 a {
 	font-weight: 500;
 }
 
-#content > span {
+#content>span {
 	font-size: 1.7em;
 	font-weight: 700;
 	position: relative;
@@ -30,7 +17,8 @@ h1 a {
 	margin-left: -65px;
 	display: block;
 }
-#content > p {
+
+#content>p {
 	color: #999;
 	position: relative;
 	left: 50%;
@@ -38,7 +26,8 @@ h1 a {
 	margin-top: 10px;
 	font-weight: 400;
 }
-#content > p::before {
+
+#content>p::before {
 	content: "*";
 	color: red;
 	margin-right: 5px;
@@ -47,14 +36,17 @@ h1 a {
 #content form li {
 	margin: 30px 0;
 }
+
 #content form li label {
 	display: block;
 	font-weight: 500;
 }
+
 #content form li label::after {
 	content: "*";
 	color: red;
 }
+
 #content form li span {
 	color: red;
 }
@@ -69,10 +61,12 @@ h1 a {
 	padding-left: 20px;
 	box-sizing: border-box;
 }
+
 #content form li input#hp2,
 #content form li input#hp3 {
 	width: 31.4%;
 }
+
 #content form li #hp1 {
 	width: 31.5%;
 	height: 54px;
@@ -81,6 +75,7 @@ h1 a {
 	font-size: 1.1em;
 	border-radius: 5px;
 }
+
 #content form li input::placeholder {
 	color: #ddd;
 	font-family: "Noto Sans KR", sans-serif;
@@ -113,6 +108,7 @@ h1 a {
 	margin-left: 65px;
 	cursor: pointer;
 }
+
 #content input[type="reset"] {
 	border: 1px solid #064f9e;
 	color: #064f9e;

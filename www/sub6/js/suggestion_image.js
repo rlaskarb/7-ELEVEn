@@ -29,7 +29,7 @@ $(document).ready(function () {
 	function scrollAnimation() {
 		container.animate(
 			{ top: -originalHeight },
-			50000, // 속도
+			45000, // 속도
 			"linear",
 			function () {
 				container.css("top", 0);

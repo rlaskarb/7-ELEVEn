@@ -31,15 +31,15 @@ $(document).ready(function () {
 		}
 	}
 
-	async function loadPosts() {
+	async function loadReview() {
 		console.log("3. loadPosts 함수 실행 시작");
 
-		const $boardList = $(".honey_recipe_tuck_box");
+		const $boardList = $(".new_product_review_tuck_box");
 		// 📌 로딩 효과 추가
 		$boardList.addClass("loading").html("<li>로딩 중...</li>");
 
-		const { data: posts, error } = await supabaseClient
-			.from("Posts")
+		const { data: review, error } = await supabaseClient
+			.from("NewProductReview")
 			.select("*")
 			.order("id", { ascending: false });
 
@@ -52,76 +52,76 @@ $(document).ready(function () {
 			return;
 		}
 
-		console.log("4-2. 게시글 조회 성공! 받아온 데이터:", posts);
+		console.log("4-2. 게시글 조회 성공! 받아온 데이터:", review);
 
 		$boardList.empty();
 
 		// 📌 빈 목록 처리
-		if (posts.length === 0) {
+		if (review.length === 0) {
 			$boardList.html(`
 				<div class="empty_list_message">
-					아직 등록된 꿀조합이 없어요.<br>
-					첫 번째 꿀조합을 공유해보세요! 🍯
+					아직 등록된 신상품 후기가 없어요.<br>
+					첫 번째 신상품 후기를 공유해보세요! 🍧
 				</div>
 			`);
 			return;
 		}
 
-		posts.forEach(function (post) {
-			const imageUrl = post.filePath || ".././common/images/noimg.jpg";
-			const displayDate = post.created_at.substring(0, 10);
+		review.forEach(function (review) {
+			const imageUrl = review.filePath || ".././common/images/noimg.jpg";
+			const displayDate = review.created_at.substring(0, 10);
 
 			// 내용이 너무 길면 자르기
 			const truncatedContent =
-				post.content.length > 50
-					? post.content.substring(0, 50) + "..."
-					: post.content;
+				review.newContent.length > 50
+					? review.newContent.substring(0, 50) + "..."
+					: review.newContent;
 
 			// 제목이 너무 길면 자르기
 			const truncatedTitle =
-				post.title.length > 20
-					? post.title.substring(0, 20) + "..."
-					: post.title;
+				review.newTitle.length > 20
+					? review.newTitle.substring(0, 20) + "..."
+					: review.newTitle;
 
 			// 📌 개선된 카드 HTML
-			const postHtml = `
+			const reviewHtml = `
                         <li>
-                            <a href="#" class="edit-trigger" data-post-id="${post.id}" >
-                                <div class="recipe_img">
-                                    <img src="${imageUrl}" alt="${post.title} 이미지" loading="lazy">
+                            <a href="#" class="edit-trigger" data-post-id="${review.id}" >
+                                <div class=" review_img">
+                                    <img src="${imageUrl}" alt="${review.newTitle} 이미지" loading="lazy">
                                 </div>
-								<div class="recipe_content">
+								<div class="review_content">
                                 	<dl>
                                     	<dt>${truncatedTitle}</dt>
                                     	<dd>${truncatedContent}</dd>
-										<dd>${post.name}</dd>	
+										<dd>${review.newName}</dd>	
                                 	</dl>
-									<div class="recipe_info">
-										<span class="recipe_date">${displayDate}</span>	
+									<div class="review_info">
+										<span class="review_date">${displayDate}</span>	
 									</div>
 								</div>
                             </a>
                        </li>
                     `;
-			$boardList.append(postHtml);
+			$boardList.append(reviewHtml);
 		});
 	}
 
 	// 새 글 저장 함수
-	$("#post-form").on("submit", async function (event) {
+	$("#review-form").on("submit", async function (event) {
 		event.preventDefault();
 
 		const submitButton = $(".write_buttons button[type='submit']");
 		submitButton.prop("disabled", true).text("등록 중...");
 
-		const title = $("#post-title").val();
-		const content = $("#post-content").val();
-		const nickname = $("#post-nickname").val();
-		const email = $("#post-email").val();
+		const title = $("#review-title").val();
+		const content = $("#review-content").val();
+		const nickname = $("#review-nickname").val();
+		const email = $("#review-email").val();
 		const finalNickname = nickname.trim() === "" ? "익명" : nickname;
 		const finalEmail = email.trim() === "" ? "" : email;
 
-		const fileInput = document.getElementById("post-file");
+		const fileInput = document.getElementById("review-file");
 		const file = fileInput.files[0];
 		let filePath = null;
 
@@ -130,7 +130,7 @@ $(document).ready(function () {
 				const fileName = `${Date.now()}-${file.name}`;
 				const { data: uploadData, error: uploadError } =
 					await supabaseClient.storage
-						.from("recipe-images")
+						.from("review-images")
 						.upload(fileName, file);
 				if (uploadError) {
 					console.error("파일 업로드 실패:", uploadError);
@@ -139,54 +139,56 @@ $(document).ready(function () {
 				}
 
 				const { data: publicUrlData } = supabaseClient.storage
-					.from("recipe-images")
+					.from("review-images")
 					.getPublicUrl(fileName);
 				filePath = publicUrlData.publicUrl;
 			}
 
-			const { data, error } = await supabaseClient.from("Posts").insert([
-				{
-					title: title,
-					content: content,
-					name: finalNickname,
-					email: finalEmail,
-					filePath: filePath,
-				},
-			]);
+			const { data, error } = await supabaseClient
+				.from("NewProductReview")
+				.insert([
+					{
+						newTitle: title,
+						newContent: content,
+						newName: finalNickname,
+						email: finalEmail,
+						filePath: filePath,
+					},
+				]);
 
 			if (error) {
 				console.error("글 등록 실패:", error);
 				alert("글을 등록하는 데 실패했습니다.");
 			} else {
-				alert("새로운 꿀조합이 성공적으로등록되었습니다!");
-				$("#post-form")[0].reset();
+				alert("신상품 후기가 성공적으로등록되었습니다!");
+				$("#review-form")[0].reset();
 				closeModal("write"); // 글쓰기 팝업닫기;
-				loadPosts();
+				loadReview();
 			}
 		} catch (e) {
 			console.error("폼 제출 중 예상치 못한 오류가 발생 : ", e);
 			alert("폼 제출 중 오류가 발생 하였습니다.");
 		} finally {
-			submitButton.prop("disabled", false).text("꿀조합 등록하기");
+			submitButton.prop("disabled", false).text("신상품 후기 등록하기");
 		}
 	});
 
 	// 📌 삭제 함수 (모달 전용)
-	async function deletePost(postId) {
+	async function deleteReview(reviewId) {
 		if (!confirm("정말로 이 게시글을 삭제하시겠습니까?")) {
 			return;
 		}
 
 		const deleteButton = $(
-			`.modal_buttons .delete-btn[data-post-id="${postId}"]`
+			`.modal_buttons .delete-btn[data-post-id="${reviewId}"]`
 		);
 		deleteButton.prop("disabled", true).text("삭제 중...");
 
 		try {
 			const { error } = await supabaseClient
-				.from("Posts")
+				.from("NewProductReview")
 				.delete()
-				.eq("id", postId);
+				.eq("id", reviewId);
 
 			if (error) {
 				console.error("게시글 삭제 실패:", error);
@@ -195,7 +197,7 @@ $(document).ready(function () {
 			} else {
 				alert("게시글이 성공적으로 삭제되었습니다.");
 				closeModal("edit"); // 모달 닫기
-				loadPosts(); // 목록 새로고침
+				loadReview(); // 목록 새로고침
 			}
 		} catch (e) {
 			console.error("삭제 중 오류:", e);
@@ -208,51 +210,53 @@ $(document).ready(function () {
 	$(document).on("click", ".edit-trigger", async function (event) {
 		event.preventDefault();
 
-		const postId = $(this).data("post-id");
+		const reviewId = $(this).data("post-id");
+		console.log("클릭된 게시글 ID:", reviewId);
 
-		const { data: post, error } = await supabaseClient
-			.from("Posts")
+		const { data: review, error } = await supabaseClient
+			.from("NewProductReview")
 			.select("*")
-			.eq("id", postId)
+			.eq("id", reviewId)
 			.single();
 
 		if (error) {
+			console.error("단일 게시글 조회 실패! Supabase 오류:", error);
 			alert("게시글 정보를 불러오는 데 실패했습니다.");
 			return;
 		}
 
-		const imageUrl = post.filePath || ".././common/images/noimg.jpg";
+		const imageUrl = review.filePath || ".././common/images/noimg.jpg";
 
 		// 📌 수정/삭제 버튼이 포함된 모달 HTML
-		const postHtml = `
+		const reviewHtml = `
 			     <ul>
                    <li> 
-                    	<div class="recipe_img_edit">
-                        	<img src="${imageUrl}" alt="${post.title} 이미지">
+                    	<div class="review_img_edit">
+                        	<img src="${imageUrl}" alt="${review.newTitle} 이미지">
                         	<p>※ 이미지 수정은 현재 지원되지 않습니다.</p>
                     	</div>
                         
-						<form id="edit-form" data-post-id="${post.id}">
+						<form id="edit-form" data-post-id="${review.id}">
                             <dl>
                                 <dt>
 									<input type="text" id="edit-title"
-										value="${post.title}" required>
+										value="${review.newTitle}" required>
 								</dt>
                                 
 								<dd>
 									<strong>닉네임:</strong>
 									<input type="text" id="edit-nickname"
-								 		value="${post.name}">
+								 		value="${review.newName}">
 								</dd>
                                 
 								<dd>
-									<textarea id="edit-content" required>${post.content}</textarea>
+									<textarea id="edit-content" required>${review.newContent}</textarea>
 	   							</dd>
                             </dl>
                             
 							<div class="modal_buttons">
                                 <button type="submit" class="edit-btn">수정 완료</button>
-								<button type="button" class="delete-btn" data-post-id="${post.id}">삭제</button>
+								<button type="button" class="delete-btn" data-post-id="${review.id}">삭제</button>
                             </div>
                         </form>
                         
@@ -263,14 +267,14 @@ $(document).ready(function () {
                 </ul>
             `;
 
-		$modalContent.html(postHtml);
+		$modalContent.html(reviewHtml);
 		openModal("edit"); // 📌 새로운 모달 열기 함수 사용
 	});
 
 	// 수정 폼 제출 이벤트
 	$(document).on("submit", "#edit-form", async function (event) {
 		event.preventDefault();
-		const postId = $(this).data("post-id");
+		const reviewId = $(this).data("post-id");
 		const submitButton = $(this).find("button[type='submit']");
 		const deleteButton = $(this).find(".delete-btn");
 
@@ -278,17 +282,17 @@ $(document).ready(function () {
 		submitButton.prop("disabled", true).text("수정 중...");
 		deleteButton.prop("disabled", true);
 
-		const updatedPost = {
-			title: $("#edit-title").val(),
-			content: $("#edit-content").val(),
-			name: $("#edit-nickname").val(),
+		const updatedReview = {
+			newTitle: $("#edit-title").val(),
+			newContent: $("#edit-content").val(),
+			newName: $("#edit-nickname").val(),
 		};
 
 		try {
 			const { error } = await supabaseClient
-				.from("Posts")
-				.update(updatedPost)
-				.eq("id", postId);
+				.from("NewProductReview")
+				.update(updatedReview)
+				.eq("id", reviewId);
 
 			if (error) {
 				alert("게시글 수정에 실패했습니다.");
@@ -297,7 +301,7 @@ $(document).ready(function () {
 			} else {
 				alert("게시글이 성공적으로 수정되었습니다.");
 				closeModal("edit"); // 📌 새로운 모달 닫기 함수 사용
-				loadPosts();
+				loadReview();
 			}
 		} catch (e) {
 			console.error("수정 중 오류:", e);
@@ -309,8 +313,8 @@ $(document).ready(function () {
 
 	// 📌 모달 내 삭제 버튼 클릭 이벤트
 	$(document).on("click", ".modal_buttons .delete-btn", function () {
-		const postId = $(this).data("post-id");
-		deletePost(postId);
+		const reviewId = $(this).data("post-id");
+		deleteReview(reviewId);
 	});
 
 	// 📌 모달 닫기 이벤트들
@@ -354,5 +358,5 @@ $(document).ready(function () {
 	});
 
 	// 페이지 로드 시 글 목록 불러오기
-	loadPosts();
+	loadReview();
 });

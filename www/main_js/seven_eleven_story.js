@@ -3,6 +3,7 @@ $(document).ready(function () {
 	const slider = $(".seven_story_shorts ul"); // 실제로 움직일 ul
 	const originalSlides = slider.find("li"); // 원본 li
 	const itemsPerView = 3; // 보여줄 갯수
+	const slideWidth = originalSlides.outerWidth(true);
 
 	originalSlides
 		.slice(0, itemsPerView)
@@ -12,7 +13,6 @@ $(document).ready(function () {
 
 	const allSlides = slider.find("li");
 	const totalSlides = allSlides.length;
-	const slideWidth = originalSlides.outerWidth(true);
 
 	slider.width(totalSlides * slideWidth);
 
@@ -47,7 +47,7 @@ $(document).ready(function () {
 			slider.css("left", -currentIndex * slideWidth);
 		}
 		currentIndex--;
-		moveSlider(currentIndex); // 드가자~
+		moveSlider(currentIndex);
 	});
 
 	// 자동 재생가능
@@ -71,16 +71,16 @@ $(document).ready(function () {
 		isDragging = true;
 		startPos = e.pageX;
 		slider.css("cursor", "grabbing");
-		stopAutoplay();
+		// stopAutoplay();
 	});
 
-	$(document).on("mouseup", function () {
-		if (isDragging) {
-			isDragging = false;
-			slider.css("cursor", "grab");
-			startAutoplay(); // 다시재생
-		}
-	});
+	// $(document).on("mouseup", function () {
+	// 	if (isDragging) {
+	// 		isDragging = false;
+	// 		slider.css("cursor", "grab");
+	// 		startAutoplay(); // 다시재생
+	// 	}
+	// });
 
 	slider.on("mousemove", function (e) {
 		if (!isDragging) return;
@@ -96,7 +96,7 @@ $(document).ready(function () {
 		}
 	});
 
-	sevenStoryShorts.on("mouseenter", stopAutoplay());
-	sevenStoryShorts.on("mouseleave", startAutoplay());
+	// sevenStoryShorts.on("mouseenter", stopAutoplay());
+	// sevenStoryShorts.on("mouseleave", startAutoplay());
 	startAutoplay();
 });
