@@ -1,123 +1,224 @@
-
-#content {
+article {
 	width: 750px;
-	margin: 50px auto;
+	margin: 100px auto;
 	background: #fff;
 	border-radius: 10px;
-	padding: 70px;
-	font-family: "Noto Sans KR", sans-serif;
-	font-weight: 500;
+	padding: 50px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#content>span {
-	font-size: 1.7em;
-	font-weight: 700;
-	position: relative;
-	left: 50%;
-	margin-left: -65px;
-	display: block;
+article h3 {
+	font-size: 1.8rem;
+	text-align: center;
+	margin-bottom: 40px;
+	color: var(--font-color-main);
 }
 
-#content>p {
-	color: #999;
-	position: relative;
-	left: 50%;
-	margin-left: -80px;
-	margin-top: 10px;
-	font-weight: 400;
+/* 섹션 공통 스타일 */
+section {
+	margin-bottom: 40px;
 }
 
-#content>p::before {
-	content: "*";
-	color: red;
-	margin-right: 5px;
+section h4 {
+	font-size: 1.3rem;
+	margin-bottom: 20px;
+	color: var(--font-color-font);
+	border-bottom: 2px solid var(--font-color-main);
+	padding-bottom: 10px;
 }
 
-#content form li {
-	margin: 30px 0;
+/* 회원정보 입력 폼 */
+.member_form ul li {
+	margin: 20px 0;
 }
 
-#content form li label {
+.member_form label {
 	display: block;
 	font-weight: 500;
+	margin-bottom: 8px;
 }
 
-#content form li label::after {
+.member_form label::after {
 	content: "*";
-	color: red;
+	color: var(--font-color-main);
+	margin-left: 5px;
 }
 
-#content form li span {
-	color: red;
-}
-
-#content form li input {
-	border: 1px solid #eee;
+.member_form input[type="text"],
+.member_form input[type="password"] {
 	width: 100%;
 	height: 50px;
-	margin-top: 5px;
+	border: 1px solid #ddd;
 	border-radius: 5px;
-	font-size: 1.1em;
-	padding-left: 20px;
-	box-sizing: border-box;
+	padding: 0 15px;
+	font-size: 1rem;
+	transition: border-color 0.3s ease;
 }
 
-#content form li input#hp2,
-#content form li input#hp3 {
-	width: 31.4%;
+.member_form input[type="text"]:focus,
+.member_form input[type="password"]:focus {
+	outline: none;
+	border-color: var(--font-color-point1);
 }
 
-#content form li #hp1 {
-	width: 31.5%;
-	height: 54px;
-	padding-left: 10px;
-	font-family: "Noto Sans KR", sans-serif;
-	font-size: 1.1em;
+.member_form select {
+	height: 52px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 0 10px;
+	font-family: inherit;
+	font-size: 1rem;
+}
+
+/* 전화번호 입력 */
+.phone_input {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.phone_input select {
+	width: 80px;
+}
+
+.phone_input input {
+	flex: 1;
+	width: auto !important;
+}
+
+/* 이메일 입력 */
+.email_input {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.email_input input {
+	flex: 1;
+	width: auto !important;
+}
+
+.email_input span {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+/* 약관 동의 섹션 */
+.terms_section dl {
+	margin-bottom: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.terms_section dt {
+	background: var(--font-color-sub2);
+	padding: 15px 20px;
+	font-weight: 600;
+	cursor: pointer;
+	position: relative;
+	transition: background-color 0.3s ease;
+}
+
+.terms_section dt:hover {
+	background: #f0f0f0;
+}
+
+.terms_section dt::after {
+	content: "▼";
+	position: absolute;
+	right: 20px;
+	transition: transform 0.3s ease;
+}
+
+.terms_section dt.active::after {
+	transform: rotate(180deg);
+}
+
+.terms_section dd {
+	padding: 20px;
+	background: white;
+	border-top: 1px solid #eee;
+	font-size: 0.9rem;
+	line-height: 1.8;
+	max-height: 200px;
+	overflow-y: auto;
+	display: none;
+}
+
+.terms_section dd.active {
+	display: block;
+}
+
+/* 체크박스 영역 */
+.checkbox_area {
+	margin-top: 30px;
+	padding: 20px;
+	background: var(--font-color-sub2);
 	border-radius: 5px;
 }
 
-#content form li input::placeholder {
-	color: #ddd;
-	font-family: "Noto Sans KR", sans-serif;
-	font-weight: 300;
-	font-size: 0.9em;
+.checkbox_area ul li {
+	margin: 15px 0;
+	display: flex;
+	align-items: center;
 }
 
-#content form li input#mail1,
-#content form li input#mail2 {
-	width: 47.5%;
+.checkbox_area input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+	accent-color: var(--font-color-main);
 }
 
-#content form li input:focus {
-	outline-color: #064f9e;
-}
-
-#content form li:last-child {
-	margin-bottom: 70px;
-}
-
-#content input[type="submit"] {
-	border: 0;
-	background: #064f9e;
-	color: #fff;
-	font-family: "Noto Sans KR", sans-serif;
-	width: 40%;
-	padding: 20px 0;
-	border-radius: 7px;
-	font-size: 1.2em;
-	margin-left: 65px;
+.checkbox_area label {
+	font-size: 0.95rem;
 	cursor: pointer;
 }
 
-#content input[type="reset"] {
-	border: 1px solid #064f9e;
-	color: #064f9e;
-	background: #fff;
-	font-family: "Noto Sans KR", sans-serif;
-	width: 40%;
-	padding: 20px 0;
-	border-radius: 7px;
-	font-size: 1.2em;
-	margin-left: 10px;
+.all_agree {
+	border-top: 1px solid #ddd;
+	padding-top: 20px !important;
+	margin-top: 20px !important;
+}
+
+.all_agree label {
+	font-weight: 600;
+	font-size: 1.1rem;
+	color: var(--font-color-main);
+}
+
+/* 버튼 영역 */
+.button_area {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.button_area ul {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.button_area li {
+	flex: 1;
+	max-width: 200px;
+}
+
+.button_area input[type="submit"] {
+	width: 50%;
+	height: 55px;
+	background: rgba(241, 38, 41, 0.8);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: var(--font-size-no10);
+	font-weight: bold;
 	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.button_area input[type="submit"]:hover {
+	transform: translateY(-5px);
+	background: var(--font-color-main);
 }
