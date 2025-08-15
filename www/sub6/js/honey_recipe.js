@@ -308,9 +308,21 @@ $(document).ready(function () {
 	});
 
 	// 📌 모달 내 삭제 버튼 클릭 이벤트
-	$(document).on("click", ".modal_buttons .delete-btn", function () {
-		const postId = $(this).data("post-id");
-		deletePost(postId);
+	// $(document).on("click", ".modal_buttons .delete-btn", function () {
+	// 	const postId = $(this).data("post-id");
+	// 	deletePost(postId);
+	// });
+	//  비밀번호 만들지못해서 임시 삭제기능 막는 코드
+	$(document).on("click", ".modal_buttons .delete-btn", function (e) {
+		e.preventDefault();
+		try {
+			// 여기서 일부러 오류(Error)를 만들어서 catch로 보냅니다.
+			throw new Error("임시 삭제 방지");
+		} catch (error) {
+			// try에서 오류가 발생했기 때문에, 이 코드가 실행됩니다.
+			console.error(error); // 콘솔에 에러를 출력해서 확인하기 좋습니다.
+			alert("미안해요.. 비밀번호 기능이 구현될 때까지 잠시 막아두겠습니다.");
+		}
 	});
 
 	// 📌 모달 닫기 이벤트들
