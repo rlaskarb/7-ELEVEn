@@ -1,5 +1,135 @@
 #content .content_area {
   width: 1600px;
   margin: 0 auto;
+  padding: 20px 0;
+
+}
+
+.service_guide {
+  width: 1400px;
+  margin: 0 auto;
   padding: 100px 0;
 }
+
+.guide_title {
+  width: 100%;
+  margin-top: 100px;
+  margin-left: 60px;
+}
+
+.guide_title h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+
+}
+
+.guide_title p {
+  font-size: 15px;
+  color: #666;
+}
+
+.delivery_type_container {
+  width: 100%;
+
+}
+
+
+.type_lotte {
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+}
+
+.type_lotte ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.type_lotte li:nth-of-type(1) {
+  width: 45%;
+
+}
+
+.type_lotte strong {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 26px;
+}
+
+.type_lotte li dl {
+  margin-bottom: 30px;
+}
+
+.type_lotte li dl dt {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.type_lotte li dl dd {
+  font-weight: 500;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.type_lotte li:nth-of-type(2) {
+  width: 45%;
+}
+
+.type_lotte li img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.type_lotte a {
+  position: absolute;
+  top: 0;
+  left: 450px;
+  background: red;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+
+.type_good {
+  width: 100%;
+  margin: 100px auto;
+  border: 1px solid red;
+}
+
+
+/* 나중에 네비 쓸 꺼 */
+
+/* .delivery_type {
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 30px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+}
+
+.delivery_type li {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.delivery_type a {
+  font-size: var(--font-size-no11);
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.delivery_type li a.current,
+.delivery_type li a:hover {
+  background: rgba(217, 38, 41, 0.9);
+  color: var(--font-color-sub2);
+} */

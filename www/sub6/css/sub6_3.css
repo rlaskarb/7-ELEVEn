@@ -2,17 +2,18 @@
   width: 1400px;
   margin: 0 auto;
   padding-bottom: 200px;
+  position: relative;
 }
 
 
 /* 글쓰기 버튼 */
 .write_btn_container {
-  text-align: right;
-  margin: 20px 0;
+  position: absolute;
+  top: -110px;
+  right: 20px;
 }
 
 .write_btn {
-  display: inline-block;
   padding: 12px 25px;
   background: var(--font-color-point2);
   color: #fff;
@@ -129,23 +130,22 @@
 
 .close_pop {
   position: absolute;
-  top: 25px;
+  top: 15px;
   right: 30px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(241, 38, 41, 0.8);
   font-size: var(--font-size-no10);
   z-index: 10;
-  transition: all 0.3s ease;
   cursor: pointer;
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .close_pop:hover {
-  color: rgba(255, 255, 255, 1);
-  transform: rotate(90deg);
+  color: rgba(241, 38, 41, 1);
 }
 
 /* ====================================
@@ -445,7 +445,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 30px 10px;
 }
 
@@ -566,7 +566,7 @@
   margin-right: 4px;
 }
 
-/* 빈 목록 메시지 */ 
+/* 빈 목록 메시지 */
 .empty_list_message {
   width: 100%;
   margin-right: 200px;

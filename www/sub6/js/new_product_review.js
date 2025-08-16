@@ -274,42 +274,53 @@ $(document).ready(function () {
 	// 수정 폼 제출 이벤트
 	$(document).on("submit", "#edit-form", async function (event) {
 		event.preventDefault();
-		const reviewId = $(this).data("post-id");
-		const submitButton = $(this).find("button[type='submit']");
-		const deleteButton = $(this).find(".delete-btn");
-
-		// 📌 수정 중에는 모든 버튼 비활성화
-		submitButton.prop("disabled", true).text("수정 중...");
-		deleteButton.prop("disabled", true);
-
-		const updatedReview = {
-			newTitle: $("#edit-title").val(),
-			newContent: $("#edit-content").val(),
-			newName: $("#edit-nickname").val(),
-		};
 
 		try {
-			const { error } = await supabaseClient
-				.from("NewProductReview")
-				.update(updatedReview)
-				.eq("id", reviewId);
-
-			if (error) {
-				alert("게시글 수정에 실패했습니다.");
-				submitButton.prop("disabled", false).text("수정 완료");
-				deleteButton.prop("disabled", false);
-			} else {
-				alert("게시글이 성공적으로 수정되었습니다.");
-				closeModal("edit"); // 📌 새로운 모달 닫기 함수 사용
-				loadReview();
-			}
-		} catch (e) {
-			console.error("수정 중 오류:", e);
-			alert("수정 중 오류가 발생했습니다.");
-			submitButton.prop("disabled", false).text("수정 완료");
-			deleteButton.prop("disabled", false);
+			// 여기서 일부러 오류(Error)를 만들어서 catch로 보냅니다.
+			throw new Error("임시 삭제 방지");
+		} catch (error) {
+			// try에서 오류가 발생했기 때문에, 이 코드가 실행됩니다.
+			console.error(error); // 콘솔에 에러를 출력해서 확인하기 좋습니다.
+			alert("미안해요.. 비밀번호 기능이 구현될 때까지 잠시 막아두겠습니다.");
 		}
 	});
+
+	// 	const reviewId = $(this).data("post-id");
+	// 	const submitButton = $(this).find("button[type='submit']");
+	// 	const deleteButton = $(this).find(".delete-btn");
+
+	// 	// 📌 수정 중에는 모든 버튼 비활성화
+	// 	submitButton.prop("disabled", true).text("수정 중...");
+	// 	deleteButton.prop("disabled", true);
+
+	// 	const updatedReview = {
+	// 		newTitle: $("#edit-title").val(),
+	// 		newContent: $("#edit-content").val(),
+	// 		newName: $("#edit-nickname").val(),
+	// 	};
+
+	// 	try {
+	// 		const { error } = await supabaseClient
+	// 			.from("NewProductReview")
+	// 			.update(updatedReview)
+	// 			.eq("id", reviewId);
+
+	// 		if (error) {
+	// 			alert("게시글 수정에 실패했습니다.");
+	// 			submitButton.prop("disabled", false).text("수정 완료");
+	// 			deleteButton.prop("disabled", false);
+	// 		} else {
+	// 			alert("게시글이 성공적으로 수정되었습니다.");
+	// 			closeModal("edit"); // 📌 새로운 모달 닫기 함수 사용
+	// 			loadReview();
+	// 		}
+	// 	} catch (e) {
+	// 		console.error("수정 중 오류:", e);
+	// 		alert("수정 중 오류가 발생했습니다.");
+	// 		submitButton.prop("disabled", false).text("수정 완료");
+	// 		deleteButton.prop("disabled", false);
+	// 	}
+	// });
 
 	// 📌 모달 내 삭제 버튼 클릭 이벤트
 	// $(document).on("click", ".modal_buttons .delete-btn", function () {
