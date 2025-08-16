@@ -1,38 +1,40 @@
 #content .content_area {
-  width: 1600px;
-  margin: 0 auto;
-  padding: 20px 0;
-
-}
-
-.service_guide {
   width: 1400px;
   margin: 0 auto;
-  padding: 100px 0;
 }
 
 .guide_title {
   width: 100%;
-  margin-top: 100px;
-  margin-left: 60px;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .guide_title h3 {
-  font-size: 30px;
-  margin-bottom: 10px;
-
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
 .guide_title p {
-  font-size: 15px;
-  color: #666;
+  font-size: 20px;
 }
 
-.delivery_type_container {
+.guide_title p span {
+  color: var(--font-color-main);
+  font-weight: 600;
+}
+
+.guide_title img {
   width: 100%;
-
+  object-fit: contain;
+  border-radius: 20px;
 }
 
+
+/* 롯대 배송 */
 
 .type_lotte {
   width: 100%;
@@ -45,15 +47,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 100px;
 }
 
-.type_lotte li:nth-of-type(1) {
-  width: 45%;
 
-}
-
-.type_lotte strong {
-  display: block;
+.type_lotte h4 {
   margin-bottom: 40px;
   font-size: 26px;
 }
@@ -86,50 +84,140 @@
 .type_lotte a {
   position: absolute;
   top: 0;
-  left: 450px;
-  background: red;
-  color: #fff;
+  left: 400px;
+  background: #fff;
+  color: var(--font-color-main);
   font-weight: 600;
   padding: 10px 20px;
   border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.type_lotte a:hover {
+  animation: smooth_bounce_scale 1s ease-in-out infinite;
+  background: rgba(217, 38, 41, 0.9);
+  color: #fff;
 }
 
 
+/* 세븐일레븐 착한배송 */
 .type_good {
-  width: 100%;
-  margin: 100px auto;
-  border: 1px solid red;
+  width: 2000px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 150px;
+  padding-bottom: 100px;
+  background: rgba(250, 248, 245, 0.7);
 }
 
-
-/* 나중에 네비 쓸 꺼 */
-
-/* .delivery_type {
-  width: 400px;
-  display: flex;
-  justify-content: space-evenly;
+.good_title {
+  width: 1200px;
   margin: 0 auto;
-  margin-top: 30px;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 25px;
-}
-
-.delivery_type li {
-  width: 50%;
-  box-sizing: border-box;
   text-align: center;
+  padding: 100px 0 50px 0;
 }
 
-.delivery_type a {
+.good_title h4 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.good_nev {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.good_nev li {
+  width: 16%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+
+.good_nev a {
   font-size: var(--font-size-no11);
   border-radius: 25px;
   font-weight: 600;
-  padding: 10px 0;
+  padding: 10px 30px;
   transition: all 0.3s ease;
 }
 
-.delivery_type li a.current,
-.delivery_type li a:hover {
+.good_nev li a.current,
+.good_nev li a:hover {
   background: rgba(217, 38, 41, 0.9);
   color: var(--font-color-sub2);
-} */
+}
+
+
+
+.good_container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 착한 택배 소개  */
+
+.good_introduction {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  border-radius: 30px;
+  padding: 70px 0;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+}
+
+.good_table dt {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.good_table dd {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.good_table span {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+.good_table table {
+  width: 100%;
+  min-height: 300px;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.good_table th {
+  border: 1px solid rgba(1, 113, 33, 0.8);
+  padding: 8px;
+}
+
+.good_table td {
+  border: 1px solid rgba(1, 113, 33, 0.8);
+  line-height: 1.5rem;
+  padding: 8px;
+}
+
+.good_introduction .good_img {
+  width: 700px;
+
+}
+
+.good_img img {
+  width: 100%;
+  border-radius:30px ;
+  object-fit: contain;
+}

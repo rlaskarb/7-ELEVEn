@@ -25,7 +25,7 @@ $(document).ready(function () {
 			gyeongsang: "경상",
 			busan: "부산",
 			jeju: "제주",
-		};
+		}; 
 
 		const selectedRegion = regionMapping[region];
 		const filteredData = presentationData.filter(

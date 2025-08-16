@@ -1,28 +1,5 @@
 @charset "utf-8";
 
-/*  바운스 바운스 */
-@keyframes smooth_bounce_scale {
-	0% {
-		transform: scale(1.3) translateY(0);
-	}
-
-	25% {
-		transform: scale(1.35) translateY(-10px);
-	}
-
-	50% {
-		transform: scale(1.3) translateY(0);
-	}
-
-	75% {
-		transform: scale(1.35) translateY(-5px);
-	}
-
-	100% {
-		transform: scale(1.3) translateY(0);
-	}
-}
-
 /*메인 비주얼 영역 */
 
 .visual {
@@ -233,7 +210,7 @@
 #content .new_menu_change dl:nth-of-type(1) dd {
 	font-size: var(--font-size-no8);
 	font-weight: 600;
-} 
+}
 
 #content .new_menu_change dl:nth-of-type(4) dt span,
 #content .new_menu_change dl:nth-of-type(4) dd span {
@@ -638,21 +615,9 @@
 }
 
 /* 주황색 그룹 (1, 2, 5번) */
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(1):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(2):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(5):hover
-	a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(1):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(2):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(5):hover a {
 	background: rgba(231, 126, 45, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(231, 126, 45, 0.6);
@@ -660,16 +625,8 @@
 }
 
 /* 빨간색 그룹 (3, 4번) */
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(3):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(4):hover
-	a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(3):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(4):hover a {
 	background: rgba(217, 38, 41, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(217, 38, 41, 0.6);
@@ -677,16 +634,8 @@
 }
 
 /* 초록색 그룹 (6, 7번) */
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(6):hover
-	a,
-#content
-	.full_search_container
-	.full_search_speech_bubble
-	li:nth-of-type(7):hover
-	a {
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(6):hover a,
+#content .full_search_container .full_search_speech_bubble li:nth-of-type(7):hover a {
 	background: rgba(1, 113, 33, 0.8);
 	color: var(--font-color-sub2);
 	box-shadow: 0 15px 30px rgba(1, 113, 33, 0.6);
@@ -810,8 +759,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 130px;
-	margin-bottom: 120px;
+	gap: 100px;
+	margin-bottom: 50px;
 }
 
 #content .seven_story_title h3 {
@@ -823,7 +772,7 @@
 #content .seven_story_title p {
 	width: 350px;
 	font-size: var(--font-size-no10);
-	line-height: 2.5rem;
+	line-height: 2.3rem;
 	/*22px*/
 }
 
@@ -868,7 +817,7 @@
 	width: 100%;
 	transform: translateY(-50%);
 	display: flex;
-	padding: 0 31px;
+	padding: 0 20px;
 	justify-content: space-between;
 	pointer-events: none;
 }
