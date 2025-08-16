@@ -72,11 +72,11 @@
 /* 오버레이 안의 텍스트 */
 .overlay .text {
 	color: white;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	text-align: center;
 	padding: 20px;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 }
 
 /* scroll_item에 마우스를 올렸을 때 .overlay를 보이게 함 */
@@ -133,12 +133,18 @@
 }
 
 #content .agree_checkbox {
+	width: 100%;
+	height: 120px;
+	line-height: 1.8rem;
+	font-weight: 500;
 	border: 1px solid #eee;
-	padding: 15px;
-	border-radius: 8px;
-	height: 150px;
+	border-radius: 15px;
 	overflow-y: auto;
-	background: #fdfdfd;
+	background: #fff;
+}
+
+#content .agree_checkbox dl {
+	padding-left: 20px;
 }
 
 #content .consent-checkbox {
@@ -147,8 +153,8 @@
 }
 
 .consent-checkbox input[type="checkbox"] {
-	width: 18px;
-	height: 18px;
+	width: 20px !important;
+	height: 20px;
 	margin-right: 10px;
 	accent-color: var(--font-color-main);
 }
