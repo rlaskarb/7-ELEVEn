@@ -1,192 +1,193 @@
 @charset "utf-8";
 
 #content .seven_beans_management {
-  width: 1600px;
-  margin: 200px auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 30px;
+	width: 1600px;
+	margin: 50px auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 30px;
 }
 
-#content .seven_beans_note h3,
-#content .seven_beans_management h3 {
-  font-size: var(--font-size-no6); /*30px*/
-  margin-bottom: 50px;
+#content .seven_beans_note h3 {
+	font-size: var(--font-size-no6); /*30px*/
+	margin-bottom: 20px;
 }
 
 #content .seven_beans_management h3 {
-  color: var(--font-color-point1);
+	font-size: var(--font-size-no6);
+	color: var(--font-color-point1);
+	margin-left: 15px;
 }
 
 #content .seven_beans_management dl {
-  padding: 20px;
-  border-radius: 20px;
-  margin-bottom: 70px;
+	padding: 20px;
+	border-radius: 20px;
+	margin-bottom: 70px;
 }
 
 #content .seven_beans_management dt {
-  font-size: var(--font-size-no8); /*26px*/
-  color: var(--font-color-point2);
-  font-weight: 700;
-  margin-bottom: 5px;
+	font-size: var(--font-size-no8); /*26px*/
+	color: var(--font-color-point2);
+	font-weight: 700;
+	margin-bottom: 5px;
 }
 
 #content .seven_beans_note p,
 #content .seven_beans_management dl dd {
-  font-size: var(--font-size-no11); /*22px*/
+	font-size: var(--font-size-no11); /*22px*/
 }
 
 #content .seven_beans_management dl dd:nth-of-type(1) {
-  margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
-#content .seven_beans_management ul {
-  transition: all 0.5s ease;
+#content .seven_beans_management ul:nth-of-type(1) {
+	margin-top: 65px;
+	transition: all 0.5s ease;
 }
 
 .seven_beans_management ul:nth-of-type(2) li {
-  display: flex;
-  gap: 15px;
+	display: flex;
+	gap: 15px;
 }
 
 .seven_beans_management li img {
-  width: 500px;
-  height: 360px;
-  border-radius: 15px;
-  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.3);
-  transition: all 0.7s ease-out;
+	width: 500px;
+	border-radius: 25px;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+	transition: all 0.8s ease;
 }
 
 .seven_beans_management li img:hover {
-  transform: scale(1.05) translateY(-5px);
+	transform: scale(1.05) translateY(-5px);
 }
 
 #content .seven_beans_note {
-  width: 1600px;
-  margin: 0 auto;
+	width: 1600px;
+	margin: 0 auto;
 }
 
 #content .note_title {
-  margin: 0 auto;
-  background: url(../images/content1/coffeeback.png);
-  margin-left: 5px;
-  text-align: center;
-  vertical-align: middle;
-  height: 300px;
-  overflow: hidden;
-  margin-bottom: 100px;
+	margin: 0 auto;
+	background: url(../images/content1/coffeeback.png);
+	margin-left: 5px;
+	text-align: center;
+	vertical-align: middle;
+	height: 300px;
+	overflow: hidden;
+	margin-bottom: 100px;
 }
 #content .note_title h3 {
-  margin-top: 70px;
+	margin-top: 70px;
 }
 #content .note_title h3,
 #content .note_title p {
-  color: var(--font-color-sub2);
-  font-weight: 600;
+	color: var(--font-color-sub2);
+	font-weight: 600;
 }
 
 #content .seven_beans_note ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
 }
 
 #content .seven_beans_note > img {
-  width: 600px;
-  height: 350px;
+	width: 600px;
+	height: 350px;
 }
 
 #content .seven_beans_note table td ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
 #content .seven_beans_note table td ul li {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
 }
 
 #content .seven_beans_note table td ul li img {
-  width: 70px;
+	width: 70px;
 }
 
 #content .seven_beans_note table td > img {
-  width: 100%;
+	width: 100%;
 }
 
 #content .seven_beans_note table {
-  width: 100%;
-  margin-bottom: 150px;
+	width: 100%;
+	margin-bottom: 150px;
 }
 
 #content .seven_beans_note table th,
 #content .seven_beans_note table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
 }
 
 #content .seven_beans_note table th {
-  background-color: #f2f2f2;
-  padding: 30px 0;
+	background-color: #f2f2f2;
+	padding: 30px 0;
 }
 
 #content .seven_beans_note table td:nth-of-type(3n + 1) {
-  background: #f2f2f2;
+	background: #f2f2f2;
 }
 #content .seven_beans_note table td {
-  padding: 20px 0;
+	padding: 20px 0;
 }
 
 #content .seven_beans_note thead th {
-  text-align: center;
-  font-size: var(--font-size-no10); /*22px*/
+	text-align: center;
+	font-size: var(--font-size-no10); /*22px*/
 }
 
 #content .seven_beans_note tbody tr:nth-of-type(1) td:nth-of-type(n + 2) {
-  text-align: center;
-  vertical-align: middle;
-  font-size: var(--font-size-no10); /*22px*/
+	text-align: center;
+	vertical-align: middle;
+	font-size: var(--font-size-no10); /*22px*/
 }
 
 #content .seven_beans_note tbody tr td:nth-of-type(1) {
-  text-align: center;
-  font-weight: 700;
-  font-size: var(--font-size-no10); /*22px*/
-  vertical-align: middle;
+	text-align: center;
+	font-weight: 700;
+	font-size: var(--font-size-no10); /*22px*/
+	vertical-align: middle;
 }
 
 #content .seven_beans_note tbody tr:nth-of-type(4) ul {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  font-size: var(--font-size-no11); /*20px*/
-  font-weight: 500;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	font-size: var(--font-size-no11); /*20px*/
+	font-weight: 500;
 }
 
 #content .seven_beans_note tbody tr:nth-of-type(4) ul li {
-  padding: 5px 7px;
-  border: 2px solid rgba(231, 126, 45, 0.8);
-  box-shadow: 1px 1px 15px 1px rgba(231, 126, 45, 0.1);
-  border-radius: 20px;
+	padding: 5px 7px;
+	border: 2px solid rgba(231, 126, 45, 0.8);
+	box-shadow: 1px 1px 15px 1px rgba(231, 126, 45, 0.1);
+	border-radius: 20px;
 }
 
 #content .seven_beans_note ul li.emphasis {
-  background: rgba(231, 126, 45, 0.8);
-  color: var(--font-color-sub2);
-  transition: all 0.3s ease;
+	background: rgba(231, 126, 45, 0.8);
+	color: var(--font-color-sub2);
+	transition: all 0.3s ease;
 }
 
 #content .seven_beans_note tbody tr:nth-of-type(4) ul li:not(.emphasis):hover {
-  background: rgba(231, 126, 45, 0.5);
-  color: var(--font-color-sub2);
+	background: rgba(231, 126, 45, 0.5);
+	color: var(--font-color-sub2);
 }
 
 #content .seven_beans_note ul li.emphasis:hover {
-  background: rgba(217, 38, 41, 0.8);
-  transform: translateY(-5px);
+	background: rgba(217, 38, 41, 0.8);
+	transform: translateY(-5px);
 }
