@@ -233,7 +233,7 @@
 #content .new_menu_change dl:nth-of-type(1) dd {
 	font-size: var(--font-size-no8);
 	font-weight: 600;
-}
+} 
 
 #content .new_menu_change dl:nth-of-type(4) dt span,
 #content .new_menu_change dl:nth-of-type(4) dd span {

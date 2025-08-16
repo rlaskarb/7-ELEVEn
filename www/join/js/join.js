@@ -6,7 +6,7 @@ $(function () {
         const $currentDt = $(this);
         // 현재 클릭된 dt의 바로 다음 dd
         const $currentDd = $currentDt.next('dd');
-
+ 
         // 클릭된 것을 제외한 모든 dd는 닫기
         $('.terms_section dd').not($currentDd).slideUp();
         // 클릭된 것을 제외한 모든 dt에서 active 클래스 제거

@@ -2,27 +2,47 @@
 
 /* 사용방법 선택자{var(--font-color-point1)} */
 :root {
-	--font-size-no1: 6.25rem; /*100px*/
-	--font-size-no2: 5.63rem; /*90px*/
-	--font-size-no3: 5rem; /*80px*/
-	--font-size-no4: 4.38rem; /*70px*/
-	--font-size-no44: 3.75rem; /*60px*/
-	--font-size-no5: 3.13rem; /*50px*/
-	--font-size-no6: 2.5rem; /*40px*/
-	--font-size-no7: 1.88rem; /*30px*/
-	--font-size-no8: 1.63rem; /*26px*/
-	--font-size-no9: 1.5rem; /*24px*/
-	--font-size-no10: 1.38rem; /*22px*/
-	--font-size-no11: 1.25rem; /*20px*/
-	--font-size-no12: 1.13rem; /*18px*/
-	--font-size-no13: 1rem; /*16px*/
+	--font-size-no1: 6.25rem;
+	/*100px*/
+	--font-size-no2: 5.63rem;
+	/*90px*/
+	--font-size-no3: 5rem;
+	/*80px*/
+	--font-size-no4: 4.38rem;
+	/*70px*/
+	--font-size-no44: 3.75rem;
+	/*60px*/
+	--font-size-no5: 3.13rem;
+	/*50px*/
+	--font-size-no6: 2.5rem;
+	/*40px*/
+	--font-size-no7: 1.88rem;
+	/*30px*/
+	--font-size-no8: 1.63rem;
+	/*26px*/
+	--font-size-no9: 1.5rem;
+	/*24px*/
+	--font-size-no10: 1.38rem;
+	/*22px*/
+	--font-size-no11: 1.25rem;
+	/*20px*/
+	--font-size-no12: 1.13rem;
+	/*18px*/
+	--font-size-no13: 1rem;
+	/*16px*/
 
-	--font-color-main: #d92629; /*빨강*/
-	--font-color-point1: #e77e2d; /*주황*/
-	--font-color-point2: #017121; /*초록*/
-	--font-color-sub1: #f0f0f2; /*쿨그레이*/
-	--font-color-sub2: #faf8f5; /*연한아이보리*/
-	--font-color-font: #333; /*쉬커먼색*/
+	--font-color-main: #d92629;
+	/*빨강*/
+	--font-color-point1: #e77e2d;
+	/*주황*/
+	--font-color-point2: #017121;
+	/*초록*/
+	--font-color-sub1: #f0f0f2;
+	/*쿨그레이*/
+	--font-color-sub2: #faf8f5;
+	/*연한아이보리*/
+	--font-color-font: #333;
+	/*쉬커먼색*/
 }
 
 /* CSS Reset */
@@ -138,15 +158,18 @@ body {
 		"Malgun Gothic", sans-serif !important;
 	color: #333333;
 	font-weight: 400;
-	word-break: keep-all; /* 한글 줄바꿈 최적화 */
-	-webkit-font-smoothing: antialiased; /* 맥에서 폰트 렌더링 개선 */
+	word-break: keep-all;
+	/* 한글 줄바꿈 최적화 */
+	-webkit-font-smoothing: antialiased;
+	/* 맥에서 폰트 렌더링 개선 */
 }
 
 button,
 input,
 select,
 textarea {
-	font-family: inherit; /* 부모의 폰트 상속 */
+	font-family: inherit;
+	/* 부모의 폰트 상속 */
 }
 
 /* 용도별 폰트 클래스 */
@@ -160,18 +183,22 @@ ol,
 ul {
 	list-style: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 address {
 	font-style: normal;
 }
+
 a {
 	display: block;
 	color: #333;
 	text-decoration: none;
 }
+
 img {
 	border: 0;
 	vertical-align: top;
@@ -222,7 +249,8 @@ img {
 
 #headerArea {
 	width: 100%;
-	position: fixed; /*스클롤을 해도 고정*/
+	position: fixed;
+	/*스클롤을 해도 고정*/
 	top: 0;
 	left: 0;
 	z-index: 100;
@@ -265,6 +293,7 @@ img {
 	display: flex;
 	width: 100%;
 }
+
 #gnb ul.dropdownmenu .menu {
 	position: relative;
 	width: 16.66%;
@@ -274,7 +303,8 @@ img {
 #gnb .dropdownmenu .depth1 {
 	display: block;
 	padding: 10px 0 20px 0;
-	font-size: var(--font-size-no11); /*20px*/
+	font-size: var(--font-size-no11);
+	/*20px*/
 	text-align: center;
 	transition: all 0.5s;
 }
@@ -288,7 +318,8 @@ img {
 	left: 0px;
 	padding: 15px 0;
 	line-height: 2.5rem;
-	font-size: var(--font-size-no13); /*16px*/
+	font-size: var(--font-size-no13);
+	/*16px*/
 	display: none;
 }
 
@@ -296,6 +327,7 @@ img {
 	text-align: center;
 	font-weight: 600;
 }
+
 #gnb .dropdownmenu .menu ul li a {
 	display: block;
 	padding-top: 5px;
@@ -354,12 +386,15 @@ img {
 
 #headerArea .search_title {
 	text-align: center;
-	font-size: var(--font-size-no7); /*30px*/
+	font-size: var(--font-size-no7);
+	/*30px*/
 	font-weight: bold;
 	color: rgba(231, 126, 45, 0.9);
 }
+
 #headerArea #pageSelector {
-	font-size: var(--font-size-no10); /*22px*/
+	font-size: var(--font-size-no10);
+	/*22px*/
 	font-weight: 500;
 	border-radius: 15px;
 	border: 3px solid rgba(217, 38, 41, 0.8);
@@ -377,7 +412,8 @@ img {
 	cursor: pointer;
 	border-bottom: 3px solid var(--font-color-point2);
 	color: var(--font-color-font);
-	font-size: var(--font-size-no10); /*22px*/
+	font-size: var(--font-size-no10);
+	/*22px*/
 	color: #333;
 }
 
@@ -574,4 +610,11 @@ img {
 .pop_up_container .pop_up_close:hover {
 	background: rgba(231, 126, 45, 0.9);
 	color: var(--font-color-sub1);
+}
+
+.pop_up_controls input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+	accent-color: var(--font-color-main);
 }

@@ -1,4 +1,4 @@
-body {
+/* body {
 	font-family: "Noto Sans KR", sans-serif;
 	background-color: #eee;
 	font-size: 16px;
@@ -11,11 +11,11 @@ body {
 
 .header_inner {
 	justify-content: flex-start !important;
-}
+} */
 
-#gnb {
+/* #gnb {
 	margin-left: 200px;
-}
+} */
 
 #content {
 	width: 1600px;
