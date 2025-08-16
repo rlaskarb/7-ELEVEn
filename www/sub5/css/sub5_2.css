@@ -1,3 +1,16 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 #content .content_area {
   width: 1400px;
   margin: 0 auto;
@@ -34,8 +47,7 @@
 }
 
 
-/* 롯대 배송 */
-
+/* 롯데 배송 */
 .type_lotte {
   width: 100%;
   margin-top: 100px;
@@ -112,6 +124,7 @@
   background: rgba(250, 248, 245, 0.7);
 }
 
+/* 탭 네비게이션 스타일 */
 .good_title {
   width: 1200px;
   margin: 0 auto;
@@ -129,95 +142,188 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 50px;
 }
 
 .good_nev li {
-  width: 16%;
+  flex: 1;
   text-align: center;
-  margin-bottom: 100px;
 }
 
-
 .good_nev a {
-  font-size: var(--font-size-no11);
-  border-radius: 25px;
+  display: block;
+  padding: 15px 20px;
+  font-size: 16px;
   font-weight: 600;
-  padding: 10px 30px;
+  color: #666;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
   transition: all 0.3s ease;
 }
 
-.good_nev li a.current,
-.good_nev li a:hover {
-  background: rgba(217, 38, 41, 0.9);
-  color: var(--font-color-sub2);
+.good_nev a:hover {
+  color: var(--font-color-main);
 }
 
-
-
-.good_container {
-  width: 100%;
-  margin: 0 auto;
+.good_nev a.active {
+  color: var(--font-color-main);
+  border-bottom-color: var(--font-color-main);
 }
 
-/* 착한 택배 소개  */
-
-.good_introduction {
+/* 콘텐츠 컨테이너 공통 스타일 */
+.tab_content {
   width: 1400px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-  border-radius: 30px;
-  padding: 70px 0;
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
-}
-
-.good_table dt {
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.good_table dd {
-  font-size: 18px;
-  font-weight: 500;
-  color: #666;
-  margin-bottom: 30px;
-}
-
-.good_table span {
-  display: block;
-  font-size: 22px;
-  font-weight: 600;
-  padding-bottom: 15px;
-}
-
-.good_table table {
-  width: 100%;
-  min-height: 300px;
-  border-collapse: collapse;
   background: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
-.good_table th {
-  border: 1px solid rgba(1, 113, 33, 0.8);
-  padding: 8px;
+.tab_content.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
 }
 
-.good_table td {
-  border: 1px solid rgba(1, 113, 33, 0.8);
-  line-height: 1.5rem;
-  padding: 8px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.good_introduction .good_img {
-  width: 700px;
-
+/* 각 탭별 특별 스타일 */
+.tab_content h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--font-color-main);
 }
 
-.good_img img {
+.tab_content p {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* 착한택배 소개 - 테이블과 이미지 배치 */
+.intro_container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.intro_table {
+  flex: 1;
+}
+
+.intro_image {
+  flex: 0 0 400px;
+}
+
+.intro_image img {
   width: 100%;
-  border-radius:30px ;
-  object-fit: contain;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  border: 1px solid var(--font-color-point2);
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: var(--font-color-sub2);
+  font-weight: 600;
+}
+
+/* 리스트 스타일 */
+.content_list {
+  list-style: none;
+  padding: 0;
+}
+
+.content_list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.content_list li:before {
+  content: "✓";
+  color: var(--font-color-point2);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* 단계별 프로세스 스타일 */
+.process_step {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--font-color-sub2);
+  border-radius: 10px;
+}
+
+.step_number {
+  background: var(--font-color-main);
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+/* FAQ 스타일 */
+.faq_item {
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.faq_question {
+  background: var(--font-color-sub2);
+  padding: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+}
+
+.faq_question:after {
+  content: "+";
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq_question.active:after {
+  transform: rotate(45deg);
+}
+
+.faq_answer {
+  padding: 15px;
+  background: #fff;
+  display: none;
 }
