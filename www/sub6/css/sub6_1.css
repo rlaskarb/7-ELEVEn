@@ -1,211 +1,172 @@
 /* 전체 콘텐츠 영역 배경색 설정 */
 #content .content_area {
-  width: 100%;
-  padding: 20px 0;
+	width: 100%;
+	padding: 20px 0;
 }
 
 /* 2단 레이아웃을 위한 컨테이너 */
 .suggestion_container {
-  width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  gap: 30px;
+	width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	gap: 30px;
 }
 
 .suggestion_form {
-  width: 60%;
+	width: 60%;
 }
 
 /* --- 자동 스크롤 애니메이션 스타일 시작 --- */
 
 /* 스크롤을 감싸는 컨테이너 (뷰포트) */
 .suggestion_image {
-  width: 40%;
-  /* height: 600px; JS로 높이를 제어하기 위해 제거 */
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.1);
+	width: 40%;
+	/* height: 600px; JS로 높이를 제어하기 위해 제거 */
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* 실제로 움직이는 이미지들의 묶음 */
 .scroll_container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
 
 /* 개별 이미지 아이템 */
 .scroll_item {
-  position: relative;
-  /* 오버레이의 기준점 */
-  margin-bottom: 20px;
-  /* 이미지 사이 간격 */
+	position: relative;
+	/* 오버레이의 기준점 */
+	margin-bottom: 20px;
+	/* 이미지 사이 간격 */
 }
 
 .scroll_item img {
-  width: 100%;
-  display: block;
-  border-radius: 15px;
+	width: 100%;
+	display: block;
+	border-radius: 15px;
 }
 
 /* 마우스를 올렸을 때 나타나는 오버레이 */
 .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  /* 평소에는 투명 */
-  transition: .5s ease;
-  background-color: rgba(0, 0, 0, 0.65);
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	/* 평소에는 투명 */
+	transition: 0.5s ease;
+	background-color: rgba(0, 0, 0, 0.65);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* 오버레이 안의 텍스트 */
 .overlay .text {
-  color: white;
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 20px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-align: center;
+	padding: 20px;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* scroll_item에 마우스를 올렸을 때 .overlay를 보이게 함 */
 .scroll_item:hover .overlay {
-  opacity: 1;
+	opacity: 1;
 }
 
 /* --- 자동 스크롤 애니메이션 스타일 끝 --- */
 
-
 #content .email_box {
-  width: 100%;
-  padding: 40px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+	width: 100%;
+	padding: 40px;
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
 }
 
 #content .email_box div {
-  padding: 15px 0;
+	padding: 15px 0;
 }
 
 #content .email_box label,
 #content .agree_title {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+	display: block;
+	margin-bottom: 8px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #333;
 }
 
 #content .email_box input,
 #content .email_box textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fff;
-  font-size: 1rem;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
+	width: 100%;
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background: #fff;
+	font-size: 1rem;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
 }
 
 #content .email_box input:focus,
 #content .email_box textarea:focus {
-  border-color: #017121;
-  box-shadow: 1px 1px 8px rgba(1, 113, 33, 0.2);
-  outline: none;
+	border-color: #017121;
+	box-shadow: 1px 1px 8px rgba(1, 113, 33, 0.2);
+	outline: none;
 }
 
 #content .email_box textarea {
-  height: 300px;
-  resize: vertical;
+	height: 300px;
+	resize: vertical;
 }
 
 #content .agree_checkbox {
-  border: 1px solid #eee;
-  padding: 15px;
-  border-radius: 8px;
-  height: 150px;
-  overflow-y: auto;
-  background: #fdfdfd;
+	border: 1px solid #eee;
+	padding: 15px;
+	border-radius: 8px;
+	height: 150px;
+	overflow-y: auto;
+	background: #fdfdfd;
 }
 
 #content .consent-checkbox {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
+	display: flex;
+	margin-top: 20px;
 }
 
-#content #agree_checkbox {
-  display: none;
-}
-
-#content .consent-checkbox .agree_text_check {
-  position: relative;
-  padding-left: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-#content .consent-checkbox .agree_text_check::before {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: 59%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-#content #agree_checkbox:checked+.agree_text_check::before {
-  background: #d92629;
-  border-color: #d92629;
-}
-
-#content .consent-checkbox .agree_text_check::after {
-  content: "✔";
-  position: absolute;
-  left: 4px;
-  top: 50%;
-  transform: translateY(-50%) scale(0);
-  font-size: 16px;
-  color: #fff;
-  transition: all 0.2s ease;
-}
-
-#content #agree_checkbox:checked+.agree_text_check::after {
-  transform: translateY(-50%) scale(1);
+.consent-checkbox input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+	accent-color: var(--font-color-main);
 }
 
 #content .email_box button {
-  width: 100%;
-  padding: 18px;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  background: #d92629;
-  margin-top: 20px;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s ease;
+	width: 100%;
+	padding: 18px;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: 700;
+	background: #d92629;
+	margin-top: 20px;
+	cursor: pointer;
+	border: none;
+	transition: background-color 0.3s ease;
 }
 
 #content .email_box button:hover {
-  background: #e77e2d;
+	background: #e77e2d;
 }
