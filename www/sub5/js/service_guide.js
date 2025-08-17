@@ -5,23 +5,20 @@ $(document).ready(function () {
 	$(".good_nev a").click(function (e) {
 		e.preventDefault();
 
-		console.log("탭 클릭됨:", $(this).attr("href"));
-
 		$(".good_nev a").removeClass("active");
 		$(".tab_content").removeClass("active");
 
 		$(this).addClass("active");
 
 		// 해당 콘텐츠 보여주기
-		var targetTab = $(this).attr("href");
+		const targetTab = $(this).attr("href");
 		$(targetTab).addClass("active");
 
-		console.log("활성화된 탭:", targetTab);
 
+//스와이퍼 기능
 		if (targetTab === "#tab2") {
 			tab2Swiper = new Swiper("#tab2 .my-tab2-swiper", {
 				slidesPerView: 3,
-				//spaceBetween: 1,  //간격
 
 				pagination: {
 					el: "#tab2 .swiper-pagination",
@@ -36,15 +33,16 @@ $(document).ready(function () {
 		}
 	});
 
+
 	// FAQ 아코디언 기능
 	$(".faq_question").click(function () {
-		var $answer = $(this).next(".faq_answer");
-		var $question = $(this);
+		const $answer = $(this).next(".faq_answer");
+		let $question = $(this);
 
 		// 현재 열려있는지 확인
 		if ($answer.is(":visible")) {
 			$answer.slideUp(400, function () {
-				// 애니메이션 완료 후 완전히 숨김
+				
 				$(this).css("display", "none");
 			});
 			$question.removeClass("active");
