@@ -456,7 +456,7 @@
 }
 
 #content .seven_story_shots li:hover img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 #content .seven_story_shots li:hover a {
@@ -469,4 +469,3 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
 }
-
