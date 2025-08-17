@@ -178,7 +178,7 @@
   background: #fff;
   border-radius: 20px;
   padding: 50px;
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   display: none;
 }
 
@@ -201,41 +201,35 @@
 
 /* 각 탭별 특별 스타일 */
 .tab_content h4 {
-  font-size: 30px;
+  font-size: 24px;
   margin-bottom: 20px;
   color: var(--font-color-main);
 }
 
 .tab_content p {
-  line-height: 1.6rem;
-  font-size: 20px;
+  line-height: 1.6;
   margin-bottom: 30px;
   color: #666;
 }
 
 /* 착한택배 소개 - 테이블과 이미지 배치 */
 .intro_container {
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   align-items: flex-start;
-  align-items: center;
   gap: 40px;
   margin-top: 20px;
 }
 
 .intro_table {
-  flex: 0.5;
+  flex: 1;
 }
 
 .intro_image {
-  flex: 0.5;
-
+  flex: 0 0 400px;
 }
 
 .intro_image img {
   width: 100%;
-  height: 370px;
   border-radius: 15px;
   object-fit: cover;
 }
@@ -250,7 +244,7 @@ table {
 th,
 td {
   border: 1px solid var(--font-color-point2);
-  padding: 15px;
+  padding: 12px;
   text-align: left;
 }
 
