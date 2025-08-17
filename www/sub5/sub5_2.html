@@ -17,6 +17,8 @@
 		rel="stylesheet" />
 	<!-- 아이콘 링크 -->
 	<script src="https://kit.fontawesome.com/347816e35e.js" crossorigin="anonymous"></script>
+	<!-- 스와이퍼 CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -81,7 +83,7 @@
 									<dd>주말 접수분은 익일 배송이 불가할 수 있습니다.</dd>
 								</dl>
 							</li>
-							<li><img src="./image/contnet2/lottedelivery.png" alt="롯데택배 이미지"></li>
+							<li><img src="./image/content2/lottedelivery.png" alt="롯데택배 이미지"></li>
 						</ul>
 
 						<a href="https://www.lotteglogis.com/home/reservation/tracking/index" target="_blank">
@@ -96,7 +98,7 @@
 					<p>세븐일레븐의 또하나의 자랑을 소개합니다</p>
 				</div>
 
-				<!-- 탭 네비게이션 (올바른 href 설정) -->
+				<!-- 탭 네비게이션 -->
 				<ul class="good_nev">
 					<li><a href="#tab1" class="active">착한택배 소개</a></li>
 					<li><a href="#tab2">이용방법</a></li>
@@ -108,11 +110,12 @@
 
 				<!-- 탭 콘텐츠들 -->
 
-				<!-- 착한택배 소개 (테이블과 이미지를 나란히 배치) -->
+				<!-- 착한택배 소개  -->
 				<div id="tab1" class="tab_content active">
-					<h4>착한택배란?</h4>
-					<p>세븐일레븐에서 보내고, 세븐일레븐에서 받는 택배서비스입니다.</p>
-
+					<dl>
+						<dt>착한택배란?</dt>
+						<dd>세븐일레븐에서 보내고, 세븐일레븐에서 받는 택배서비스입니다.</dd>
+					</dl>
 					<div class="intro_container">
 						<div class="intro_table">
 							<table>
@@ -145,106 +148,151 @@
 							</table>
 						</div>
 						<div class="intro_image">
-							<img src="./image/contnet2/good1.png" alt="착한택배 이미지">
+							<img src="./image/content2/good1.png" alt="착한택배 이미지">
 						</div>
 					</div>
 				</div>
 
 				<!-- 이용방법 -->
 				<div id="tab2" class="tab_content">
-					<h4>착한택배 이용방법</h4>
-					<p>간편하고 쉬운 착한택배 이용 방법을 안내해드립니다.</p>
-
-					<ul class="content_list">
-						<li>전국 세븐일레븐 매장에서 접수 가능</li>
-						<li>송장 작성 후 물품과 함께 점원에게 전달</li>
-						<li>배송료 1,890원 현금 또는 카드 결제</li>
-						<li>접수 완료 후 송장번호로 배송조회 가능</li>
-						<li>수령 매장에서 신분증 확인 후 물품 수령</li>
-					</ul>
+					<dl>
+						<dt>착한택배 이용방법</dt>
+						<dd>간편하고 쉬운 착한택배 이용 방법을 안내해드립니다.</dd>
+					</dl>
+					<div class="swiper my-tab2-swiper">
+						<ul class="swiper-wrapper content_list">
+							<li class="swiper-slide">세븐 앱에서 택배를 예약해주세요</li>
+							<li class="swiper-slide">택배접수가 가능한 세븐일레븐 매장에 방문해주세요</li>
+							<li class="swiper-slide">입력한 정보 확인후 운송장을 출력 해주세요</li>
+							<li class="swiper-slide">촤측면 운송장을 택배물품에 부착해주세요</li>
+							<li class="swiper-slide">택배물품과 우측면 운송장을 카운터에 전달해주세요</li>
+							<li class="swiper-slide">매장에 택배접수가 완료되면 세븐엘레븐 앱에서 배송조회를 하실수 있어요</li>
+						</ul>
+						<!-- 스와이퍼 아이템 -->
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
 				</div>
 
 				<!-- 접수가능 품목 -->
 				<div id="tab3" class="tab_content">
-					<h4>접수가능 품목</h4>
-					<p>안전한 배송을 위해 접수 가능한 품목을 확인해주세요.</p>
+					<dl>
+						<dt>접수가능 품목</dt>
+						<dd>안전한 배송을 위해 접수 가능한 품목을 확인해주세요.</dd>
+					</dl>
 
 					<table>
-						<tr>
-							<th>가능 품목</th>
-							<td>의류, 도서, 생활용품, 건강식품, 화장품, 액세서리 등</td>
-						</tr>
-						<tr>
-							<th>불가 품목</th>
-							<td>
-								• 현금, 유가증권, 신용카드<br>
-								• 깨지기 쉬운 물품 (유리, 도자기 등)<br>
-								• 액체류 (화장품, 샴푸 등)<br>
-								• 부패하기 쉬운 식품<br>
-								• 위험물질 (화학약품, 스프레이 등)
-							</td>
-						</tr>
+						<tbody>
+							<tr>
+								<th scope="row" rowspan="5">접수가능품목</th>
+								<td>의류</td>
+								<td rowspan="5">
+									무게 5kg 이하가로, 세로, 높이 합 80cm 이하 접수 가능
+								</td>
+							</tr>
+							<tr>
+								<td>잡화/서적</td>
+							</tr>
+							<tr>
+								<td>전자제품</td>
+							</tr>
+							<tr>
+								<td>가구</td>
+							</tr>
+							<tr>
+								<td>곡물사료</td>
+							</tr>
+							<tr>
+								<th socpe="row" rowspan="7">취급 제한 품목</th>
+								<td>현금화 가능 물품</td>
+								<td>
+									현금화 사용 가능 물품
+									(현금, 어음, 상품권, 수표 유가증권, 공연티켓 등 )
+								</td>
+							</tr>
+							<tr>
+								<td>서신류</td>
+								<td>
+									우편법상의 제한물품
+									(편지, 신분증, 여권, 긴급을 요하는 서류 화물 등)
+								</td>
+							</tr>
+							<tr>
+								<td>재생불가 및 시한성 물품</td>
+								<td>
+									원본재생불가 및 시한 초과시 가치 상실물품
+									(서류, 필름, 입학원서, 입사서류 등)
+								</td>
+							</tr>
+							<tr>
+								<td>고가제품</td>
+								<td>
+									50만원 초과 상품
+									(예술품, 골프채, 낚시대 등)
+								</td>
+							</tr>
+							<tr>
+								<td>동식물</td>
+								<td>동·식물 및 동식물 사체</td>
+							</tr>
+							<tr>
+								<td>변질, 파손 유의 상품</td>
+								<td>
+									운송기간 중 변질 및 파손이 우려되는 물품
+									(식품류, 한약류, 과일류, 화훼류, 유리류 등)
+								</td>
+							</tr>
+							<tr>
+								<td>위험물품</td>
+								<td>
+									독극물, 농약류, 마약류, 화약류, 총포(도검류),
+									인화성 물질, 페인트류, 배터리 등
+								</td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 
 				<!-- 포장방법 -->
 				<div id="tab4" class="tab_content">
-					<h4>올바른 포장방법</h4>
-					<p>안전한 배송을 위한 포장 가이드입니다.</p>
-
-					<ul class="content_list">
-						<li>튼튼한 박스나 포장재 사용</li>
-						<li>물품이 박스 안에서 움직이지 않도록 완충재 충분히 사용</li>
-						<li>박스 테이핑은 십자형으로 견고하게</li>
-						<li>송장은 박스 상단 평평한 곳에 부착</li>
-						<li>기존 송장이나 바코드는 완전히 제거</li>
-						<li>무게와 크기 제한 준수 (5kg 이하, 80cm 이하)</li>
-					</ul>
+					<dl>
+						<dt>올바른 포장방법</dt>
+						<dd>안전한 배송을 위한 포장 가이드입니다.</dd>
+					</dl>
+					<div class="packaging_content">
+						<ul class="content_list packaging_list">
+							<li>튼튼한 박스나 포장재 사용</li>
+							<li>물품이 박스 안에서 움직이지 않도록 완충재 충분히 사용</li>
+							<li>박스 테이핑은 십자형으로 견고하게</li>
+							<li>송장은 박스 상단 평평한 곳에 부착</li>
+							<li>기존 송장이나 바코드는 완전히 제거</li>
+							<li>무게와 크기 제한 준수 (5kg 이하, 80cm 이하)</li>
+						</ul>
+						<div class="packaging">
+							<img src="./image/content2/tab4.png" alt="올바르지 않는 포장예시">
+						</div>
+					</div>
 				</div>
 
 				<!-- 배송프로세스 -->
 				<div id="tab5" class="tab_content">
-					<h4>배송 프로세스</h4>
-					<p>착한택배의 배송 과정을 단계별로 안내합니다.</p>
+					<dl>
+						<dt>배송 프로세스</dt>
+						<dd>착한택배의 배송 과정을 단계별로 안내합니다.</dd>
+					</dl>
 
-					<div class="process_step">
-						<div class="step_number">1</div>
-						<div>
-							<strong>접수</strong><br>
-							전국 세븐일레븐 매장에서 15시 이전 접수
-						</div>
-					</div>
+					<div class="Shipping_flow">
+						<img src="./image/content2/tab5.png" alt="세븐일레븐 착한택배 서비스 흐름도">
 
-					<div class="process_step">
-						<div class="step_number">2</div>
-						<div>
-							<strong>집화</strong><br>
-							당일 저녁 매장에서 택배 수거
-						</div>
-					</div>
-
-					<div class="process_step">
-						<div class="step_number">3</div>
-						<div>
-							<strong>운송</strong><br>
-							전국 택배 네트워크를 통한 안전한 운송
-						</div>
-					</div>
-
-					<div class="process_step">
-						<div class="step_number">4</div>
-						<div>
-							<strong>도착</strong><br>
-							수령 매장 도착 후 문자 알림 발송
-						</div>
-					</div>
-
-					<div class="process_step">
-						<div class="step_number">5</div>
-						<div>
-							<strong>수령</strong><br>
-							신분증 확인 후 물품 수령 완료
-						</div>
+						<ul class="Shipping_text hidden">
+							<li>보내는 분이 세븐일레븐 앱으로 택배를 접수한다.</li>
+							<li>매장이 주문정보를 확인하고 수거요원에게 전달한다.</li>
+							<li>수거요원이 픽업하여 물류센터로 이동한다.</li>
+							<li>물류센터에서 집하 후 구간 도착 처리된다.</li>
+							<li>배송요원이 배정되어 배송이 시작된다.</li>
+							<li>받는 분이 택배를 수령하거나 매장에서 픽업한다.</li>
+						</ul>
 					</div>
 				</div>
 
@@ -265,12 +313,31 @@
 
 					<div class="faq_item">
 						<div class="faq_question">Q. 배송조회는 어떻게 하나요?</div>
-						<div class="faq_answer">A. 접수 시 받은 송장번호로 세븐일레븐 홈페이지에서 조회 가능합니다.</div>
+						<div class="faq_answer">A. 접수 시 받은 송장번호로 세븐일레븐 홈페이지 및 앱에서 조회 가능합니다.</div>
 					</div>
 
 					<div class="faq_item">
 						<div class="faq_question">Q. 배송 중 분실되면 어떻게 하나요?</div>
 						<div class="faq_answer">A. 물품가액 50만원 한도 내에서 배상처리됩니다.</div>
+					</div>
+
+					<div class="faq_item">
+						<div class="faq_question">Q. 착한택배 서비스는 뭔가요?</div>
+						<div class="faq_answer">A. 코리아세븐의 전국 저온 배송 물류망을 통해 동일 운임으로 접수 / 집하 / 배송하는 Store to Store 택배서비스
+							서비스입니다.</div>
+					</div>
+					<div class="faq_item">
+						<div class="faq_question">Q. 착한택배 운임은 어떻게 되나요?</div>
+						<div class="faq_answer">A. 착한택배는 균일가 운임은 1,980원 입니다. 전국 동일한 운임료가 적용됩니다.
+							<br>현재는 코리아세븐 내륙점포↔내륙점포, 제주도점포↔제주도점포 간에 서비스가 제공됩니다. (내륙↔제주간은 추후 런칭 예정)
+						</div>
+					</div>
+					<div class="faq_item">
+						<div class="faq_question">Q. 물품포장은 고객이 직접 해야 하나요?</div>
+						<div class="faq_answer">A. 고객님께서 보내실 물건의 포장을 직접해 가지고 오셔야 합니다.<br>
+							배송 중 포장 부실에 따른 상품의 고장/파손에 대하여 택배사의 <br>배상 책임을 묻지 않겠다는 고객님의 동의 절차를 거치게 됩니다. (※파손 면책 약관 세부사항
+							참고)
+						</div>
 					</div>
 				</div>
 			</div>
@@ -279,10 +346,11 @@
 		<? include "../common/sub_footer.html" ?>
 
 	</div>
-	<!-- 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
 	<script src="../common/js/jquery-1.12.4.min.js"></script>
 	<script src="../common/js/jquery-migrate-1.4.1.min.js"></script>
+	<!--스와이퍼 JS-->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="../common/js/fullnav_ex.js"></script>
 	<script src="../common/js/top_button.js"></script>
 	<script src="../common/js/sub_nav.js"></script>
@@ -290,45 +358,81 @@
 
 	<script>
 		$(document).ready(function () {
+			let tab2Swiper = null;
+
 			// 탭 클릭 이벤트
 			$('.good_nev a').click(function (e) {
 				e.preventDefault();
 
-				console.log('탭 클릭됨:', $(this).attr('href')); // 디버깅용
+				console.log('탭 클릭됨:', $(this).attr('href'));
 
-				// 모든 탭과 콘텐츠에서 active 클래스 제거
 				$('.good_nev a').removeClass('active');
 				$('.tab_content').removeClass('active');
 
-				// 클릭한 탭에 active 클래스 추가
 				$(this).addClass('active');
 
 				// 해당 콘텐츠 보여주기
 				var targetTab = $(this).attr('href');
 				$(targetTab).addClass('active');
 
-				console.log('활성화된 탭:', targetTab); // 디버깅용
+				console.log('활성화된 탭:', targetTab);
+
+				if (targetTab === '#tab2') {
+					tab2Swiper = new Swiper('#tab2 .my-tab2-swiper', {
+
+						slidesPerView: 3,
+						//spaceBetween: 1,  //간격
+
+
+
+						pagination: {
+							el: '#tab2 .swiper-pagination',
+							clickable: true,
+						},
+
+						navigation: {
+							nextEl: '#tab2 .swiper-button-next',
+							prevEl: '#tab2 .swiper-button-prev',
+						},
+
+					});
+				}
 			});
 
-			// FAQ 아코디언 기능 (개선된 버전)
+
+
+			// FAQ 아코디언 기능
 			$('.faq_question').click(function () {
 				var $answer = $(this).next('.faq_answer');
 				var $question = $(this);
 
 				// 현재 열려있는지 확인
 				if ($answer.is(':visible')) {
-					$answer.slideUp(300);
+					$answer.slideUp(400, function () {
+						// 애니메이션 완료 후 완전히 숨김
+						$(this).css('display', 'none');
+					});
 					$question.removeClass('active');
 				} else {
 					// 다른 FAQ들 닫기
-					$('.faq_answer').slideUp(300);
+					$('.faq_answer').slideUp(400, function () {
+						$(this).css('display', 'none');
+					});
 					$('.faq_question').removeClass('active');
 
 					// 현재 FAQ 열기
-					$answer.slideDown(300);
+					$answer.css('display', 'block').hide().slideDown(400);
 					$question.addClass('active');
+
+					// 멀티라인 FAQ의 경우 특별 효과 추가
+					if ($answer.hasClass('faq_multiline')) {
+						setTimeout(function () {
+							$answer.addClass('active-multiline');
+						}, 200);
+					}
 				}
 			});
+			$('.good_nev a[href="#tab1"]').click();
 		});
 	</script>
 

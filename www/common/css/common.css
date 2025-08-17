@@ -239,7 +239,7 @@ img {
 
 #wrap {
 	width: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 	cursor: url(../images/bobcur-1.cur) 15 15, pointer;
 }
 
