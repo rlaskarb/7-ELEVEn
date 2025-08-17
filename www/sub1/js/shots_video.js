@@ -15,8 +15,9 @@ $(document).ready(function () {
 			$li.find("img").show(); // 숨겼던 이미지 다시 보여주기
 			$button.text("자세히 보기").removeClass("video-active"); // 버튼 텍스트 되돌리기
 		} else {
+			const origin = window.location.origin;
 			// 영상이 없는 상태일 경우 (자세히 보기 버튼 클릭 시)
-			const iframeSrc = `https://www.youtube.com/embed/${videoId}?playsinline=1`;
+			const iframeSrc = `https://www.youtube.com/embed/${videoId}?playsinline=1&origin=${origin}`;
 			const $iframe = $("<iframe>", {
 				src: iframeSrc,
 				frameborder: 0,
