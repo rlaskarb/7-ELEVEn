@@ -10,20 +10,22 @@
   padding-bottom: 150px;
 }
 
-#content .content_area > h3 {
-  font-size: var(--font-size-no6); /*40px*/
+#content .content_area>h3 {
+  font-size: var(--font-size-no6);
+  /*40px*/
   text-align: center;
   margin-top: 50px;
 }
 
-#content .content_area > p {
-  font-size: var(--font-size-no9); /*24px*/
+#content .content_area>p {
+  font-size: var(--font-size-no9);
+  /*24px*/
   text-align: center;
   margin-top: 50px;
   margin-bottom: 70px;
 }
 
-#content .content_area > p span {
+#content .content_area>p span {
   color: var(--font-color-main);
 }
 
@@ -84,6 +86,7 @@
   color: var(--font-color-point1);
   transform: scale(1.05);
 }
+
 /* 미국 */
 #content .united_states {
   left: 285px;
@@ -241,7 +244,8 @@
   padding: 7px 12px;
   border-radius: 15px;
   font-weight: 600;
-  font-size: var(--font-size-no12); /*18px*/
+  font-size: var(--font-size-no12);
+  /*18px*/
   background: rgba(217, 38, 41, 0.9);
 }
 
@@ -250,7 +254,8 @@
   top: 682px;
   left: 50px;
   width: 80%;
-  font-size: var(--font-size-no9); /*24px*/
+  font-size: var(--font-size-no9);
+  /*24px*/
   font-weight: 700;
   line-height: 3rem;
 }
@@ -273,6 +278,7 @@
   top: 878px;
   right: 3px;
 }
+
 #replay_animation_btn:hover {
   background-color: var(--font-color-point1);
   transform: scale(1.05);
@@ -290,6 +296,7 @@
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+
 .country_pin.show,
 .final_message.show,
 .korea_special_message.show {
@@ -303,6 +310,7 @@
   transform: scale(0.9);
   transition: all 0.8s ease-out;
 }
+
 .start_up_story_img.show,
 .start_up_story_text1.show,
 .start_up_story_text2.show {
@@ -333,13 +341,13 @@
   background: red;
 }
 
-#content .seven_eleven_story_telling > h3 {
+#content .seven_eleven_story_telling>h3 {
   font-size: var(--font-size-no6);
   text-align: center;
   margin-top: 150px;
 }
 
-#content .seven_eleven_story_telling > p {
+#content .seven_eleven_story_telling>p {
   font-size: var(--font-size-no9);
   text-align: center;
   margin-top: 50px;
@@ -461,3 +469,4 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
 }
+
