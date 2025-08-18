@@ -42,34 +42,22 @@
 
 .write_modal_box,
 .edit_modal_box {
-	/* 화면 전체 덮기 */
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-
-	/* 배경 */
 	background-color: rgba(0, 0, 0, 0.6);
-
-	/* 레이어 순서 */
 	z-index: 9999;
-
-	/* 중앙 정렬 */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	/* 📌 숨김 처리 - !important 없이 */
 	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
-
-	/* 애니메이션 */
 	transition: all 0.3s ease;
 }
 
-/* 📌 모달 활성화 상태 */
 .write_modal_box.show,
 .edit_modal_box.show {
 	visibility: visible;
@@ -92,8 +80,6 @@
 	background: #fff;
 	overflow-y: auto;
 	position: relative;
-
-	/* 모달 콘텐츠 애니메이션 */
 	transform: translateY(-30px) scale(0.95);
 	transition: transform 0.3s ease;
 }
@@ -115,8 +101,6 @@
 	box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
 	position: relative;
 	overflow-y: auto;
-
-	/* 모달 콘텐츠 애니메이션 */
 	transform: translateY(-30px) scale(0.95);
 	transition: transform 0.3s ease;
 }
