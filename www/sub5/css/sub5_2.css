@@ -1,489 +1,481 @@
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
-
 #content .content_area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 150px;
 }
 
 .guide_title {
-  width: 100%;
-  margin-top: 50px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	margin-top: 50px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .guide_title h3 {
-  font-size: var(--font-size-no6);
-  /*40px*/
-  margin-bottom: 30px;
+	font-size: var(--font-size-no6);
+	/*40px*/
+	margin-bottom: 30px;
 }
 
 .guide_title p {
-  font-size: var(--font-size-no11);
-  /*20px*/
+	font-size: var(--font-size-no11);
+	/*20px*/
 }
 
 .guide_title p span {
-  color: var(--font-color-main);
-  font-weight: 600;
+	color: var(--font-color-main);
+	font-weight: 600;
 }
 
 .guide_title img {
-  width: 100%;
-  object-fit: contain;
-  border-radius: 20px;
+	width: 100%;
+	object-fit: contain;
+	border-radius: 20px;
 }
-
 
 /* 롯데 배송 */
 .type_lotte {
-  width: 100%;
-  margin-top: 100px;
-  position: relative;
+	width: 100%;
+	margin-top: 100px;
+	position: relative;
 }
 
 .type_lotte ul {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
 }
 
-
 .type_lotte h4 {
-  margin-bottom: 40px;
-  font-size: var(--font-size-no7);
-  /*30px*/
+	margin-bottom: 40px;
+	font-size: var(--font-size-no7);
+	/*30px*/
 }
 
 .type_lotte li dl {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .type_lotte li dl dt {
-  font-size: var(--font-size-no11);
-  /*20px*/
-  font-weight: 600;
-  margin-bottom: 10px;
+	font-size: var(--font-size-no11);
+	/*20px*/
+	font-weight: 600;
+	margin-bottom: 10px;
 }
 
 .type_lotte li dl dd {
-  font-weight: 500;
-  margin-left: 15px;
-  margin-bottom: 5px;
+	font-weight: 500;
+	margin-left: 15px;
+	margin-bottom: 5px;
 }
 
 .type_lotte li:nth-of-type(2) {
-  width: 45%;
+	width: 45%;
 }
 
 .type_lotte li img {
-  width: 100%;
-  object-fit: contain;
+	width: 100%;
+	object-fit: contain;
 }
 
 .type_lotte a {
-  position: absolute;
-  top: 0;
-  left: 400px;
-  background: #fff;
-  color: var(--font-color-main);
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: all 0.5s ease;
+	position: absolute;
+	top: 0;
+	left: 400px;
+	background: #fff;
+	color: var(--font-color-main);
+	font-weight: 600;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: all 0.5s ease;
 }
 
 .type_lotte a:hover {
-  animation: smooth_bounce_scale 1s ease-in-out infinite;
-  background: rgba(217, 38, 41, 0.9);
-  color: #fff;
+	animation: smooth_bounce_scale 1s ease-in-out infinite;
+	background: rgba(217, 38, 41, 0.9);
+	color: #fff;
 }
-
 
 /* 세븐일레븐 착한배송 */
 .type_good {
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 150px;
-  padding-bottom: 100px;
-
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 150px;
+	padding-bottom: 100px;
 }
 
 /* 탭 네비게이션 스타일 */
 .good_title {
-  width: 1200px;
-  text-align: left;
-  padding: 200px 0 50px 0;
+	width: 1200px;
+	text-align: left;
+	padding: 200px 0 50px 0;
 }
 
 .good_title h4 {
-  font-size: var(--font-size-no7);
-  /*30px*/
+	font-size: var(--font-size-no7);
+	/*30px*/
 
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .good_title p {
-  font-size: var(--font-size-no11);
-  /*20px*/
-  color: #666;
+	font-size: var(--font-size-no11);
+	/*20px*/
+	color: #666;
 }
 
 .good_nev {
-  width: 1200px;
-  display: flex;
-  justify-content: center;
-  border-bottom: 2px solid #eee;
-  margin-bottom: 50px;
+	width: 1200px;
+	display: flex;
+	justify-content: center;
+	border-bottom: 2px solid #eee;
+	margin-bottom: 50px;
 }
 
 .good_nev li {
-  flex: 1;
-  text-align: center;
+	flex: 1;
+	text-align: center;
 }
 
 .good_nev a {
-  display: block;
-  padding: 15px 20px;
-  font-size: var(--font-size-no11);
-  /*20px*/
-  font-weight: 600;
-  color: #666;
-  text-decoration: none;
-  border-bottom: 3px solid transparent;
-  transition: all 0.3s ease;
+	display: block;
+	padding: 15px 20px;
+	font-size: var(--font-size-no11);
+	/*20px*/
+	font-weight: 600;
+	color: #666;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	transition: all 0.3s ease;
 }
 
 .good_nev a:hover {
-  color: var(--font-color-main);
+	color: var(--font-color-main);
 }
 
 .good_nev a.active {
-  color: var(--font-color-main);
-  border-bottom-color: var(--font-color-main);
+	color: var(--font-color-main);
+	border-bottom-color: var(--font-color-main);
 }
 
 /* 콘텐츠 컨테이너 공통 스타일 */
 .tab_content {
-  width: 1100px;
-  background: #fff;
-  border-radius: 20px;
-  padding: 50px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  display: none;
+	width: 1100px;
+	background: #fff;
+	border-radius: 20px;
+	padding: 50px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+	display: none;
 }
 
 .tab_content.active {
-  display: block;
-  animation: fadeIn 0.5s ease;
+	display: block;
+	animation: fadeIn 0.5s ease;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 /* 각 탭별 특별 스타일 */
 .tab_content dl dt {
-  font-size: var(--font-size-no7);
-  /*30px*/
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: var(--font-color-main);
+	font-size: var(--font-size-no7);
+	/*30px*/
+	font-weight: 600;
+	margin-bottom: 20px;
+	color: var(--font-color-main);
 }
 
 .tab_content dl dd {
-  line-height: 1.6rem;
-  font-size: var(--font-size-no11);
-  /*20px*/
-  font-weight: 500;
-  margin-bottom: 30px;
-  color: #666;
+	line-height: 1.6rem;
+	font-size: var(--font-size-no11);
+	/*20px*/
+	font-weight: 500;
+	margin-bottom: 30px;
+	color: #666;
 }
 
 /* 착한택배 소개 - 테이블과 이미지 배치 */
 .intro_container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-top: 20px;
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	margin-top: 20px;
 }
 
 .intro_table {
-  flex: 0.5;
+	flex: 0.5;
 }
 
 .intro_image {
-  flex: 0.5;
+	flex: 0.5;
 }
 
 .intro_image img {
-  width: 100%;
-  height: 400px;
-  border-radius: 15px;
-  object-fit: cover;
+	width: 100%;
+	height: 400px;
+	border-radius: 15px;
+	object-fit: cover;
 }
 
 /* 테이블 스타일 */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
 }
 
 th,
 td {
-  border: 1px solid var(--font-color-point2);
-  padding: 12px;
-  text-align: left;
+	border: 1px solid var(--font-color-point2);
+	padding: 12px;
+	text-align: left;
 }
 
 th {
-  background: var(--font-color-sub2);
-  font-weight: 600;
+	background: var(--font-color-sub2);
+	font-weight: 600;
 }
 
 /* 이용방법 */
 #tab2 .content_list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 20px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 20px;
 }
 
-
 #tab2 .content_list li.swiper-slide {
-  height: 500px;
-  text-indent: -999px;
-  overflow: hidden;
-  background-color: #fff;
+	height: 500px;
+	text-indent: -999px;
+	overflow: hidden;
+	background-color: #fff;
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 
 #tab2 .content_list li:nth-of-type(1) {
-  background-image: url(../image/content2/tab2_1.png);
-
+	background-image: url(../image/content2/tab2_1.png);
 }
 
 #tab2 .content_list li:nth-of-type(2) {
-  background-image: url(../image/content2/tab2_2.png);
+	background-image: url(../image/content2/tab2_2.png);
 }
 
 #tab2 .content_list li:nth-of-type(3) {
-  background-image: url(../image/content2/tab2_3.png);
+	background-image: url(../image/content2/tab2_3.png);
 }
 
 #tab2 .content_list li:nth-of-type(4) {
-  background-image: url(../image/content2/tab2_4.png);
+	background-image: url(../image/content2/tab2_4.png);
 }
 
 #tab2 .content_list li:nth-of-type(5) {
-  background-image: url(../image/content2/tab2_5.png);
+	background-image: url(../image/content2/tab2_5.png);
 }
 
 #tab2 .content_list li:nth-of-type(6) {
-  background-image: url(../image/content2/tab2_6.png);
-
+	background-image: url(../image/content2/tab2_6.png);
 }
 
 /* 스와이퍼 기본테마 */
 #tab2 .my-tab2-swiper {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
 }
 
 #tab2 .swiper-button-next,
 #tab2 .swiper-button-prev {
-  color: var(--font-color-main);
+	color: var(--font-color-main);
 }
 
 #tab2 .swiper-pagination-bullet {
-  background: #ddd;
-  opacity: 1;
-  transition: all 0.5s ease;
+	background: #ddd;
+	opacity: 1;
+	transition: all 0.5s ease;
 }
 
 #tab2 .swiper-pagination-bullet-active {
-  background: var(--font-color-point2);
-  transform: scale(1.2);
+	background: var(--font-color-point2);
+	transform: scale(1.2);
 }
 
 /* 포장방법 */
 
 #tab4 .content_list li {
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
 }
 
 #tab4 .content_list li:before {
-  content: "✓";
-  color: var(--font-color-point2);
-  font-weight: bold;
-  margin-right: 10px;
+	content: "✓";
+	color: var(--font-color-point2);
+	font-weight: bold;
+	margin-right: 10px;
 }
 
 .packaging_content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
 }
 
 .packaging_list {
-  flex: 0.5;
+	flex: 0.5;
 }
 
 .packaging {
-  flex: 0.5;
-  position: relative;
+	flex: 0.5;
+	position: relative;
 }
 
 .packaging img {
-  width: 100%;
-  height: 400px;
-  border-radius: 15px;
-  object-fit: contain;
+	width: 100%;
+	height: 400px;
+	border-radius: 15px;
+	object-fit: contain;
 }
 
 .packaging::before {
-  content: "포장 불량 예시";
-  color: red;
-  background: #fff;
-  position: absolute;
-  top: 35px
+	content: "포장 불량 예시";
+	color: red;
+	background: #fff;
+	position: absolute;
+	top: 35px;
 }
-
-
 
 /* 단계별 프로세스 스타일 */
 .Shipping_flow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .Shipping_flow img {
-  width: 100%;
-  height: 600px;
-  object-fit: contain;
+	width: 100%;
+	height: 600px;
+	object-fit: contain;
 }
-
 
 /* FAQ 스타일 */
 .faq_item {
-  margin: 20px 0;
-  border: 2px solid #eee;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-
+	margin: 20px 0;
+	border: 2px solid #eee;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
 }
 
 .faq_item:hover {
-  border-color: var(--font-color-main);
-  box-shadow: 1px 1px 20px rgba(217, 38, 41, 0.1);
-  transform: translateY(-2px);
+	border-color: var(--font-color-main);
+	box-shadow: 1px 1px 20px rgba(217, 38, 41, 0.1);
+	transform: translateY(-2px);
 }
 
 .faq_question {
-  background: rgba(250, 245, 245, 0.7);
-  padding: 20px;
-  cursor: pointer;
-  font-weight: 600;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  transition: all 0.3s ease;
+	background: rgba(250, 245, 245, 0.7);
+	padding: 20px;
+	cursor: pointer;
+	font-weight: 600;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	transition: all 0.3s ease;
 }
 
 .faq_question:hover {
-  background: rgba(250, 245, 245, 1);
-  color: var(--font-color-main);
+	background: rgba(250, 245, 245, 1);
+	color: var(--font-color-main);
 }
 
-
 .faq_question:after {
-  content: "▶";
-  position: absolute;
-  right: 20px;
-  color: var(--font-color-main);
-  transition: all 0.3s ease;
-  transform-origin: center;
+	content: "▶";
+	position: absolute;
+	right: 20px;
+	color: var(--font-color-main);
+	transition: all 0.3s ease;
+	transform-origin: center;
 }
 
 .faq_question.active:after {
-  transform: rotate(90deg);
-  color: var(--font-color-point2);
+	transform: rotate(90deg);
+	color: var(--font-color-point2);
 }
 
 .faq_question.active {
-  background: linear-gradient(135deg, #fff 0%, #e8f5e8 100%);
-  color: var(--font-color-point2);
-  border-bottom: 2px solid #e0e0e0;
+	background: linear-gradient(135deg, #fff 0%, #e8f5e8 100%);
+	color: var(--font-color-point2);
+	border-bottom: 2px solid #e0e0e0;
 }
 
 .faq_answer {
-  padding: 0;
-  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-  display: none;
-  position: relative;
-  overflow: hidden;
+	padding: 0;
+	background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+	display: none;
+	position: relative;
+	overflow: hidden;
 }
 
 /* 일반 FAQ 답변 내용 스타일 */
 .faq_answer:not(.faq_multiline) {
-  padding: 30px;
-  color: #444;
-  line-height: 1.7rem;
-  background: #fff;
-  margin: 3px 15px 15px 15px;
-  border-radius: 12px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e8f4fd;
+	padding: 30px;
+	color: #444;
+	line-height: 1.7rem;
+	background: #fff;
+	margin: 3px 15px 15px 15px;
+	border-radius: 12px;
+	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+	border: 1px solid #e8f4fd;
 }
 
 /* 브레이크 라인 여백 조정 */
 .faq_answer.faq_multiline br {
-  line-height: 2.2rem;
+	line-height: 2.2rem;
 }
 
 .faq_highlight {
-  background: linear-gradient(120deg, transparent 0%, rgba(217, 38, 41, 0.1) 50%, transparent 100%);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: 600;
-  color: var(--font-color-main);
+	background: linear-gradient(
+		120deg,
+		transparent 0%,
+		rgba(217, 38, 41, 0.1) 50%,
+		transparent 100%
+	);
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-weight: 600;
+	color: var(--font-color-main);
 }
