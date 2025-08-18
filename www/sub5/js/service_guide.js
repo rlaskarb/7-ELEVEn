@@ -14,8 +14,7 @@ $(document).ready(function () {
 		const targetTab = $(this).attr("href");
 		$(targetTab).addClass("active");
 
-
-//스와이퍼 기능
+		//스와이퍼 기능
 		if (targetTab === "#tab2") {
 			tab2Swiper = new Swiper("#tab2 .my-tab2-swiper", {
 				slidesPerView: 3,
@@ -33,7 +32,6 @@ $(document).ready(function () {
 		}
 	});
 
-
 	// FAQ 아코디언 기능
 	$(".faq_question").click(function () {
 		const $answer = $(this).next(".faq_answer");
@@ -42,7 +40,6 @@ $(document).ready(function () {
 		// 현재 열려있는지 확인
 		if ($answer.is(":visible")) {
 			$answer.slideUp(400, function () {
-				
 				$(this).css("display", "none");
 			});
 			$question.removeClass("active");

@@ -35,8 +35,6 @@ function loadEvents() {
 	$(document).ready(function () {
 		// JSON 데이터 로드
 		$.getJSON("./data/events_in_progress.json", function (data) {
-			console.log("JSON 데이터 로드 성공:", data);
-
 			const allEvents = data.events_in_progress;
 			globalEventsData = allEvents; // 전역 변수에 저장
 
@@ -52,12 +50,10 @@ function loadEvents() {
 				filteredEvents = allEvents.filter((event) =>
 					isEventOngoing(event.endDate)
 				);
-				console.log("진행중인 이벤트 수:", filteredEvents.length);
 			} else if (pageType === "finished") {
 				filteredEvents = allEvents.filter(
 					(event) => !isEventOngoing(event.endDate)
 				);
-				console.log("종료된 이벤트 수:", filteredEvents.length);
 			}
 
 			// 이벤트 렌더링 (간단한 카드 형태로)
@@ -125,8 +121,6 @@ function renderSimpleEventCards(events, pageType) {
 
 	// 팝업 이벤트 리스너 등록
 	bindPopupEvents();
-
-	console.log(`${pageType} 이벤트 ${events.length}개 렌더링 완료`);
 }
 
 // 팝업 이벤트 리스너 바인딩
@@ -165,9 +159,7 @@ function findEventById(eventId) {
 	return globalEventsData.find((event) => (event.di || event.id) == eventId);
 }
 
-
-
-// 이벤트 팝업 열기 
+// 이벤트 팝업 열기
 function openEventPopup(eventId) {
 	const event = findEventById(eventId);
 
@@ -212,18 +204,19 @@ function openEventPopup(eventId) {
                                 ${contentItems}
                             </dl>
                         </li>
-                        ${
-													event.url && event.url !== "#"
-														? `<li>
-                                <dl>
-                                    <dt>참여 링크</dt>
-                                    <dd>
-                                        <a href="${event.url}" target="_blank">이벤트 페이지로 이동</a>
-                                    </dd>
-                                </dl>
-                            </li>`
-														: ""
-												}
+                       		 ${
+															event.url && event.url !== "#"
+																? `
+						<li>
+                            <dl>
+                                <dt>참여 링크</dt>
+                                dd>
+                                    <a href="${event.url}" target="_blank">이벤트 페이지로 이동</a>
+                                /dd>
+                            </dl>
+                        </li>`
+																: ""
+														}
                     </ul>
                 </div>
                 

@@ -7,9 +7,8 @@ $(document).ready(function () {
 
 	const $modalBox = $(".edit_modal_box"); // 등록된 글 조회되는 큰박스 창
 	const $modalContent = $(".edit_popup_content"); // 실제 조회값이 담기는 박스 창
-	const $writeModalBox = $(".write_modal_box"); //꿀조합레시피공유하기 등록창
+	const $writeModalBox = $(".write_modal_box");
 
-	console.log("2. Supabase 클라이언트 초기화 완료");
 
 	// 📌 모달 열기 함수
 	function openModal(modalType) {
@@ -32,8 +31,6 @@ $(document).ready(function () {
 	}
 
 	async function loadReview() {
-		console.log("3. loadPosts 함수 실행 시작");
-
 		const $boardList = $(".new_product_review_tuck_box");
 		// 📌 로딩 효과 추가
 		$boardList.addClass("loading").html("<li>로딩 중...</li>");
@@ -275,12 +272,11 @@ $(document).ready(function () {
 	$(document).on("submit", "#edit-form", async function (event) {
 		event.preventDefault();
 
+		// 수정 기능 임시 막기
 		try {
-			// 여기서 일부러 오류(Error)를 만들어서 catch로 보냅니다.
 			throw new Error("임시 삭제 방지");
 		} catch (error) {
-			// try에서 오류가 발생했기 때문에, 이 코드가 실행됩니다.
-			console.error(error); // 콘솔에 에러를 출력해서 확인하기 좋습니다.
+			console.error(error);
 			alert("미안해요.. 비밀번호 기능이 구현될 때까지 잠시 막아두겠습니다.");
 		}
 	});
@@ -327,15 +323,14 @@ $(document).ready(function () {
 	// 	const reviewId = $(this).data("post-id");
 	// 	deleteReview(reviewId);
 	// });
+
 	//  비밀번호 만들지못해서 임시 삭제기능 막는 코드
 	$(document).on("click", ".modal_buttons .delete-btn", function (e) {
 		e.preventDefault();
 		try {
-			// 여기서 일부러 오류(Error)를 만들어서 catch로 보냅니다.
 			throw new Error("임시 삭제 방지");
 		} catch (error) {
-			// try에서 오류가 발생했기 때문에, 이 코드가 실행됩니다.
-			console.error(error); // 콘솔에 에러를 출력해서 확인하기 좋습니다.
+			console.error(error);
 			alert("미안해요.. 비밀번호 기능이 구현될 때까지 잠시 막아두겠습니다.");
 		}
 	});

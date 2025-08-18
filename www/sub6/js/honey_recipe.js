@@ -9,8 +9,6 @@ $(document).ready(function () {
 	const $modalContent = $(".edit_popup_content"); // 실제 조회값이 담기는 박스 창
 	const $writeModalBox = $(".write_modal_box"); //꿀조합레시피공유하기 등록창
 
-	console.log("2. Supabase 클라이언트 초기화 완료");
-
 	// 📌 모달 열기 함수
 	function openModal(modalType) {
 		const $modal = modalType === "edit" ? $modalBox : $writeModalBox;
@@ -52,8 +50,6 @@ $(document).ready(function () {
 			return;
 		}
 
-		console.log("4-2. 게시글 조회 성공! 받아온 데이터:", posts);
-
 		$boardList.empty();
 
 		// 📌 빈 목록 처리
@@ -83,7 +79,7 @@ $(document).ready(function () {
 					? post.title.substring(0, 20) + "..."
 					: post.title;
 
-			// 📌 개선된 카드 HTML
+			// 📌 카드 HTML
 			const postHtml = `
                         <li>
                             <a href="#" class="edit-trigger" data-post-id="${post.id}" >
@@ -171,7 +167,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// 📌 삭제 함수 (모달 전용)
+	// 📌 모달 삭제 함수
 	async function deletePost(postId) {
 		if (!confirm("정말로 이 게시글을 삭제하시겠습니까?")) {
 			return;
@@ -271,12 +267,11 @@ $(document).ready(function () {
 	$(document).on("submit", "#edit-form", async function (event) {
 		event.preventDefault();
 
+		//수정 막기 기능
 		try {
-			// 여기서 일부러 오류(Error)를 만들어서 catch로 보냅니다.
 			throw new Error("임시 삭제 방지");
 		} catch (error) {
-			// try에서 오류가 발생했기 때문에, 이 코드가 실행됩니다.
-			console.error(error); // 콘솔에 에러를 출력해서 확인하기 좋습니다.
+			console.error(error);
 			alert("미안해요.. 비밀번호 기능이 구현될 때까지 잠시 막아두겠습니다.");
 		}
 	});
@@ -324,19 +319,19 @@ $(document).ready(function () {
 	// 	deletePost(postId);
 	// });
 
+
 	//  비밀번호 만들지못해서 임시 삭제기능 막는 코드
 	$(document).on("click", ".modal_buttons .delete-btn", function (e) {
 		e.preventDefault();
 		try {
-			// 여기서 일부러 오류(Error)를 만들어서 catch로 보냅니다.
 			throw new Error("임시 삭제 방지");
 		} catch (error) {
-			// try에서 오류가 발생했기 때문에, 이 코드가 실행됩니다.
-			console.error(error); // 콘솔에 에러를 출력해서 확인하기 좋습니다.
+			console.error(error);
 			alert("미안해요.. 비밀번호 기능이 구현될 때까지 잠시 막아두겠습니다.");
 		}
 	});
 
+	
 	// 📌 모달 닫기 이벤트들
 	// X 버튼 클릭
 	$(document).on("click", ".close_pop", function (e) {
