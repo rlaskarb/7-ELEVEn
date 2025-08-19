@@ -172,7 +172,7 @@
 #content .seven_beans_note tbody tr:nth-of-type(4) ul li {
 	padding: 5px 7px;
 	border: 2px solid rgba(231, 126, 45, 0.8);
-	box-shadow: 1px 1px 15px 1px rgba(231, 126, 45, 0.1);
+	box-shadow: 1px 1px 15px rgba(231, 126, 45, 0.1);
 	border-radius: 20px;
 }
 
