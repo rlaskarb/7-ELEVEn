@@ -365,7 +365,7 @@
 }
 
 .benefit_card {
-	background-color: var(250, 248, 245, 0.8);
+	background-color: rgba(250, 248, 245, 0.8);
 	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
 	display: flex;
 	align-items: center;

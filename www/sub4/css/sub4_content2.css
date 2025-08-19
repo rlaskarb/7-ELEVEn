@@ -121,7 +121,7 @@
 
 .icon_area ul li:nth-of-type(5) {
 	top: 2310px;
-	background-position: 0 -494px;
+	background-position: 0 -497px;
 }
 
 .icon_area ul li:nth-of-type(6) {
@@ -246,7 +246,7 @@
 
 .train_order_content #desc3::after {
 	content: "D-30";
-	bottom: 100px;
+	bottom: 120px;
 }
 
 .train_order_content #desc4::before {
@@ -256,7 +256,7 @@
 
 .train_order_content #desc4::after {
 	content: "D-29";
-	bottom: 80px;
+	bottom: 110px;
 }
 
 .train_order_content #desc5::before {
@@ -266,7 +266,7 @@
 
 .train_order_content #desc5::after {
 	content: "D-29~15";
-	bottom: 120px;
+	bottom: 130px;
 }
 
 .train_order_content #desc6::before {
@@ -276,7 +276,7 @@
 
 .train_order_content #desc6::after {
 	content: "D-14";
-	bottom: 145px;
+	bottom: 155px;
 }
 
 .train_order_content #desc7::before {
@@ -286,7 +286,7 @@
 
 .train_order_content #desc7::after {
 	content: "D-14~7";
-	bottom: 90px;
+	bottom: 100px;
 }
 
 .train_order_content #desc8::before {
