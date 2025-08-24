@@ -28,7 +28,7 @@ $(document).ready(function () {
 			$("body").css("overflow", "auto");
 		}
 	}
-
+ 
 	async function loadPosts() {
 		console.log("3. loadPosts 함수 실행 시작");
 

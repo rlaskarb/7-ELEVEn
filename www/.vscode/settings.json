@@ -1,4 +1,5 @@
 {
-  "editor.wordWrap": "off",
-  "editor.scrollbar.horizontal": "visible"
+    "editor.wordWrap": "off",
+    "editor.scrollbar.horizontal": "visible",
+    "liveServer.settings.port": 5501
 }
