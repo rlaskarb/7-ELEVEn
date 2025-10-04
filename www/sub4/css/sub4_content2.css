@@ -57,7 +57,7 @@
 
 .procedures_nav.fixed {
 	position: fixed;
-	top: -100px;
+	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
@@ -338,7 +338,7 @@
 	box-shadow: 0 10px 20px rgba(217, 38, 41, 0.3);
 }
 
-#desc9 > div {
+#desc9>div {
 	position: relative;
 }
 
