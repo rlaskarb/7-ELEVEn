@@ -57,7 +57,7 @@
 
 .procedures_nav.fixed {
 	position: fixed;
-	top: 0;
+	top: -100px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
