@@ -380,66 +380,7 @@ img {
 	transform: scale(1.2);
 }
 
-/* 검색 박스 */
-#headerArea .main_search_box {
-	width: 1000px;
-	height: 250px;
-	background: rgba(250, 248, 245, 0.7);
-	position: fixed;
-	top: 333px;
-	left: 64%;
-	transform: translate(-50%, -50%);
-	border: 3px solid rgba(217, 38, 41, 0.8);
-	box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 40px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 30px;
-	display: none;
-}
 
-#headerArea .search_title {
-	text-align: center;
-	font-size: var(--font-size-no7);
-	/*30px*/
-	font-weight: bold;
-	color: rgba(231, 126, 45, 0.9);
-}
-
-#headerArea #pageSelector {
-	font-size: var(--font-size-no10);
-	/*22px*/
-	font-weight: 500;
-	border-radius: 15px;
-	border: 3px solid rgba(217, 38, 41, 0.8);
-	padding: 3px 15px 5px 20px;
-	color: #333;
-	cursor: pointer;
-}
-
-#headerArea #searchInput {
-	width: 400px;
-	margin-left: 20px;
-	border: 1px solid transparent;
-	background: transparent;
-	outline: none;
-	cursor: pointer;
-	border-bottom: 3px solid var(--font-color-point2);
-	color: var(--font-color-font);
-	font-size: var(--font-size-no10);
-	/*22px*/
-	color: #333;
-}
-
-#headerArea .main_btn {
-	border: 1px solid transparent;
-	background: transparent;
-	cursor: pointer;
-	font-size: var(--font-size-no7);
-	color: var(--font-color-point2);
-}
 
 /* 풋터 공통 영역 */
 
