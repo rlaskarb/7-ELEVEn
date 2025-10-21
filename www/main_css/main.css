@@ -285,7 +285,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(../main_images/events_in_profess_background.png);
+        url(../main_images/events_in_profess_background.avif);
     /*linear-gradient(방향,시작색상,끝색상)*/
     display: flex;
     flex-direction: column;
@@ -655,7 +655,7 @@
     margin: 125px auto;
     position: relative;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    background: url(../main_images/start_up1.png);
+    background: url(../main_images/start_up1.avif);
 }
 
 #content .start_up_guide .start_up_guide_container h3 {
