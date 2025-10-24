@@ -56,13 +56,16 @@ $(document).ready(function () {
 		const $this = $(this);
 		const fadeSpeed = 200;
 
-	
-		$this.fadeOut(fadeSpeed , function(){
-			$(this).html(original_content);
-			$(this).css("background", "url(./main_images/start_up1.avif)");
-			$(this).find(".start_up_list > li").removeClass("active");
-			$this.fadeIn(fadeSpeed);
-		})
+		const isClicked = $this.find(".start_up_list > li.active").length>0;
+
+		if(isClicked){
+			$this.fadeOut(fadeSpeed , function(){
+				$(this).html(original_content);
+				$(this).css("background", "url(./main_images/start_up1.avif)");
+				$this.fadeIn(fadeSpeed);
+			})
+		}
+		
 		
 	});
 });
