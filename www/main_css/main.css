@@ -643,8 +643,8 @@
     height: 1050px;
     margin: 0 auto;
     background: var(--font-color-sub2);
-    border: 1px solid #adb5bd;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid transparent;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
 }
 
 #content .start_up_guide .start_up_guide_container {
@@ -654,7 +654,7 @@
     border-radius: 40px;
     margin: 125px auto;
     position: relative;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
     background: url(../main_images/start_up1.avif);
 }
 
